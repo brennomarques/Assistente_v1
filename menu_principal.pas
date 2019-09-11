@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
-  Vcl.StdCtrls, System.ImageList, Vcl.ImgList;
+  Vcl.StdCtrls, System.ImageList, Vcl.ImgList, PngBitBtn, Vcl.Buttons,
+  PngSpeedButton;
 
 type
   TForm1 = class(TForm)
@@ -126,8 +127,7 @@ type
     Label78: TLabel;
     Label79: TLabel;
     Label80: TLabel;
-    ImageList1: TImageList;
-    Image27: TImage;
+    Image_token_pro_72: TImage;
     Label81: TLabel;
     Label82: TLabel;
     Image28: TImage;
@@ -144,6 +144,16 @@ type
     Label89: TLabel;
     Label90: TLabel;
     Label91: TLabel;
+    Png_Token_pro_false: TPngSpeedButton;
+    Png_Token_pro_true: TPngSpeedButton;
+    PngSpeedButton3: TPngSpeedButton;
+    PngSpeedButton4: TPngSpeedButton;
+    PngSpeedButton5: TPngSpeedButton;
+    PngSpeedButton6: TPngSpeedButton;
+    PngSpeedButton7: TPngSpeedButton;
+    PngSpeedButton8: TPngSpeedButton;
+    PngSpeedButton9: TPngSpeedButton;
+    PngSpeedButton10: TPngSpeedButton;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -316,6 +326,7 @@ type
       Y: Integer);
     procedure Label91MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
+    procedure Png_Token_pro_falseClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -1042,6 +1053,12 @@ procedure TForm1.Label9MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
  Label9.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Png_Token_pro_falseClick(Sender: TObject);
+begin
+  if True then
+
 end;
 
 end.
