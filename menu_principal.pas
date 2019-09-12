@@ -1057,7 +1057,15 @@ end;
 
 procedure TForm1.Png_Token_pro_falseClick(Sender: TObject);
 begin
-  if True then
+  if Png_Token_pro_false.Visible = true then
+  begin
+    Png_Token_pro_true.Visible:=true;
+    Png_Token_pro_false.Visible:=false;
+  end
+  else
+  begin
+    ShowMessage('fora');
+  end;
 
 end;
 
