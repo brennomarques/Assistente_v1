@@ -127,17 +127,12 @@ type
     Label78: TLabel;
     Label79: TLabel;
     Label80: TLabel;
-    Image_token_pro_72: TImage;
     Label81: TLabel;
     Label82: TLabel;
     Image28: TImage;
     Label83: TLabel;
-    Image29: TImage;
     Label84: TLabel;
     Label85: TLabel;
-    Image30: TImage;
-    Image31: TImage;
-    Image32: TImage;
     Label86: TLabel;
     Label87: TLabel;
     Label88: TLabel;
@@ -146,14 +141,14 @@ type
     Label91: TLabel;
     Png_Token_pro_false: TPngSpeedButton;
     Png_Token_pro_true: TPngSpeedButton;
-    PngSpeedButton3: TPngSpeedButton;
-    PngSpeedButton4: TPngSpeedButton;
-    PngSpeedButton5: TPngSpeedButton;
-    PngSpeedButton6: TPngSpeedButton;
-    PngSpeedButton7: TPngSpeedButton;
-    PngSpeedButton8: TPngSpeedButton;
-    PngSpeedButton9: TPngSpeedButton;
-    PngSpeedButton10: TPngSpeedButton;
+    Png_token_safenet_5100_true: TPngSpeedButton;
+    Png_token_safenet_5100_false: TPngSpeedButton;
+    Png_token_aladin_false: TPngSpeedButton;
+    Png_token_safenet_5110_true: TPngSpeedButton;
+    Png_token_epass2003_true: TPngSpeedButton;
+    Png_token_epass2003_false: TPngSpeedButton;
+    Png_token_aladin_true: TPngSpeedButton;
+    Png_token_safenet_5110_false: TPngSpeedButton;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -327,6 +322,15 @@ type
     procedure Label91MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
     procedure Png_Token_pro_falseClick(Sender: TObject);
+    procedure Png_Token_pro_trueClick(Sender: TObject);
+    procedure Png_token_safenet_5100_falseClick(Sender: TObject);
+    procedure Png_token_safenet_5100_trueClick(Sender: TObject);
+    procedure Png_token_safenet_5110_falseClick(Sender: TObject);
+    procedure Png_token_safenet_5110_trueClick(Sender: TObject);
+    procedure Png_token_aladin_falseClick(Sender: TObject);
+    procedure Png_token_aladin_trueClick(Sender: TObject);
+    procedure Png_token_epass2003_falseClick(Sender: TObject);
+    procedure Png_token_epass2003_trueClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -1055,18 +1059,149 @@ begin
  Label9.Font.Style := [fsUnderline];
 end;
 
+procedure TForm1.Png_token_aladin_falseClick(Sender: TObject);
+begin
+  if Png_token_aladin_false.Visible = true then
+  begin
+    Png_token_aladin_false.Visible:=false;
+    Png_token_aladin_true.Visible:=true;
+
+    Png_Token_pro_false.Visible:=true;
+    Png_Token_pro_true.Visible:=false;
+    Png_token_safenet_5100_true.Visible:=false;
+    Png_token_safenet_5100_false.Visible:=true;
+    Png_token_safenet_5110_false.Visible:=true;
+    Png_token_safenet_5110_true.Visible:=false;
+    Png_token_epass2003_false.Visible:=true;
+    Png_token_epass2003_true.Visible:=false;
+  end
+end;
+
+procedure TForm1.Png_token_aladin_trueClick(Sender: TObject);
+begin
+  if Png_token_aladin_true.Visible = true then
+  begin
+    Png_token_aladin_false.Visible:=true;
+    Png_token_aladin_true.Visible:=false;
+  end
+end;
+
+procedure TForm1.Png_token_epass2003_falseClick(Sender: TObject);
+begin
+  if Png_token_epass2003_false.Visible = true then
+  begin
+    Png_token_epass2003_false.Visible:=false;
+    Png_token_epass2003_true.Visible:=true;
+
+    Png_token_safenet_5110_false.Visible:=true;
+    Png_token_safenet_5110_true.Visible:=false;
+
+    Png_token_safenet_5100_false.Visible:=true;
+    Png_token_safenet_5100_true.Visible:=false;
+
+    Png_token_aladin_false.Visible:=true;
+    Png_token_aladin_true.Visible:=false;
+
+    Png_Token_pro_false.Visible:=true;
+    Png_Token_pro_true.Visible:=false;
+  end
+end;
+
+procedure TForm1.Png_token_epass2003_trueClick(Sender: TObject);
+begin
+  if Png_token_epass2003_true.Visible = true then
+  begin
+    Png_token_epass2003_false.Visible:=true;
+    Png_token_epass2003_true.Visible:=false;
+  end
+end;
+
 procedure TForm1.Png_Token_pro_falseClick(Sender: TObject);
 begin
   if Png_Token_pro_false.Visible = true then
   begin
     Png_Token_pro_true.Visible:=true;
     Png_Token_pro_false.Visible:=false;
-  end
-  else
-  begin
-    ShowMessage('fora');
-  end;
 
+    Png_token_safenet_5100_false.Visible:=true;
+    Png_token_safenet_5100_true.Visible:=false;
+    Png_token_aladin_false.Visible:=true;
+    Png_token_aladin_true.Visible:=false;
+    Png_token_safenet_5110_false.Visible:=true;
+    Png_token_safenet_5110_true.Visible:=false;
+    Png_token_epass2003_false.Visible:=true;
+    Png_token_epass2003_true.Visible:=false;
+
+
+  end
+
+end;
+
+procedure TForm1.Png_Token_pro_trueClick(Sender: TObject);
+begin
+  if Png_Token_pro_true.Visible = true then
+  begin
+    Png_Token_pro_true.Visible:=false;
+    Png_Token_pro_false.Visible:=true;
+  end
+end;
+
+procedure TForm1.Png_token_safenet_5100_falseClick(Sender: TObject);
+begin
+  if Png_token_safenet_5100_false.Visible = true then
+  begin
+    Png_token_safenet_5100_false.Visible:=false;
+    Png_token_safenet_5100_true.Visible:=true;
+
+    Png_Token_pro_false.Visible:=true;
+    Png_Token_pro_true.Visible:=false;
+
+    Png_token_aladin_false.Visible:=true;
+    Png_token_aladin_true.Visible:=false;
+    Png_token_safenet_5110_false.Visible:=true;
+    Png_token_safenet_5110_true.Visible:=false;
+    Png_token_epass2003_false.Visible:=true;
+    Png_token_epass2003_true.Visible:=false;
+  end
+end;
+
+procedure TForm1.Png_token_safenet_5100_trueClick(Sender: TObject);
+begin
+  if Png_token_safenet_5100_true.Visible = true then
+  begin
+    Png_token_safenet_5100_false.Visible:=true;
+    Png_token_safenet_5100_true.Visible:=false;
+  end
+end;
+
+procedure TForm1.Png_token_safenet_5110_falseClick(Sender: TObject);
+begin
+  if Png_token_safenet_5110_false.Visible = true then
+  begin
+    Png_token_safenet_5110_false.Visible:=false;
+    Png_token_safenet_5110_true.Visible:=true;
+
+    Png_token_safenet_5100_false.Visible:=true;
+    Png_token_safenet_5100_true.Visible:=false;
+
+    Png_token_aladin_false.Visible:=true;
+    Png_token_aladin_true.Visible:=false;
+
+    Png_Token_pro_false.Visible:=true;
+    Png_Token_pro_true.Visible:=false;
+
+    Png_token_epass2003_false.Visible:=true;
+    Png_token_epass2003_true.Visible:=false;
+  end
+end;
+
+procedure TForm1.Png_token_safenet_5110_trueClick(Sender: TObject);
+begin
+  if Png_token_safenet_5110_true.Visible = true then
+  begin
+    Png_token_safenet_5110_true.Visible:=false;
+    Png_token_safenet_5110_false.Visible:=true;
+  end
 end;
 
 end.
