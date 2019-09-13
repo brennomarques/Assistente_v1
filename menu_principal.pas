@@ -149,6 +149,18 @@ type
     Png_token_epass2003_false: TPngSpeedButton;
     Png_token_aladin_true: TPngSpeedButton;
     Png_token_safenet_5110_false: TPngSpeedButton;
+    Panel_lista_cartao: TPanel;
+    Image27: TImage;
+    Label92: TLabel;
+    Label93: TLabel;
+    Label94: TLabel;
+    Label95: TLabel;
+    Image29: TImage;
+    Label97: TLabel;
+    PngSpeedButton1: TPngSpeedButton;
+    PngSpeedButton2: TPngSpeedButton;
+    PngSpeedButton3: TPngSpeedButton;
+    PngSpeedButton4: TPngSpeedButton;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -331,6 +343,12 @@ type
     procedure Png_token_aladin_trueClick(Sender: TObject);
     procedure Png_token_epass2003_falseClick(Sender: TObject);
     procedure Png_token_epass2003_trueClick(Sender: TObject);
+    procedure Label76Click(Sender: TObject);
+    procedure Image23Click(Sender: TObject);
+    procedure Label70Click(Sender: TObject);
+    procedure Label94MouseLeave(Sender: TObject);
+    procedure Label94MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
   private
     { Private declarations }
   public
@@ -353,6 +371,7 @@ begin
   Panel_suporte.Visible:=false;
   Panel_Downloads.Visible:=false;
   Panel_pergunta_midia.Visible:=false;
+  Panel_lista_tokens.Visible:=false;
 end;
 
 procedure TForm1.Image10Click(Sender: TObject);
@@ -448,6 +467,12 @@ procedure TForm1.Image22MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label75.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Image23Click(Sender: TObject);
+begin
+  Panel_lista_tokens.Visible:=true;
+  Panel_pergunta_midia.Visible:=false;
 end;
 
 procedure TForm1.Image23MouseLeave(Sender: TObject);
@@ -797,6 +822,7 @@ begin
   Panel_Downloads.Visible:=false;
   Panel_pergunta_midia.Visible:=false;
   Panel_Inicial_Inferior.Visible:=true;
+  Panel_lista_tokens.Visible:=false;
 end;
 
 procedure TForm1.Label5MouseLeave(Sender: TObject);
@@ -841,6 +867,7 @@ begin
   Panel_suporte.Visible:=false;
   Panel_Downloads.Visible:=false;
   Panel_pergunta_midia.Visible:=false;
+  Panel_lista_tokens.Visible:=false;
 end;
 
 procedure TForm1.Label6MouseLeave(Sender: TObject);
@@ -852,6 +879,12 @@ procedure TForm1.Label6MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
  Label6.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Label70Click(Sender: TObject);
+begin
+  Panel_lista_tokens.Visible:=true;
+  Panel_Instalador_token_cartao_1.Visible:=false;
 end;
 
 procedure TForm1.Label70MouseLeave(Sender: TObject);
@@ -905,6 +938,12 @@ begin
   Label75.Font.Style := [fsUnderline];
 end;
 
+procedure TForm1.Label76Click(Sender: TObject);
+begin
+  Panel_lista_tokens.Visible:=true;
+  Panel_pergunta_midia.Visible:=false;
+end;
+
 procedure TForm1.Label76MouseLeave(Sender: TObject);
 begin
   Label76.Font.Style := [];
@@ -925,6 +964,7 @@ begin
   Panel_Downloads.Visible:=false;
   Panel_pergunta_midia.Visible:=false;
   Panel_Instalador_token_cartao_1.Visible:=false;
+  Panel_lista_tokens.Visible:=false;
 end;
 
 procedure TForm1.Label7MouseLeave(Sender: TObject);
@@ -1013,6 +1053,7 @@ begin
   Panel_Downloads.Visible:=false;
   Panel_pergunta_midia.Visible:=false;
   Panel_Instalador_token_cartao_1.Visible:=false;
+  Panel_lista_tokens.Visible:=false;
 end;
 
 procedure TForm1.Label8MouseLeave(Sender: TObject);
@@ -1037,6 +1078,17 @@ begin
   Label91.Font.Style := [fsUnderline];
 end;
 
+procedure TForm1.Label94MouseLeave(Sender: TObject);
+begin
+  Label94.Font.Style := [];
+end;
+
+procedure TForm1.Label94MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  Label94.Font.Style := [fsUnderline];
+end;
+
 procedure TForm1.Label9Click(Sender: TObject);
 begin
   Panel_Instalador_token_cartao_1.Visible:=false;
@@ -1046,6 +1098,7 @@ begin
   Panel_pergunta_midia.Visible:=false;
   Panel_Downloads.Visible:=true;
   Panel_Inicial_Inferior.Visible:=false;
+  Panel_lista_tokens.Visible:=false;
 end;
 
 procedure TForm1.Label9MouseLeave(Sender: TObject);

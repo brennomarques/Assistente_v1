@@ -3,8 +3,8 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Assistente - BETA '
-  ClientHeight = 688
-  ClientWidth = 1098
+  ClientHeight = 689
+  ClientWidth = 1099
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,18 +21,20 @@ object Form1: TForm1
   object Panel_Inicial_Inferior: TPanel
     Left = 0
     Top = 113
-    Width = 1098
-    Height = 575
+    Width = 1099
+    Height = 576
     Align = alClient
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1098
+    ExplicitHeight = 575
     object Image1: TImage
       Left = 0
       Top = 0
-      Width = 1098
-      Height = 575
+      Width = 1099
+      Height = 576
       Align = alClient
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000004640000
@@ -1661,7 +1663,7 @@ object Form1: TForm1
     object Label3: TLabel
       Left = 56
       Top = 40
-      Width = 145
+      Width = 134
       Height = 32
       Caption = 'Ol'#225', cliente!'
       Font.Charset = DEFAULT_CHARSET
@@ -1674,7 +1676,7 @@ object Form1: TForm1
     object Label1: TLabel
       Left = 56
       Top = 78
-      Width = 576
+      Width = 565
       Height = 32
       Caption = 'Seja bem-vindo ao Assistente de Instala'#231#227'o de '
       Font.Charset = DEFAULT_CHARSET
@@ -1687,7 +1689,7 @@ object Form1: TForm1
     object Label2: TLabel
       Left = 56
       Top = 116
-      Width = 391
+      Width = 381
       Height = 32
       Caption = 'Driver '#233' Emiss'#227'o de Certificado.'
       Font.Charset = DEFAULT_CHARSET
@@ -1700,8 +1702,8 @@ object Form1: TForm1
     object Label4: TLabel
       Left = 56
       Top = 200
-      Width = 242
-      Height = 23
+      Width = 237
+      Height = 24
       Caption = 'Escolha o que seja realizar:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -1787,8 +1789,8 @@ object Form1: TForm1
     object Label10: TLabel
       Left = 410
       Top = 292
-      Width = 122
-      Height = 18
+      Width = 125
+      Height = 19
       Caption = 'Emitir Certificado'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -1803,8 +1805,8 @@ object Form1: TForm1
     object Label11: TLabel
       Left = 121
       Top = 292
-      Width = 95
-      Height = 18
+      Width = 100
+      Height = 19
       Caption = 'Instalar Driver'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -1820,7 +1822,7 @@ object Form1: TForm1
   object Panel_Inicial_Superior: TPanel
     Left = 0
     Top = 0
-    Width = 1098
+    Width = 1099
     Height = 113
     Align = alTop
     BevelOuter = bvNone
@@ -1833,6 +1835,7 @@ object Form1: TForm1
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1098
     object Image2: TImage
       Left = 56
       Top = 16
@@ -1934,8 +1937,8 @@ object Form1: TForm1
     object Label5: TLabel
       Left = 480
       Top = 40
-      Width = 36
-      Height = 18
+      Width = 38
+      Height = 19
       Caption = 'Inicio'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -1951,8 +1954,8 @@ object Form1: TForm1
     object Label6: TLabel
       Left = 557
       Top = 40
-      Width = 67
-      Height = 18
+      Width = 71
+      Height = 19
       Caption = 'Instalador'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -1968,8 +1971,8 @@ object Form1: TForm1
     object Label7: TLabel
       Left = 672
       Top = 40
-      Width = 122
-      Height = 18
+      Width = 125
+      Height = 19
       Caption = 'Emitir Certificado'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -1985,8 +1988,8 @@ object Form1: TForm1
     object Label8: TLabel
       Left = 848
       Top = 40
-      Width = 55
-      Height = 18
+      Width = 56
+      Height = 19
       Caption = 'Suporte'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -2003,7 +2006,7 @@ object Form1: TForm1
       Left = 944
       Top = 40
       Width = 78
-      Height = 18
+      Height = 19
       Caption = 'Downloads'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -2038,17 +2041,19 @@ object Form1: TForm1
   object Panel_Instalador_token_cartao: TPanel
     Left = 0
     Top = 113
-    Width = 1098
-    Height = 575
+    Width = 1099
+    Height = 576
     Align = alClient
     BevelOuter = bvNone
     Color = 14264576
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 1098
+    ExplicitHeight = 575
     object Label13: TLabel
       Left = 56
       Top = 48
-      Width = 242
+      Width = 229
       Height = 32
       Caption = 'Qual '#233' a sua m'#237'dia?'
       Font.Charset = DEFAULT_CHARSET
@@ -2061,7 +2066,7 @@ object Form1: TForm1
     object Label14: TLabel
       Left = 56
       Top = 108
-      Width = 585
+      Width = 566
       Height = 32
       Caption = 'Escolha a m'#237'dia onde o Certificado ser'#225' emitido:'
       Font.Charset = DEFAULT_CHARSET
@@ -2074,8 +2079,8 @@ object Form1: TForm1
     object Label15: TLabel
       Left = -45
       Top = 286
-      Width = 38
-      Height = 17
+      Width = 40
+      Height = 18
       Caption = 'Token'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2738,8 +2743,8 @@ object Form1: TForm1
     object Label21: TLabel
       Left = 137
       Top = 210
-      Width = 38
-      Height = 17
+      Width = 40
+      Height = 18
       Caption = 'Token'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2795,7 +2800,7 @@ object Form1: TForm1
       Left = 348
       Top = 210
       Width = 72
-      Height = 17
+      Height = 18
       Caption = 'SmartCard'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2843,8 +2848,8 @@ object Form1: TForm1
     object Label17: TLabel
       Left = 121
       Top = 515
-      Width = 36
-      Height = 17
+      Width = 41
+      Height = 18
       Caption = 'Voltar'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2860,17 +2865,19 @@ object Form1: TForm1
   object Panel_Certificado_A1_A3: TPanel
     Left = 0
     Top = 113
-    Width = 1098
-    Height = 575
+    Width = 1099
+    Height = 576
     Align = alClient
     BevelOuter = bvNone
     Color = 14264576
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 1098
+    ExplicitHeight = 575
     object Label18: TLabel
       Left = 56
       Top = 48
-      Width = 277
+      Width = 276
       Height = 32
       Caption = 'Prepare-se para emitir!'
       Font.Charset = DEFAULT_CHARSET
@@ -2883,7 +2890,7 @@ object Form1: TForm1
     object Label19: TLabel
       Left = 56
       Top = 107
-      Width = 520
+      Width = 504
       Height = 32
       Caption = 'Escolha o tipo de Certificado a ser emitido:'
       Font.Charset = DEFAULT_CHARSET
@@ -2977,8 +2984,8 @@ object Form1: TForm1
     object Label20: TLabel
       Left = 147
       Top = 208
-      Width = 20
-      Height = 18
+      Width = 15
+      Height = 19
       Caption = 'A1'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2993,8 +3000,8 @@ object Form1: TForm1
     object Label22: TLabel
       Left = 376
       Top = 208
-      Width = 20
-      Height = 18
+      Width = 18
+      Height = 19
       Caption = 'A3'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -3619,17 +3626,19 @@ object Form1: TForm1
   object Panel_emissor_certificado: TPanel
     Left = 0
     Top = 113
-    Width = 1098
-    Height = 575
+    Width = 1099
+    Height = 576
     Align = alClient
     BevelOuter = bvNone
     Color = 5264916
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 1098
+    ExplicitHeight = 575
     object Label23: TLabel
       Left = 55
       Top = 49
-      Width = 351
+      Width = 358
       Height = 32
       Caption = 'Emitir meu Certificado Digital'
       Font.Charset = DEFAULT_CHARSET
@@ -3642,7 +3651,7 @@ object Form1: TForm1
     object Label24: TLabel
       Left = 56
       Top = 117
-      Width = 368
+      Width = 353
       Height = 16
       Caption = 'Para realizar o processo '#233' necess'#225'rio ter em m'#227'os o seu nome'
       Font.Charset = DEFAULT_CHARSET
@@ -3655,7 +3664,7 @@ object Form1: TForm1
     object Label25: TLabel
       Left = 56
       Top = 137
-      Width = 60
+      Width = 59
       Height = 16
       Caption = 'de usu'#225'rio'
       Font.Charset = DEFAULT_CHARSET
@@ -3668,7 +3677,7 @@ object Form1: TForm1
     object Label26: TLabel
       Left = 121
       Top = 137
-      Width = 216
+      Width = 206
       Height = 16
       Caption = '(dispon'#237'vel no Documento Reservado)'
       Font.Charset = DEFAULT_CHARSET
@@ -3683,7 +3692,7 @@ object Form1: TForm1
     object Label27: TLabel
       Left = 333
       Top = 137
-      Width = 64
+      Width = 61
       Height = 16
       Caption = 'e senha de'
       Font.Charset = DEFAULT_CHARSET
@@ -3696,7 +3705,7 @@ object Form1: TForm1
     object Label28: TLabel
       Left = 54
       Top = 159
-      Width = 136
+      Width = 132
       Height = 16
       Caption = 'emiss'#227'o do Certificado.'
       Font.Charset = DEFAULT_CHARSET
@@ -3709,7 +3718,7 @@ object Form1: TForm1
     object Label29: TLabel
       Left = 54
       Top = 191
-      Width = 358
+      Width = 346
       Height = 16
       Caption = ' Lembre-se, para que o assistente funcione '#233' necess'#225'rio ter o'
       Font.Charset = DEFAULT_CHARSET
@@ -3722,7 +3731,7 @@ object Form1: TForm1
     object Label30: TLabel
       Left = 56
       Top = 211
-      Width = 44
+      Width = 47
       Height = 16
       Caption = 'Java v.8'
       Font.Charset = DEFAULT_CHARSET
@@ -3735,7 +3744,7 @@ object Form1: TForm1
     object Label31: TLabel
       Left = 109
       Top = 209
-      Width = 306
+      Width = 297
       Height = 16
       Caption = 'instalado em seu computador, que est'#225' dispon'#237'vel na'
       Font.Charset = DEFAULT_CHARSET
@@ -3761,7 +3770,7 @@ object Form1: TForm1
     object Label33: TLabel
       Left = 81
       Top = 231
-      Width = 67
+      Width = 68
       Height = 16
       Caption = 'Downloads.'
       Font.Charset = DEFAULT_CHARSET
@@ -3776,7 +3785,7 @@ object Form1: TForm1
     object Label34: TLabel
       Left = 155
       Top = 231
-      Width = 279
+      Width = 259
       Height = 16
       Caption = 'Para saber mais, acesse o Manual de Emiss'#227'o '
       Font.Charset = DEFAULT_CHARSET
@@ -3789,7 +3798,7 @@ object Form1: TForm1
     object Label35: TLabel
       Left = 56
       Top = 250
-      Width = 80
+      Width = 77
       Height = 16
       Caption = 'clicando aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -3838,8 +3847,8 @@ object Form1: TForm1
     object Label36: TLabel
       Left = 66
       Top = 302
-      Width = 223
-      Height = 17
+      Width = 226
+      Height = 18
       Caption = 'Executar o Assistente de Emiss'#227'o'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4872,17 +4881,19 @@ object Form1: TForm1
   object Panel_suporte: TPanel
     Left = 0
     Top = 113
-    Width = 1098
-    Height = 575
+    Width = 1099
+    Height = 576
     Align = alClient
     BevelOuter = bvNone
     Color = 9667712
     ParentBackground = False
     TabOrder = 5
+    ExplicitWidth = 1098
+    ExplicitHeight = 575
     object Label37: TLabel
       Left = 56
       Top = 40
-      Width = 217
+      Width = 205
       Height = 32
       Caption = 'Precisa de ajuda?'
       Font.Charset = DEFAULT_CHARSET
@@ -4895,8 +4906,8 @@ object Form1: TForm1
     object Label38: TLabel
       Left = 56
       Top = 95
-      Width = 223
-      Height = 18
+      Width = 228
+      Height = 19
       Caption = 'Entre em contato conosco* para'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4908,8 +4919,8 @@ object Form1: TForm1
     object Label39: TLabel
       Left = 56
       Top = 115
-      Width = 159
-      Height = 18
+      Width = 154
+      Height = 19
       Caption = 'sanar as suas d'#250'vidas.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4921,8 +4932,8 @@ object Form1: TForm1
     object Label40: TLabel
       Left = 56
       Top = 189
-      Width = 163
-      Height = 18
+      Width = 172
+      Height = 19
       Caption = 'Central de Atendimento'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4934,7 +4945,7 @@ object Form1: TForm1
     object Label41: TLabel
       Left = 56
       Top = 211
-      Width = 85
+      Width = 80
       Height = 16
       Caption = '0800 941 6601'
       Font.Charset = DEFAULT_CHARSET
@@ -4947,8 +4958,8 @@ object Form1: TForm1
     object Label42: TLabel
       Left = 56
       Top = 252
-      Width = 114
-      Height = 18
+      Width = 116
+      Height = 19
       Caption = 'Suporte T'#233'cnico'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4960,7 +4971,7 @@ object Form1: TForm1
     object Label43: TLabel
       Left = 56
       Top = 278
-      Width = 85
+      Width = 83
       Height = 16
       Caption = '0800 941 6602'
       Font.Charset = DEFAULT_CHARSET
@@ -4986,8 +4997,8 @@ object Form1: TForm1
     object Label45: TLabel
       Left = 314
       Top = 189
-      Width = 78
-      Height = 18
+      Width = 81
+      Height = 19
       Caption = 'Televendas'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4999,8 +5010,8 @@ object Form1: TForm1
     object Label46: TLabel
       Left = 310
       Top = 256
-      Width = 165
-      Height = 18
+      Width = 173
+      Height = 19
       Caption = 'Hor'#225'rio de Atendimento'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -5012,7 +5023,7 @@ object Form1: TForm1
     object Label47: TLabel
       Left = 314
       Top = 212
-      Width = 85
+      Width = 82
       Height = 16
       Caption = '0800 941 6603'
       Font.Charset = DEFAULT_CHARSET
@@ -5025,7 +5036,7 @@ object Form1: TForm1
     object Label48: TLabel
       Left = 310
       Top = 278
-      Width = 184
+      Width = 170
       Height = 16
       Caption = 'Segunda '#224' sexta das 8h '#224's 19h'
       Font.Charset = DEFAULT_CHARSET
@@ -5038,7 +5049,7 @@ object Form1: TForm1
     object Label49: TLabel
       Left = 310
       Top = 298
-      Width = 132
+      Width = 120
       Height = 16
       Caption = 'S'#225'bado das 8h '#192's 12h'
       Font.Charset = DEFAULT_CHARSET
@@ -5051,7 +5062,7 @@ object Form1: TForm1
     object Label50: TLabel
       Left = 59
       Top = 359
-      Width = 347
+      Width = 335
       Height = 16
       Caption = 'Se voc'#234' precisa autorizar o acesso ao seu computador para'
       Font.Charset = DEFAULT_CHARSET
@@ -5957,7 +5968,7 @@ object Form1: TForm1
     object Label51: TLabel
       Left = 59
       Top = 379
-      Width = 277
+      Width = 261
       Height = 16
       Caption = 'um de nossos t'#233'cnicos, clique no bot'#227'o abaixo.'
       Font.Charset = DEFAULT_CHARSET
@@ -6022,8 +6033,8 @@ object Form1: TForm1
     object Label52: TLabel
       Left = 59
       Top = 512
-      Width = 340
-      Height = 15
+      Width = 308
+      Height = 14
       Caption = '* A Soluti n'#227'o oferece suporte para emiss'#245'es de notas fiscais.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6035,8 +6046,8 @@ object Form1: TForm1
     object Label53: TLabel
       Left = 59
       Top = 539
-      Width = 708
-      Height = 14
+      Width = 694
+      Height = 13
       Caption = 
         'Sobre o desbloqueio da m'#237'dia: '#201' realizado apenas com a senha PUK' +
         ', caso voc'#234' n'#227'o a tenha em m'#227'os o desbloqueio '#233' feito nas unidad' +
@@ -6051,8 +6062,8 @@ object Form1: TForm1
     object Label54: TLabel
       Left = 100
       Top = 422
-      Width = 112
-      Height = 18
+      Width = 109
+      Height = 19
       Caption = 'Acesso Remoto'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6067,17 +6078,19 @@ object Form1: TForm1
   object Panel_Downloads: TPanel
     Left = 0
     Top = 113
-    Width = 1098
-    Height = 575
+    Width = 1099
+    Height = 576
     Align = alClient
     BevelOuter = bvNone
     Color = 8988182
     ParentBackground = False
     TabOrder = 6
+    ExplicitWidth = 1098
+    ExplicitHeight = 575
     object Label55: TLabel
       Left = 56
       Top = 40
-      Width = 134
+      Width = 135
       Height = 32
       Caption = 'Downloads'
       Font.Charset = DEFAULT_CHARSET
@@ -6942,8 +6955,8 @@ object Form1: TForm1
     object Label56: TLabel
       Left = 56
       Top = 97
-      Width = 127
-      Height = 18
+      Width = 125
+      Height = 19
       Caption = #201' necess'#225'rio ter o'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6955,8 +6968,8 @@ object Form1: TForm1
     object Label57: TLabel
       Left = 185
       Top = 97
-      Width = 56
-      Height = 18
+      Width = 54
+      Height = 19
       Caption = 'Java v.8'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6968,8 +6981,8 @@ object Form1: TForm1
     object Label58: TLabel
       Left = 245
       Top = 97
-      Width = 241
-      Height = 18
+      Width = 246
+      Height = 19
       Caption = 'instalado em seu computador para'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6982,7 +6995,7 @@ object Form1: TForm1
       Left = 56
       Top = 122
       Width = 433
-      Height = 18
+      Height = 19
       Caption = 'a baixa do Certificado Digital. Para fazer o download clique no'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6994,8 +7007,8 @@ object Form1: TForm1
     object Label60: TLabel
       Left = 56
       Top = 147
-      Width = 95
-      Height = 18
+      Width = 96
+      Height = 19
       Caption = 'bot'#227'o abaixo.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7042,8 +7055,8 @@ object Form1: TForm1
     object Label61: TLabel
       Left = 108
       Top = 194
-      Width = 113
-      Height = 18
+      Width = 106
+      Height = 19
       Caption = 'Baixe o Java v.8'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7058,7 +7071,7 @@ object Form1: TForm1
       Left = 56
       Top = 300
       Width = 397
-      Height = 18
+      Height = 19
       Caption = 'O uso do Certificado Digital '#233' indicado para o navegador'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7070,8 +7083,8 @@ object Form1: TForm1
     object Label63: TLabel
       Left = 458
       Top = 300
-      Width = 48
-      Height = 18
+      Width = 50
+      Height = 19
       Caption = 'Mozilla'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7083,8 +7096,8 @@ object Form1: TForm1
     object Label64: TLabel
       Left = 56
       Top = 320
-      Width = 52
-      Height = 18
+      Width = 54
+      Height = 19
       Caption = 'Firefox.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7096,8 +7109,8 @@ object Form1: TForm1
     object Label65: TLabel
       Left = 113
       Top = 320
-      Width = 362
-      Height = 18
+      Width = 369
+      Height = 19
       Caption = 'Para configurar em seu computador, clique no bot'#227'o'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7109,8 +7122,8 @@ object Form1: TForm1
     object Label66: TLabel
       Left = 56
       Top = 341
-      Width = 51
-      Height = 18
+      Width = 50
+      Height = 19
       Caption = 'abaixo.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7157,8 +7170,8 @@ object Form1: TForm1
     object Label67: TLabel
       Left = 69
       Top = 388
-      Width = 190
-      Height = 18
+      Width = 192
+      Height = 19
       Caption = 'Configurar o Mozilla Firefox'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7173,18 +7186,20 @@ object Form1: TForm1
   object Panel_Instalador_token_cartao_1: TPanel
     Left = 0
     Top = 113
-    Width = 1098
-    Height = 575
+    Width = 1099
+    Height = 576
     Align = alClient
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
     TabOrder = 7
+    ExplicitWidth = 1098
+    ExplicitHeight = 575
     object Label68: TLabel
       Left = 56
       Top = 23
-      Width = 373
-      Height = 38
+      Width = 375
+      Height = 40
       Caption = 'Prepare-se para come'#231'ar!'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7196,8 +7211,8 @@ object Form1: TForm1
     object Label69: TLabel
       Left = 56
       Top = 95
-      Width = 422
-      Height = 24
+      Width = 418
+      Height = 25
       Caption = 'Escolha o tipo de m'#237'dia que deseja instalado:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7898,8 +7913,8 @@ object Form1: TForm1
     object Label70: TLabel
       Left = 134
       Top = 177
-      Width = 41
-      Height = 18
+      Width = 42
+      Height = 19
       Caption = 'Token'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7907,14 +7922,15 @@ object Form1: TForm1
       Font.Name = 'Branding Medium'
       Font.Style = []
       ParentFont = False
+      OnClick = Label70Click
       OnMouseMove = Label70MouseMove
       OnMouseLeave = Label70MouseLeave
     end
     object Label71: TLabel
       Left = 337
       Top = 177
-      Width = 77
-      Height = 18
+      Width = 76
+      Height = 19
       Caption = 'SmartCard'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7929,18 +7945,21 @@ object Form1: TForm1
   object Panel_pergunta_midia: TPanel
     Left = 0
     Top = 113
-    Width = 1098
-    Height = 575
+    Width = 1099
+    Height = 576
     Align = alClient
     BevelOuter = bvNone
     Color = 5264915
     ParentBackground = False
     TabOrder = 8
+    ExplicitLeft = 1
+    ExplicitWidth = 760
+    ExplicitHeight = 509
     object Label72: TLabel
       Left = 56
       Top = 29
-      Width = 245
-      Height = 38
+      Width = 242
+      Height = 40
       Caption = 'M'#237'dia Escolhida: '
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7952,8 +7971,8 @@ object Form1: TForm1
     object Label73: TLabel
       Left = 56
       Top = 97
-      Width = 308
-      Height = 23
+      Width = 306
+      Height = 24
       Caption = 'Voc'#234' j'#225' tem o seu driver instalado?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7965,8 +7984,8 @@ object Form1: TForm1
     object Label_Tipo: TLabel
       Left = 304
       Top = 32
-      Width = 11
-      Height = 38
+      Width = 13
+      Height = 40
       Caption = '-'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -8062,6 +8081,7 @@ object Form1: TForm1
         61746500323031392D30392D30335431383A31343A31392B30323A3030DFCBF4
         470000002574455874646174653A6D6F6469667900323031392D30392D303354
         31383A31343A31392B30323A3030AE964CFB0000000049454E44AE426082}
+      OnClick = Image23Click
       OnMouseLeave = Image23MouseLeave
       OnMouseMove = Image23MouseMove
     end
@@ -8101,8 +8121,8 @@ object Form1: TForm1
     object Label74: TLabel
       Left = 130
       Top = 518
-      Width = 40
-      Height = 18
+      Width = 43
+      Height = 19
       Caption = 'Voltar'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -8966,8 +8986,8 @@ object Form1: TForm1
     object Label75: TLabel
       Left = 136
       Top = 178
-      Width = 28
-      Height = 18
+      Width = 26
+      Height = 19
       Caption = 'Sim'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -8981,8 +9001,8 @@ object Form1: TForm1
     object Label76: TLabel
       Left = 360
       Top = 178
-      Width = 29
-      Height = 18
+      Width = 28
+      Height = 19
       Caption = 'N'#227'o'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -8990,6 +9010,7 @@ object Form1: TForm1
       Font.Name = 'Branding Medium'
       Font.Style = []
       ParentFont = False
+      OnClick = Label76Click
       OnMouseMove = Label76MouseMove
       OnMouseLeave = Label76MouseLeave
     end
@@ -8997,15 +9018,17 @@ object Form1: TForm1
   object Panel_lista_tokens: TPanel
     Left = 0
     Top = 113
-    Width = 1098
-    Height = 575
+    Width = 1099
+    Height = 576
     Align = alClient
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
-    ExplicitLeft = -1
-    ExplicitTop = 119
+    ExplicitLeft = 1
+    ExplicitTop = 112
+    ExplicitWidth = 976
+    ExplicitHeight = 154
     object Image26: TImage
       Left = 323
       Top = 34
@@ -9239,7 +9262,7 @@ object Form1: TForm1
     object Label77: TLabel
       Left = 415
       Top = 44
-      Width = 368
+      Width = 345
       Height = 32
       Caption = 'Selecione o seu Token abaixo:'
       Font.Charset = DEFAULT_CHARSET
@@ -9252,7 +9275,7 @@ object Form1: TForm1
     object Label78: TLabel
       Left = 415
       Top = 78
-      Width = 279
+      Width = 266
       Height = 16
       Caption = 'Lembre-se de manter a sua m'#237'dia desconectada'
       Font.Charset = DEFAULT_CHARSET
@@ -9265,7 +9288,7 @@ object Form1: TForm1
     object Label79: TLabel
       Left = 415
       Top = 97
-      Width = 211
+      Width = 202
       Height = 16
       Caption = 'do computador durante a instala'#231#227'o.'
       Font.Charset = DEFAULT_CHARSET
@@ -9278,8 +9301,8 @@ object Form1: TForm1
     object Label80: TLabel
       Left = 415
       Top = 139
-      Width = 210
-      Height = 18
+      Width = 214
+      Height = 19
       Caption = 'N'#227'o estou com a minha m'#237'dia.'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -9294,8 +9317,8 @@ object Form1: TForm1
     object Label81: TLabel
       Left = 228
       Top = 227
-      Width = 170
-      Height = 18
+      Width = 161
+      Height = 19
       Caption = 'Token Safenet PRO 72K'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9307,7 +9330,7 @@ object Form1: TForm1
     object Label82: TLabel
       Left = 228
       Top = 252
-      Width = 121
+      Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9358,8 +9381,8 @@ object Form1: TForm1
     object Label83: TLabel
       Left = 458
       Top = 499
-      Width = 116
-      Height = 18
+      Width = 118
+      Height = 19
       Caption = 'Baixar Instalador'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9373,8 +9396,8 @@ object Form1: TForm1
     object Label84: TLabel
       Left = 228
       Top = 328
-      Width = 139
-      Height = 18
+      Width = 134
+      Height = 19
       Caption = 'Token Safenet 5100'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9386,7 +9409,7 @@ object Form1: TForm1
     object Label85: TLabel
       Left = 228
       Top = 352
-      Width = 121
+      Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9401,8 +9424,8 @@ object Form1: TForm1
     object Label86: TLabel
       Left = 540
       Top = 227
-      Width = 146
-      Height = 18
+      Width = 147
+      Height = 19
       Caption = 'Token Safenet Aladin'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9414,7 +9437,7 @@ object Form1: TForm1
     object Label87: TLabel
       Left = 540
       Top = 252
-      Width = 121
+      Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9429,8 +9452,8 @@ object Form1: TForm1
     object Label88: TLabel
       Left = 541
       Top = 328
-      Width = 138
-      Height = 18
+      Width = 130
+      Height = 19
       Caption = 'Token Safenet 5110'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9442,7 +9465,7 @@ object Form1: TForm1
     object Label89: TLabel
       Left = 541
       Top = 352
-      Width = 121
+      Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9457,8 +9480,8 @@ object Form1: TForm1
     object Label90: TLabel
       Left = 796
       Top = 227
-      Width = 126
-      Height = 18
+      Width = 120
+      Height = 19
       Caption = 'Token Epass2003'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9470,7 +9493,7 @@ object Form1: TForm1
     object Label91: TLabel
       Left = 796
       Top = 252
-      Width = 121
+      Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9838,6 +9861,390 @@ object Form1: TForm1
         2E94B3DCA928A4877FCC9FAFD42F8761D3388A4417918B4D74F832117E9A1141
         AF9DCE8E96BCFE0C5EEB03586CAB4614E5B71E24845624582FA4A311F1013ACE
         88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
+    end
+  end
+  object Panel_lista_cartao: TPanel
+    Left = 8
+    Top = 119
+    Width = 1048
+    Height = 546
+    Color = 6730063
+    ParentBackground = False
+    TabOrder = 10
+    object Image27: TImage
+      Left = 320
+      Top = 34
+      Width = 89
+      Height = 105
+      Picture.Data = {
+        0954506E67496D61676589504E470D0A1A0A0000000D49484452000000570000
+        0068080600000084E46C140000000473424954080808087C08648800001DBE49
+        44415478DAD55D097855D5B55EFB9CCC09819040929B1086308322CE8A5554B0
+        22B64A7DAD5A25A1C3AB5F6D25C1D627DF7BB5A5F5757280843EDFEB734012AC
+        1DFCEA935AA55671C0A1D51645A18844C6E426210C1920E33967EFB7F6DE6B9F
+        7B298424E4DC1B5D2DDEE4DE73F739FB3F6BAFE15F6B9F30180259FD95865142
+        F02B0517670063B94C400EBE9D8DFF460B267218B09151877780802DF8BA1984
+        D80E827D9092C6B6DCF670A86328AE7D20C2E275A28AC58D1780E5DE88E05CCD
+        184C1BEC784288B7719C9719B3362C5D1B7A3D5EF31888C414DCD5B7D6CD1236
+        FB326ADE8D78A6B1313B91803DA8F16B8497FCD8B2274635C4724E039198805B
+        511AFE3C13E2C7B8E4670EC19C7E87D3BAAFAC2AB47908CE7D9C040A6E6569FD
+        39B85E57E3A8170FF5C4509B5F12C2FE5EF9BABCB787EA120201F7819BEB7312
+        93C47D38A1253862DCEC785F220038FEE7C196CED0F7563CC57AE27DFE410321
+        4D004EA31A311D1EEF8BEFAF20C8EF2638EC0BDF7E32B42F9EE71D14B8158BEB
+        97334BFC349E177CBA22401CB159C2DC3BD6E66D8DD7394F1BDC8A92F0C3180A
+        FD6BBC2E3408410D3E009C9D5FBE2EB43F1EE71B30B8FFFB0D91D8D955FF3402
+        7B6DFCE10942C456D65470DED20DAC3BD6671A30B895A5E10DF872F590E012DC
+        B4FF0743B5DB637E96811C5C59127E04BFF1F5A10325C089736BEED275F9AFC5
+        F41CFD3DB0B2A4EE4E4C0A1E1C6A50021321B69555179E11CB53F40BDC95A50D
+        336CE0DB861A8FA08533B668D9DAD033B11ABF4F7057CC1509238AC29B196367
+        0E3518319067CBAA0A3E1FABC1FB041743AEBB3132F8D950A3101311E025BAE9
+        A36E7F7244732C863F25B80F2D69CA7378CF6ED4DAD4A1C62156C2047C6D6975
+        C19A988C7DAA0F3F8D89C24005138BB5E555055F89C5D8BD82FB5F2575D91E63
+        87867AF2319718460DBD82FB69E20D06256877F33B43C95F7A8A79410FDD3BB8
+        25E11D6812A60CF5DCE32182B3B1B1E01B4E0AEEEAD203C502DC8F877AD2F112
+        C1ED0B6341AA9F14DC8AD2FAA50C44E5504F3A5EC28575CDB2EAFC0D418F7B72
+        704BEA7E8FE1D717867AD25DA9EDD092DD04DDC91DE024754372473AA41DCB84
+        ECC3F9819E4708B8A9BCBAE0B7415F7F2F9A5BB78B019B1023CCFA9483A15AD8
+        37651B3486F6CA8983E55920A4BB1178B99EC0656C4156531E8C094F8250C378
+        487493077742014BCBAA0B7E11F43C4E00F7FEC58DE94996772C6E48464967C6
+        51D876D12B7030AF16E76B0373192E590EE05AB24F01037EFCDD63B232A6C591
+        3F32C8AF1F0F45F59320FFD0E955EFF176DD535E55F89F41CFE704702B1737CE
+        4455895B29C4C8A1C25AD83CF74FC02D170195942053DA2A2B8C4A5B517BD57B
+        9CB457989F5522A05E93BA53A1F0403114354E82AC63390339FDDD655505F7C5
+        1CDC5F2CAE3F975BE26FF104365CBC133EB86C238245400A092402CB35885273
+        95B64A3025C0F27FAEFC596BB4341DCC955E1FF4F1F87B46FB70286A9A04E30E
+        4C821427EDD42070B66CE9BA5045CCC1ADBC357C31AEC837E3056C6B4E13BC79
+        FD530A28059C041881020209485BB987C87991F7388F68B750DA6D297099D0F6
+        59DE184B7DCE60746B3E141D9E0805CDE32041249C78115C7CB36C5DE12F077A
+        ED952575157899B3D03FCDC56B7815CDD6AB68BB7FD82BB898995D829959DC7A
+        AF5EBB711DB467B42940143052433D202D15F87F099CAD973F393403BC3415EA
+        733C8E11B84673A5BD96C0E227DA19E20D4BE44990DF5C04635B8A21B73D2AE2
+        10EC96B2EAD093FDBDE6554B9A4730D1F10A9EE9AC7FFE0C4FBD45B0B4CB97AD
+        CD6A3901DCD525E1D9787DEFC603D8FA493BE0FDB92F69102440DC56C0095785
+        475A4B3D6D0A3C4F3B346D36D0D979527BB93617F8BB340FA0BE47A6C4313704
+        5D1E4FC0574FDF343CD6F33C48EF4E87092D536162EB5448E689D72EAD2A7CAE
+        BFD75D59127E06EFD975BD7D8E57F24C7955C1A213C18D6376F6D7EB7E0FCDD9
+        8D783596028A090D880454509420D796FC919B1BE04599044EE0CB2842688D16
+        52B3E5F7A2CC8A1C937B7A990A573B464FDD4C0636028F37E2AE4D3F5EF6407F
+        AE79D592867196E07BFA3A8E336BFC09E0526BD2C158037B34EB30BCF12FBF45
+        3034A812380596310D2E905333B6D552611923CD565011701ED7E199B4CDCC00
+        4C1A2FB8B929A0EDB9FC5D6A37DD14F9FBBE947D2F77589D4F37FF5BD5437D83
+        5B7FBD25C4FFF50D2E5B74D224A2B2B4AE0B2F7E9091F9A965E7B97F858FCF7A
+        0F81E32A3A906072A56952A32C952808D22E03BCFA27CD835CE6CAF6525421F4
+        CD00BA19BEE353DA8B37C5131A7C4F9B1566DE77B8B2C9BB5377BFE4596EA7EB
+        B0BFB5FCC79A7B4F0D6EC35CD4DC57FA06D7BABC970C2DBC193F383B96E0BE76
+        E313D09ED98A1A656B93A02202A1A20686AF9CB4902B3BA9FFA9F73C0D920288
+        B49573727A5C676F0A70195DD0316A35286D864838C7E54AF0D4EBC7A93B3778
+        020D061EE3F4582FB4FD684DAF1ADC7FB39096D58BE6869FC0975B6205ECE150
+        1DBC73CD7A0D8EB4B3428759DCD38ECCE21A0CADBD5CDD00504B199496735AE6
+        DA5683FA2EF3B55B7F473B434B8FCB8DBD05CAEEB499D1C759B02375C7B396BE
+        915C74333C1DBFFBE88AB53B7ABB7E1982016365BD4E5088CAB2EAC2F2DEC0FD
+        2EBEDC1F2B70FF71C9ABB07FCA3FB4A63174282EF7635715AB2A87C6B4633376
+        52028B2AC91C5B1DB730FB3094A6EE80D4A21064245BD0D891001BEA86C153BB
+        32A1BD2B81ECB75E0D168D258792C987BC799E005FC36BD26BFEC8A547946936
+        FE8EC76C6FFDC99AE5BD5DBF0CC52CDEB1F6A4118380F5DC4A5B72D2504C4AAC
+        C3B1974A1E0527B1874818F98E360D6078034F2F5B468E47C7AE4269738625E0
+        BF73DE810268C5346C1840A8F0B8B18FF530F8E97BB9F0C6FE0C908371A5BD1A
+        E8E818DAA4CF9C7BDECEF49DCFA351C07B27988C26F08608CFE1B7B5DFBFB6F1
+        54F358B5B86E89C5ACB938E0385C6F7BF1929F89EE83E8B51281B1DC21FC343B
+        68601B26D4C0962B5FA4F0882900F1C2507B757CAA432A7CCB61DAB1298D9307
+        DB0AF4956736C2AC83EF037475004C9808903EECF813341F06686B85157BCE82
+        970F8C221B2B1709F3E366B50AC8F67A9CBBBB526BFE84D722749C8C1FE14DF4
+        5CEB37EDF73FFAEBC1CCF554659E2719839B830677CB952F40FDB85D91D049D9
+        541D977A423B346E422960BE364BF370715627DC3B03A3C4F07E04B119532E34
+        29A331D3CACCA43B174660DBD4EF875273A1F4F569D0DA61AB7198A3EDB51F0B
+        731DFB4ADDAE49F978038E2F98340BD25838C24233B1A5EDBE35DF8F11B875D7
+        32C69E0D125827B90B36DEF238E2C55536A6ED2979713971AECD808C0A2CCF68
+        1B250178D8AFCF0D436E0AAAD78EED00D923B5F73B240BD4F89A9804D0D30D50
+        3C0920250DA0FD283CBA350BAA768DD337074C1668E908C4D36647FEBC23FDA3
+        F5CC61B6200728D599736B7FDB038FDC11137035C0E103A8BDA3830277FFF4AD
+        B0EDE24DB21143D954302197E21580C2234A6369391B32E7D2B466F841CA5B68
+        06D2513B8F024C99069044A1F8E126CCA5C3274CE7EDC46970D7DFCFC07B13B1
+        E786BF1086C6C4D3ED4CD9FD82271C873BA8DBAE8E40D0A9D6B5AE7C74506DA6
+        7D81FB3304F7EEA0C07D67E17A38985FEB4704D28E2A121C2769A18DE54C1335
+        86A7351A2D8FBF63DC41B83EBD16A0B11EC147F40B8B00B2C825A096C26E3435
+        D367A22DEED4EFA5A4C21B8D2360F92B793A3656E3E0B88CF80957877A12F0FD
+        29B5AF77F0CE16EEE2D95CA6784C0CDBB6B7AE7A6CF9E9CEB54F707FB1B8713C
+        B7BCDD41002BAB0CAFDDF484CF74A9E5A96CAEB67DB294C32535CE4DE2809FB9
+        82081C1BFE70E17E484FE0DA24A4E3B26F69418756AC1D5A5303402B460F93A6
+        1E77CEC7B78E84C7DFCF563C82E5E9985A11F13EE963A99F0F24346D39621DD9
+        CFB96D593D42B13FDC152FB655AC1954E9A73F8D788138B65DB33743CD397FC3
+        A5E829C03467601149A3C96EE56CA40956E6C0D23F9057DF78296DC4D9BA4583
+        7A081D1B8E0513264534F78CE319C07FDF940FAFEF1BA66C33774DB6A6CF0186
+        79C3B18F5AC7EA6A13C2EF629C6B816309CD278B87DA2A1F7921A6E00655F679
+        F386DF41DB8823BE03F384766A60120757911D4A9385D12C4F3BA259193DB06A
+        D681E3C1956200956159CDCEE3ED30CA82A7C6C1B1CE44CADC98CF556816CDF2
+        4D0F46065E4D620DA6C0787617635D34D22EF47CAB73557538A6E04A41ED7D76
+        301B4C5A471D80BF5CF7FBE3CA378A0F20525B07F540F1A766C194660B4D78A7
+        591C9E9D53AB07DB8756CAC69B52383602B4340DD13FA36CD83D0C7EF2662E45
+        212A9E25168D1131AF9A416875A04FB48F6C3F008777A3D6E229D987ED2B1F19
+        B4AFE917B883D5DE0F2F7C03F6CED8A22ABAA0A20311E1678529D5E0AB43155E
+        FCCD52955F9302033C726E0314A306FB26206794360DC614D47C04303C53C7BD
+        2877BC1882F7EA53F5864E04D8F34C1ACD14B0726C8BECBBA6333D77B7BD7FA3
+        CBBBBBF03E541FAB78F4E9B880AB002E09CB3DBDA715F7BDFCE52AE84E3DA62C
+        82E519EE96D82C21F47BC614486E57F201A0AB0F3A5DB5E0868256F8D664EA51
+        9659581D6AB26D690DCE1C8E80D7A80841A6C35B9A52E1DB2F16AA8880C9EC4F
+        460A8EFEAAE4124C7626FF593E1B07D02DBA0FED61E1775A59D72D50B1B6256E
+        E0FEFCAB078725BB3D1F0F34EE6D2ADA0B7FBFEA391D63AA6A2DE5F8C472F94B
+        551852DBF2097279A07444F233694E56CDC6D47764971EF81F98022761E2D085
+        89435222022D0B8F08D2C4A970F31F8AA0F658B20294999417AC4891533A4B13
+        4F8326DF9536A399C873461FBBB27DFEBC207AC706B855AAAE14E3C4B503F98E
+        2C99878B3F521337CB5F85402EF108BE9DA504C2D3848A321DC022651F7C2FC3
+        7661F98CC330270563DDFD7B755C2BA5191DE5C1837828837BC317C2C6A65C4A
+        1418152EA904C4CDF92842E156A40424F4FBE7779D07939C8981B4380D78931F
+        A6C51B312DBEA2BFC7FF79C923E0DA3DC476C933DABAEA6048702E88C09171AD
+        A5ECAD4FACA8CF8134DCF2DB99AE1A79106ECED90F3945399091C8D10CA4A07D
+        B5E1F9BDC3A1A1234DC7C8148548CD67A681C467DCB4FD05612A179A7EB47912
+        7CA17D1124CAF2BBE291C4F707D38933607057961C2AB058F787F8C5617D1D1B
+        9EBC03DEBF7423B15B82086B41591745082E9903F9A96BEBC22401A0F9009D4C
+        70AA77F9CC96342B8A398B6A0EF10491414453FA3786121339618F08754FF8DA
+        ABAE03519ED05D0C17775D74FC24043C5A565D705A5B174E6B63757FCDC3E6CF
+        3E0707C6ECD5F9BC1BD53DA39F84A026264324414BDF140C55A5C1D4C3A2CAEB
+        D1C54BDDB710951848405DEE877B0664EE1127ACAA1104B23F2E91456AD530F8
+        4CD72530C61D73E24404AC595A1DFABA8E33620CAE948AD2F07AFC72AF7BB8BA
+        533BE0E55B1FD71A28749A29276851D94535C998E549B5331D9A59546814FE52
+        567633AAFB461723CDF2D62520F57D4F4703CA96F2289BEDD23921926E0BDF2C
+        E99B91EAA5C3A2F65E5B11E4A18F9557150C686BEE6983BBFA96C3993CA1EB2D
+        1C60C6C93EDF7BE67BF0E1056FF9F69319EAD0D31A24A20015B4CC7579C7564B
+        97636AAB4AEE821C92A7A307B5A45DF2F6660C613A6E64F8C631BC029D81718A
+        693DC36550A5995379DE74EFE0D8539C29706EF739A79C338EF2607955E8BB31
+        0757035C57C86DF61E866727B414CA868F23390D7E07A22C876BC284385C494C
+        4B0BE1D0F297E2EA0AAF4599992948EADA397ED7D5208161CE4CC7A3A7A7A292
+        01932C98044518ED8548A583C23F53D804BCB6AB3AE7418ED78FC28B80EBD106
+        AF8F39B8526457A4C7F8A6E88D801DC35B61D3977E452573AA8F9992B6D05501
+        10919088BB40BD04CC7778867330FD0BEA7857B73C295B0B82FA1D220E502620
+        869350631029A4B8041774C2401188FACCD5FCEE70371316765ED3AFF9E2D78F
+        722FF1EC3B9F18DD675752200FFBF9E72E949AF3DE869A59EF521DC5F62B09A6
+        12C0A8126B1A3E4CF95B6BB4BC24AA0890DD94219A27A7E598108A456E0E3760
+        696DB69469004A3C2862300ECFD38E5210D88C1CE5193D33E1CC9E816C45135B
+        CBAA0AFBDC0B1DD893942A4AC20FA17950CCFD6B37AD83F6616D3E2F20BCC852
+        6494DFAB4BE4CCF7EC3EB8AA9E067E8D4B01291D12906353C8B1483B92A989D1
+        6A501105F59E99762705B45FF530ED4C16D95C1BAE6FFF1CA48BF401CD178758
+        8E49C6CFE302EEE34B444A9B087F7024543F49561C045DB88C5B8DFDF4CB2C54
+        52D7244AA47626FC0C4D9B098F9207264CCB92B1A5A06DB6E969909395A92E98
+        78D756FD0740B4A2B2D81E991CEA155385503C24D7C983F99DFDCE89A2E1ED72
+        2D36F93B8F17D4C61C5C29AB4BEB166E9BB3E98FB553B7835CD06A92C2F0053C
+        2AA4327D5F1015DBEACF5534612A14A4A1A61FCC9800465995CAEC806A624AEB
+        1374A461CEE14AA362EBB8D9B446A9D856470DF2FCE7769D0D539DD3DBCB8873
+        7BBABCBAF086B8802BE5AAB7963732C7CA65C4CFCA860F631A7C464CE83856A5
+        BBA60F979BF625885ACEBA6F4C036551E4414E4D32DAA6E18331CD7AF1A85A99
+        A92A9BD8D8DC1CF39E841DC75C84E96EB2483AEDF97226662F5B5BB825E6E04E
+        3E72ED2599AD59F7E5EC1B73919A2450EC6A3A153D7D4605AA4700AAD45737D1
+        79A630E9270E94CE7A10C537188ED7A3567F5336D7A9B4CACA4CF8659CA5E934
+        67E08F2FEDEFD89EB19895CD19ECB47F53565570D23258A0E04E6BB9F62E9CC8
+        67C66C9B7E45424F52BA02573923BDE509355A797DB5AF4C309F1133ED9DCA84
+        F81180ED9B10155D50CA0BFEE7C26FCB5736D8B1887503BF7589FB3656678682
+        887943375E8CC08E77C70D6ACE2A47E4F6C43BD6E59DD0F91818B8D39BE666F0
+        948CB59E0BC923EBF3C70F6FCA9D013EC5474EC5B589CB05BD41C474379A564F
+        3F840272381A1CBDBF2152503436DA700EB2B9C3238727C338A17A7D23AB0678
+        842513E45093BC14F8527B309B44F1D43FC2D4F807B103B775C1028FDBDF945A
+        64772427147E34E56AA9ACCA8140A46BC6440D86B4163EA8A661C3747D471A43
+        7CB286481AA0AAB1E7F14893334516BA16277C8ED8E39A09033FFCD3A6646277
+        315CD07D7E50E06E417067C70CDC69CD0B7FE409365B465E1288BC8F275E90DA
+        3E6CB42A42D226110FEDA4A946804BA19AE10D3CA2182979102252B88CD0849C
+        2A14B64FD200EDF6D114A5ADFB741DCADEC8E498F8566D9F02CDCC5DDE7919E4
+        7BC1ED21B6ECA4823BD68CAA0F1CDCA96D57663391F618A6B596ECC294E5D361
+        077342D90DA173B82147A8C3DB73A8EACB8D83B2A29C8C66C5B439000A9B981F
+        B6314A7BB95F1A12BADF81EB4AAECAE654A99C93766B73C1885A6464A3339C0C
+        B8AE23E88732B1DBCAAA420F070EEE94A30BAEB078C2520C876C4F1A3B19D0BB
+        096CEC8E9957E3641322BC02655D519BF5FCF4951AF3383935C564D13E338B47
+        3940D7305B14A699CAAE5F9B03DFCE4776FD30228F74AC3BD399016775CF0A18
+        5CF14B4C89BF1938B8D38E5EF32D70ECAB3519C270FE9EDC82C447ED1B77766A
+        DBB0316A49022D6FDA9513C99CACC87626D3BC61780157D056543A468A631AA6
+        99DFCC775CD31EA5C09A4123AA97D26E46767941C7D590C547040B2DC09B6877
+        2F091CDCA92DD7FCC412F64C3407DC75A571B584CC5D339AB37346D58DBDC84F
+        6BFDC60F41D50943BE50133411DE603654BBCCE7165491C890358E204ED86C4A
+        E111BE418ACBFCEC4F6D5D754CB4C120C71B055777CC0F145802F728829B193C
+        B8CDD73C2844C244B47F96E2031C269BC1998C1C8A764C47D39090A826ACCC6D
+        6407BAB1B5A65143F588C9CD25D4F2A9C815535353D91EB59D7A9A7B605194A5
+        82DBE76C41EF6313CC67E0CC16D5B39CB36046CFF4C0C19592E8A48F8C7E005C
+        20E04E3EB4F0C716B7CF54948AA3ECAA40F360A1768AD1B56366A6B68E182F88
+        DBD568682023B610226194CB682F84A56DAE4C3B3C62B300E818D08C1658FE66
+        14B3B94410D9CE8D03246D379C85ACEEA68A9498806B0B31E5DBD5853B8305F7
+        C8C2DB31FBBA0A6D1D1A5C44544EC8515A26D28E8E1839BA6EDC1C9F91F274BA
+        ABF63950694617232D1F54937CA053D4E01AAEC04F0220AADF8BB643C90FE931
+        0110152B2BB341F6BBC02980B95D97C5045829E87C2F5E565DF89740C19DD2B8
+        E00ABC6FE5E8D7115C3409AE74E13875890BB7D9B89A69F32D3721454F58A79E
+        1E854D9118D7F2EB5CD16680534D4CD01655D36A6F4878BFD21095B12989A239
+        B5F3B4E182CEF360A2531C337071469F5D5A15FA73A0E086EA3F9736CC16BF56
+        1376C0ECF7929BBD04776CC8AB2F9A91DE3A6282E91A177EA625287E350FA520
+        CD568F0088AADE528825BDBE2ED5E85510DDF0210C39634A427E7CACED798297
+        1869F88891E0E92E595655E03FAB22B00C6D72C3E75730879FADEA589E340D16
+        E73D7A09A71DCB1C915737F6333EA325D3382A6BCBE5CAA9E8785C599D6CAED9
+        C923A89260F1A8102CBAF10398BFC742A5CACCF259377923C6F78C3FB1E12360
+        41A73EABBC3AF783C0C19D70F09AC95697FD73E65AB66E27526199857690C910
+        AD68CFF47909DD09697EF5356AD35DA4EB9034D94F2ECC1E320ACBFCEFB14819
+        48DE04109176FFE81D9882FA7CF1BB9776CE8131DE98C14DB20F418796830EED
+        70E0E04A99BAEF7377A0C6CD97D182C799227485C3189A0A3EF260FEA411AD39
+        D3B42DD43DB8FE736BFCCE19EA2303208766385DADC1B21BDDA2DA97C0E1798F
+        6E1155D99CE22E7472C2A23B71F05F8A930237742C8A29B0389D6365D505C7B5
+        78050A6E61ED45A9C93DB92B2C0FA62320AA96A896A82B98ED26258EDD33FDB3
+        3A94920D1F0991E71E70025B02E79A0611115589B074778E4FD280CF57F8BB72
+        04F7EB628C9A467461124D564FDF0D1F83C656C05FCAAB0B8EFB9B4481977972
+        1BAF4ACF6C495D212C6B326A16460FB67EDA04460FA3EBC79F9DDE3EACC02FE9
+        A8254EBB6A54B7A31DD1664A04D41311E4EF8EDE61A9F75170B2B7A61B27AAB7
+        21EA8922862C9AD7310F466366165B74D9CAB2EAD077620AAE9189DB16DD8973
+        BC1C3D3AC7CC89C9BDE3692D99D9794D63E7441A3E226198E0C6DBD300D224B8
+        52F52DBF92ACBB69286CA38C4F730BF4AC05C323189206DFC87247C2C28E05B1
+        05560AB71696ADCB7F3E2EE04A297E7FD14CD4D8452E67E733077554D8AC68FF
+        E4CB927A92330DCFA0086D69285D16E11244247BD3CE8BD3432AA8C5DEB43909
+        88F0BEA4B9AA6D49C5CEDA4E5FD87D01143BB17F72620FB733EE5A97D71E3770
+        8DE4BEB96874B2CD2E455B3837AB25F792914746CF52F545619E0CC268697BE4
+        BC746A6B34DBA72CCDC382687F9A6F7B4D4B29E8F4D938C874371DAEEFB86E70
+        17DF1F11F0243AB3131EFE111770A325EF959BC65DFBD60DEF8647D6667524B5
+        539F81D1527A748AAB2B0A9C9B720DF8E570EDC058A49F8C1E28647A19FCD23A
+        1E37BF737EEC6D2D40AF8F888D3BB8522A4AC35FC3133F7A28B311EA7276436D
+        CE1EE8967F87C8D4BB54694C6BB44776953909BAD184C2B2C8336C22CFC2893C
+        6CC882F3DBF5DE86988B803D4BAB43C5276B8C1E12707FF74561D7A78577463F
+        46B661442DD466ED8686CC3AE8C1C09851E6A537A898240274439EEAAFD5AD50
+        CCE71DC02F665E766C2E14BA05F199CC291E0F3B24E04A5955D2B0C062FCF97F
+        7EDFC320B97EF83ED89FB9071A326A69BF8206535067A49FD652198811C99EDB
+        9D07E7759C07993CF3742E69E0B80AD1C03B45F19D4F8DE9EC155CF53827CE4B
+        CD9B18FFAFEFAD452748A92C09FF0AAFE0CBBD7DDE637743DD30043A631F34A6
+        D41FB711DB2FC1A3843A0A6052C7644529C65370EDDCBAB42AF4AB5E3FEFED21
+        64B1FEA34052567EAD76A4E55ADB11A2DCFE1C7F28E520B4D96DD06977409297
+        0C295E2A64F764431A4FEBCFD70315BCC19B30233B2539CC2A4BEA5E05C64E38
+        08F5A2A5BCAA302BD61759716B783EB3E1CF831F29AED2613B6C7A5F7F309455
+        96867BDDFE53565510179BBC7A717DB9B0C4AA78233408F92A62F3785F07B18A
+        D2BA96DEFEAC6CBCC095525152B78E31766B3C113A3D110F975515DED69F2359
+        AFCF8215B00F438C71F1BCECBE9E4B3BD422E8B9B8FD3D1E1D5ADD591667CF44
+        FFA179B4B7AD1897CF8D47C4102D2BBE2892B252EB9FC36B9917CFF3F6471093
+        A7302AB979207FC38742B1E611005D08329FCB2D8680A6BE2A9F45381493507B
+        2B78FDB39F2880053C80ABF8AE817E6DC892885389CCE01A52EBEFC1D5730F53
+        CD094323EAD1998C2D39552C7B2AF944826BA4A2B4FE524C19E4330FF286E0F4
+        9B31BDBE7D6975FE3BA73BC0271A5C29FA2FAEB8E5E84CEEEA2DAA0956C42E0E
+        EC9E655505837A48A6944F3CB84624C88996FB0DBCE0EFE26587823F83A8C1BC
+        FFDEB275A175418DF8A901375A569784E7712616836037300603DBFA182D028E
+        2102EB05B087CBAB429B82BECE4F25B8466464715484AFC4657C0E13EA19EBB3
+        714645BD7F43EC4220E523BCDE4333B331BA3B2616F2A906F7932EFF0F48DE9A
+        A59685D5F20000000049454E44AE426082}
+    end
+    object Label92: TLabel
+      Left = 415
+      Top = 44
+      Width = 401
+      Height = 32
+      Caption = 'Selecione o seu Smartcard abaixo:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Branding Medium'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label93: TLabel
+      Left = 415
+      Top = 75
+      Width = 266
+      Height = 16
+      Caption = 'Lembre-se de manter a sua m'#237'dia desconectada'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Branding Light'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label94: TLabel
+      Left = 415
+      Top = 139
+      Width = 209
+      Height = 19
+      Caption = 'N'#227'o estou com a minha m'#237'dia.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 5264916
+      Font.Height = -16
+      Font.Name = 'Branding Light'
+      Font.Style = []
+      ParentFont = False
+      OnMouseMove = Label94MouseMove
+      OnMouseLeave = Label94MouseLeave
+    end
+    object Label95: TLabel
+      Left = 415
+      Top = 97
+      Width = 202
+      Height = 16
+      Caption = 'do computador durante a instala'#231#227'o.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Branding Light'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Image29: TImage
+      Left = 398
+      Top = 486
+      Width = 246
+      Height = 47
+      Picture.Data = {
+        0954506E67496D61676589504E470D0A1A0A0000000D49484452000000F30000
+        002C0806000000B09E8EC50000000473424954080808087C086488000002F449
+        44415478DAEDDD4D48945114C6F1739C010D2421280A8C1609B58BA450DF2294
+        8C6A5512D9369D576B979B68DDAEA0856D821C47DB0559E4A24506651F342304
+        7D408B04836A1311448290C1E8E98EA1596AEACCE2E2E5FFDB38EFD7F0CCE2E1
+        708599ABB28CDE6CAAC6545B4DAC5945B69AE96655A95CEE3900C533930951FB
+        2CA21FDDC19049E2DE99A8E7DDFF9ED1A52E645EB4EF98CE6BB7BBE588EF0F06
+        A0C0EE9725AD2BB5B76F74B1AB0BCAEC26F18669958B627AD64DE0A4EFF800FE
+        70133BEF7A794DCD2EC651E6DBFC6B7F95393D12579BD94D15DDEF3B3480A599
+        C81357EA531DF5BD5F66CFCD95B97FF87445BE3CF148541B7C0705B012F63C39
+        39D5DCD67463B2703457E69E5CEAB69BC8277CC703B00A66031D51A6B5F072A6
+        CC6E9D7CDC54EFFACE0560F5DCFAB9C5AD9F0767CAECA6F26B379577F90E05A0
+        0866AFDC74AED5F4485CEF56D339DF79009440A541DD54BEE4A6F205DF590014
+        CFC42E6B3A1BDF77AD3EEC3B0C8012980C29EB6560ED7393F98D2B73FC5D45AA
+        7C8701503C1319D7742E36DF4100948E320381A0CC402028331008CA0C048232
+        0381A0CC402028331008CA0C0482320381A0CC402028331008CA0C0482320381
+        A0CC402028331008CA0C0482320381D09E6C3CA92AE5BE830028DEEF9F0DCAA6
+        3E88EA36DF610094C06CB4F0EB9C232A5AE73B0B80E2CDEC0AD9934D75ABEA39
+        DF610014CFCCAEB23D0D10004BE8EED98DE39EB1C13AB0369949B633EADD3753
+        E6742E6E747F867D8702B07A6565D351AAAE2FF767B375D6CEC09A53582B7746
+        99AEC2EBB9320F0F3726C7CAB73F14D503BE03025801B3A7353FDF1F6C6A7A9C
+        2F1CEAFC6B7D2FDB36E627136F556593EF9C0096E6D6C99F9215537BDA6BFBBF
+        CE9ED37F6FBA953DB9EEBBAEBFA3A2477D0706B00893A12A196F698D067ECC3F
+        AD8BDE6BA2995CEAD8B4E87937A523DFD901FCFEAFB5ABEC958E86F4A0EBE582
+        EF54E8726F703DDBB95365AAC5DD79C81D568BE916F74695BE3F18103257DC09
+        51FBEC2AFA514D1EB8EEDE8DA3CCD8FF9EF905756B0949E666F13E0000000049
+        454E44AE426082}
+    end
+    object Label97: TLabel
+      Left = 458
+      Top = 499
+      Width = 118
+      Height = 19
+      Caption = 'Baixar Instalador'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Branding Medium'
+      Font.Style = []
+      ParentFont = False
+      OnMouseMove = Label83MouseMove
+      OnMouseLeave = Label83MouseLeave
+    end
+    object PngSpeedButton1: TPngSpeedButton
+      Left = 220
+      Top = 339
+      Width = 43
+      Height = 44
+    end
+    object PngSpeedButton2: TPngSpeedButton
+      Left = 171
+      Top = 335
+      Width = 43
+      Height = 44
+    end
+    object PngSpeedButton3: TPngSpeedButton
+      Left = 337
+      Top = 296
+      Width = 43
+      Height = 44
+    end
+    object PngSpeedButton4: TPngSpeedButton
+      Left = 319
+      Top = 224
+      Width = 43
+      Height = 44
     end
   end
 end
