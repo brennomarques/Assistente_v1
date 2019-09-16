@@ -155,6 +155,24 @@ type
     Label93: TLabel;
     Label94: TLabel;
     Label95: TLabel;
+    Image29: TImage;
+    Png_morpho_false: TPngSpeedButton;
+    Png_morpho_true: TPngSpeedButton;
+    Png_wp_false: TPngSpeedButton;
+    Png_wp_true: TPngSpeedButton;
+    Png_idemia_false: TPngSpeedButton;
+    Png_idemia_true: TPngSpeedButton;
+    Png_gmailto_false: TPngSpeedButton;
+    Png_gmailto_true: TPngSpeedButton;
+    Label96: TLabel;
+    Label98: TLabel;
+    Label99: TLabel;
+    Label100: TLabel;
+    Label101: TLabel;
+    Label102: TLabel;
+    Label103: TLabel;
+    Label104: TLabel;
+    Label105: TLabel;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -343,6 +361,29 @@ type
     procedure Label94MouseLeave(Sender: TObject);
     procedure Label94MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
+    procedure Label98MouseLeave(Sender: TObject);
+    procedure Label100MouseLeave(Sender: TObject);
+    procedure Label102MouseLeave(Sender: TObject);
+    procedure Label104MouseLeave(Sender: TObject);
+    procedure Label98MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Label100MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Label102MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Label104MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Label105MouseLeave(Sender: TObject);
+    procedure Label105MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Png_wp_falseClick(Sender: TObject);
+    procedure Png_wp_trueClick(Sender: TObject);
+    procedure Png_morpho_falseClick(Sender: TObject);
+    procedure Png_morpho_trueClick(Sender: TObject);
+    procedure Png_idemia_falseClick(Sender: TObject);
+    procedure Png_idemia_trueClick(Sender: TObject);
+    procedure Png_gmailto_falseClick(Sender: TObject);
+    procedure Png_gmailto_trueClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -616,6 +657,50 @@ procedure TForm1.Image8MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label22.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Label100MouseLeave(Sender: TObject);
+begin
+  Label100.Font.Style := [];
+end;
+
+procedure TForm1.Label100MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  Label100.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Label102MouseLeave(Sender: TObject);
+begin
+  Label102.Font.Style := [];
+end;
+
+procedure TForm1.Label102MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  Label102.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Label104MouseLeave(Sender: TObject);
+begin
+  Label104.Font.Style := [];
+end;
+
+procedure TForm1.Label104MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  Label104.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Label105MouseLeave(Sender: TObject);
+begin
+  Label105.Font.Style := [];
+end;
+
+procedure TForm1.Label105MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  Label105.Font.Style := [fsUnderline];
 end;
 
 procedure TForm1.Label10Click(Sender: TObject);
@@ -1083,6 +1168,17 @@ begin
   Label94.Font.Style := [fsUnderline];
 end;
 
+procedure TForm1.Label98MouseLeave(Sender: TObject);
+begin
+  Label98.Font.Style := [];
+end;
+
+procedure TForm1.Label98MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  Label98.Font.Style := [fsUnderline];
+end;
+
 procedure TForm1.Label9Click(Sender: TObject);
 begin
   Panel_Instalador_token_cartao_1.Visible:=false;
@@ -1104,6 +1200,89 @@ procedure TForm1.Label9MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
  Label9.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Png_gmailto_falseClick(Sender: TObject);
+begin
+  if Png_gmailto_false.Visible = true then
+  begin
+    Png_gmailto_false.Visible:=false;
+    Png_gmailto_true.Visible:=true;
+
+    Png_wp_true.Visible:=false;
+    Png_wp_false.Visible:=true;
+
+    Png_morpho_false.Visible:=true;
+    Png_morpho_true.Visible:=false;
+
+    Png_idemia_false.Visible:=true;
+    Png_idemia_true.Visible:=false;
+
+  end
+end;
+
+procedure TForm1.Png_gmailto_trueClick(Sender: TObject);
+begin
+  if Png_gmailto_true.Visible = true then
+  begin
+    Png_gmailto_false.Visible:=true;
+    Png_gmailto_true.Visible:=false;
+  end
+end;
+
+procedure TForm1.Png_idemia_falseClick(Sender: TObject);
+begin
+  if Png_idemia_false.Visible = true then
+  begin
+    Png_idemia_false.Visible:=false;
+    Png_idemia_true.Visible:=true;
+
+    Png_wp_true.Visible:=false;
+    Png_wp_false.Visible:=true;
+
+    Png_morpho_false.Visible:=true;
+    Png_morpho_true.Visible:=false;
+
+    Png_gmailto_false.Visible:=true;
+    Png_gmailto_true.Visible:=false;
+
+  end
+end;
+
+procedure TForm1.Png_idemia_trueClick(Sender: TObject);
+begin
+  if Png_idemia_true.Visible = true then
+  begin
+    Png_idemia_false.Visible:=true;
+    Png_idemia_true.Visible:=false;
+  end
+end;
+
+procedure TForm1.Png_morpho_falseClick(Sender: TObject);
+begin
+  if Png_morpho_false.Visible = true then
+  begin
+    Png_morpho_false.Visible:=false;
+    Png_morpho_true.Visible:=true;
+
+    Png_wp_true.Visible:=false;
+    Png_wp_false.Visible:=true;
+
+    Png_idemia_false.Visible:=true;
+    Png_idemia_true.Visible:=false;
+
+    Png_gmailto_false.Visible:=true;
+    Png_gmailto_true.Visible:=false;
+  end
+end;
+
+procedure TForm1.Png_morpho_trueClick(Sender: TObject);
+begin
+  if Png_morpho_true.Visible = true then
+  begin
+    Png_morpho_false.Visible:=true;
+    Png_morpho_true.Visible:=false;
+  end
 end;
 
 procedure TForm1.Png_token_aladin_falseClick(Sender: TObject);
@@ -1248,6 +1427,37 @@ begin
   begin
     Png_token_safenet_5110_true.Visible:=false;
     Png_token_safenet_5110_false.Visible:=true;
+  end
+end;
+
+procedure TForm1.Png_wp_falseClick(Sender: TObject);
+begin
+  if Png_wp_false.Visible = true then
+  begin
+    Png_wp_true.Visible:=true;
+    Png_wp_false.Visible:=false;
+
+    Png_morpho_false.Visible:=true;
+    Png_morpho_true.Visible:=false;
+
+    Png_idemia_false.Visible:=true;
+    Png_idemia_true.Visible:=false;
+
+    Png_gmailto_false.Visible:=true;
+    Png_gmailto_true.Visible:=false;
+
+
+
+
+  end
+end;
+
+procedure TForm1.Png_wp_trueClick(Sender: TObject);
+begin
+  if Png_wp_true.Visible = true then
+  begin
+    Png_wp_true.Visible:=false;
+    Png_wp_false.Visible:=true;
   end
 end;
 

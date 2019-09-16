@@ -1661,7 +1661,7 @@ object Form1: TForm1
     object Label3: TLabel
       Left = 56
       Top = 40
-      Width = 145
+      Width = 134
       Height = 32
       Caption = 'Ol'#225', cliente!'
       Font.Charset = DEFAULT_CHARSET
@@ -1674,7 +1674,7 @@ object Form1: TForm1
     object Label1: TLabel
       Left = 56
       Top = 78
-      Width = 576
+      Width = 565
       Height = 32
       Caption = 'Seja bem-vindo ao Assistente de Instala'#231#227'o de '
       Font.Charset = DEFAULT_CHARSET
@@ -1687,7 +1687,7 @@ object Form1: TForm1
     object Label2: TLabel
       Left = 56
       Top = 116
-      Width = 391
+      Width = 381
       Height = 32
       Caption = 'Driver '#233' Emiss'#227'o de Certificado.'
       Font.Charset = DEFAULT_CHARSET
@@ -1700,8 +1700,8 @@ object Form1: TForm1
     object Label4: TLabel
       Left = 56
       Top = 200
-      Width = 242
-      Height = 23
+      Width = 237
+      Height = 24
       Caption = 'Escolha o que seja realizar:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -1787,8 +1787,8 @@ object Form1: TForm1
     object Label10: TLabel
       Left = 410
       Top = 292
-      Width = 122
-      Height = 18
+      Width = 125
+      Height = 19
       Caption = 'Emitir Certificado'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -1803,8 +1803,8 @@ object Form1: TForm1
     object Label11: TLabel
       Left = 121
       Top = 292
-      Width = 95
-      Height = 18
+      Width = 100
+      Height = 19
       Caption = 'Instalar Driver'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -1935,7 +1935,7 @@ object Form1: TForm1
       Left = 480
       Top = 40
       Width = 38
-      Height = 18
+      Height = 19
       Caption = 'Inicio'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -1952,7 +1952,7 @@ object Form1: TForm1
       Left = 557
       Top = 40
       Width = 71
-      Height = 18
+      Height = 19
       Caption = 'Instalador'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -1969,7 +1969,7 @@ object Form1: TForm1
       Left = 672
       Top = 40
       Width = 125
-      Height = 18
+      Height = 19
       Caption = 'Emitir Certificado'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -1986,7 +1986,7 @@ object Form1: TForm1
       Left = 848
       Top = 40
       Width = 56
-      Height = 18
+      Height = 19
       Caption = 'Suporte'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -2003,7 +2003,7 @@ object Form1: TForm1
       Left = 944
       Top = 40
       Width = 78
-      Height = 18
+      Height = 19
       Caption = 'Downloads'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -2036,11 +2036,10 @@ object Form1: TForm1
     end
   end
   object Panel_Instalador_token_cartao: TPanel
-    Left = 0
-    Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Left = 377
+    Top = 200
+    Width = 551
+    Height = 406
     BevelOuter = bvNone
     Color = 14264576
     ParentBackground = False
@@ -2048,7 +2047,7 @@ object Form1: TForm1
     object Label13: TLabel
       Left = 56
       Top = 48
-      Width = 242
+      Width = 229
       Height = 32
       Caption = 'Qual '#233' a sua m'#237'dia?'
       Font.Charset = DEFAULT_CHARSET
@@ -2061,7 +2060,7 @@ object Form1: TForm1
     object Label14: TLabel
       Left = 56
       Top = 108
-      Width = 585
+      Width = 566
       Height = 32
       Caption = 'Escolha a m'#237'dia onde o Certificado ser'#225' emitido:'
       Font.Charset = DEFAULT_CHARSET
@@ -2074,8 +2073,8 @@ object Form1: TForm1
     object Label15: TLabel
       Left = -45
       Top = 286
-      Width = 38
-      Height = 17
+      Width = 40
+      Height = 18
       Caption = 'Token'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2738,8 +2737,8 @@ object Form1: TForm1
     object Label21: TLabel
       Left = 137
       Top = 210
-      Width = 38
-      Height = 17
+      Width = 40
+      Height = 18
       Caption = 'Token'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2795,7 +2794,7 @@ object Form1: TForm1
       Left = 348
       Top = 210
       Width = 72
-      Height = 17
+      Height = 18
       Caption = 'SmartCard'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2843,8 +2842,8 @@ object Form1: TForm1
     object Label17: TLabel
       Left = 121
       Top = 515
-      Width = 36
-      Height = 17
+      Width = 41
+      Height = 18
       Caption = 'Voltar'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2858,11 +2857,10 @@ object Form1: TForm1
     end
   end
   object Panel_Certificado_A1_A3: TPanel
-    Left = 0
-    Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Left = 1
+    Top = 112
+    Width = 429
+    Height = 294
     BevelOuter = bvNone
     Color = 14264576
     ParentBackground = False
@@ -2870,7 +2868,7 @@ object Form1: TForm1
     object Label18: TLabel
       Left = 56
       Top = 48
-      Width = 277
+      Width = 276
       Height = 32
       Caption = 'Prepare-se para emitir!'
       Font.Charset = DEFAULT_CHARSET
@@ -2883,7 +2881,7 @@ object Form1: TForm1
     object Label19: TLabel
       Left = 56
       Top = 107
-      Width = 520
+      Width = 504
       Height = 32
       Caption = 'Escolha o tipo de Certificado a ser emitido:'
       Font.Charset = DEFAULT_CHARSET
@@ -2977,8 +2975,8 @@ object Form1: TForm1
     object Label20: TLabel
       Left = 147
       Top = 208
-      Width = 20
-      Height = 18
+      Width = 15
+      Height = 19
       Caption = 'A1'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2993,8 +2991,8 @@ object Form1: TForm1
     object Label22: TLabel
       Left = 376
       Top = 208
-      Width = 20
-      Height = 18
+      Width = 18
+      Height = 19
       Caption = 'A3'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -3619,9 +3617,8 @@ object Form1: TForm1
   object Panel_emissor_certificado: TPanel
     Left = 0
     Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Width = 508
+    Height = 416
     BevelOuter = bvNone
     Color = 5264916
     ParentBackground = False
@@ -3629,7 +3626,7 @@ object Form1: TForm1
     object Label23: TLabel
       Left = 55
       Top = 49
-      Width = 351
+      Width = 358
       Height = 32
       Caption = 'Emitir meu Certificado Digital'
       Font.Charset = DEFAULT_CHARSET
@@ -3642,7 +3639,7 @@ object Form1: TForm1
     object Label24: TLabel
       Left = 56
       Top = 117
-      Width = 368
+      Width = 353
       Height = 16
       Caption = 'Para realizar o processo '#233' necess'#225'rio ter em m'#227'os o seu nome'
       Font.Charset = DEFAULT_CHARSET
@@ -3655,7 +3652,7 @@ object Form1: TForm1
     object Label25: TLabel
       Left = 56
       Top = 137
-      Width = 60
+      Width = 59
       Height = 16
       Caption = 'de usu'#225'rio'
       Font.Charset = DEFAULT_CHARSET
@@ -3668,7 +3665,7 @@ object Form1: TForm1
     object Label26: TLabel
       Left = 121
       Top = 137
-      Width = 216
+      Width = 206
       Height = 16
       Caption = '(dispon'#237'vel no Documento Reservado)'
       Font.Charset = DEFAULT_CHARSET
@@ -3683,7 +3680,7 @@ object Form1: TForm1
     object Label27: TLabel
       Left = 333
       Top = 137
-      Width = 64
+      Width = 61
       Height = 16
       Caption = 'e senha de'
       Font.Charset = DEFAULT_CHARSET
@@ -3696,7 +3693,7 @@ object Form1: TForm1
     object Label28: TLabel
       Left = 54
       Top = 159
-      Width = 136
+      Width = 132
       Height = 16
       Caption = 'emiss'#227'o do Certificado.'
       Font.Charset = DEFAULT_CHARSET
@@ -3709,7 +3706,7 @@ object Form1: TForm1
     object Label29: TLabel
       Left = 54
       Top = 191
-      Width = 358
+      Width = 346
       Height = 16
       Caption = ' Lembre-se, para que o assistente funcione '#233' necess'#225'rio ter o'
       Font.Charset = DEFAULT_CHARSET
@@ -3722,7 +3719,7 @@ object Form1: TForm1
     object Label30: TLabel
       Left = 56
       Top = 211
-      Width = 44
+      Width = 47
       Height = 16
       Caption = 'Java v.8'
       Font.Charset = DEFAULT_CHARSET
@@ -3735,7 +3732,7 @@ object Form1: TForm1
     object Label31: TLabel
       Left = 109
       Top = 209
-      Width = 306
+      Width = 297
       Height = 16
       Caption = 'instalado em seu computador, que est'#225' dispon'#237'vel na'
       Font.Charset = DEFAULT_CHARSET
@@ -3761,7 +3758,7 @@ object Form1: TForm1
     object Label33: TLabel
       Left = 81
       Top = 231
-      Width = 67
+      Width = 68
       Height = 16
       Caption = 'Downloads.'
       Font.Charset = DEFAULT_CHARSET
@@ -3776,7 +3773,7 @@ object Form1: TForm1
     object Label34: TLabel
       Left = 155
       Top = 231
-      Width = 279
+      Width = 259
       Height = 16
       Caption = 'Para saber mais, acesse o Manual de Emiss'#227'o '
       Font.Charset = DEFAULT_CHARSET
@@ -3789,7 +3786,7 @@ object Form1: TForm1
     object Label35: TLabel
       Left = 56
       Top = 250
-      Width = 80
+      Width = 77
       Height = 16
       Caption = 'clicando aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -3838,8 +3835,8 @@ object Form1: TForm1
     object Label36: TLabel
       Left = 66
       Top = 302
-      Width = 223
-      Height = 17
+      Width = 226
+      Height = 18
       Caption = 'Executar o Assistente de Emiss'#227'o'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -3852,7 +3849,7 @@ object Form1: TForm1
     end
     object Image13: TImage
       Left = 557
-      Top = 107
+      Top = 111
       Width = 465
       Height = 422
       Picture.Data = {
@@ -4872,9 +4869,8 @@ object Form1: TForm1
   object Panel_suporte: TPanel
     Left = 0
     Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Width = 475
+    Height = 351
     BevelOuter = bvNone
     Color = 9667712
     ParentBackground = False
@@ -4882,7 +4878,7 @@ object Form1: TForm1
     object Label37: TLabel
       Left = 56
       Top = 40
-      Width = 217
+      Width = 205
       Height = 32
       Caption = 'Precisa de ajuda?'
       Font.Charset = DEFAULT_CHARSET
@@ -4895,8 +4891,8 @@ object Form1: TForm1
     object Label38: TLabel
       Left = 56
       Top = 95
-      Width = 223
-      Height = 18
+      Width = 228
+      Height = 19
       Caption = 'Entre em contato conosco* para'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4908,8 +4904,8 @@ object Form1: TForm1
     object Label39: TLabel
       Left = 56
       Top = 115
-      Width = 159
-      Height = 18
+      Width = 154
+      Height = 19
       Caption = 'sanar as suas d'#250'vidas.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4921,8 +4917,8 @@ object Form1: TForm1
     object Label40: TLabel
       Left = 56
       Top = 189
-      Width = 163
-      Height = 18
+      Width = 172
+      Height = 19
       Caption = 'Central de Atendimento'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4934,7 +4930,7 @@ object Form1: TForm1
     object Label41: TLabel
       Left = 56
       Top = 211
-      Width = 85
+      Width = 80
       Height = 16
       Caption = '0800 941 6601'
       Font.Charset = DEFAULT_CHARSET
@@ -4947,8 +4943,8 @@ object Form1: TForm1
     object Label42: TLabel
       Left = 56
       Top = 252
-      Width = 114
-      Height = 18
+      Width = 116
+      Height = 19
       Caption = 'Suporte T'#233'cnico'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4960,7 +4956,7 @@ object Form1: TForm1
     object Label43: TLabel
       Left = 56
       Top = 278
-      Width = 85
+      Width = 83
       Height = 16
       Caption = '0800 941 6602'
       Font.Charset = DEFAULT_CHARSET
@@ -4986,8 +4982,8 @@ object Form1: TForm1
     object Label45: TLabel
       Left = 314
       Top = 189
-      Width = 78
-      Height = 18
+      Width = 81
+      Height = 19
       Caption = 'Televendas'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4999,8 +4995,8 @@ object Form1: TForm1
     object Label46: TLabel
       Left = 310
       Top = 256
-      Width = 165
-      Height = 18
+      Width = 173
+      Height = 19
       Caption = 'Hor'#225'rio de Atendimento'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -5012,7 +5008,7 @@ object Form1: TForm1
     object Label47: TLabel
       Left = 314
       Top = 212
-      Width = 85
+      Width = 82
       Height = 16
       Caption = '0800 941 6603'
       Font.Charset = DEFAULT_CHARSET
@@ -5025,7 +5021,7 @@ object Form1: TForm1
     object Label48: TLabel
       Left = 310
       Top = 278
-      Width = 184
+      Width = 170
       Height = 16
       Caption = 'Segunda '#224' sexta das 8h '#224's 19h'
       Font.Charset = DEFAULT_CHARSET
@@ -5038,7 +5034,7 @@ object Form1: TForm1
     object Label49: TLabel
       Left = 310
       Top = 298
-      Width = 132
+      Width = 120
       Height = 16
       Caption = 'S'#225'bado das 8h '#192's 12h'
       Font.Charset = DEFAULT_CHARSET
@@ -5051,7 +5047,7 @@ object Form1: TForm1
     object Label50: TLabel
       Left = 59
       Top = 359
-      Width = 347
+      Width = 335
       Height = 16
       Caption = 'Se voc'#234' precisa autorizar o acesso ao seu computador para'
       Font.Charset = DEFAULT_CHARSET
@@ -5957,7 +5953,7 @@ object Form1: TForm1
     object Label51: TLabel
       Left = 59
       Top = 379
-      Width = 277
+      Width = 261
       Height = 16
       Caption = 'um de nossos t'#233'cnicos, clique no bot'#227'o abaixo.'
       Font.Charset = DEFAULT_CHARSET
@@ -6022,8 +6018,8 @@ object Form1: TForm1
     object Label52: TLabel
       Left = 59
       Top = 512
-      Width = 340
-      Height = 15
+      Width = 308
+      Height = 14
       Caption = '* A Soluti n'#227'o oferece suporte para emiss'#245'es de notas fiscais.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6035,8 +6031,8 @@ object Form1: TForm1
     object Label53: TLabel
       Left = 59
       Top = 539
-      Width = 708
-      Height = 14
+      Width = 694
+      Height = 13
       Caption = 
         'Sobre o desbloqueio da m'#237'dia: '#201' realizado apenas com a senha PUK' +
         ', caso voc'#234' n'#227'o a tenha em m'#227'os o desbloqueio '#233' feito nas unidad' +
@@ -6051,8 +6047,8 @@ object Form1: TForm1
     object Label54: TLabel
       Left = 100
       Top = 422
-      Width = 112
-      Height = 18
+      Width = 109
+      Height = 19
       Caption = 'Acesso Remoto'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6065,11 +6061,10 @@ object Form1: TForm1
     end
   end
   object Panel_Downloads: TPanel
-    Left = 0
-    Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Left = 1
+    Top = 112
+    Width = 448
+    Height = 347
     BevelOuter = bvNone
     Color = 8988182
     ParentBackground = False
@@ -6077,7 +6072,7 @@ object Form1: TForm1
     object Label55: TLabel
       Left = 56
       Top = 40
-      Width = 134
+      Width = 135
       Height = 32
       Caption = 'Downloads'
       Font.Charset = DEFAULT_CHARSET
@@ -6942,8 +6937,8 @@ object Form1: TForm1
     object Label56: TLabel
       Left = 56
       Top = 97
-      Width = 127
-      Height = 18
+      Width = 125
+      Height = 19
       Caption = #201' necess'#225'rio ter o'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6955,8 +6950,8 @@ object Form1: TForm1
     object Label57: TLabel
       Left = 185
       Top = 97
-      Width = 56
-      Height = 18
+      Width = 54
+      Height = 19
       Caption = 'Java v.8'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6968,8 +6963,8 @@ object Form1: TForm1
     object Label58: TLabel
       Left = 245
       Top = 97
-      Width = 241
-      Height = 18
+      Width = 246
+      Height = 19
       Caption = 'instalado em seu computador para'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6982,7 +6977,7 @@ object Form1: TForm1
       Left = 56
       Top = 122
       Width = 433
-      Height = 18
+      Height = 19
       Caption = 'a baixa do Certificado Digital. Para fazer o download clique no'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6994,8 +6989,8 @@ object Form1: TForm1
     object Label60: TLabel
       Left = 56
       Top = 147
-      Width = 95
-      Height = 18
+      Width = 96
+      Height = 19
       Caption = 'bot'#227'o abaixo.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7042,8 +7037,8 @@ object Form1: TForm1
     object Label61: TLabel
       Left = 108
       Top = 194
-      Width = 113
-      Height = 18
+      Width = 106
+      Height = 19
       Caption = 'Baixe o Java v.8'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7058,7 +7053,7 @@ object Form1: TForm1
       Left = 56
       Top = 300
       Width = 397
-      Height = 18
+      Height = 19
       Caption = 'O uso do Certificado Digital '#233' indicado para o navegador'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7070,8 +7065,8 @@ object Form1: TForm1
     object Label63: TLabel
       Left = 458
       Top = 300
-      Width = 48
-      Height = 18
+      Width = 50
+      Height = 19
       Caption = 'Mozilla'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7083,8 +7078,8 @@ object Form1: TForm1
     object Label64: TLabel
       Left = 56
       Top = 320
-      Width = 52
-      Height = 18
+      Width = 54
+      Height = 19
       Caption = 'Firefox.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7096,8 +7091,8 @@ object Form1: TForm1
     object Label65: TLabel
       Left = 113
       Top = 320
-      Width = 362
-      Height = 18
+      Width = 369
+      Height = 19
       Caption = 'Para configurar em seu computador, clique no bot'#227'o'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7109,8 +7104,8 @@ object Form1: TForm1
     object Label66: TLabel
       Left = 56
       Top = 341
-      Width = 51
-      Height = 18
+      Width = 50
+      Height = 19
       Caption = 'abaixo.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7157,8 +7152,8 @@ object Form1: TForm1
     object Label67: TLabel
       Left = 69
       Top = 388
-      Width = 190
-      Height = 18
+      Width = 192
+      Height = 19
       Caption = 'Configurar o Mozilla Firefox'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7173,9 +7168,8 @@ object Form1: TForm1
   object Panel_Instalador_token_cartao_1: TPanel
     Left = 0
     Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Width = 427
+    Height = 313
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
@@ -7183,8 +7177,8 @@ object Form1: TForm1
     object Label68: TLabel
       Left = 56
       Top = 23
-      Width = 373
-      Height = 38
+      Width = 375
+      Height = 40
       Caption = 'Prepare-se para come'#231'ar!'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7196,8 +7190,8 @@ object Form1: TForm1
     object Label69: TLabel
       Left = 56
       Top = 95
-      Width = 422
-      Height = 24
+      Width = 418
+      Height = 25
       Caption = 'Escolha o tipo de m'#237'dia que deseja instalado:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7892,14 +7886,15 @@ object Form1: TForm1
         3A3030C66273D20000002574455874646174653A6D6F6469667900323031392D
         30382D33305431393A31353A35322B30323A3030B73FCB6E0000000049454E44
         AE426082}
+      OnClick = Image21Click
       OnMouseLeave = Image21MouseLeave
       OnMouseMove = Image21MouseMove
     end
     object Label70: TLabel
       Left = 134
       Top = 177
-      Width = 41
-      Height = 18
+      Width = 42
+      Height = 19
       Caption = 'Token'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7914,8 +7909,8 @@ object Form1: TForm1
     object Label71: TLabel
       Left = 337
       Top = 177
-      Width = 77
-      Height = 18
+      Width = 76
+      Height = 19
       Caption = 'SmartCard'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7923,16 +7918,16 @@ object Form1: TForm1
       Font.Name = 'Branding Medium'
       Font.Style = []
       ParentFont = False
+      OnClick = Label71Click
       OnMouseMove = Label71MouseMove
       OnMouseLeave = Label71MouseLeave
     end
   end
   object Panel_pergunta_midia: TPanel
-    Left = 0
-    Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Left = 48
+    Top = 361
+    Width = 389
+    Height = 250
     BevelOuter = bvNone
     Color = 5264915
     ParentBackground = False
@@ -7940,8 +7935,8 @@ object Form1: TForm1
     object Label72: TLabel
       Left = 56
       Top = 29
-      Width = 245
-      Height = 38
+      Width = 242
+      Height = 40
       Caption = 'M'#237'dia Escolhida: '
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7953,8 +7948,8 @@ object Form1: TForm1
     object Label73: TLabel
       Left = 56
       Top = 97
-      Width = 308
-      Height = 23
+      Width = 306
+      Height = 24
       Caption = 'Voc'#234' j'#225' tem o seu driver instalado?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7966,8 +7961,8 @@ object Form1: TForm1
     object Label_Tipo: TLabel
       Left = 304
       Top = 32
-      Width = 11
-      Height = 38
+      Width = 13
+      Height = 40
       Caption = '-'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -8103,8 +8098,8 @@ object Form1: TForm1
     object Label74: TLabel
       Left = 130
       Top = 518
-      Width = 40
-      Height = 18
+      Width = 43
+      Height = 19
       Caption = 'Voltar'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -8968,8 +8963,8 @@ object Form1: TForm1
     object Label75: TLabel
       Left = 136
       Top = 178
-      Width = 28
-      Height = 18
+      Width = 26
+      Height = 19
       Caption = 'Sim'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -8983,8 +8978,8 @@ object Form1: TForm1
     object Label76: TLabel
       Left = 360
       Top = 178
-      Width = 29
-      Height = 18
+      Width = 28
+      Height = 19
       Caption = 'N'#227'o'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9000,9 +8995,8 @@ object Form1: TForm1
   object Panel_lista_tokens: TPanel
     Left = 0
     Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Width = 221
+    Height = 141
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
@@ -9240,7 +9234,7 @@ object Form1: TForm1
     object Label77: TLabel
       Left = 415
       Top = 44
-      Width = 368
+      Width = 345
       Height = 32
       Caption = 'Selecione o seu Token abaixo:'
       Font.Charset = DEFAULT_CHARSET
@@ -9253,7 +9247,7 @@ object Form1: TForm1
     object Label78: TLabel
       Left = 415
       Top = 78
-      Width = 279
+      Width = 266
       Height = 16
       Caption = 'Lembre-se de manter a sua m'#237'dia desconectada'
       Font.Charset = DEFAULT_CHARSET
@@ -9266,7 +9260,7 @@ object Form1: TForm1
     object Label79: TLabel
       Left = 415
       Top = 97
-      Width = 211
+      Width = 202
       Height = 16
       Caption = 'do computador durante a instala'#231#227'o.'
       Font.Charset = DEFAULT_CHARSET
@@ -9279,8 +9273,8 @@ object Form1: TForm1
     object Label80: TLabel
       Left = 415
       Top = 139
-      Width = 210
-      Height = 18
+      Width = 214
+      Height = 19
       Caption = 'N'#227'o estou com a minha m'#237'dia.'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -9295,8 +9289,8 @@ object Form1: TForm1
     object Label81: TLabel
       Left = 228
       Top = 227
-      Width = 170
-      Height = 18
+      Width = 161
+      Height = 19
       Caption = 'Token Safenet PRO 72K'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9308,7 +9302,7 @@ object Form1: TForm1
     object Label82: TLabel
       Left = 228
       Top = 252
-      Width = 121
+      Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9359,8 +9353,8 @@ object Form1: TForm1
     object Label83: TLabel
       Left = 466
       Top = 498
-      Width = 116
-      Height = 18
+      Width = 118
+      Height = 19
       Caption = 'Baixar Instalador'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9374,8 +9368,8 @@ object Form1: TForm1
     object Label84: TLabel
       Left = 228
       Top = 328
-      Width = 139
-      Height = 18
+      Width = 134
+      Height = 19
       Caption = 'Token Safenet 5100'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9387,7 +9381,7 @@ object Form1: TForm1
     object Label85: TLabel
       Left = 228
       Top = 352
-      Width = 121
+      Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9402,8 +9396,8 @@ object Form1: TForm1
     object Label86: TLabel
       Left = 540
       Top = 227
-      Width = 146
-      Height = 18
+      Width = 147
+      Height = 19
       Caption = 'Token Safenet Aladin'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9415,7 +9409,7 @@ object Form1: TForm1
     object Label87: TLabel
       Left = 540
       Top = 252
-      Width = 121
+      Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9430,8 +9424,8 @@ object Form1: TForm1
     object Label88: TLabel
       Left = 541
       Top = 328
-      Width = 138
-      Height = 18
+      Width = 130
+      Height = 19
       Caption = 'Token Safenet 5110'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9443,7 +9437,7 @@ object Form1: TForm1
     object Label89: TLabel
       Left = 541
       Top = 352
-      Width = 121
+      Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9458,8 +9452,8 @@ object Form1: TForm1
     object Label90: TLabel
       Left = 796
       Top = 227
-      Width = 126
-      Height = 18
+      Width = 120
+      Height = 19
       Caption = 'Token Epass2003'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9471,7 +9465,7 @@ object Form1: TForm1
     object Label91: TLabel
       Left = 796
       Top = 252
-      Width = 121
+      Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9842,10 +9836,10 @@ object Form1: TForm1
     end
   end
   object Panel_lista_cartao: TPanel
-    Left = -1
+    Left = 1
     Top = 113
-    Width = 1073
-    Height = 553
+    Width = 190
+    Height = 116
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
@@ -10100,7 +10094,7 @@ object Form1: TForm1
     object Label92: TLabel
       Left = 415
       Top = 44
-      Width = 421
+      Width = 401
       Height = 32
       Caption = 'Selecione o seu Smartcard abaixo:'
       Font.Charset = DEFAULT_CHARSET
@@ -10113,7 +10107,7 @@ object Form1: TForm1
     object Label93: TLabel
       Left = 415
       Top = 75
-      Width = 279
+      Width = 266
       Height = 16
       Caption = 'Lembre-se de manter a sua m'#237'dia desconectada'
       Font.Charset = DEFAULT_CHARSET
@@ -10126,8 +10120,8 @@ object Form1: TForm1
     object Label94: TLabel
       Left = 415
       Top = 139
-      Width = 210
-      Height = 18
+      Width = 209
+      Height = 19
       Caption = 'N'#227'o estou com a minha m'#237'dia.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = 5264916
@@ -10141,7 +10135,7 @@ object Form1: TForm1
     object Label95: TLabel
       Left = 415
       Top = 97
-      Width = 211
+      Width = 202
       Height = 16
       Caption = 'do computador durante a instala'#231#227'o.'
       Font.Charset = DEFAULT_CHARSET
@@ -10152,8 +10146,8 @@ object Form1: TForm1
       ParentFont = False
     end
     object Image29: TImage
-      Left = 387
-      Top = 480
+      Left = 394
+      Top = 486
       Width = 246
       Height = 47
       Picture.Data = {
@@ -10186,11 +10180,12 @@ object Form1: TForm1
         454E44AE426082}
     end
     object Png_morpho_false: TPngSpeedButton
-      Left = 257
-      Top = 338
+      Left = 237
+      Top = 330
       Width = 54
       Height = 52
       Flat = True
+      OnClick = Png_morpho_falseClick
       PngImage.Data = {
         89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
         530000000473424954080808087C086488000002934944415478DAED9A4D6813
@@ -10217,11 +10212,13 @@ object Form1: TForm1
         88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
     end
     object Png_morpho_true: TPngSpeedButton
-      Left = 317
-      Top = 338
+      Left = 237
+      Top = 330
       Width = 54
       Height = 52
       Flat = True
+      Visible = False
+      OnClick = Png_morpho_trueClick
       PngImage.Data = {
         89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
         530000000473424954080808087C086488000003474944415478DAEDDA4D4814
@@ -10254,11 +10251,12 @@ object Form1: TForm1
         0049020F0000000049454E44AE426082}
     end
     object Png_wp_false: TPngSpeedButton
-      Left = 257
+      Left = 237
       Top = 222
       Width = 54
       Height = 52
       Flat = True
+      OnClick = Png_wp_falseClick
       PngImage.Data = {
         89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
         530000000473424954080808087C086488000002934944415478DAED9A4D6813
@@ -10285,11 +10283,13 @@ object Form1: TForm1
         88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
     end
     object Png_wp_true: TPngSpeedButton
-      Left = 317
+      Left = 237
       Top = 222
       Width = 54
       Height = 52
       Flat = True
+      Visible = False
+      OnClick = Png_wp_trueClick
       PngImage.Data = {
         89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
         530000000473424954080808087C086488000003474944415478DAEDDA4D4814
@@ -10322,11 +10322,12 @@ object Form1: TForm1
         0049020F0000000049454E44AE426082}
     end
     object Png_idemia_false: TPngSpeedButton
-      Left = 672
+      Left = 632
       Top = 222
       Width = 54
       Height = 52
       Flat = True
+      OnClick = Png_idemia_falseClick
       PngImage.Data = {
         89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
         530000000473424954080808087C086488000002934944415478DAED9A4D6813
@@ -10353,11 +10354,13 @@ object Form1: TForm1
         88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
     end
     object Png_idemia_true: TPngSpeedButton
-      Left = 732
+      Left = 632
       Top = 222
       Width = 54
       Height = 52
       Flat = True
+      Visible = False
+      OnClick = Png_idemia_trueClick
       PngImage.Data = {
         89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
         530000000473424954080808087C086488000003474944415478DAEDDA4D4814
@@ -10390,11 +10393,12 @@ object Form1: TForm1
         0049020F0000000049454E44AE426082}
     end
     object Png_gmailto_false: TPngSpeedButton
-      Left = 672
-      Top = 338
+      Left = 632
+      Top = 330
       Width = 54
       Height = 52
       Flat = True
+      OnClick = Png_gmailto_falseClick
       PngImage.Data = {
         89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
         530000000473424954080808087C086488000002934944415478DAED9A4D6813
@@ -10421,11 +10425,13 @@ object Form1: TForm1
         88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
     end
     object Png_gmailto_true: TPngSpeedButton
-      Left = 732
-      Top = 338
+      Left = 632
+      Top = 330
       Width = 54
       Height = 52
       Flat = True
+      Visible = False
+      OnClick = Png_gmailto_trueClick
       PngImage.Data = {
         89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
         530000000473424954080808087C086488000003474944415478DAEDDA4D4814
@@ -10458,10 +10464,10 @@ object Form1: TForm1
         0049020F0000000049454E44AE426082}
     end
     object Label96: TLabel
-      Left = 377
-      Top = 228
+      Left = 298
+      Top = 227
       Width = 219
-      Height = 18
+      Height = 19
       Caption = 'OT. 10 046WK000383227 - 08/15'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -10471,8 +10477,8 @@ object Form1: TForm1
       ParentFont = False
     end
     object Label98: TLabel
-      Left = 377
-      Top = 251
+      Left = 298
+      Top = 250
       Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
@@ -10486,10 +10492,10 @@ object Form1: TForm1
       OnMouseLeave = Label98MouseLeave
     end
     object Label99: TLabel
-      Left = 377
-      Top = 344
+      Left = 297
+      Top = 335
       Width = 105
-      Height = 18
+      Height = 19
       Caption = 'MORPHO 10/14'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -10499,8 +10505,8 @@ object Form1: TForm1
       ParentFont = False
     end
     object Label100: TLabel
-      Left = 375
-      Top = 366
+      Left = 297
+      Top = 357
       Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
@@ -10514,10 +10520,10 @@ object Form1: TForm1
       OnMouseLeave = Label100MouseLeave
     end
     object Label101: TLabel
-      Left = 792
-      Top = 228
+      Left = 692
+      Top = 227
       Width = 188
-      Height = 18
+      Height = 19
       Caption = 'IDEMIA 2 - 1882054A1 06/18'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -10527,7 +10533,7 @@ object Form1: TForm1
       ParentFont = False
     end
     object Label102: TLabel
-      Left = 792
+      Left = 692
       Top = 250
       Width = 117
       Height = 16
@@ -10542,10 +10548,10 @@ object Form1: TForm1
       OnMouseLeave = Label102MouseLeave
     end
     object Label103: TLabel
-      Left = 792
-      Top = 341
+      Left = 692
+      Top = 335
       Width = 113
-      Height = 18
+      Height = 19
       Caption = 'Cart'#227'o Gemalto'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -10555,8 +10561,8 @@ object Form1: TForm1
       ParentFont = False
     end
     object Label104: TLabel
-      Left = 792
-      Top = 363
+      Left = 692
+      Top = 357
       Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
@@ -10570,10 +10576,10 @@ object Form1: TForm1
       OnMouseLeave = Label104MouseLeave
     end
     object Label105: TLabel
-      Left = 450
-      Top = 492
+      Left = 465
+      Top = 500
       Width = 118
-      Height = 18
+      Height = 19
       Caption = 'Baixar Instalador'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite

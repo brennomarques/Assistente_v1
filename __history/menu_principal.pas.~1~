@@ -156,15 +156,14 @@ type
     Label94: TLabel;
     Label95: TLabel;
     Image29: TImage;
-    Label97: TLabel;
-    PngSpeedButton1: TPngSpeedButton;
-    PngSpeedButton2: TPngSpeedButton;
-    PngSpeedButton3: TPngSpeedButton;
-    Png_cartao_gemailto: TPngSpeedButton;
-    PngSpeedButton5: TPngSpeedButton;
-    PngSpeedButton6: TPngSpeedButton;
-    PngSpeedButton7: TPngSpeedButton;
-    PngSpeedButton8: TPngSpeedButton;
+    Png_morpho_false: TPngSpeedButton;
+    Png_morpho_true: TPngSpeedButton;
+    Png_wp_false: TPngSpeedButton;
+    Png_wp_true: TPngSpeedButton;
+    Png_idemia_false: TPngSpeedButton;
+    Png_idemia_true: TPngSpeedButton;
+    Png_gmailto_false: TPngSpeedButton;
+    Png_gmailto_true: TPngSpeedButton;
     Label96: TLabel;
     Label98: TLabel;
     Label99: TLabel;
@@ -173,6 +172,7 @@ type
     Label102: TLabel;
     Label103: TLabel;
     Label104: TLabel;
+    Label105: TLabel;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -372,6 +372,9 @@ type
     procedure Label102MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
     procedure Label104MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Label105MouseLeave(Sender: TObject);
+    procedure Label105MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
   private
     { Private declarations }
@@ -679,6 +682,17 @@ procedure TForm1.Label104MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label104.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Label105MouseLeave(Sender: TObject);
+begin
+  Label105.Font.Style := [];
+end;
+
+procedure TForm1.Label105MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  Label105.Font.Style := [fsUnderline];
 end;
 
 procedure TForm1.Label10Click(Sender: TObject);

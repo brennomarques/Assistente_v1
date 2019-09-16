@@ -28,8 +28,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1098
-    ExplicitHeight = 575
     object Image1: TImage
       Left = 0
       Top = 0
@@ -1663,7 +1661,7 @@ object Form1: TForm1
     object Label3: TLabel
       Left = 56
       Top = 40
-      Width = 134
+      Width = 145
       Height = 32
       Caption = 'Ol'#225', cliente!'
       Font.Charset = DEFAULT_CHARSET
@@ -1676,7 +1674,7 @@ object Form1: TForm1
     object Label1: TLabel
       Left = 56
       Top = 78
-      Width = 565
+      Width = 576
       Height = 32
       Caption = 'Seja bem-vindo ao Assistente de Instala'#231#227'o de '
       Font.Charset = DEFAULT_CHARSET
@@ -1689,7 +1687,7 @@ object Form1: TForm1
     object Label2: TLabel
       Left = 56
       Top = 116
-      Width = 381
+      Width = 391
       Height = 32
       Caption = 'Driver '#233' Emiss'#227'o de Certificado.'
       Font.Charset = DEFAULT_CHARSET
@@ -1702,8 +1700,8 @@ object Form1: TForm1
     object Label4: TLabel
       Left = 56
       Top = 200
-      Width = 237
-      Height = 24
+      Width = 242
+      Height = 23
       Caption = 'Escolha o que seja realizar:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -1789,8 +1787,8 @@ object Form1: TForm1
     object Label10: TLabel
       Left = 410
       Top = 292
-      Width = 125
-      Height = 19
+      Width = 122
+      Height = 18
       Caption = 'Emitir Certificado'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -1805,8 +1803,8 @@ object Form1: TForm1
     object Label11: TLabel
       Left = 121
       Top = 292
-      Width = 100
-      Height = 19
+      Width = 95
+      Height = 18
       Caption = 'Instalar Driver'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -1835,7 +1833,6 @@ object Form1: TForm1
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1098
     object Image2: TImage
       Left = 56
       Top = 16
@@ -1938,7 +1935,7 @@ object Form1: TForm1
       Left = 480
       Top = 40
       Width = 38
-      Height = 19
+      Height = 18
       Caption = 'Inicio'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -1955,7 +1952,7 @@ object Form1: TForm1
       Left = 557
       Top = 40
       Width = 71
-      Height = 19
+      Height = 18
       Caption = 'Instalador'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -1972,7 +1969,7 @@ object Form1: TForm1
       Left = 672
       Top = 40
       Width = 125
-      Height = 19
+      Height = 18
       Caption = 'Emitir Certificado'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -1989,7 +1986,7 @@ object Form1: TForm1
       Left = 848
       Top = 40
       Width = 56
-      Height = 19
+      Height = 18
       Caption = 'Suporte'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -2006,7 +2003,7 @@ object Form1: TForm1
       Left = 944
       Top = 40
       Width = 78
-      Height = 19
+      Height = 18
       Caption = 'Downloads'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -2048,12 +2045,10 @@ object Form1: TForm1
     Color = 14264576
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 1098
-    ExplicitHeight = 575
     object Label13: TLabel
       Left = 56
       Top = 48
-      Width = 229
+      Width = 242
       Height = 32
       Caption = 'Qual '#233' a sua m'#237'dia?'
       Font.Charset = DEFAULT_CHARSET
@@ -2066,7 +2061,7 @@ object Form1: TForm1
     object Label14: TLabel
       Left = 56
       Top = 108
-      Width = 566
+      Width = 585
       Height = 32
       Caption = 'Escolha a m'#237'dia onde o Certificado ser'#225' emitido:'
       Font.Charset = DEFAULT_CHARSET
@@ -2079,8 +2074,8 @@ object Form1: TForm1
     object Label15: TLabel
       Left = -45
       Top = 286
-      Width = 40
-      Height = 18
+      Width = 38
+      Height = 17
       Caption = 'Token'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2743,8 +2738,8 @@ object Form1: TForm1
     object Label21: TLabel
       Left = 137
       Top = 210
-      Width = 40
-      Height = 18
+      Width = 38
+      Height = 17
       Caption = 'Token'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2800,7 +2795,7 @@ object Form1: TForm1
       Left = 348
       Top = 210
       Width = 72
-      Height = 18
+      Height = 17
       Caption = 'SmartCard'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2848,8 +2843,8 @@ object Form1: TForm1
     object Label17: TLabel
       Left = 121
       Top = 515
-      Width = 41
-      Height = 18
+      Width = 36
+      Height = 17
       Caption = 'Voltar'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -2872,12 +2867,10 @@ object Form1: TForm1
     Color = 14264576
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 1098
-    ExplicitHeight = 575
     object Label18: TLabel
       Left = 56
       Top = 48
-      Width = 276
+      Width = 277
       Height = 32
       Caption = 'Prepare-se para emitir!'
       Font.Charset = DEFAULT_CHARSET
@@ -2890,7 +2883,7 @@ object Form1: TForm1
     object Label19: TLabel
       Left = 56
       Top = 107
-      Width = 504
+      Width = 520
       Height = 32
       Caption = 'Escolha o tipo de Certificado a ser emitido:'
       Font.Charset = DEFAULT_CHARSET
@@ -2984,8 +2977,8 @@ object Form1: TForm1
     object Label20: TLabel
       Left = 147
       Top = 208
-      Width = 15
-      Height = 19
+      Width = 20
+      Height = 18
       Caption = 'A1'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -3000,8 +2993,8 @@ object Form1: TForm1
     object Label22: TLabel
       Left = 376
       Top = 208
-      Width = 18
-      Height = 19
+      Width = 20
+      Height = 18
       Caption = 'A3'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -3633,12 +3626,10 @@ object Form1: TForm1
     Color = 5264916
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 1098
-    ExplicitHeight = 575
     object Label23: TLabel
       Left = 55
       Top = 49
-      Width = 358
+      Width = 351
       Height = 32
       Caption = 'Emitir meu Certificado Digital'
       Font.Charset = DEFAULT_CHARSET
@@ -3651,7 +3642,7 @@ object Form1: TForm1
     object Label24: TLabel
       Left = 56
       Top = 117
-      Width = 353
+      Width = 368
       Height = 16
       Caption = 'Para realizar o processo '#233' necess'#225'rio ter em m'#227'os o seu nome'
       Font.Charset = DEFAULT_CHARSET
@@ -3664,7 +3655,7 @@ object Form1: TForm1
     object Label25: TLabel
       Left = 56
       Top = 137
-      Width = 59
+      Width = 60
       Height = 16
       Caption = 'de usu'#225'rio'
       Font.Charset = DEFAULT_CHARSET
@@ -3677,7 +3668,7 @@ object Form1: TForm1
     object Label26: TLabel
       Left = 121
       Top = 137
-      Width = 206
+      Width = 216
       Height = 16
       Caption = '(dispon'#237'vel no Documento Reservado)'
       Font.Charset = DEFAULT_CHARSET
@@ -3692,7 +3683,7 @@ object Form1: TForm1
     object Label27: TLabel
       Left = 333
       Top = 137
-      Width = 61
+      Width = 64
       Height = 16
       Caption = 'e senha de'
       Font.Charset = DEFAULT_CHARSET
@@ -3705,7 +3696,7 @@ object Form1: TForm1
     object Label28: TLabel
       Left = 54
       Top = 159
-      Width = 132
+      Width = 136
       Height = 16
       Caption = 'emiss'#227'o do Certificado.'
       Font.Charset = DEFAULT_CHARSET
@@ -3718,7 +3709,7 @@ object Form1: TForm1
     object Label29: TLabel
       Left = 54
       Top = 191
-      Width = 346
+      Width = 358
       Height = 16
       Caption = ' Lembre-se, para que o assistente funcione '#233' necess'#225'rio ter o'
       Font.Charset = DEFAULT_CHARSET
@@ -3731,7 +3722,7 @@ object Form1: TForm1
     object Label30: TLabel
       Left = 56
       Top = 211
-      Width = 47
+      Width = 44
       Height = 16
       Caption = 'Java v.8'
       Font.Charset = DEFAULT_CHARSET
@@ -3744,7 +3735,7 @@ object Form1: TForm1
     object Label31: TLabel
       Left = 109
       Top = 209
-      Width = 297
+      Width = 306
       Height = 16
       Caption = 'instalado em seu computador, que est'#225' dispon'#237'vel na'
       Font.Charset = DEFAULT_CHARSET
@@ -3770,7 +3761,7 @@ object Form1: TForm1
     object Label33: TLabel
       Left = 81
       Top = 231
-      Width = 68
+      Width = 67
       Height = 16
       Caption = 'Downloads.'
       Font.Charset = DEFAULT_CHARSET
@@ -3785,7 +3776,7 @@ object Form1: TForm1
     object Label34: TLabel
       Left = 155
       Top = 231
-      Width = 259
+      Width = 279
       Height = 16
       Caption = 'Para saber mais, acesse o Manual de Emiss'#227'o '
       Font.Charset = DEFAULT_CHARSET
@@ -3798,7 +3789,7 @@ object Form1: TForm1
     object Label35: TLabel
       Left = 56
       Top = 250
-      Width = 77
+      Width = 80
       Height = 16
       Caption = 'clicando aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -3847,8 +3838,8 @@ object Form1: TForm1
     object Label36: TLabel
       Left = 66
       Top = 302
-      Width = 226
-      Height = 18
+      Width = 223
+      Height = 17
       Caption = 'Executar o Assistente de Emiss'#227'o'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4888,12 +4879,10 @@ object Form1: TForm1
     Color = 9667712
     ParentBackground = False
     TabOrder = 5
-    ExplicitWidth = 1098
-    ExplicitHeight = 575
     object Label37: TLabel
       Left = 56
       Top = 40
-      Width = 205
+      Width = 217
       Height = 32
       Caption = 'Precisa de ajuda?'
       Font.Charset = DEFAULT_CHARSET
@@ -4906,8 +4895,8 @@ object Form1: TForm1
     object Label38: TLabel
       Left = 56
       Top = 95
-      Width = 228
-      Height = 19
+      Width = 223
+      Height = 18
       Caption = 'Entre em contato conosco* para'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4919,8 +4908,8 @@ object Form1: TForm1
     object Label39: TLabel
       Left = 56
       Top = 115
-      Width = 154
-      Height = 19
+      Width = 159
+      Height = 18
       Caption = 'sanar as suas d'#250'vidas.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4932,8 +4921,8 @@ object Form1: TForm1
     object Label40: TLabel
       Left = 56
       Top = 189
-      Width = 172
-      Height = 19
+      Width = 163
+      Height = 18
       Caption = 'Central de Atendimento'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4945,7 +4934,7 @@ object Form1: TForm1
     object Label41: TLabel
       Left = 56
       Top = 211
-      Width = 80
+      Width = 85
       Height = 16
       Caption = '0800 941 6601'
       Font.Charset = DEFAULT_CHARSET
@@ -4958,8 +4947,8 @@ object Form1: TForm1
     object Label42: TLabel
       Left = 56
       Top = 252
-      Width = 116
-      Height = 19
+      Width = 114
+      Height = 18
       Caption = 'Suporte T'#233'cnico'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -4971,7 +4960,7 @@ object Form1: TForm1
     object Label43: TLabel
       Left = 56
       Top = 278
-      Width = 83
+      Width = 85
       Height = 16
       Caption = '0800 941 6602'
       Font.Charset = DEFAULT_CHARSET
@@ -4997,8 +4986,8 @@ object Form1: TForm1
     object Label45: TLabel
       Left = 314
       Top = 189
-      Width = 81
-      Height = 19
+      Width = 78
+      Height = 18
       Caption = 'Televendas'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -5010,8 +4999,8 @@ object Form1: TForm1
     object Label46: TLabel
       Left = 310
       Top = 256
-      Width = 173
-      Height = 19
+      Width = 165
+      Height = 18
       Caption = 'Hor'#225'rio de Atendimento'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -5023,7 +5012,7 @@ object Form1: TForm1
     object Label47: TLabel
       Left = 314
       Top = 212
-      Width = 82
+      Width = 85
       Height = 16
       Caption = '0800 941 6603'
       Font.Charset = DEFAULT_CHARSET
@@ -5036,7 +5025,7 @@ object Form1: TForm1
     object Label48: TLabel
       Left = 310
       Top = 278
-      Width = 170
+      Width = 184
       Height = 16
       Caption = 'Segunda '#224' sexta das 8h '#224's 19h'
       Font.Charset = DEFAULT_CHARSET
@@ -5049,7 +5038,7 @@ object Form1: TForm1
     object Label49: TLabel
       Left = 310
       Top = 298
-      Width = 120
+      Width = 132
       Height = 16
       Caption = 'S'#225'bado das 8h '#192's 12h'
       Font.Charset = DEFAULT_CHARSET
@@ -5062,7 +5051,7 @@ object Form1: TForm1
     object Label50: TLabel
       Left = 59
       Top = 359
-      Width = 335
+      Width = 347
       Height = 16
       Caption = 'Se voc'#234' precisa autorizar o acesso ao seu computador para'
       Font.Charset = DEFAULT_CHARSET
@@ -5968,7 +5957,7 @@ object Form1: TForm1
     object Label51: TLabel
       Left = 59
       Top = 379
-      Width = 261
+      Width = 277
       Height = 16
       Caption = 'um de nossos t'#233'cnicos, clique no bot'#227'o abaixo.'
       Font.Charset = DEFAULT_CHARSET
@@ -6033,8 +6022,8 @@ object Form1: TForm1
     object Label52: TLabel
       Left = 59
       Top = 512
-      Width = 308
-      Height = 14
+      Width = 340
+      Height = 15
       Caption = '* A Soluti n'#227'o oferece suporte para emiss'#245'es de notas fiscais.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6046,8 +6035,8 @@ object Form1: TForm1
     object Label53: TLabel
       Left = 59
       Top = 539
-      Width = 694
-      Height = 13
+      Width = 708
+      Height = 14
       Caption = 
         'Sobre o desbloqueio da m'#237'dia: '#201' realizado apenas com a senha PUK' +
         ', caso voc'#234' n'#227'o a tenha em m'#227'os o desbloqueio '#233' feito nas unidad' +
@@ -6062,8 +6051,8 @@ object Form1: TForm1
     object Label54: TLabel
       Left = 100
       Top = 422
-      Width = 109
-      Height = 19
+      Width = 112
+      Height = 18
       Caption = 'Acesso Remoto'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6085,12 +6074,10 @@ object Form1: TForm1
     Color = 8988182
     ParentBackground = False
     TabOrder = 6
-    ExplicitWidth = 1098
-    ExplicitHeight = 575
     object Label55: TLabel
       Left = 56
       Top = 40
-      Width = 135
+      Width = 134
       Height = 32
       Caption = 'Downloads'
       Font.Charset = DEFAULT_CHARSET
@@ -6955,8 +6942,8 @@ object Form1: TForm1
     object Label56: TLabel
       Left = 56
       Top = 97
-      Width = 125
-      Height = 19
+      Width = 127
+      Height = 18
       Caption = #201' necess'#225'rio ter o'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6968,8 +6955,8 @@ object Form1: TForm1
     object Label57: TLabel
       Left = 185
       Top = 97
-      Width = 54
-      Height = 19
+      Width = 56
+      Height = 18
       Caption = 'Java v.8'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6981,8 +6968,8 @@ object Form1: TForm1
     object Label58: TLabel
       Left = 245
       Top = 97
-      Width = 246
-      Height = 19
+      Width = 241
+      Height = 18
       Caption = 'instalado em seu computador para'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -6995,7 +6982,7 @@ object Form1: TForm1
       Left = 56
       Top = 122
       Width = 433
-      Height = 19
+      Height = 18
       Caption = 'a baixa do Certificado Digital. Para fazer o download clique no'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7007,8 +6994,8 @@ object Form1: TForm1
     object Label60: TLabel
       Left = 56
       Top = 147
-      Width = 96
-      Height = 19
+      Width = 95
+      Height = 18
       Caption = 'bot'#227'o abaixo.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7055,8 +7042,8 @@ object Form1: TForm1
     object Label61: TLabel
       Left = 108
       Top = 194
-      Width = 106
-      Height = 19
+      Width = 113
+      Height = 18
       Caption = 'Baixe o Java v.8'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7071,7 +7058,7 @@ object Form1: TForm1
       Left = 56
       Top = 300
       Width = 397
-      Height = 19
+      Height = 18
       Caption = 'O uso do Certificado Digital '#233' indicado para o navegador'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7083,8 +7070,8 @@ object Form1: TForm1
     object Label63: TLabel
       Left = 458
       Top = 300
-      Width = 50
-      Height = 19
+      Width = 48
+      Height = 18
       Caption = 'Mozilla'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7096,8 +7083,8 @@ object Form1: TForm1
     object Label64: TLabel
       Left = 56
       Top = 320
-      Width = 54
-      Height = 19
+      Width = 52
+      Height = 18
       Caption = 'Firefox.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7109,8 +7096,8 @@ object Form1: TForm1
     object Label65: TLabel
       Left = 113
       Top = 320
-      Width = 369
-      Height = 19
+      Width = 362
+      Height = 18
       Caption = 'Para configurar em seu computador, clique no bot'#227'o'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7122,8 +7109,8 @@ object Form1: TForm1
     object Label66: TLabel
       Left = 56
       Top = 341
-      Width = 50
-      Height = 19
+      Width = 51
+      Height = 18
       Caption = 'abaixo.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7170,8 +7157,8 @@ object Form1: TForm1
     object Label67: TLabel
       Left = 69
       Top = 388
-      Width = 192
-      Height = 19
+      Width = 190
+      Height = 18
       Caption = 'Configurar o Mozilla Firefox'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7193,13 +7180,11 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 7
-    ExplicitWidth = 1098
-    ExplicitHeight = 575
     object Label68: TLabel
       Left = 56
       Top = 23
-      Width = 375
-      Height = 40
+      Width = 373
+      Height = 38
       Caption = 'Prepare-se para come'#231'ar!'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7211,8 +7196,8 @@ object Form1: TForm1
     object Label69: TLabel
       Left = 56
       Top = 95
-      Width = 418
-      Height = 25
+      Width = 422
+      Height = 24
       Caption = 'Escolha o tipo de m'#237'dia que deseja instalado:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7913,8 +7898,8 @@ object Form1: TForm1
     object Label70: TLabel
       Left = 134
       Top = 177
-      Width = 42
-      Height = 19
+      Width = 41
+      Height = 18
       Caption = 'Token'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7929,8 +7914,8 @@ object Form1: TForm1
     object Label71: TLabel
       Left = 337
       Top = 177
-      Width = 76
-      Height = 19
+      Width = 77
+      Height = 18
       Caption = 'SmartCard'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7952,14 +7937,11 @@ object Form1: TForm1
     Color = 5264915
     ParentBackground = False
     TabOrder = 8
-    ExplicitLeft = 1
-    ExplicitWidth = 760
-    ExplicitHeight = 509
     object Label72: TLabel
       Left = 56
       Top = 29
-      Width = 242
-      Height = 40
+      Width = 245
+      Height = 38
       Caption = 'M'#237'dia Escolhida: '
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7971,8 +7953,8 @@ object Form1: TForm1
     object Label73: TLabel
       Left = 56
       Top = 97
-      Width = 306
-      Height = 24
+      Width = 308
+      Height = 23
       Caption = 'Voc'#234' j'#225' tem o seu driver instalado?'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -7984,8 +7966,8 @@ object Form1: TForm1
     object Label_Tipo: TLabel
       Left = 304
       Top = 32
-      Width = 13
-      Height = 40
+      Width = 11
+      Height = 38
       Caption = '-'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -8121,8 +8103,8 @@ object Form1: TForm1
     object Label74: TLabel
       Left = 130
       Top = 518
-      Width = 43
-      Height = 19
+      Width = 40
+      Height = 18
       Caption = 'Voltar'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -8986,8 +8968,8 @@ object Form1: TForm1
     object Label75: TLabel
       Left = 136
       Top = 178
-      Width = 26
-      Height = 19
+      Width = 28
+      Height = 18
       Caption = 'Sim'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9001,8 +8983,8 @@ object Form1: TForm1
     object Label76: TLabel
       Left = 360
       Top = 178
-      Width = 28
-      Height = 19
+      Width = 29
+      Height = 18
       Caption = 'N'#227'o'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9025,10 +9007,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
-    ExplicitLeft = 1
-    ExplicitTop = 112
-    ExplicitWidth = 976
-    ExplicitHeight = 154
     object Image26: TImage
       Left = 323
       Top = 34
@@ -9262,7 +9240,7 @@ object Form1: TForm1
     object Label77: TLabel
       Left = 415
       Top = 44
-      Width = 345
+      Width = 368
       Height = 32
       Caption = 'Selecione o seu Token abaixo:'
       Font.Charset = DEFAULT_CHARSET
@@ -9275,7 +9253,7 @@ object Form1: TForm1
     object Label78: TLabel
       Left = 415
       Top = 78
-      Width = 266
+      Width = 279
       Height = 16
       Caption = 'Lembre-se de manter a sua m'#237'dia desconectada'
       Font.Charset = DEFAULT_CHARSET
@@ -9288,7 +9266,7 @@ object Form1: TForm1
     object Label79: TLabel
       Left = 415
       Top = 97
-      Width = 202
+      Width = 211
       Height = 16
       Caption = 'do computador durante a instala'#231#227'o.'
       Font.Charset = DEFAULT_CHARSET
@@ -9301,8 +9279,8 @@ object Form1: TForm1
     object Label80: TLabel
       Left = 415
       Top = 139
-      Width = 214
-      Height = 19
+      Width = 210
+      Height = 18
       Caption = 'N'#227'o estou com a minha m'#237'dia.'
       DragCursor = crHandPoint
       Font.Charset = DEFAULT_CHARSET
@@ -9317,8 +9295,8 @@ object Form1: TForm1
     object Label81: TLabel
       Left = 228
       Top = 227
-      Width = 161
-      Height = 19
+      Width = 170
+      Height = 18
       Caption = 'Token Safenet PRO 72K'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9330,7 +9308,7 @@ object Form1: TForm1
     object Label82: TLabel
       Left = 228
       Top = 252
-      Width = 117
+      Width = 121
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9343,7 +9321,7 @@ object Form1: TForm1
       OnMouseLeave = Label82MouseLeave
     end
     object Image28: TImage
-      Left = 398
+      Left = 395
       Top = 486
       Width = 246
       Height = 47
@@ -9379,10 +9357,10 @@ object Form1: TForm1
       OnMouseMove = Image28MouseMove
     end
     object Label83: TLabel
-      Left = 458
-      Top = 499
-      Width = 118
-      Height = 19
+      Left = 466
+      Top = 498
+      Width = 116
+      Height = 18
       Caption = 'Baixar Instalador'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9396,8 +9374,8 @@ object Form1: TForm1
     object Label84: TLabel
       Left = 228
       Top = 328
-      Width = 134
-      Height = 19
+      Width = 139
+      Height = 18
       Caption = 'Token Safenet 5100'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9409,7 +9387,7 @@ object Form1: TForm1
     object Label85: TLabel
       Left = 228
       Top = 352
-      Width = 117
+      Width = 121
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9424,8 +9402,8 @@ object Form1: TForm1
     object Label86: TLabel
       Left = 540
       Top = 227
-      Width = 147
-      Height = 19
+      Width = 146
+      Height = 18
       Caption = 'Token Safenet Aladin'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9437,7 +9415,7 @@ object Form1: TForm1
     object Label87: TLabel
       Left = 540
       Top = 252
-      Width = 117
+      Width = 121
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9452,8 +9430,8 @@ object Form1: TForm1
     object Label88: TLabel
       Left = 541
       Top = 328
-      Width = 130
-      Height = 19
+      Width = 138
+      Height = 18
       Caption = 'Token Safenet 5110'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9465,7 +9443,7 @@ object Form1: TForm1
     object Label89: TLabel
       Left = 541
       Top = 352
-      Width = 117
+      Width = 121
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9480,8 +9458,8 @@ object Form1: TForm1
     object Label90: TLabel
       Left = 796
       Top = 227
-      Width = 120
-      Height = 19
+      Width = 126
+      Height = 18
       Caption = 'Token Epass2003'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -9493,7 +9471,7 @@ object Form1: TForm1
     object Label91: TLabel
       Left = 796
       Top = 252
-      Width = 117
+      Width = 121
       Height = 16
       Caption = 'Veja a foto dele aqui.'
       Font.Charset = DEFAULT_CHARSET
@@ -9864,10 +9842,10 @@ object Form1: TForm1
     end
   end
   object Panel_lista_cartao: TPanel
-    Left = 8
-    Top = 119
-    Width = 1048
-    Height = 546
+    Left = -1
+    Top = 113
+    Width = 1073
+    Height = 553
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
@@ -10122,7 +10100,7 @@ object Form1: TForm1
     object Label92: TLabel
       Left = 415
       Top = 44
-      Width = 401
+      Width = 421
       Height = 32
       Caption = 'Selecione o seu Smartcard abaixo:'
       Font.Charset = DEFAULT_CHARSET
@@ -10135,7 +10113,7 @@ object Form1: TForm1
     object Label93: TLabel
       Left = 415
       Top = 75
-      Width = 266
+      Width = 279
       Height = 16
       Caption = 'Lembre-se de manter a sua m'#237'dia desconectada'
       Font.Charset = DEFAULT_CHARSET
@@ -10148,8 +10126,8 @@ object Form1: TForm1
     object Label94: TLabel
       Left = 415
       Top = 139
-      Width = 209
-      Height = 19
+      Width = 210
+      Height = 18
       Caption = 'N'#227'o estou com a minha m'#237'dia.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = 5264916
@@ -10163,7 +10141,7 @@ object Form1: TForm1
     object Label95: TLabel
       Left = 415
       Top = 97
-      Width = 202
+      Width = 211
       Height = 16
       Caption = 'do computador durante a instala'#231#227'o.'
       Font.Charset = DEFAULT_CHARSET
@@ -10174,8 +10152,8 @@ object Form1: TForm1
       ParentFont = False
     end
     object Image29: TImage
-      Left = 398
-      Top = 486
+      Left = 387
+      Top = 480
       Width = 246
       Height = 47
       Picture.Data = {
@@ -10207,11 +10185,395 @@ object Form1: TForm1
         51FBEC2AFA514D1EB8EEDE8DA3CCD8FF9EF905756B0949E666F13E0000000049
         454E44AE426082}
     end
-    object Label97: TLabel
-      Left = 458
-      Top = 499
+    object Png_morpho_false: TPngSpeedButton
+      Left = 257
+      Top = 338
+      Width = 54
+      Height = 52
+      Flat = True
+      PngImage.Data = {
+        89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
+        530000000473424954080808087C086488000002934944415478DAED9A4D6813
+        4114C7DFDBA4D542B2114151A87811F5268AA055918215F5A441AC573F92C58B
+        B4CDFA714D6E1EDAA641106CAC7AF350A53D7868043FAA68BDA9E0C18A07F522
+        2248B3DB6221D97DBE0D581B6B3E6A16675AE67708C36C26FC7FD9791BC83C84
+        1AE83D6737A116E804820E02DA8080EB0021546B9D2F104C13C21704FAE412E4
+        00F1BEDD37F8AEDA12AC7421DC75660B0682038870F8BF84AFD791608C9C62B7
+        9DB939599710DF91D5805A8ABF8D737C31285AE0AF5200457EB906E4A4ACF4D0
+        F78A422D9762AD4D8E768727F7890E5D9F198D171D3A3993B9F175A150F2D44A
+        DD6E7EC4136DA2732ECE899E5B7AA10392B767CB842289F85DDE66C74507FC37
+        2B18CEF70F76CE09854DE3980630223A5723B800517E028E96842209E335AB6D
+        131DAA21085EF15DDA817A22B61B519B109DC7172772DB906BE70AD7CE65D161
+        FC118214EA667C8C7FFD0F890EE38B10500E9745FDFC367A8311D398E2614474
+        169FC87B42243A859F2821D95142B2A384644709C98E12921D25243B4A487694
+        90EC2821D95142B2A384644709C90EEA0963161156880EE213DE3FA7F18FECB5
+        5174123FE0AD3689BA69BC44805DA2C3F86344E3DE71CA00027689CEE28B0F50
+        66599DE01535DA5E3A63E56DF76CC9F4265480885E58FDD9BD25A1D085587B80
+        B4C7A24335828BB8C7EEBD3E31D7A7B0946BC9AB1DAB2FDBED8DE77592B40723
+        F6E6873CDA2F3AE022799A0FBF3F00C927C572212674FEF41AADB9E92D4FAE15
+        9DB22E083E3B85C2CEE9ABB7BEFD9A5AD85ED673A245D756DDE3ED774474DEEA
+        2E94B3DCA928A4877FCC9FAFD42F8761D3388A4417918B4D74F832117E9A1141
+        AF9DCE8E96BCFE0C5EEB03586CAB4614E5B71E24845624582FA4A311F1013ACE
+        88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
+    end
+    object Png_morpho_true: TPngSpeedButton
+      Left = 317
+      Top = 338
+      Width = 54
+      Height = 52
+      Flat = True
+      PngImage.Data = {
+        89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
+        530000000473424954080808087C086488000003474944415478DAEDDA4D4814
+        611807F0E7D95DD43EA5EF02AD8342415024953A45B8645487A845B26B3AA375
+        CB4BD4A5C05B870E7609DC0FED1664A250070D72FBA05949488B820C8534A924
+        0A9722B7D8DDA76737D634F77B3E5E57FC5F76767667F9FF7879DF5966062145
+        DCAA5C4A88B504548D00C544B8191156A63A4E8F10C10F40FA048063FCA697C0
+        7AFF9CE47C9BEC184CF48167A07E7B38882DFC95636694CF80D963B15193BCAF
+        6D382D108FC8DA304233109EE791B089AE1F974410E46E3791A859913CDF1282
+        5CFD4A1111DD46C083A24BA7050378CCB0330D15EEC979A076EFD98260BEB50F
+        102B4517CD90F5CC160855D7D96F05E6809C3EF92E8F4C8DE87AD999A8A341F2
+        D4CE8078DE9CE295AC4B742F2DE1F9E4E0F9D41D05F1E80CF1E8EC165D4A5388
+        067994CA9017820A9E5D3ED17D74094225F2E85CE3D1B924BA8B4E694697AAF4
+        B0ECA8E826BA84A01717C5FC99F1D04B062953BC32148A2EA30F08FCE8F22924
+        BA889E59022DF42C818CCC899D97C166CD8381B14E98F0BFC96D9063D75558B7
+        BC38BAFD3B340D7DEF5AB3422D08D06C4C2CD9A28483E2616279F5B1079E8F77
+        E60E2819E6EBCF0F59CD2561202330BA80F66FAD8115796BC03BE2168ED10CB2
+        972A50B2BE3CBAED0F7C868EA12B42319A40B331B1A442198DD104522A5C71F7
+        27429981D1048A9CD537AD2A490B651646132855D118CA4C8C66502A54888260
+        C5F857938DC0E8024A853213A31B28139491185D41E9A08CC6E80E4A86320363
+        08281ECA2C8C61A04862E7A9C9EFA3303871CF148CA12051597C20A7AA041021
+        5F74113DF2F7CAA92ABF07C46DA2CBE823A2E1C8C5FA7E042CD7FE6BE213BD89
+        EC54E51644BC20BA8C2E20A21B8BEA0E1E59714FEC1EEBD35C7936212186406D
+        94DC07A2205EBAABF8C52BBA9496582C61492E6FF3FD7B4E2187E75264EE344A
+        9EA6C8F60CC8EBADB28DE4973CE425FC90E882196A9E94FE1A3D6CB73F0ACE01
+        45D2F6A26E4330607DCD27DA8DA27BA66781715B41686F7D59FB97D8BE794F63
+        DD514F2F9BC2D59DBC481C175D38B9067A0BC1EFA8953AA667EF8EFBBC1CCBD1
+        E3934F86012FF26849A2BBFFD74DE5DAD71B2A5DDDDC6DDEFF504CF503AD6AE3
+        0E849083BF7984DF1601E116114F3422C103EEDFA5489E9164C7FC011F55E3AD
+        0049020F0000000049454E44AE426082}
+    end
+    object Png_wp_false: TPngSpeedButton
+      Left = 257
+      Top = 222
+      Width = 54
+      Height = 52
+      Flat = True
+      PngImage.Data = {
+        89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
+        530000000473424954080808087C086488000002934944415478DAED9A4D6813
+        4114C7DFDBA4D542B2114151A87811F5268AA055918215F5A441AC573F92C58B
+        B4CDFA714D6E1EDAA641106CAC7AF350A53D7868043FAA68BDA9E0C18A07F522
+        2248B3DB6221D97DBE0D581B6B3E6A16675AE67708C36C26FC7FD9791BC83C84
+        1AE83D6737A116E804820E02DA8080EB0021546B9D2F104C13C21704FAE412E4
+        00F1BEDD37F8AEDA12AC7421DC75660B0682038870F8BF84AFD791608C9C62B7
+        9DB939599710DF91D5805A8ABF8D737C31285AE0AF5200457EB906E4A4ACF4D0
+        F78A422D9762AD4D8E768727F7890E5D9F198D171D3A3993B9F175A150F2D44A
+        DD6E7EC4136DA2732ECE899E5B7AA10392B767CB842289F85DDE66C74507FC37
+        2B18CEF70F76CE09854DE3980630223A5723B800517E028E96842209E335AB6D
+        131DAA21085EF15DDA817A22B61B519B109DC7172772DB906BE70AD7CE65D161
+        FC118214EA667C8C7FFD0F890EE38B10500E9745FDFC367A8311D398E2614474
+        169FC87B42243A859F2821D95142B2A384644709C98E12921D25243B4A487694
+        90EC2821D95142B2A384644709C90EEA0963161156880EE213DE3FA7F18FECB5
+        5174123FE0AD3689BA69BC44805DA2C3F86344E3DE71CA00027689CEE28B0F50
+        66599DE01535DA5E3A63E56DF76CC9F4265480885E58FDD9BD25A1D085587B80
+        B4C7A24335828BB8C7EEBD3E31D7A7B0946BC9AB1DAB2FDBED8DE77592B40723
+        F6E6873CDA2F3AE022799A0FBF3F00C927C572212674FEF41AADB9E92D4FAE15
+        9DB22E083E3B85C2CEE9ABB7BEFD9A5AD85ED673A245D756DDE3ED774474DEEA
+        2E94B3DCA928A4877FCC9FAFD42F8761D3388A4417918B4D74F832117E9A1141
+        AF9DCE8E96BCFE0C5EEB03586CAB4614E5B71E24845624582FA4A311F1013ACE
+        88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
+    end
+    object Png_wp_true: TPngSpeedButton
+      Left = 317
+      Top = 222
+      Width = 54
+      Height = 52
+      Flat = True
+      PngImage.Data = {
+        89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
+        530000000473424954080808087C086488000003474944415478DAEDDA4D4814
+        611807F0E7D95DD43EA5EF02AD8342415024953A45B8645487A845B26B3AA375
+        CB4BD4A5C05B870E7609DC0FED1664A250070D72FBA05949488B820C8534A924
+        0A9722B7D8DDA76737D634F77B3E5E57FC5F76767667F9FF7879DF5966062145
+        DCAA5C4A88B504548D00C544B8191156A63A4E8F10C10F40FA048063FCA697C0
+        7AFF9CE47C9BEC184CF48167A07E7B38882DFC95636694CF80D963B15193BCAF
+        6D382D108FC8DA304233109EE791B089AE1F974410E46E3791A859913CDF1282
+        5CFD4A1111DD46C083A24BA7050378CCB0330D15EEC979A076EFD98260BEB50F
+        102B4517CD90F5CC160855D7D96F05E6809C3EF92E8F4C8DE87AD999A8A341F2
+        D4CE8078DE9CE295AC4B742F2DE1F9E4E0F9D41D05F1E80CF1E8EC165D4A5388
+        067994CA9017820A9E5D3ED17D74094225F2E85CE3D1B924BA8B4E694697AAF4
+        B0ECA8E826BA84A01717C5FC99F1D04B062953BC32148A2EA30F08FCE8F22924
+        BA889E59022DF42C818CCC899D97C166CD8381B14E98F0BFC96D9063D75558B7
+        BC38BAFD3B340D7DEF5AB3422D08D06C4C2CD9A28483E2616279F5B1079E8F77
+        E60E2819E6EBCF0F59CD2561202330BA80F66FAD8115796BC03BE2168ED10CB2
+        972A50B2BE3CBAED0F7C868EA12B42319A40B331B1A442198DD104522A5C71F7
+        27429981D1048A9CD537AD2A490B651646132855D118CA4C8C66502A54888260
+        C5F857938DC0E8024A853213A31B28139491185D41E9A08CC6E80E4A86320363
+        08281ECA2C8C61A04862E7A9C9EFA3303871CF148CA12051597C20A7AA041021
+        5F74113DF2F7CAA92ABF07C46DA2CBE823A2E1C8C5FA7E042CD7FE6BE213BD89
+        EC54E51644BC20BA8C2E20A21B8BEA0E1E59714FEC1EEBD35C7936212186406D
+        94DC07A2205EBAABF8C52BBA9496582C61492E6FF3FD7B4E2187E75264EE344A
+        9EA6C8F60CC8EBADB28DE4973CE425FC90E882196A9E94FE1A3D6CB73F0ACE01
+        45D2F6A26E4330607DCD27DA8DA27BA66781715B41686F7D59FB97D8BE794F63
+        DD514F2F9BC2D59DBC481C175D38B9067A0BC1EFA8953AA667EF8EFBBC1CCBD1
+        E3934F86012FF26849A2BBFFD74DE5DAD71B2A5DDDDC6DDEFF504CF503AD6AE3
+        0E849083BF7984DF1601E116114F3422C103EEDFA5489E9164C7FC011F55E3AD
+        0049020F0000000049454E44AE426082}
+    end
+    object Png_idemia_false: TPngSpeedButton
+      Left = 672
+      Top = 222
+      Width = 54
+      Height = 52
+      Flat = True
+      PngImage.Data = {
+        89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
+        530000000473424954080808087C086488000002934944415478DAED9A4D6813
+        4114C7DFDBA4D542B2114151A87811F5268AA055918215F5A441AC573F92C58B
+        B4CDFA714D6E1EDAA641106CAC7AF350A53D7868043FAA68BDA9E0C18A07F522
+        2248B3DB6221D97DBE0D581B6B3E6A16675AE67708C36C26FC7FD9791BC83C84
+        1AE83D6737A116E804820E02DA8080EB0021546B9D2F104C13C21704FAE412E4
+        00F1BEDD37F8AEDA12AC7421DC75660B0682038870F8BF84AFD791608C9C62B7
+        9DB939599710DF91D5805A8ABF8D737C31285AE0AF5200457EB906E4A4ACF4D0
+        F78A422D9762AD4D8E768727F7890E5D9F198D171D3A3993B9F175A150F2D44A
+        DD6E7EC4136DA2732ECE899E5B7AA10392B767CB842289F85DDE66C74507FC37
+        2B18CEF70F76CE09854DE3980630223A5723B800517E028E96842209E335AB6D
+        131DAA21085EF15DDA817A22B61B519B109DC7172772DB906BE70AD7CE65D161
+        FC118214EA667C8C7FFD0F890EE38B10500E9745FDFC367A8311D398E2614474
+        169FC87B42243A859F2821D95142B2A384644709C98E12921D25243B4A487694
+        90EC2821D95142B2A384644709C90EEA0963161156880EE213DE3FA7F18FECB5
+        5174123FE0AD3689BA69BC44805DA2C3F86344E3DE71CA00027689CEE28B0F50
+        66599DE01535DA5E3A63E56DF76CC9F4265480885E58FDD9BD25A1D085587B80
+        B4C7A24335828BB8C7EEBD3E31D7A7B0946BC9AB1DAB2FDBED8DE77592B40723
+        F6E6873CDA2F3AE022799A0FBF3F00C927C572212674FEF41AADB9E92D4FAE15
+        9DB22E083E3B85C2CEE9ABB7BEFD9A5AD85ED673A245D756DDE3ED774474DEEA
+        2E94B3DCA928A4877FCC9FAFD42F8761D3388A4417918B4D74F832117E9A1141
+        AF9DCE8E96BCFE0C5EEB03586CAB4614E5B71E24845624582FA4A311F1013ACE
+        88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
+    end
+    object Png_idemia_true: TPngSpeedButton
+      Left = 732
+      Top = 222
+      Width = 54
+      Height = 52
+      Flat = True
+      PngImage.Data = {
+        89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
+        530000000473424954080808087C086488000003474944415478DAEDDA4D4814
+        611807F0E7D95DD43EA5EF02AD8342415024953A45B8645487A845B26B3AA375
+        CB4BD4A5C05B870E7609DC0FED1664A250070D72FBA05949488B820C8534A924
+        0A9722B7D8DDA76737D634F77B3E5E57FC5F76767667F9FF7879DF5966062145
+        DCAA5C4A88B504548D00C544B8191156A63A4E8F10C10F40FA048063FCA697C0
+        7AFF9CE47C9BEC184CF48167A07E7B38882DFC95636694CF80D963B15193BCAF
+        6D382D108FC8DA304233109EE791B089AE1F974410E46E3791A859913CDF1282
+        5CFD4A1111DD46C083A24BA7050378CCB0330D15EEC979A076EFD98260BEB50F
+        102B4517CD90F5CC160855D7D96F05E6809C3EF92E8F4C8DE87AD999A8A341F2
+        D4CE8078DE9CE295AC4B742F2DE1F9E4E0F9D41D05F1E80CF1E8EC165D4A5388
+        067994CA9017820A9E5D3ED17D74094225F2E85CE3D1B924BA8B4E694697AAF4
+        B0ECA8E826BA84A01717C5FC99F1D04B062953BC32148A2EA30F08FCE8F22924
+        BA889E59022DF42C818CCC899D97C166CD8381B14E98F0BFC96D9063D75558B7
+        BC38BAFD3B340D7DEF5AB3422D08D06C4C2CD9A28483E2616279F5B1079E8F77
+        E60E2819E6EBCF0F59CD2561202330BA80F66FAD8115796BC03BE2168ED10CB2
+        972A50B2BE3CBAED0F7C868EA12B42319A40B331B1A442198DD104522A5C71F7
+        27429981D1048A9CD537AD2A490B651646132855D118CA4C8C66502A54888260
+        C5F857938DC0E8024A853213A31B28139491185D41E9A08CC6E80E4A86320363
+        08281ECA2C8C61A04862E7A9C9EFA3303871CF148CA12051597C20A7AA041021
+        5F74113DF2F7CAA92ABF07C46DA2CBE823A2E1C8C5FA7E042CD7FE6BE213BD89
+        EC54E51644BC20BA8C2E20A21B8BEA0E1E59714FEC1EEBD35C7936212186406D
+        94DC07A2205EBAABF8C52BBA9496582C61492E6FF3FD7B4E2187E75264EE344A
+        9EA6C8F60CC8EBADB28DE4973CE425FC90E882196A9E94FE1A3D6CB73F0ACE01
+        45D2F6A26E4330607DCD27DA8DA27BA66781715B41686F7D59FB97D8BE794F63
+        DD514F2F9BC2D59DBC481C175D38B9067A0BC1EFA8953AA667EF8EFBBC1CCBD1
+        E3934F86012FF26849A2BBFFD74DE5DAD71B2A5DDDDC6DDEFF504CF503AD6AE3
+        0E849083BF7984DF1601E116114F3422C103EEDFA5489E9164C7FC011F55E3AD
+        0049020F0000000049454E44AE426082}
+    end
+    object Png_gmailto_false: TPngSpeedButton
+      Left = 672
+      Top = 338
+      Width = 54
+      Height = 52
+      Flat = True
+      PngImage.Data = {
+        89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
+        530000000473424954080808087C086488000002934944415478DAED9A4D6813
+        4114C7DFDBA4D542B2114151A87811F5268AA055918215F5A441AC573F92C58B
+        B4CDFA714D6E1EDAA641106CAC7AF350A53D7868043FAA68BDA9E0C18A07F522
+        2248B3DB6221D97DBE0D581B6B3E6A16675AE67708C36C26FC7FD9791BC83C84
+        1AE83D6737A116E804820E02DA8080EB0021546B9D2F104C13C21704FAE412E4
+        00F1BEDD37F8AEDA12AC7421DC75660B0682038870F8BF84AFD791608C9C62B7
+        9DB939599710DF91D5805A8ABF8D737C31285AE0AF5200457EB906E4A4ACF4D0
+        F78A422D9762AD4D8E768727F7890E5D9F198D171D3A3993B9F175A150F2D44A
+        DD6E7EC4136DA2732ECE899E5B7AA10392B767CB842289F85DDE66C74507FC37
+        2B18CEF70F76CE09854DE3980630223A5723B800517E028E96842209E335AB6D
+        131DAA21085EF15DDA817A22B61B519B109DC7172772DB906BE70AD7CE65D161
+        FC118214EA667C8C7FFD0F890EE38B10500E9745FDFC367A8311D398E2614474
+        169FC87B42243A859F2821D95142B2A384644709C98E12921D25243B4A487694
+        90EC2821D95142B2A384644709C90EEA0963161156880EE213DE3FA7F18FECB5
+        5174123FE0AD3689BA69BC44805DA2C3F86344E3DE71CA00027689CEE28B0F50
+        66599DE01535DA5E3A63E56DF76CC9F4265480885E58FDD9BD25A1D085587B80
+        B4C7A24335828BB8C7EEBD3E31D7A7B0946BC9AB1DAB2FDBED8DE77592B40723
+        F6E6873CDA2F3AE022799A0FBF3F00C927C572212674FEF41AADB9E92D4FAE15
+        9DB22E083E3B85C2CEE9ABB7BEFD9A5AD85ED673A245D756DDE3ED774474DEEA
+        2E94B3DCA928A4877FCC9FAFD42F8761D3388A4417918B4D74F832117E9A1141
+        AF9DCE8E96BCFE0C5EEB03586CAB4614E5B71E24845624582FA4A311F1013ACE
+        88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
+    end
+    object Png_gmailto_true: TPngSpeedButton
+      Left = 732
+      Top = 338
+      Width = 54
+      Height = 52
+      Flat = True
+      PngImage.Data = {
+        89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
+        530000000473424954080808087C086488000003474944415478DAEDDA4D4814
+        611807F0E7D95DD43EA5EF02AD8342415024953A45B8645487A845B26B3AA375
+        CB4BD4A5C05B870E7609DC0FED1664A250070D72FBA05949488B820C8534A924
+        0A9722B7D8DDA76737D634F77B3E5E57FC5F76767667F9FF7879DF5966062145
+        DCAA5C4A88B504548D00C544B8191156A63A4E8F10C10F40FA048063FCA697C0
+        7AFF9CE47C9BEC184CF48167A07E7B38882DFC95636694CF80D963B15193BCAF
+        6D382D108FC8DA304233109EE791B089AE1F974410E46E3791A859913CDF1282
+        5CFD4A1111DD46C083A24BA7050378CCB0330D15EEC979A076EFD98260BEB50F
+        102B4517CD90F5CC160855D7D96F05E6809C3EF92E8F4C8DE87AD999A8A341F2
+        D4CE8078DE9CE295AC4B742F2DE1F9E4E0F9D41D05F1E80CF1E8EC165D4A5388
+        067994CA9017820A9E5D3ED17D74094225F2E85CE3D1B924BA8B4E694697AAF4
+        B0ECA8E826BA84A01717C5FC99F1D04B062953BC32148A2EA30F08FCE8F22924
+        BA889E59022DF42C818CCC899D97C166CD8381B14E98F0BFC96D9063D75558B7
+        BC38BAFD3B340D7DEF5AB3422D08D06C4C2CD9A28483E2616279F5B1079E8F77
+        E60E2819E6EBCF0F59CD2561202330BA80F66FAD8115796BC03BE2168ED10CB2
+        972A50B2BE3CBAED0F7C868EA12B42319A40B331B1A442198DD104522A5C71F7
+        27429981D1048A9CD537AD2A490B651646132855D118CA4C8C66502A54888260
+        C5F857938DC0E8024A853213A31B28139491185D41E9A08CC6E80E4A86320363
+        08281ECA2C8C61A04862E7A9C9EFA3303871CF148CA12051597C20A7AA041021
+        5F74113DF2F7CAA92ABF07C46DA2CBE823A2E1C8C5FA7E042CD7FE6BE213BD89
+        EC54E51644BC20BA8C2E20A21B8BEA0E1E59714FEC1EEBD35C7936212186406D
+        94DC07A2205EBAABF8C52BBA9496582C61492E6FF3FD7B4E2187E75264EE344A
+        9EA6C8F60CC8EBADB28DE4973CE425FC90E882196A9E94FE1A3D6CB73F0ACE01
+        45D2F6A26E4330607DCD27DA8DA27BA66781715B41686F7D59FB97D8BE794F63
+        DD514F2F9BC2D59DBC481C175D38B9067A0BC1EFA8953AA667EF8EFBBC1CCBD1
+        E3934F86012FF26849A2BBFFD74DE5DAD71B2A5DDDDC6DDEFF504CF503AD6AE3
+        0E849083BF7984DF1601E116114F3422C103EEDFA5489E9164C7FC011F55E3AD
+        0049020F0000000049454E44AE426082}
+    end
+    object Label96: TLabel
+      Left = 377
+      Top = 228
+      Width = 219
+      Height = 18
+      Caption = 'OT. 10 046WK000383227 - 08/15'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Branding Medium'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label98: TLabel
+      Left = 377
+      Top = 251
+      Width = 117
+      Height = 16
+      Caption = 'Veja a foto dele aqui.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Branding Medium'
+      Font.Style = []
+      ParentFont = False
+      OnMouseMove = Label98MouseMove
+      OnMouseLeave = Label98MouseLeave
+    end
+    object Label99: TLabel
+      Left = 377
+      Top = 344
+      Width = 105
+      Height = 18
+      Caption = 'MORPHO 10/14'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Branding Medium'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label100: TLabel
+      Left = 375
+      Top = 366
+      Width = 117
+      Height = 16
+      Caption = 'Veja a foto dele aqui.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Branding Medium'
+      Font.Style = []
+      ParentFont = False
+      OnMouseMove = Label100MouseMove
+      OnMouseLeave = Label100MouseLeave
+    end
+    object Label101: TLabel
+      Left = 792
+      Top = 228
+      Width = 188
+      Height = 18
+      Caption = 'IDEMIA 2 - 1882054A1 06/18'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Branding Medium'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label102: TLabel
+      Left = 792
+      Top = 250
+      Width = 117
+      Height = 16
+      Caption = 'Veja a foto dele aqui.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Branding Medium'
+      Font.Style = []
+      ParentFont = False
+      OnMouseMove = Label102MouseMove
+      OnMouseLeave = Label102MouseLeave
+    end
+    object Label103: TLabel
+      Left = 792
+      Top = 341
+      Width = 113
+      Height = 18
+      Caption = 'Cart'#227'o Gemalto'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Branding Medium'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label104: TLabel
+      Left = 792
+      Top = 363
+      Width = 117
+      Height = 16
+      Caption = 'Veja a foto dele aqui.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Branding Medium'
+      Font.Style = []
+      ParentFont = False
+      OnMouseMove = Label104MouseMove
+      OnMouseLeave = Label104MouseLeave
+    end
+    object Label105: TLabel
+      Left = 450
+      Top = 492
       Width = 118
-      Height = 19
+      Height = 18
       Caption = 'Baixar Instalador'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -10219,32 +10581,8 @@ object Form1: TForm1
       Font.Name = 'Branding Medium'
       Font.Style = []
       ParentFont = False
-      OnMouseMove = Label83MouseMove
-      OnMouseLeave = Label83MouseLeave
-    end
-    object PngSpeedButton1: TPngSpeedButton
-      Left = 220
-      Top = 339
-      Width = 43
-      Height = 44
-    end
-    object PngSpeedButton2: TPngSpeedButton
-      Left = 171
-      Top = 335
-      Width = 43
-      Height = 44
-    end
-    object PngSpeedButton3: TPngSpeedButton
-      Left = 337
-      Top = 296
-      Width = 43
-      Height = 44
-    end
-    object PngSpeedButton4: TPngSpeedButton
-      Left = 319
-      Top = 224
-      Width = 43
-      Height = 44
+      OnMouseMove = Label105MouseMove
+      OnMouseLeave = Label105MouseLeave
     end
   end
 end
