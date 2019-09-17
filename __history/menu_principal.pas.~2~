@@ -384,6 +384,8 @@ type
     procedure Png_idemia_trueClick(Sender: TObject);
     procedure Png_gmailto_falseClick(Sender: TObject);
     procedure Png_gmailto_trueClick(Sender: TObject);
+    procedure Label71Click(Sender: TObject);
+    procedure Image21Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -392,6 +394,7 @@ type
 
 var
   Form1: TForm1;
+  nomeToken: String;//variavel global vai receber o nome da midia
 
 implementation
 
@@ -407,11 +410,14 @@ begin
   Panel_Downloads.Visible:=false;
   Panel_pergunta_midia.Visible:=false;
   Panel_lista_tokens.Visible:=false;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Image10Click(Sender: TObject);
 begin
-  Label_Tipo.Caption:='Token';
+  //Label_Tipo.Caption:='Token';
+  nomeToken:='Token'; //variavel global recebe nome token
+  ShowMessage('NOme:'+nomeToken);
   Panel_pergunta_midia.Visible:=true;
   Panel_Instalador_token_cartao.Visible:=false;
 end;
@@ -480,6 +486,12 @@ procedure TForm1.Image20MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label70.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Image21Click(Sender: TObject);
+begin
+  Panel_lista_cartao.Visible:=true;
+  Panel_Instalador_token_cartao_1.Visible:=false;
 end;
 
 procedure TForm1.Image21MouseLeave(Sender: TObject);
@@ -586,7 +598,8 @@ end;
 
 procedure TForm1.Image5Click(Sender: TObject);
 begin
-  Label_Tipo.Caption:='SmartCard';
+  //Label_Tipo.Caption:='SmartCard';
+  nomeToken:='SmartCard';//variavel global recebe esse nome
   Panel_pergunta_midia.Visible:=true;
   Panel_Instalador_token_cartao.Visible:=false;
 end;
@@ -751,7 +764,8 @@ end;
 
 procedure TForm1.Label16Click(Sender: TObject);
 begin
-  Label_Tipo.Caption:='SmartCard';
+  //Label_Tipo.Caption:='SmartCard';
+  nomeToken:='SmartCard';//variavel global recebe esse nome
   Panel_pergunta_midia.Visible:=true;
   Panel_Instalador_token_cartao.Visible:=false;
 end;
@@ -902,6 +916,7 @@ begin
   Panel_pergunta_midia.Visible:=false;
   Panel_Inicial_Inferior.Visible:=true;
   Panel_lista_tokens.Visible:=false;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Label5MouseLeave(Sender: TObject);
@@ -947,6 +962,7 @@ begin
   Panel_Downloads.Visible:=false;
   Panel_pergunta_midia.Visible:=false;
   Panel_lista_tokens.Visible:=false;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Label6MouseLeave(Sender: TObject);
@@ -975,6 +991,12 @@ procedure TForm1.Label70MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label70.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Label71Click(Sender: TObject);
+begin
+  Panel_lista_cartao.Visible:=true;
+  Panel_Instalador_token_cartao_1.Visible:=false;
 end;
 
 procedure TForm1.Label71MouseLeave(Sender: TObject);
@@ -1044,6 +1066,7 @@ begin
   Panel_pergunta_midia.Visible:=false;
   Panel_Instalador_token_cartao_1.Visible:=false;
   Panel_lista_tokens.Visible:=false;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Label7MouseLeave(Sender: TObject);
@@ -1133,6 +1156,7 @@ begin
   Panel_pergunta_midia.Visible:=false;
   Panel_Instalador_token_cartao_1.Visible:=false;
   Panel_lista_tokens.Visible:=false;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Label8MouseLeave(Sender: TObject);
@@ -1189,6 +1213,7 @@ begin
   Panel_Downloads.Visible:=true;
   Panel_Inicial_Inferior.Visible:=false;
   Panel_lista_tokens.Visible:=false;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Label9MouseLeave(Sender: TObject);

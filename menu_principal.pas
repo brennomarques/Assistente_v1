@@ -394,7 +394,7 @@ type
 
 var
   Form1: TForm1;
-  nomeToken: String;
+  nomeToken: String;//variavel global vai receber o nome da midia
 
 implementation
 
@@ -415,9 +415,8 @@ end;
 
 procedure TForm1.Image10Click(Sender: TObject);
 begin
-  Label_Tipo.Caption:='Token';
-  nomeToken:='Token';
-  ShowMessage('NOme:'+nomeToken);
+  nomeToken:='Token'; //variavel global recebe nome token
+  Label_Tipo.Caption:=nomeToken;
   Panel_pergunta_midia.Visible:=true;
   Panel_Instalador_token_cartao.Visible:=false;
 end;
@@ -518,8 +517,16 @@ end;
 
 procedure TForm1.Image23Click(Sender: TObject);
 begin
-  Panel_lista_tokens.Visible:=true;
-  Panel_pergunta_midia.Visible:=false;
+  if nomeToken = 'Token' then
+  begin
+    Panel_lista_tokens.Visible:=true;
+    Panel_pergunta_midia.Visible:=false;
+  end
+  else
+  begin
+    Panel_lista_cartao.Visible:=true;
+    Panel_pergunta_midia.Visible:=false;
+  end;
 end;
 
 procedure TForm1.Image23MouseLeave(Sender: TObject);
@@ -598,7 +605,8 @@ end;
 
 procedure TForm1.Image5Click(Sender: TObject);
 begin
-  Label_Tipo.Caption:='SmartCard';
+  nomeToken:='SmartCard';//variavel global recebe esse nome
+  Label_Tipo.Caption:=nomeToken;
   Panel_pergunta_midia.Visible:=true;
   Panel_Instalador_token_cartao.Visible:=false;
 end;
@@ -763,7 +771,8 @@ end;
 
 procedure TForm1.Label16Click(Sender: TObject);
 begin
-  Label_Tipo.Caption:='SmartCard';
+  nomeToken:='SmartCard';//variavel global recebe esse nome
+  Label_Tipo.Caption:=nomeToken;
   Panel_pergunta_midia.Visible:=true;
   Panel_Instalador_token_cartao.Visible:=false;
 end;
@@ -815,7 +824,8 @@ end;
 
 procedure TForm1.Label21Click(Sender: TObject);
 begin
-  Label_Tipo.Caption:='Token';
+  nomeToken:='Token';
+  Label_Tipo.Caption:=nomeToken;//exibir nome da midia selecionada
   Panel_pergunta_midia.Visible:=true;
   Panel_Instalador_token_cartao.Visible:=false;
 
@@ -1039,8 +1049,16 @@ end;
 
 procedure TForm1.Label76Click(Sender: TObject);
 begin
-  Panel_lista_tokens.Visible:=true;
-  Panel_pergunta_midia.Visible:=false;
+  if nomeToken = 'Token' then
+  begin
+    Panel_lista_tokens.Visible:=true;
+    Panel_pergunta_midia.Visible:=false;
+  end
+  else
+  begin
+    Panel_lista_cartao.Visible:=true;
+    Panel_pergunta_midia.Visible:=false;
+  end;
 end;
 
 procedure TForm1.Label76MouseLeave(Sender: TObject);

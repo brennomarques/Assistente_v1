@@ -2036,11 +2036,10 @@ object Form1: TForm1
     end
   end
   object Panel_Instalador_token_cartao: TPanel
-    Left = 0
-    Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Left = 377
+    Top = 200
+    Width = 551
+    Height = 406
     BevelOuter = bvNone
     Color = 14264576
     ParentBackground = False
@@ -2753,7 +2752,7 @@ object Form1: TForm1
     end
     object Image5: TImage
       Left = 285
-      Top = 202
+      Top = 198
       Width = 204
       Height = 44
       Picture.Data = {
@@ -2858,11 +2857,10 @@ object Form1: TForm1
     end
   end
   object Panel_Certificado_A1_A3: TPanel
-    Left = 0
-    Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Left = 1
+    Top = 112
+    Width = 429
+    Height = 294
     BevelOuter = bvNone
     Color = 14264576
     ParentBackground = False
@@ -3619,9 +3617,8 @@ object Form1: TForm1
   object Panel_emissor_certificado: TPanel
     Left = 0
     Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Width = 508
+    Height = 416
     BevelOuter = bvNone
     Color = 5264916
     ParentBackground = False
@@ -3852,7 +3849,7 @@ object Form1: TForm1
     end
     object Image13: TImage
       Left = 557
-      Top = 107
+      Top = 111
       Width = 465
       Height = 422
       Picture.Data = {
@@ -4872,9 +4869,8 @@ object Form1: TForm1
   object Panel_suporte: TPanel
     Left = 0
     Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Width = 475
+    Height = 351
     BevelOuter = bvNone
     Color = 9667712
     ParentBackground = False
@@ -6065,11 +6061,10 @@ object Form1: TForm1
     end
   end
   object Panel_Downloads: TPanel
-    Left = 0
-    Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Left = 1
+    Top = 112
+    Width = 448
+    Height = 347
     BevelOuter = bvNone
     Color = 8988182
     ParentBackground = False
@@ -7173,9 +7168,8 @@ object Form1: TForm1
   object Panel_Instalador_token_cartao_1: TPanel
     Left = 0
     Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Width = 427
+    Height = 313
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
@@ -7892,6 +7886,7 @@ object Form1: TForm1
         3A3030C66273D20000002574455874646174653A6D6F6469667900323031392D
         30382D33305431393A31353A35322B30323A3030B73FCB6E0000000049454E44
         AE426082}
+      OnClick = Image21Click
       OnMouseLeave = Image21MouseLeave
       OnMouseMove = Image21MouseMove
     end
@@ -7923,16 +7918,16 @@ object Form1: TForm1
       Font.Name = 'Branding Medium'
       Font.Style = []
       ParentFont = False
+      OnClick = Label71Click
       OnMouseMove = Label71MouseMove
       OnMouseLeave = Label71MouseLeave
     end
   end
   object Panel_pergunta_midia: TPanel
-    Left = 0
-    Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Left = 48
+    Top = 361
+    Width = 512
+    Height = 250
     BevelOuter = bvNone
     Color = 5264915
     ParentBackground = False
@@ -8981,7 +8976,7 @@ object Form1: TForm1
       OnMouseLeave = Label75MouseLeave
     end
     object Label76: TLabel
-      Left = 360
+      Left = 362
       Top = 178
       Width = 28
       Height = 19
@@ -9000,9 +8995,8 @@ object Form1: TForm1
   object Panel_lista_tokens: TPanel
     Left = 0
     Top = 113
-    Width = 1099
-    Height = 576
-    Align = alClient
+    Width = 221
+    Height = 141
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
@@ -9844,8 +9838,8 @@ object Form1: TForm1
   object Panel_lista_cartao: TPanel
     Left = 1
     Top = 113
-    Width = 1081
-    Height = 568
+    Width = 190
+    Height = 116
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
@@ -10152,8 +10146,8 @@ object Form1: TForm1
       ParentFont = False
     end
     object Image29: TImage
-      Left = 387
-      Top = 480
+      Left = 394
+      Top = 486
       Width = 246
       Height = 47
       Picture.Data = {
@@ -10582,8 +10576,8 @@ object Form1: TForm1
       OnMouseLeave = Label104MouseLeave
     end
     object Label105: TLabel
-      Left = 450
-      Top = 492
+      Left = 465
+      Top = 500
       Width = 118
       Height = 19
       Caption = 'Baixar Instalador'

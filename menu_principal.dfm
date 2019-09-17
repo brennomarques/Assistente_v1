@@ -2036,8 +2036,8 @@ object Form1: TForm1
     end
   end
   object Panel_Instalador_token_cartao: TPanel
-    Left = 377
-    Top = 200
+    Left = 514
+    Top = 201
     Width = 551
     Height = 406
     BevelOuter = bvNone
@@ -2698,7 +2698,7 @@ object Form1: TForm1
       Left = 56
       Top = 202
       Width = 201
-      Height = 44
+      Height = 39
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000000C80000
         00240803000000FB0085550000000467414D410000B18F0BFC61050000013850
@@ -2751,10 +2751,10 @@ object Form1: TForm1
       OnMouseLeave = Label21MouseLeave
     end
     object Image5: TImage
-      Left = 285
+      Left = 298
       Top = 202
-      Width = 204
-      Height = 44
+      Width = 199
+      Height = 39
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000000C80000
         00240803000000FB0085550000000467414D410000B18F0BFC61050000013850
@@ -2791,7 +2791,7 @@ object Form1: TForm1
       OnMouseMove = Image5MouseMove
     end
     object Label16: TLabel
-      Left = 348
+      Left = 364
       Top = 210
       Width = 72
       Height = 18
@@ -7926,7 +7926,7 @@ object Form1: TForm1
   object Panel_pergunta_midia: TPanel
     Left = 48
     Top = 361
-    Width = 389
+    Width = 512
     Height = 250
     BevelOuter = bvNone
     Color = 5264915
@@ -8017,7 +8017,7 @@ object Form1: TForm1
       OnMouseMove = Image22MouseMove
     end
     object Image23: TImage
-      Left = 274
+      Left = 275
       Top = 167
       Width = 200
       Height = 39
@@ -8976,7 +8976,7 @@ object Form1: TForm1
       OnMouseLeave = Label75MouseLeave
     end
     object Label76: TLabel
-      Left = 360
+      Left = 362
       Top = 178
       Width = 28
       Height = 19
@@ -8995,8 +8995,8 @@ object Form1: TForm1
   object Panel_lista_tokens: TPanel
     Left = 0
     Top = 113
-    Width = 221
-    Height = 141
+    Width = 371
+    Height = 225
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
@@ -9837,9 +9837,9 @@ object Form1: TForm1
   end
   object Panel_lista_cartao: TPanel
     Left = 1
-    Top = 113
-    Width = 190
-    Height = 116
+    Top = 112
+    Width = 344
+    Height = 226
     Color = 6730063
     ParentBackground = False
     TabOrder = 10

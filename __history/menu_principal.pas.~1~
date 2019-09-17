@@ -376,6 +376,16 @@ type
     procedure Label105MouseLeave(Sender: TObject);
     procedure Label105MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
+    procedure Png_wp_falseClick(Sender: TObject);
+    procedure Png_wp_trueClick(Sender: TObject);
+    procedure Png_morpho_falseClick(Sender: TObject);
+    procedure Png_morpho_trueClick(Sender: TObject);
+    procedure Png_idemia_falseClick(Sender: TObject);
+    procedure Png_idemia_trueClick(Sender: TObject);
+    procedure Png_gmailto_falseClick(Sender: TObject);
+    procedure Png_gmailto_trueClick(Sender: TObject);
+    procedure Label71Click(Sender: TObject);
+    procedure Image21Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -384,6 +394,7 @@ type
 
 var
   Form1: TForm1;
+  nomeToken: String;
 
 implementation
 
@@ -399,11 +410,14 @@ begin
   Panel_Downloads.Visible:=false;
   Panel_pergunta_midia.Visible:=false;
   Panel_lista_tokens.Visible:=false;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Image10Click(Sender: TObject);
 begin
   Label_Tipo.Caption:='Token';
+  nomeToken:='Token';
+  ShowMessage('NOme:'+nomeToken);
   Panel_pergunta_midia.Visible:=true;
   Panel_Instalador_token_cartao.Visible:=false;
 end;
@@ -472,6 +486,12 @@ procedure TForm1.Image20MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label70.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Image21Click(Sender: TObject);
+begin
+  Panel_lista_cartao.Visible:=true;
+  Panel_Instalador_token_cartao_1.Visible:=false;
 end;
 
 procedure TForm1.Image21MouseLeave(Sender: TObject);
@@ -894,6 +914,7 @@ begin
   Panel_pergunta_midia.Visible:=false;
   Panel_Inicial_Inferior.Visible:=true;
   Panel_lista_tokens.Visible:=false;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Label5MouseLeave(Sender: TObject);
@@ -939,6 +960,7 @@ begin
   Panel_Downloads.Visible:=false;
   Panel_pergunta_midia.Visible:=false;
   Panel_lista_tokens.Visible:=false;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Label6MouseLeave(Sender: TObject);
@@ -967,6 +989,12 @@ procedure TForm1.Label70MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label70.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Label71Click(Sender: TObject);
+begin
+  Panel_lista_cartao.Visible:=true;
+  Panel_Instalador_token_cartao_1.Visible:=false;
 end;
 
 procedure TForm1.Label71MouseLeave(Sender: TObject);
@@ -1036,6 +1064,7 @@ begin
   Panel_pergunta_midia.Visible:=false;
   Panel_Instalador_token_cartao_1.Visible:=false;
   Panel_lista_tokens.Visible:=false;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Label7MouseLeave(Sender: TObject);
@@ -1125,6 +1154,7 @@ begin
   Panel_pergunta_midia.Visible:=false;
   Panel_Instalador_token_cartao_1.Visible:=false;
   Panel_lista_tokens.Visible:=false;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Label8MouseLeave(Sender: TObject);
@@ -1181,6 +1211,7 @@ begin
   Panel_Downloads.Visible:=true;
   Panel_Inicial_Inferior.Visible:=false;
   Panel_lista_tokens.Visible:=false;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Label9MouseLeave(Sender: TObject);
@@ -1192,6 +1223,89 @@ procedure TForm1.Label9MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
  Label9.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Png_gmailto_falseClick(Sender: TObject);
+begin
+  if Png_gmailto_false.Visible = true then
+  begin
+    Png_gmailto_false.Visible:=false;
+    Png_gmailto_true.Visible:=true;
+
+    Png_wp_true.Visible:=false;
+    Png_wp_false.Visible:=true;
+
+    Png_morpho_false.Visible:=true;
+    Png_morpho_true.Visible:=false;
+
+    Png_idemia_false.Visible:=true;
+    Png_idemia_true.Visible:=false;
+
+  end
+end;
+
+procedure TForm1.Png_gmailto_trueClick(Sender: TObject);
+begin
+  if Png_gmailto_true.Visible = true then
+  begin
+    Png_gmailto_false.Visible:=true;
+    Png_gmailto_true.Visible:=false;
+  end
+end;
+
+procedure TForm1.Png_idemia_falseClick(Sender: TObject);
+begin
+  if Png_idemia_false.Visible = true then
+  begin
+    Png_idemia_false.Visible:=false;
+    Png_idemia_true.Visible:=true;
+
+    Png_wp_true.Visible:=false;
+    Png_wp_false.Visible:=true;
+
+    Png_morpho_false.Visible:=true;
+    Png_morpho_true.Visible:=false;
+
+    Png_gmailto_false.Visible:=true;
+    Png_gmailto_true.Visible:=false;
+
+  end
+end;
+
+procedure TForm1.Png_idemia_trueClick(Sender: TObject);
+begin
+  if Png_idemia_true.Visible = true then
+  begin
+    Png_idemia_false.Visible:=true;
+    Png_idemia_true.Visible:=false;
+  end
+end;
+
+procedure TForm1.Png_morpho_falseClick(Sender: TObject);
+begin
+  if Png_morpho_false.Visible = true then
+  begin
+    Png_morpho_false.Visible:=false;
+    Png_morpho_true.Visible:=true;
+
+    Png_wp_true.Visible:=false;
+    Png_wp_false.Visible:=true;
+
+    Png_idemia_false.Visible:=true;
+    Png_idemia_true.Visible:=false;
+
+    Png_gmailto_false.Visible:=true;
+    Png_gmailto_true.Visible:=false;
+  end
+end;
+
+procedure TForm1.Png_morpho_trueClick(Sender: TObject);
+begin
+  if Png_morpho_true.Visible = true then
+  begin
+    Png_morpho_false.Visible:=true;
+    Png_morpho_true.Visible:=false;
+  end
 end;
 
 procedure TForm1.Png_token_aladin_falseClick(Sender: TObject);
@@ -1336,6 +1450,37 @@ begin
   begin
     Png_token_safenet_5110_true.Visible:=false;
     Png_token_safenet_5110_false.Visible:=true;
+  end
+end;
+
+procedure TForm1.Png_wp_falseClick(Sender: TObject);
+begin
+  if Png_wp_false.Visible = true then
+  begin
+    Png_wp_true.Visible:=true;
+    Png_wp_false.Visible:=false;
+
+    Png_morpho_false.Visible:=true;
+    Png_morpho_true.Visible:=false;
+
+    Png_idemia_false.Visible:=true;
+    Png_idemia_true.Visible:=false;
+
+    Png_gmailto_false.Visible:=true;
+    Png_gmailto_true.Visible:=false;
+
+
+
+
+  end
+end;
+
+procedure TForm1.Png_wp_trueClick(Sender: TObject);
+begin
+  if Png_wp_true.Visible = true then
+  begin
+    Png_wp_true.Visible:=false;
+    Png_wp_false.Visible:=true;
   end
 end;
 
