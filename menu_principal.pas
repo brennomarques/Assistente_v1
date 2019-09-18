@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
   Vcl.StdCtrls, System.ImageList, Vcl.ImgList, PngBitBtn, Vcl.Buttons,
-  PngSpeedButton;
+  PngSpeedButton, Documento_reservado;
 
 type
   TForm1 = class(TForm)
@@ -173,6 +173,15 @@ type
     Label103: TLabel;
     Label104: TLabel;
     Label105: TLabel;
+    Frame_doc_reservado1: TFrame_doc_reservado;
+    Panel_sem_midia: TPanel;
+    Label97: TLabel;
+    Label106: TLabel;
+    Label107: TLabel;
+    Label108: TLabel;
+    Image30: TImage;
+    Image31: TImage;
+    Label109: TLabel;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -386,6 +395,16 @@ type
     procedure Png_gmailto_trueClick(Sender: TObject);
     procedure Label71Click(Sender: TObject);
     procedure Image21Click(Sender: TObject);
+    procedure Label109MouseLeave(Sender: TObject);
+    procedure Label109MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Image31MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Image31MouseLeave(Sender: TObject);
+    procedure Label94Click(Sender: TObject);
+    procedure Label80Click(Sender: TObject);
+    procedure Label109Click(Sender: TObject);
+    procedure Image31Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -411,6 +430,7 @@ begin
   Panel_pergunta_midia.Visible:=false;
   Panel_lista_tokens.Visible:=false;
   Panel_lista_cartao.Visible:=false;
+  Panel_sem_midia.Visible:=false;
 end;
 
 procedure TForm1.Image10Click(Sender: TObject);
@@ -569,6 +589,23 @@ begin
   Label83.Font.Style := [fsUnderline];
 end;
 
+procedure TForm1.Image31Click(Sender: TObject);
+begin
+  Panel_Inicial_Inferior.Visible:=true;
+  Panel_sem_midia.Visible:=false;
+end;
+
+procedure TForm1.Image31MouseLeave(Sender: TObject);
+begin
+  Label109.Font.Style := [];
+end;
+
+procedure TForm1.Image31MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  Label109.Font.Style := [fsUnderline];
+end;
+
 procedure TForm1.Image3Click(Sender: TObject);
 begin
    Panel_Instalador_token_cartao_1.Visible:=false;
@@ -723,6 +760,23 @@ begin
   Label105.Font.Style := [fsUnderline];
 end;
 
+procedure TForm1.Label109Click(Sender: TObject);
+begin
+  Panel_Inicial_Inferior.Visible:=true;
+  Panel_sem_midia.Visible:=false;
+end;
+
+procedure TForm1.Label109MouseLeave(Sender: TObject);
+begin
+  Label109.Font.Style := [];
+end;
+
+procedure TForm1.Label109MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  Label109.Font.Style := [fsUnderline];
+end;
+
 procedure TForm1.Label10Click(Sender: TObject);
 begin
   Panel_Certificado_A1_A3.Visible:=true;
@@ -862,12 +916,14 @@ end;
 procedure TForm1.Label26MouseLeave(Sender: TObject);
 begin
   Label26.Font.Style := [];
+  Frame_doc_reservado1.Visible:=false;
 end;
 
 procedure TForm1.Label26MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label26.Font.Style := [fsUnderline];
+  Frame_doc_reservado1.Visible:=true;
 end;
 
 procedure TForm1.Label33MouseLeave(Sender: TObject);
@@ -925,6 +981,7 @@ begin
   Panel_Inicial_Inferior.Visible:=true;
   Panel_lista_tokens.Visible:=false;
   Panel_lista_cartao.Visible:=false;
+  Panel_sem_midia.Visible:=false;
 end;
 
 procedure TForm1.Label5MouseLeave(Sender: TObject);
@@ -971,6 +1028,7 @@ begin
   Panel_pergunta_midia.Visible:=false;
   Panel_lista_tokens.Visible:=false;
   Panel_lista_cartao.Visible:=false;
+  Panel_sem_midia.Visible:=false;
 end;
 
 procedure TForm1.Label6MouseLeave(Sender: TObject);
@@ -1083,6 +1141,7 @@ begin
   Panel_Instalador_token_cartao_1.Visible:=false;
   Panel_lista_tokens.Visible:=false;
   Panel_lista_cartao.Visible:=false;
+  Panel_sem_midia.Visible:=false;
 end;
 
 procedure TForm1.Label7MouseLeave(Sender: TObject);
@@ -1094,6 +1153,12 @@ procedure TForm1.Label7MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
  Label7.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Label80Click(Sender: TObject);
+begin
+  Panel_sem_midia.Visible:=true;
+  Panel_lista_tokens.Visible:=false;
 end;
 
 procedure TForm1.Label80MouseLeave(Sender: TObject);
@@ -1173,6 +1238,7 @@ begin
   Panel_Instalador_token_cartao_1.Visible:=false;
   Panel_lista_tokens.Visible:=false;
   Panel_lista_cartao.Visible:=false;
+  Panel_sem_midia.Visible:=false;
 end;
 
 procedure TForm1.Label8MouseLeave(Sender: TObject);
@@ -1195,6 +1261,12 @@ procedure TForm1.Label91MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label91.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Label94Click(Sender: TObject);
+begin
+  Panel_sem_midia.Visible:=true;
+  Panel_lista_cartao.Visible:=false;
 end;
 
 procedure TForm1.Label94MouseLeave(Sender: TObject);
@@ -1230,6 +1302,7 @@ begin
   Panel_Inicial_Inferior.Visible:=false;
   Panel_lista_tokens.Visible:=false;
   Panel_lista_cartao.Visible:=false;
+  Panel_sem_midia.Visible:=false;
 end;
 
 procedure TForm1.Label9MouseLeave(Sender: TObject);
