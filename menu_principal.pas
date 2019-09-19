@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
   Vcl.StdCtrls, System.ImageList, Vcl.ImgList, PngBitBtn, Vcl.Buttons,
-  PngSpeedButton, Documento_reservado;
+  PngSpeedButton, Documento_reservado, token_pro72k, token_safenet_5100;
 
 type
   TForm1 = class(TForm)
@@ -182,6 +182,8 @@ type
     Image30: TImage;
     Image31: TImage;
     Label109: TLabel;
+    Frame_token_pro72k1: TFrame_token_pro72k;
+    Frame_safenet_51001: TFrame_safenet_5100;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -405,6 +407,7 @@ type
     procedure Label80Click(Sender: TObject);
     procedure Label109Click(Sender: TObject);
     procedure Image31Click(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -431,6 +434,23 @@ begin
   Panel_lista_tokens.Visible:=false;
   Panel_lista_cartao.Visible:=false;
   Panel_sem_midia.Visible:=false;
+end;
+procedure Arredondarcantos(componente: TWinControl; Y:String);
+var
+   BX: TRect;
+   mdo: HRGN;
+begin
+  with componente do
+    begin
+    BX := ClientRect;
+    mdo := CreateRoundRectRgn(BX.Left, BX.Top, BX.Right,
+    BX.Bottom, StrToInt(Y), StrToInt(Y)) ;
+    Perform(EM_GETRECT, 0, lParam(@BX)) ;
+    InflateRect(BX, - 4, - 4) ;
+    Perform(EM_SETRECTNP, 0, lParam(@BX)) ;
+    SetWindowRgn(Handle, mdo, True) ;
+    Invalidate;
+    end;
 end;
 
 procedure TForm1.Image10Click(Sender: TObject);
@@ -1175,12 +1195,15 @@ end;
 procedure TForm1.Label82MouseLeave(Sender: TObject);
 begin
   Label82.Font.Style := [];
+  Frame_token_pro72k1.Visible:=false;
 end;
 
 procedure TForm1.Label82MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label82.Font.Style := [fsUnderline];
+  Frame_token_pro72k1.Visible:=true;
+  //Arredondarcantos(Frame_token_pro72k, '50');//para arredonda as borda
 end;
 
 procedure TForm1.Label83MouseLeave(Sender: TObject);
@@ -1197,12 +1220,14 @@ end;
 procedure TForm1.Label85MouseLeave(Sender: TObject);
 begin
   Label85.Font.Style := [];
+  Frame_safenet_51001.Visible:=false;
 end;
 
 procedure TForm1.Label85MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label85.Font.Style := [fsUnderline];
+  Frame_safenet_51001.Visible:=true;
 end;
 
 procedure TForm1.Label87MouseLeave(Sender: TObject);

@@ -28,7 +28,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1092
     object Image1: TImage
       Left = 0
       Top = 0
@@ -1834,7 +1833,6 @@ object Form1: TForm1
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1092
     object Image2: TImage
       Left = 56
       Top = 16
@@ -2047,7 +2045,6 @@ object Form1: TForm1
     Color = 14264576
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 1092
     object Label13: TLabel
       Left = 56
       Top = 48
@@ -2870,7 +2867,6 @@ object Form1: TForm1
     Color = 14264576
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 1092
     object Label18: TLabel
       Left = 56
       Top = 48
@@ -3630,7 +3626,6 @@ object Form1: TForm1
     Color = 5264916
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 1092
     object Label23: TLabel
       Left = 55
       Top = 49
@@ -4896,7 +4891,6 @@ object Form1: TForm1
     Color = 9667712
     ParentBackground = False
     TabOrder = 5
-    ExplicitWidth = 1092
     object Label37: TLabel
       Left = 56
       Top = 40
@@ -6093,7 +6087,6 @@ object Form1: TForm1
     ParentBackground = False
     TabOrder = 6
     Visible = False
-    ExplicitWidth = 1092
     object Label55: TLabel
       Left = 56
       Top = 40
@@ -7200,7 +7193,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 7
-    ExplicitWidth = 1092
     object Label68: TLabel
       Left = 56
       Top = 23
@@ -7960,7 +7952,6 @@ object Form1: TForm1
     Color = 5264915
     ParentBackground = False
     TabOrder = 8
-    ExplicitWidth = 1092
     object Label72: TLabel
       Left = 56
       Top = 29
@@ -9031,7 +9022,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
-    ExplicitWidth = 1092
     object Image26: TImage
       Left = 323
       Top = 34
@@ -9866,19 +9856,52 @@ object Form1: TForm1
         AF9DCE8E96BCFE0C5EEB03586CAB4614E5B71E24845624582FA4A311F1013ACE
         88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
     end
+    inline Frame_token_pro72k1: TFrame_token_pro72k
+      Left = 755
+      Top = 285
+      Width = 302
+      Height = 248
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 9667712
+      Font.Height = -11
+      Font.Name = 'Branding Medium'
+      Font.Style = []
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+      Visible = False
+      ExplicitLeft = 755
+      ExplicitTop = 285
+      inherited Image1: TImage
+        Width = 249
+        ExplicitWidth = 249
+      end
+    end
+    inline Frame_safenet_51001: TFrame_safenet_5100
+      Left = 762
+      Top = 292
+      Width = 302
+      Height = 248
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 1
+      Visible = False
+      ExplicitLeft = 762
+      ExplicitTop = 292
+    end
   end
   object Panel_lista_cartao: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 578
-    Align = alClient
+    Width = 191
+    Height = 416
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
-    ExplicitWidth = 760
-    ExplicitHeight = 472
     object Image27: TImage
       Left = 320
       Top = 34
@@ -10631,17 +10654,12 @@ object Form1: TForm1
   object Panel_sem_midia: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 578
-    Align = alClient
+    Width = 298
+    Height = 172
     BevelOuter = bvNone
     Color = 6714127
     ParentBackground = False
     TabOrder = 11
-    ExplicitLeft = 1
-    ExplicitTop = 119
-    ExplicitWidth = 408
-    ExplicitHeight = 410
     object Label97: TLabel
       Left = 56
       Top = 40
