@@ -6,9 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
   Vcl.StdCtrls, System.ImageList, Vcl.ImgList, PngBitBtn, Vcl.Buttons,
-  PngSpeedButton, Documento_reservado, token_pro72k, token_safenet_5100,
-  cartao_wp, cartao_mopho, cartao_idemia, cartao_gemalto, token_safenet_aladin,
-  token_safenet_5110, token_epass2003;
+  PngSpeedButton, Documento_reservado, token_pro72k, token_safenet_5100;
 
 type
   TForm1 = class(TForm)
@@ -184,15 +182,6 @@ type
     Image30: TImage;
     Image31: TImage;
     Label109: TLabel;
-    fcartao_wp1: Tfcartao_wp;
-    FCartao_mopho1: TFCartao_mopho;
-    fcartao_idemia1: Tfcartao_idemia;
-    Fcartao_gemalto1: TFcartao_gemalto;
-    Frame_token_pro72k1: TFrame_token_pro72k;
-    Frame_safenet_51001: TFrame_safenet_5100;
-    Token_aladin1: TToken_aladin;
-    token_safent_51101: Ttoken_safent_5110;
-    Token_epass1: TToken_epass;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -748,40 +737,34 @@ end;
 procedure TForm1.Label100MouseLeave(Sender: TObject);
 begin
   Label100.Font.Style := [];
-  FCartao_mopho1.Visible:=false;
 end;
 
 procedure TForm1.Label100MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label100.Font.Style := [fsUnderline];
-  FCartao_mopho1.Visible:=true;
 end;
 
 procedure TForm1.Label102MouseLeave(Sender: TObject);
 begin
   Label102.Font.Style := [];
-  fcartao_idemia1.Visible:=false;
 end;
 
 procedure TForm1.Label102MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label102.Font.Style := [fsUnderline];
-  fcartao_idemia1.Visible:=true;
 end;
 
 procedure TForm1.Label104MouseLeave(Sender: TObject);
 begin
   Label104.Font.Style := [];
-  Fcartao_gemalto1.Visible:=false;
 end;
 
 procedure TForm1.Label104MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label104.Font.Style := [fsUnderline];
-  Fcartao_gemalto1.Visible:=true;
 end;
 
 procedure TForm1.Label105MouseLeave(Sender: TObject);
@@ -1248,27 +1231,23 @@ end;
 procedure TForm1.Label87MouseLeave(Sender: TObject);
 begin
   Label87.Font.Style := [];
-  Token_aladin1.Visible:=false;
 end;
 
 procedure TForm1.Label87MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label87.Font.Style := [fsUnderline];
-  Token_aladin1.Visible:=true;
 end;
 
 procedure TForm1.Label89MouseLeave(Sender: TObject);
 begin
   Label89.Font.Style := [];
-  token_safent_51101.Visible:=false;
 end;
 
 procedure TForm1.Label89MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label89.Font.Style := [fsUnderline];
-  token_safent_51101.Visible:=true;
 end;
 
 procedure TForm1.Label8Click(Sender: TObject);
@@ -1299,14 +1278,12 @@ end;
 procedure TForm1.Label91MouseLeave(Sender: TObject);
 begin
   Label91.Font.Style := [];
-  Token_epass1.Visible:=false;
 end;
 
 procedure TForm1.Label91MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label91.Font.Style := [fsUnderline];
-  Token_epass1.Visible:=true;
 end;
 
 procedure TForm1.Label94Click(Sender: TObject);
@@ -1329,14 +1306,12 @@ end;
 procedure TForm1.Label98MouseLeave(Sender: TObject);
 begin
   Label98.Font.Style := [];
-  fcartao_wp1.Visible:=false;
 end;
 
 procedure TForm1.Label98MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label98.Font.Style := [fsUnderline];
-  fcartao_wp1.Visible:=true;
 end;
 
 procedure TForm1.Label9Click(Sender: TObject);

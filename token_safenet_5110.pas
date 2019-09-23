@@ -1,16 +1,16 @@
-unit token_safenet_aladin;
+unit token_safenet_5110;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
-  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage;
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls, Vcl.StdCtrls;
 
 type
-  TToken_aladin = class(TFrame)
-    Image1: TImage;
+  Ttoken_safent_5110 = class(TFrame)
     Label1: TLabel;
+    Image1: TImage;
   private
     { Private declarations }
   public

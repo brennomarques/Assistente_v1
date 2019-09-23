@@ -121,12 +121,37 @@
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="token_safenet_aladin.pas">
-            <Form>Frame1</Form>
+            <Form>Token_aladin</Form>
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="token_epass2003.pas">
-            <Form>Frame2</Form>
+            <Form>Token_epass</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="token_safenet_5110.pas">
+            <Form>token_safent_5110</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="cartao_wp.pas">
+            <Form>fcartao_wp</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="cartao_mopho.pas">
+            <Form>FCartao_mopho</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="cartao_idemia.pas">
+            <Form>fcartao_idemia</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="cartao_gemalto.pas">
+            <Form>Fcartao_gemalto</Form>
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>

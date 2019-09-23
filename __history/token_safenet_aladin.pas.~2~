@@ -8,7 +8,7 @@ uses
   Vcl.Imaging.pngimage;
 
 type
-  TToken_aladin = class(TFrame)
+  TFrame1 = class(TFrame)
     Image1: TImage;
     Label1: TLabel;
   private

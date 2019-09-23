@@ -9022,6 +9022,8 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
+    ExplicitWidth = 559
+    ExplicitHeight = 395
     object Image26: TImage
       Left = 323
       Top = 34
@@ -9429,7 +9431,7 @@ object Form1: TForm1
       ParentFont = False
     end
     object Label87: TLabel
-      Left = 540
+      Left = 541
       Top = 252
       Width = 117
       Height = 16
@@ -9857,7 +9859,7 @@ object Form1: TForm1
         88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
     end
     inline Frame_token_pro72k1: TFrame_token_pro72k
-      Left = 755
+      Left = 731
       Top = 285
       Width = 302
       Height = 248
@@ -9872,16 +9874,12 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 0
       Visible = False
-      ExplicitLeft = 755
+      ExplicitLeft = 731
       ExplicitTop = 285
-      inherited Image1: TImage
-        Width = 249
-        ExplicitWidth = 249
-      end
     end
     inline Frame_safenet_51001: TFrame_safenet_5100
-      Left = 762
-      Top = 292
+      Left = 693
+      Top = 298
       Width = 302
       Height = 248
       Color = clWhite
@@ -9889,12 +9887,51 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 1
       Visible = False
-      ExplicitLeft = 762
-      ExplicitTop = 292
+      ExplicitLeft = 693
+      ExplicitTop = 298
+    end
+    inline Token_aladin1: TToken_aladin
+      Left = 755
+      Top = 6
+      Width = 302
+      Height = 248
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 2
+      Visible = False
+      ExplicitLeft = 755
+      ExplicitTop = 6
+    end
+    inline token_safent_51101: Ttoken_safent_5110
+      Left = 102
+      Top = 214
+      Width = 302
+      Height = 248
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 3
+      Visible = False
+      ExplicitLeft = 102
+      ExplicitTop = 214
+    end
+    inline Token_epass1: TToken_epass
+      Left = 304
+      Top = 105
+      Width = 302
+      Height = 248
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 4
+      Visible = False
+      ExplicitLeft = 304
+      ExplicitTop = 105
     end
   end
   object Panel_lista_cartao: TPanel
-    Left = 0
+    Left = 1
     Top = 113
     Width = 191
     Height = 416
@@ -10537,8 +10574,8 @@ object Form1: TForm1
       ParentFont = False
     end
     object Label98: TLabel
-      Left = 298
-      Top = 250
+      Left = 297
+      Top = 249
       Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
@@ -10594,7 +10631,7 @@ object Form1: TForm1
     end
     object Label102: TLabel
       Left = 692
-      Top = 250
+      Top = 252
       Width = 117
       Height = 16
       Caption = 'Veja a foto dele aqui.'
@@ -10649,6 +10686,58 @@ object Form1: TForm1
       ParentFont = False
       OnMouseMove = Label105MouseMove
       OnMouseLeave = Label105MouseLeave
+    end
+    inline fcartao_wp1: Tfcartao_wp
+      Left = 523
+      Top = 164
+      Width = 302
+      Height = 248
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 0
+      Visible = False
+      ExplicitLeft = 523
+      ExplicitTop = 164
+    end
+    inline FCartao_mopho1: TFCartao_mopho
+      Left = 523
+      Top = 164
+      Width = 302
+      Height = 248
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 1
+      Visible = False
+      ExplicitLeft = 523
+      ExplicitTop = 164
+    end
+    inline fcartao_idemia1: Tfcartao_idemia
+      Left = 227
+      Top = 164
+      Width = 302
+      Height = 248
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 2
+      Visible = False
+      ExplicitLeft = 227
+      ExplicitTop = 164
+    end
+    inline Fcartao_gemalto1: TFcartao_gemalto
+      Left = 227
+      Top = 164
+      Width = 302
+      Height = 248
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 3
+      Visible = False
+      ExplicitLeft = 227
+      ExplicitTop = 164
     end
   end
   object Panel_sem_midia: TPanel
