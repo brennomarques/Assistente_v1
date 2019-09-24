@@ -6028,6 +6028,7 @@ object Form1: TForm1
         323031392D30392D30325432333A34323A33382B30323A303072102F62000000
         2574455874646174653A6D6F6469667900323031392D30392D30325432333A34
         323A33382B30323A3030034D97DE0000000049454E44AE426082}
+      OnClick = Image15Click
       OnMouseLeave = Image15MouseLeave
       OnMouseMove = Image15MouseMove
     end
@@ -6072,6 +6073,7 @@ object Form1: TForm1
       Font.Name = 'Branding Medium'
       Font.Style = []
       ParentFont = False
+      OnClick = Label54Click
       OnMouseMove = Label54MouseMove
       OnMouseLeave = Label54MouseLeave
     end
@@ -7017,7 +7019,7 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
     end
-    object Image17: TImage
+    object Image_Instala_java: TImage
       Left = 56
       Top = 187
       Width = 223
@@ -7049,8 +7051,9 @@ object Form1: TForm1
         2D30392D30335431343A30373A30362B30323A3030552A590800000025744558
         74646174653A6D6F6469667900323031392D30392D30335431343A30373A3036
         2B30323A30302477E1B40000000049454E44AE426082}
-      OnMouseLeave = Image17MouseLeave
-      OnMouseMove = Image17MouseMove
+      OnClick = Image_Instala_javaClick
+      OnMouseLeave = Image_Instala_javaMouseLeave
+      OnMouseMove = Image_Instala_javaMouseMove
     end
     object Label61: TLabel
       Left = 108
@@ -7064,6 +7067,7 @@ object Form1: TForm1
       Font.Name = 'Branding Medium'
       Font.Style = []
       ParentFont = False
+      OnClick = Label61Click
       OnMouseMove = Label61MouseMove
       OnMouseLeave = Label61MouseLeave
     end
@@ -7132,7 +7136,7 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
     end
-    object Image18: TImage
+    object Image_config_mozilla: TImage
       Left = 56
       Top = 381
       Width = 220
@@ -7164,10 +7168,10 @@ object Form1: TForm1
         2D30392D30335431343A30373A30362B30323A3030552A590800000025744558
         74646174653A6D6F6469667900323031392D30392D30335431343A30373A3036
         2B30323A30302477E1B40000000049454E44AE426082}
-      OnMouseLeave = Image18MouseLeave
-      OnMouseMove = Image18MouseMove
+      OnMouseLeave = Image_config_mozillaMouseLeave
+      OnMouseMove = Image_config_mozillaMouseMove
     end
-    object Label67: TLabel
+    object Label_config_dll: TLabel
       Left = 69
       Top = 388
       Width = 192
@@ -7179,8 +7183,9 @@ object Form1: TForm1
       Font.Name = 'Branding Medium'
       Font.Style = []
       ParentFont = False
-      OnMouseMove = Label67MouseMove
-      OnMouseLeave = Label67MouseLeave
+      OnClick = Label_config_dllClick
+      OnMouseMove = Label_config_dllMouseMove
+      OnMouseLeave = Label_config_dllMouseLeave
     end
   end
   object Panel_Instalador_token_cartao_1: TPanel
@@ -9022,8 +9027,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
-    ExplicitWidth = 559
-    ExplicitHeight = 395
     object Image26: TImage
       Left = 323
       Top = 34
@@ -9859,8 +9862,8 @@ object Form1: TForm1
         88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
     end
     inline Frame_token_pro72k1: TFrame_token_pro72k
-      Left = 731
-      Top = 285
+      Left = 400
+      Top = 166
       Width = 302
       Height = 248
       Color = clWhite
@@ -9874,12 +9877,12 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 0
       Visible = False
-      ExplicitLeft = 731
-      ExplicitTop = 285
+      ExplicitLeft = 400
+      ExplicitTop = 166
     end
     inline Frame_safenet_51001: TFrame_safenet_5100
-      Left = 693
-      Top = 298
+      Left = 396
+      Top = 166
       Width = 302
       Height = 248
       Color = clWhite
@@ -9887,12 +9890,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 1
       Visible = False
-      ExplicitLeft = 693
-      ExplicitTop = 298
+      ExplicitLeft = 396
+      ExplicitTop = 166
     end
     inline Token_aladin1: TToken_aladin
-      Left = 755
-      Top = 6
+      Left = 68
+      Top = 166
       Width = 302
       Height = 248
       Color = clWhite
@@ -9900,12 +9903,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 2
       Visible = False
-      ExplicitLeft = 755
-      ExplicitTop = 6
+      ExplicitLeft = 68
+      ExplicitTop = 166
     end
     inline token_safent_51101: Ttoken_safent_5110
-      Left = 102
-      Top = 214
+      Left = 68
+      Top = 166
       Width = 302
       Height = 248
       Color = clWhite
@@ -9913,12 +9916,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 3
       Visible = False
-      ExplicitLeft = 102
-      ExplicitTop = 214
+      ExplicitLeft = 68
+      ExplicitTop = 166
     end
     inline Token_epass1: TToken_epass
-      Left = 304
-      Top = 105
+      Left = 395
+      Top = 166
       Width = 302
       Height = 248
       Color = clWhite
@@ -9926,15 +9929,16 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 4
       Visible = False
-      ExplicitLeft = 304
-      ExplicitTop = 105
+      ExplicitLeft = 395
+      ExplicitTop = 166
     end
   end
   object Panel_lista_cartao: TPanel
-    Left = 1
+    Left = 0
     Top = 113
-    Width = 191
-    Height = 416
+    Width = 1084
+    Height = 578
+    Align = alClient
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
@@ -10242,8 +10246,8 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
     end
-    object Image29: TImage
-      Left = 394
+    object Image_baixa_instalador: TImage
+      Left = 398
       Top = 486
       Width = 246
       Height = 47
@@ -10275,6 +10279,9 @@ object Form1: TForm1
         EF54E8726F703DDBB95365AAC5DD79C81D568BE916F74695BE3F18103257DC09
         51FBEC2AFA514D1EB8EEDE8DA3CCD8FF9EF905756B0949E666F13E0000000049
         454E44AE426082}
+      OnClick = Image_baixa_instaladorClick
+      OnMouseLeave = Image_baixa_instaladorMouseLeave
+      OnMouseMove = Image_baixa_instaladorMouseMove
     end
     object Png_morpho_false: TPngSpeedButton
       Left = 237
@@ -10489,13 +10496,13 @@ object Form1: TForm1
         0E849083BF7984DF1601E116114F3422C103EEDFA5489E9164C7FC011F55E3AD
         0049020F0000000049454E44AE426082}
     end
-    object Png_gmailto_false: TPngSpeedButton
+    object Png_gemalto_false: TPngSpeedButton
       Left = 632
       Top = 330
       Width = 54
       Height = 52
       Flat = True
-      OnClick = Png_gmailto_falseClick
+      OnClick = Png_gemalto_falseClick
       PngImage.Data = {
         89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
         530000000473424954080808087C086488000002934944415478DAED9A4D6813
@@ -10521,14 +10528,14 @@ object Form1: TForm1
         AF9DCE8E96BCFE0C5EEB03586CAB4614E5B71E24845624582FA4A311F1013ACE
         88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
     end
-    object Png_gmailto_true: TPngSpeedButton
+    object Png_gemalto_true: TPngSpeedButton
       Left = 632
       Top = 330
       Width = 54
       Height = 52
       Flat = True
       Visible = False
-      OnClick = Png_gmailto_trueClick
+      OnClick = Png_gemalto_trueClick
       PngImage.Data = {
         89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
         530000000473424954080808087C086488000003474944415478DAEDDA4D4814
@@ -10688,8 +10695,8 @@ object Form1: TForm1
       OnMouseLeave = Label105MouseLeave
     end
     inline fcartao_wp1: Tfcartao_wp
-      Left = 523
-      Top = 164
+      Left = 765
+      Top = 321
       Width = 302
       Height = 248
       Color = clWhite
@@ -10697,12 +10704,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 0
       Visible = False
-      ExplicitLeft = 523
-      ExplicitTop = 164
+      ExplicitLeft = 765
+      ExplicitTop = 321
     end
     inline FCartao_mopho1: TFCartao_mopho
-      Left = 523
-      Top = 164
+      Left = 765
+      Top = 320
       Width = 302
       Height = 248
       Color = clWhite
@@ -10710,12 +10717,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 1
       Visible = False
-      ExplicitLeft = 523
-      ExplicitTop = 164
+      ExplicitLeft = 765
+      ExplicitTop = 320
     end
     inline fcartao_idemia1: Tfcartao_idemia
-      Left = 227
-      Top = 164
+      Left = 759
+      Top = 320
       Width = 302
       Height = 248
       Color = clWhite
@@ -10723,12 +10730,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 2
       Visible = False
-      ExplicitLeft = 227
-      ExplicitTop = 164
+      ExplicitLeft = 759
+      ExplicitTop = 320
     end
     inline Fcartao_gemalto1: TFcartao_gemalto
-      Left = 227
-      Top = 164
+      Left = 765
+      Top = 320
       Width = 302
       Height = 248
       Color = clWhite
@@ -10736,8 +10743,8 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 3
       Visible = False
-      ExplicitLeft = 227
-      ExplicitTop = 164
+      ExplicitLeft = 765
+      ExplicitTop = 320
     end
   end
   object Panel_sem_midia: TPanel

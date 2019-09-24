@@ -8,7 +8,7 @@ uses
   Vcl.StdCtrls, System.ImageList, Vcl.ImgList, PngBitBtn, Vcl.Buttons,
   PngSpeedButton, Documento_reservado, token_pro72k, token_safenet_5100,
   cartao_wp, cartao_mopho, cartao_idemia, cartao_gemalto, token_safenet_aladin,
-  token_safenet_5110, token_epass2003;
+  token_safenet_5110, token_epass2003, ShellApi, System.IniFiles;
 
 type
   TForm1 = class(TForm)
@@ -95,15 +95,15 @@ type
     Label58: TLabel;
     Label59: TLabel;
     Label60: TLabel;
-    Image17: TImage;
+    Image_Instala_java: TImage;
     Label61: TLabel;
     Label62: TLabel;
     Label63: TLabel;
     Label64: TLabel;
     Label65: TLabel;
     Label66: TLabel;
-    Image18: TImage;
-    Label67: TLabel;
+    Image_config_mozilla: TImage;
+    Label_config_dll: TLabel;
     Panel_Instalador_token_cartao_1: TPanel;
     Label68: TLabel;
     Label69: TLabel;
@@ -157,15 +157,15 @@ type
     Label93: TLabel;
     Label94: TLabel;
     Label95: TLabel;
-    Image29: TImage;
+    Image_baixa_instalador: TImage;
     Png_morpho_false: TPngSpeedButton;
     Png_morpho_true: TPngSpeedButton;
     Png_wp_false: TPngSpeedButton;
     Png_wp_true: TPngSpeedButton;
     Png_idemia_false: TPngSpeedButton;
     Png_idemia_true: TPngSpeedButton;
-    Png_gmailto_false: TPngSpeedButton;
-    Png_gmailto_true: TPngSpeedButton;
+    Png_gemalto_false: TPngSpeedButton;
+    Png_gemalto_true: TPngSpeedButton;
     Label96: TLabel;
     Label98: TLabel;
     Label99: TLabel;
@@ -293,14 +293,14 @@ type
     procedure Label61MouseLeave(Sender: TObject);
     procedure Label61MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
-    procedure Image18MouseMove(Sender: TObject; Shift: TShiftState; X,
+    procedure Image_config_mozillaMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
-    procedure Image18MouseLeave(Sender: TObject);
-    procedure Image17MouseMove(Sender: TObject; Shift: TShiftState; X,
+    procedure Image_config_mozillaMouseLeave(Sender: TObject);
+    procedure Image_Instala_javaMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
-    procedure Image17MouseLeave(Sender: TObject);
-    procedure Label67MouseLeave(Sender: TObject);
-    procedure Label67MouseMove(Sender: TObject; Shift: TShiftState; X,
+    procedure Image_Instala_javaMouseLeave(Sender: TObject);
+    procedure Label_config_dllMouseLeave(Sender: TObject);
+    procedure Label_config_dllMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
     procedure Label9Click(Sender: TObject);
     procedure Label70MouseLeave(Sender: TObject);
@@ -402,8 +402,8 @@ type
     procedure Png_morpho_trueClick(Sender: TObject);
     procedure Png_idemia_falseClick(Sender: TObject);
     procedure Png_idemia_trueClick(Sender: TObject);
-    procedure Png_gmailto_falseClick(Sender: TObject);
-    procedure Png_gmailto_trueClick(Sender: TObject);
+    procedure Png_gemalto_falseClick(Sender: TObject);
+    procedure Png_gemalto_trueClick(Sender: TObject);
     procedure Label71Click(Sender: TObject);
     procedure Image21Click(Sender: TObject);
     procedure Label109MouseLeave(Sender: TObject);
@@ -416,6 +416,18 @@ type
     procedure Label80Click(Sender: TObject);
     procedure Label109Click(Sender: TObject);
     procedure Image31Click(Sender: TObject);
+    procedure Image_Instala_javaClick(Sender: TObject);
+    Function eBuscaNome(dado: string): String;
+    Function eEncontarSecao(ArqIni: TIniFile):String;
+    procedure eConfiguraDLL(caminho: String);
+    procedure Label61Click(Sender: TObject);
+    procedure Image15Click(Sender: TObject);
+    procedure Label54Click(Sender: TObject);
+    procedure Label_config_dllClick(Sender: TObject);
+    procedure Image_baixa_instaladorClick(Sender: TObject);
+    procedure Image_baixa_instaladorMouseMove(Sender: TObject;
+      Shift: TShiftState; X, Y: Integer);
+    procedure Image_baixa_instaladorMouseLeave(Sender: TObject);
 
   private
     { Private declarations }
@@ -492,6 +504,11 @@ begin
   Label36.Font.Style := [fsUnderline];
 end;
 
+procedure TForm1.Image15Click(Sender: TObject);
+begin
+  ShellExecute(Handle, 'open','http://187.95.189.232', '', nil, 0);
+end;
+
 procedure TForm1.Image15MouseLeave(Sender: TObject);
 begin
   Label54.Font.Style := [];
@@ -503,26 +520,193 @@ begin
   Label54.Font.Style := [fsUnderline];
 end;
 
-procedure TForm1.Image17MouseLeave(Sender: TObject);
+procedure TForm1.Image_Instala_javaClick(Sender: TObject);
+begin
+  ShellExecute(Handle, 'open','https://www.java.com/pt_BR/', '', nil, 0);
+end;
+
+procedure TForm1.Image_Instala_javaMouseLeave(Sender: TObject);
 begin
   Label61.Font.Style := [];
 end;
 
-procedure TForm1.Image17MouseMove(Sender: TObject; Shift: TShiftState; X,
+procedure TForm1.Image_Instala_javaMouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label61.Font.Style := [fsUnderline];
 end;
-
-procedure TForm1.Image18MouseLeave(Sender: TObject);
+Function TForm1.eBuscaNome(dado: string): String;
+var
+  varString, nome: string;
+  SizeVet, i, x: Integer;
+  status: boolean;
 begin
-  Label67.Font.Style := [];
+  varString:= dado;//recebe dados para realizar o procedimento de busca.
+  SizeVet := Length(varString);//saber o tamanho da StringList
+  status:= False;
+  for i := 0 to SizeVet do//roda até chega no tamnho da SizeVet. o SizeVet esta amarzenado o tamnho da StringList
+  begin
+    if (varString[i] = '[') and (varString[i+1] = 'I') then
+    begin
+      x:=i;
+      while x <> -1 do
+      begin
+        //nome:=nome+varString[x];//Variavel nome recebe a possição de X
+        if varString[x] = '[' then
+        begin
+          nome:=nome+varString[x+1];
+          x:=x+2; //VAI ANDA 2 CASA NO VETOR DEVIDO A PRIMEIRA NÃO SER ATRIBUIDA.
+        end
+        else
+        begin
+          if varString[x] = ']' then
+          begin
+            x:=-1;
+            status:=True;
+          end
+          else
+          begin
+            nome:=nome+varString[x];
+            x:=x+1;
+          end;
+        end;
+      end;
+    end;
+  end;
+  if status then
+  begin
+    result:= nome;
+  end
+  else
+  begin
+    result:='False';//se não encontra o valor ele retorna nome falso para que posso realizar outro metodo
+  end;
+end;
+Function TForm1.eEncontarSecao(ArqIni: TIniFile):String;
+var
+ aux, aux1: string;
+ i: Integer;
+begin
+  i:=0;
+  while i >=0 do
+  begin
+    aux1:='Profile'+IntToStr(i);//aux1 recebe a concatenação para String
+    aux := ArqIni.ReadString(aux1, 'Default', ''); //aqui vou anda em cada Profile
+    if aux = '1' then //se Default for verdadeido ou seja =1
+    begin
+     //ShowMessage('dentro, Profile' + IntToStr(i));
+      aux := ArqIni.ReadString(aux1, 'Path', '');//pega o caminho do profile em uso
+      //ShowMessage('Caminho: ' + aux);
+      result:=aux;
+      i:=-1;//condição de parada, se estava aqui pr achou default logo decrementa I para da stop para condição.
+    end
+    else//caso se aux não for =1 ele incremento a I.
+    begin
+      i:=i+1;
+    end;
+  end;
+end;
+procedure TForm1.eConfiguraDLL(caminho: String); //FUNÇÃO PARA CONFIGURAR DLL
+var
+  Arquivo: TextFile;
+  Registro: string;
+begin
+  if FileExists(caminho+'\PKCS11.txt') then
+  begin
+    //ShowMessage('[PKCS11] Vai ser configurado.');
+    AssignFile(Arquivo, caminho+'\PKCS11.txt');//PEGANDO O ARQUIVO PKCS11 PARA GRAVAR
+    Append(Arquivo);
+
+    //TOKEN EPASS
+    Registro := 'library=eps2003csp11.dll';
+    Writeln(Arquivo, Registro);
+    Registro := 'name=Epass';
+    Writeln(Arquivo, Registro);
+    WriteLn(Arquivo,'');//Acrescenta outra linha
+
+    {//CARTÃO OBETHUR
+    Registro := 'library=OcsCryptoki.dll';
+    Writeln(Arquivo, Registro);
+    Registro := 'name=Oberthur';
+    Writeln(Arquivo, Registro);
+    WriteLn(Arquivo,'');//Acrescenta outra linha }
+
+    //CARTÃO MORPHO
+    Registro := 'library=aetpkss1.dll';
+    Writeln(Arquivo, Registro);
+    Registro := 'name=Morpho';
+    Writeln(Arquivo, Registro);
+    WriteLn(Arquivo,'');//Acrescenta outra linha
+
+    //TOKEN SAFENT
+    Registro := 'library=etoken.dll';
+    Writeln(Arquivo, Registro);
+    Registro := 'name=Safenet';
+    Writeln(Arquivo, Registro);
+    WriteLn(Arquivo,'');//Acrescenta outra linha
+    //Quando e usado dll token epass com cartão awp tem conflito, não funcionar, então estou quando deve usar.
+    CloseFile(Arquivo);
+    Application.MessageBox('DLL Configurada com sucesso!','Configuração DLL', MB_OK or MB_ICONINFORMATION)
+  end
+  else
+  begin
+    Application.MessageBox('[ERROR:] Não foi possível acessar PKCS11','ERROR DLL', MB_OK or MB_ICONINFORMATION)
+    //ShowMessage('[ERROR:] Não foi possível acessar PKCS11');
+  end;
+end;
+procedure TForm1.Image_baixa_instaladorClick(Sender: TObject);
+begin
+  if Png_wp_true.Visible = true then
+  begin
+    ShowMessage('Baixa awp ');
+  end
+  else
+  begin
+    if Png_morpho_true.Visible = true then
+    begin
+      ShowMessage('Baixa mopho');
+    end
+    else
+    begin
+      if Png_idemia_true.Visible = true then
+      begin
+        ShowMessage('Baixa idemia');
+      end
+      else
+      begin
+        if Png_gemalto_true.Visible = true then
+        begin
+          ShowMessage('Baixa Gemalto');
+        end
+        else
+        begin
+          Application.MessageBox('Selecione o modelo do Cartão!','Seleção da Mídia', MB_OK or MB_ICONINFORMATION)
+        end;
+      end;
+    end;
+  end;
 end;
 
-procedure TForm1.Image18MouseMove(Sender: TObject; Shift: TShiftState; X,
+procedure TForm1.Image_baixa_instaladorMouseLeave(Sender: TObject);
+begin
+  Label105.Font.Style := [];
+end;
+
+procedure TForm1.Image_baixa_instaladorMouseMove(Sender: TObject;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  Label105.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Image_config_mozillaMouseLeave(Sender: TObject);
+begin
+  Label_config_dll.Font.Style := [];
+end;
+
+procedure TForm1.Image_config_mozillaMouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
-  Label67.Font.Style := [fsUnderline];
+  Label_config_dll.Font.Style := [fsUnderline];
 end;
 
 procedure TForm1.Image20MouseLeave(Sender: TObject);
@@ -994,6 +1178,11 @@ begin
   Label36.Font.Style := [fsUnderline];
 end;
 
+procedure TForm1.Label54Click(Sender: TObject);
+begin
+  ShellExecute(Handle, 'open','http://187.95.189.232', '', nil, 0);
+end;
+
 procedure TForm1.Label54MouseLeave(Sender: TObject);
 begin
   Label54.Font.Style := [];
@@ -1030,6 +1219,11 @@ begin
  Label5.Font.Style := [fsUnderline];
 end;
 
+procedure TForm1.Label61Click(Sender: TObject);
+begin
+  ShellExecute(Handle, 'open','https://www.java.com/pt_BR/', '', nil, 0);
+end;
+
 procedure TForm1.Label61MouseLeave(Sender: TObject);
 begin
   Label61.Font.Style := [];
@@ -1041,15 +1235,66 @@ begin
   Label61.Font.Style := [fsUnderline];
 end;
 
-procedure TForm1.Label67MouseLeave(Sender: TObject);
+procedure TForm1.Label_config_dllClick(Sender: TObject);
+  var//declaração das variaveis
+  usuarioname, caminho, aux: String;
+  ArqIni: TIniFile;
+  varString, varArquivo, nomearq: string;
+  StringList: TStringList;
 begin
-  Label67.Font.Style := [];
+    caminho:= '\AppData\Roaming\Mozilla\Firefox\';//ESSE CAMINHO E ESTATICO DO MOZILLA.
+    usuarioname:= GetEnvironmentVariable('userprofile');//LOCALIZO O CAMINHO ONDE A PASTA DO USUARIO LOCAL ESTA.
+
+    if DirectoryExists(usuarioname+caminho) then//SE O DIRETORIO EXITIR FAZ ALTERAÇÃO DO  .INI (usuarioname+caminho E CONCATENAÇÃO DA DUA VARIAVEL)
+    begin
+      //ShowMessage('Tem o caminho do arquivo');
+      if FileExists(usuarioname+caminho+'profiles.ini') then //AQUI VERIFICAO SE TEM O ARQUIVO .INI, PODE ACONTECE.
+      begin
+        //ShowMessage('Tem o aquivo .ini');
+        varArquivo := usuarioname+caminho+'profiles.ini'; //CARREGO O CAMINHO DO ARQUIVO .INI
+        ArqIni := TIniFile.Create(varArquivo);//AQUI CARREGO MEU ARQUIVO PARA MEMORIA PARA TER ACESSO MAIS RAPIDO.
+        StringList := TStringList.Create;//
+        try
+          StringList.LoadFromFile(varArquivo);//ESTOU CARREGADO MEU ARQUIVO PARA StringList
+          varString := StringList.Text;// Joga arquivo carregado na StringList na variável;
+          nomearq:= eBuscaNome(varString);//FUNÇÃO QUE LOCALIZA SEÇÃO [INSTALL...]
+          if nomearq ='False' then//AQUI DEFINI QUAL SEÇÃO SERA USADA, SE NÃO TIVER [INSTALL...] VEI SER [PROFILE]
+          begin// AQUI NÃO ENCOTROU A SEÇÃO [INSTALL] ENTÃO SERA EXECULTADO A SEÇÃO [PROFILE]
+            ShowMessage(' [ERROR] :');
+            aux:=eEncontarSecao(ArqIni);//FUNÇÃO BUSCA SEÇÃO [PROFILE] QUE ESTA SENDO USADA.
+            ShowMessage('Achou PROFILE: '+aux);
+            eConfiguraDLL(usuarioname+caminho+aux);//FUNÇÃO PARA CONFIGURAR DLL
+          end
+          else
+          begin // AQUI ELE ENCOTROU A SEÇÃO [INSTALL....]
+            aux := ArqIni.ReadString(nomearq, 'Default', '');//AUX RECEBE O CAMINHO DO PERFIL
+            eConfiguraDLL(usuarioname+caminho+aux);//FUNÇÃO PARA CONFIGURAR DLL
+          end;
+        finally
+          FreeAndNil(StringList);
+        end;
+      end
+      else
+      begin
+        ShowMessage('Não foi possível encotrar o PROFILE');
+      end;
+    end
+    else
+    begin
+      ShowMessage('Não encontrado o caminho');
+    end;
+
 end;
 
-procedure TForm1.Label67MouseMove(Sender: TObject; Shift: TShiftState; X,
+procedure TForm1.Label_config_dllMouseLeave(Sender: TObject);
+begin
+  Label_config_dll.Font.Style := [];
+end;
+
+procedure TForm1.Label_config_dllMouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
-  Label67.Font.Style := [fsUnderline];
+  Label_config_dll.Font.Style := [fsUnderline];
 end;
 
 procedure TForm1.Label6Click(Sender: TObject);
@@ -1364,12 +1609,12 @@ begin
  Label9.Font.Style := [fsUnderline];
 end;
 
-procedure TForm1.Png_gmailto_falseClick(Sender: TObject);
+procedure TForm1.Png_gemalto_falseClick(Sender: TObject);
 begin
-  if Png_gmailto_false.Visible = true then
+  if Png_gemalto_false.Visible = true then
   begin
-    Png_gmailto_false.Visible:=false;
-    Png_gmailto_true.Visible:=true;
+    Png_gemalto_false.Visible:=false;
+    Png_gemalto_true.Visible:=true;
 
     Png_wp_true.Visible:=false;
     Png_wp_false.Visible:=true;
@@ -1383,12 +1628,12 @@ begin
   end
 end;
 
-procedure TForm1.Png_gmailto_trueClick(Sender: TObject);
+procedure TForm1.Png_gemalto_trueClick(Sender: TObject);
 begin
-  if Png_gmailto_true.Visible = true then
+  if Png_gemalto_true.Visible = true then
   begin
-    Png_gmailto_false.Visible:=true;
-    Png_gmailto_true.Visible:=false;
+    Png_gemalto_false.Visible:=true;
+    Png_gemalto_true.Visible:=false;
   end
 end;
 
@@ -1405,8 +1650,8 @@ begin
     Png_morpho_false.Visible:=true;
     Png_morpho_true.Visible:=false;
 
-    Png_gmailto_false.Visible:=true;
-    Png_gmailto_true.Visible:=false;
+    Png_gemalto_false.Visible:=true;
+    Png_gemalto_true.Visible:=false;
 
   end
 end;
@@ -1433,8 +1678,8 @@ begin
     Png_idemia_false.Visible:=true;
     Png_idemia_true.Visible:=false;
 
-    Png_gmailto_false.Visible:=true;
-    Png_gmailto_true.Visible:=false;
+    Png_gemalto_false.Visible:=true;
+    Png_gemalto_true.Visible:=false;
   end
 end;
 
@@ -1605,8 +1850,8 @@ begin
     Png_idemia_false.Visible:=true;
     Png_idemia_true.Visible:=false;
 
-    Png_gmailto_false.Visible:=true;
-    Png_gmailto_true.Visible:=false;
+    Png_gemalto_false.Visible:=true;
+    Png_gemalto_true.Visible:=false;
 
 
 
