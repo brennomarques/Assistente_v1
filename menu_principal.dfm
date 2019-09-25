@@ -10354,13 +10354,13 @@ object Form1: TForm1
         0E849083BF7984DF1601E116114F3422C103EEDFA5489E9164C7FC011F55E3AD
         0049020F0000000049454E44AE426082}
     end
-    object Png_wp_false: TPngSpeedButton
+    object Png_awp_false: TPngSpeedButton
       Left = 237
       Top = 222
       Width = 54
       Height = 52
       Flat = True
-      OnClick = Png_wp_falseClick
+      OnClick = Png_awp_falseClick
       PngImage.Data = {
         89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
         530000000473424954080808087C086488000002934944415478DAED9A4D6813
@@ -10386,14 +10386,14 @@ object Form1: TForm1
         AF9DCE8E96BCFE0C5EEB03586CAB4614E5B71E24845624582FA4A311F1013ACE
         88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
     end
-    object Png_wp_true: TPngSpeedButton
+    object Png_awp_true: TPngSpeedButton
       Left = 237
       Top = 222
       Width = 54
       Height = 52
       Flat = True
       Visible = False
-      OnClick = Png_wp_trueClick
+      OnClick = Png_awp_trueClick
       PngImage.Data = {
         89504E470D0A1A0A0000000D4948445200000034000000330806000000D87D2B
         530000000473424954080808087C086488000003474944415478DAEDDA4D4814
@@ -10745,6 +10745,18 @@ object Form1: TForm1
       Visible = False
       ExplicitLeft = 765
       ExplicitTop = 320
+    end
+    inline FBaixa_driver1: TFBaixa_driver
+      Left = 523
+      Top = 48
+      Width = 329
+      Height = 340
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 4
+      ExplicitLeft = 523
+      ExplicitTop = 48
     end
   end
   object Panel_sem_midia: TPanel
@@ -12881,5 +12893,23 @@ object Form1: TForm1
       OnMouseMove = Label109MouseMove
       OnMouseLeave = Label109MouseLeave
     end
+  end
+  object IdHTTP_baixa: TIdHTTP
+    OnWork = IdHTTP_baixaWork
+    AllowCookies = True
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Request.ContentLength = -1
+    Request.ContentRangeEnd = -1
+    Request.ContentRangeStart = -1
+    Request.ContentRangeInstanceLength = -1
+    Request.Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Request.BasicAuthentication = False
+    Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
+    Request.Ranges.Units = 'bytes'
+    Request.Ranges = <>
+    HTTPOptions = [hoForceEncodeParams]
+    Left = 312
+    Top = 24
   end
 end

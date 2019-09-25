@@ -292,28 +292,61 @@ object FBaixa_driver: TFBaixa_driver
   end
   object Label3: TLabel
     Left = 68
-    Top = 263
-    Width = 184
+    Top = 260
+    Width = 186
     Height = 13
     Caption = 'Fique tranquilo! Quando for conclu'#237'do,'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = 9667712
     Font.Height = -11
-    Font.Name = 'Tahoma'
+    Font.Name = 'Branding Medium'
     Font.Style = []
     ParentFont = False
   end
   object Label2: TLabel
     Left = 68
-    Top = 282
-    Width = 158
+    Top = 275
+    Width = 161
     Height = 13
     Caption = 'essa mensagem ir'#225' desaparecer.'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = 9667712
     Font.Height = -11
-    Font.Name = 'Tahoma'
+    Font.Name = 'Branding Medium'
     Font.Style = []
     ParentFont = False
+  end
+  object Label_baixando1: TLabel
+    Left = 68
+    Top = 301
+    Width = 61
+    Height = 16
+    Caption = 'Baixando...'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 9667712
+    Font.Height = -13
+    Font.Name = 'Branding Medium'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label_download1: TLabel
+    Left = 68
+    Top = 320
+    Width = 87
+    Height = 16
+    Caption = 'Download em...'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 9667712
+    Font.Height = -13
+    Font.Name = 'Branding Medium'
+    Font.Style = []
+    ParentFont = False
+  end
+  object ProgressBar1: TProgressBar
+    Left = 80
+    Top = 16
+    Width = 150
+    Height = 17
+    TabOrder = 0
   end
 end

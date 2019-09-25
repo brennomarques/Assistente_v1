@@ -8,7 +8,9 @@ uses
   Vcl.StdCtrls, System.ImageList, Vcl.ImgList, PngBitBtn, Vcl.Buttons,
   PngSpeedButton, Documento_reservado, token_pro72k, token_safenet_5100,
   cartao_wp, cartao_mopho, cartao_idemia, cartao_gemalto, token_safenet_aladin,
-  token_safenet_5110, token_epass2003, ShellApi, System.IniFiles;
+  token_safenet_5110, token_epass2003, ShellApi, System.IniFiles,
+  IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP,
+  Baixa_driver;
 
 type
   TForm1 = class(TForm)
@@ -160,8 +162,8 @@ type
     Image_baixa_instalador: TImage;
     Png_morpho_false: TPngSpeedButton;
     Png_morpho_true: TPngSpeedButton;
-    Png_wp_false: TPngSpeedButton;
-    Png_wp_true: TPngSpeedButton;
+    Png_awp_false: TPngSpeedButton;
+    Png_awp_true: TPngSpeedButton;
     Png_idemia_false: TPngSpeedButton;
     Png_idemia_true: TPngSpeedButton;
     Png_gemalto_false: TPngSpeedButton;
@@ -193,6 +195,8 @@ type
     Token_aladin1: TToken_aladin;
     token_safent_51101: Ttoken_safent_5110;
     Token_epass1: TToken_epass;
+    FBaixa_driver1: TFBaixa_driver;
+    IdHTTP_baixa: TIdHTTP;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -396,8 +400,8 @@ type
     procedure Label105MouseLeave(Sender: TObject);
     procedure Label105MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
-    procedure Png_wp_falseClick(Sender: TObject);
-    procedure Png_wp_trueClick(Sender: TObject);
+    procedure Png_awp_falseClick(Sender: TObject);
+    procedure Png_awp_trueClick(Sender: TObject);
     procedure Png_morpho_falseClick(Sender: TObject);
     procedure Png_morpho_trueClick(Sender: TObject);
     procedure Png_idemia_falseClick(Sender: TObject);
@@ -428,6 +432,13 @@ type
     procedure Image_baixa_instaladorMouseMove(Sender: TObject;
       Shift: TShiftState; X, Y: Integer);
     procedure Image_baixa_instaladorMouseLeave(Sender: TObject);
+    procedure eBaixaDriver(nomeDrive: String);//função responsavel em sabe quantos bit e a maquina, e baixar o driver
+    function RetornaKiloBytes(ValorAtual: real): string; //retorna bits
+    function RetornaPorcentagem(ValorMaximo,ValorAtual: real): string;// retorna a porcentagem de download
+    procedure eGetDriver(Link: string; Nome: string);
+    procedure IdHTTP_baixaWork(ASender: TObject; AWorkMode: TWorkMode;
+      AWorkCount: Int64);//faz get no link para baixa e chama a função instalação do driver.
+
 
   private
     { Private declarations }
@@ -437,11 +448,14 @@ type
 
 var
   Form1: TForm1;
-  nomeToken: String;//variavel global vai receber o nome da midia
+  nomeToken: String;//variavel global vai receber o nome da midia DO PANEL
 
 implementation
 
 {$R *.dfm}
+
+uses FBaixa_driver; //para manipular valor do frame
+
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
@@ -456,22 +470,12 @@ begin
   Panel_lista_cartao.Visible:=false;
   Panel_sem_midia.Visible:=false;
 end;
-procedure Arredondarcantos(componente: TWinControl; Y:String);
-var
-   BX: TRect;
-   mdo: HRGN;
+procedure TForm1.IdHTTP_baixaWork(ASender: TObject; AWorkMode: TWorkMode;
+  AWorkCount: Int64);
 begin
-  with componente do
-    begin
-    BX := ClientRect;
-    mdo := CreateRoundRectRgn(BX.Left, BX.Top, BX.Right,
-    BX.Bottom, StrToInt(Y), StrToInt(Y)) ;
-    Perform(EM_GETRECT, 0, lParam(@BX)) ;
-    InflateRect(BX, - 4, - 4) ;
-    Perform(EM_SETRECTNP, 0, lParam(@BX)) ;
-    SetWindowRgn(Handle, mdo, True) ;
-    Invalidate;
-    end;
+  {FBaixa_driver1.Label_baixando1.Caption := 'Baixando ... ' + RetornaKiloBytes(AWorkCount);
+  FBaixa_driver1.Label_download1 := 'Download em ...' + RetornaPorcentagem(FBaixa_driver1.ProgressBar1, AWorkCount); }
+  //FBaixa_driver.Label_baixando1.Caption:= 'gratodfdfd';
 end;
 
 procedure TForm1.Image10Click(Sender: TObject);
@@ -654,29 +658,129 @@ begin
     //ShowMessage('[ERROR:] Não foi possível acessar PKCS11');
   end;
 end;
+function IsWindows64: Boolean; // saber quantos bits e a maquina
+type
+  TIsWow64Process = function(AHandle: THandle; var AIsWow64: BOOL)
+    : BOOL; stdcall;
+var
+  vKernel32Handle: DWORD;
+  vIsWow64Process: TIsWow64Process;
+  vIsWow64: BOOL;
+begin
+
+  Result := False;
+
+  vKernel32Handle := LoadLibrary('kernel32.dll');
+  if (vKernel32Handle = 0) then
+    Exit;
+
+  try
+
+    @vIsWow64Process := GetProcAddress(vKernel32Handle, 'IsWow64Process');
+    if not Assigned(vIsWow64Process) then
+      Exit;
+
+    vIsWow64 := False;
+    if (vIsWow64Process(GetCurrentProcess, vIsWow64)) then
+      Result := vIsWow64;
+
+  finally
+    FreeLibrary(vKernel32Handle);
+  end;
+end;
+function TForm1.RetornaKiloBytes(ValorAtual: real): string;
+var
+  resultado: real;
+begin
+  resultado := ((ValorAtual / 1024) / 1024);
+  Result := FormatFloat('0.000 KBs', resultado);
+end;
+
+function TForm1.RetornaPorcentagem(ValorMaximo,
+  ValorAtual: real): string;
+var
+  resultado: real;
+begin
+  resultado := ((ValorAtual * 100) / ValorMaximo);
+  Result := FormatFloat('0%', resultado);
+end;
+procedure TForm1.eGetDriver(Link: string; Nome: string);// procedimento para realizar a baixa do drive.
+var
+  caminhouser, usuarioname, arquivo, caminho: string;
+  MyFile: TFileStream;
+begin
+  // definir o link
+  caminho := Link; // link para realizar a baixa
+  // arquivo:= edit1.text; // nome do arquivo para download
+  arquivo := Nome; // nome do arquivo com extenão
+  usuarioname:= GetEnvironmentVariable('userprofile');//LOCALIZO O CAMINHO ONDE A PASTA DO USUARIO LOCAL ESTA.
+  caminhouser:=usuarioname+'\SOLUTI_DRIVER\';
+  if not DirectoryExists(caminhouser) then
+  // se o local não exitir e cria a pasta
+    ForceDirectories('caminhouser'); // criação da pasta
+  MyFile := TFileStream.Create(caminhouser + arquivo, fmCreate);
+  // local no hd e nome do arquivo com a extensão, onde vai salvar.
+  try
+    // IdHTTP1.Get('https://www.soluti.com.br/download/1171/'+arquivo, MyFile); // fazendo o download do arquivo
+    if arquivo = 'Emissor.jnlp' then
+    begin
+      //IdHTTPEmissor.Get(caminho + arquivo, MyFile);
+    end
+    else
+    begin
+      IdHTTP_baixa.Get(caminho + arquivo, MyFile);
+    end;
+  finally
+    MyFile.Free;
+    //eInstalaDrive(arquivo); // mando o nome do arquivo a ser execultado.
+    ShowMessage('Baixa Driver feito com exito! agora instalar ');
+  end;
+end;
+procedure TForm1.eBaixaDriver(nomeDrive: String); // atraves da variavel nomeDrive a função define qual driver e instalado na maquina
+var
+  link, nome: string;
+begin
+  if IsWindows64 = true then // maquina 64 bits
+  begin
+    if nomeDrive = 'awp' then
+    begin
+      link:='https://www.soluti.com.br/download/5153/';
+      nome:='Cartão_AWP_64bits.msi';
+      eGetDriver(link, nome);
+      ShowMessage('LInk, nome');
+    end;
+  end
+  else//aqui maquinas 32 bits
+  begin
+    ShowMessage('Marquina 32');
+  end;
+end;
 procedure TForm1.Image_baixa_instaladorClick(Sender: TObject);
 begin
-  if Png_wp_true.Visible = true then
+  if Png_awp_true.Visible = true then
   begin
-    ShowMessage('Baixa awp ');
+    eBaixaDriver('awp');//chamando a função e passando nome do driver a ser baixado.
   end
   else
   begin
     if Png_morpho_true.Visible = true then
     begin
       ShowMessage('Baixa mopho');
+      eBaixaDriver('morpho');//chamando a função e passando nome do driver a ser baixado.
     end
     else
     begin
       if Png_idemia_true.Visible = true then
       begin
         ShowMessage('Baixa idemia');
+        eBaixaDriver('idemia');//chamando a função e passando nome do driver a ser baixado.
       end
       else
       begin
         if Png_gemalto_true.Visible = true then
         begin
           ShowMessage('Baixa Gemalto');
+          eBaixaDriver('gemalto');//chamando a função e passando nome do driver a ser baixado.
         end
         else
         begin
@@ -1616,8 +1720,8 @@ begin
     Png_gemalto_false.Visible:=false;
     Png_gemalto_true.Visible:=true;
 
-    Png_wp_true.Visible:=false;
-    Png_wp_false.Visible:=true;
+    Png_awp_true.Visible:=false;
+    Png_awp_false.Visible:=true;
 
     Png_morpho_false.Visible:=true;
     Png_morpho_true.Visible:=false;
@@ -1644,8 +1748,8 @@ begin
     Png_idemia_false.Visible:=false;
     Png_idemia_true.Visible:=true;
 
-    Png_wp_true.Visible:=false;
-    Png_wp_false.Visible:=true;
+    Png_awp_true.Visible:=false;
+    Png_awp_false.Visible:=true;
 
     Png_morpho_false.Visible:=true;
     Png_morpho_true.Visible:=false;
@@ -1672,8 +1776,8 @@ begin
     Png_morpho_false.Visible:=false;
     Png_morpho_true.Visible:=true;
 
-    Png_wp_true.Visible:=false;
-    Png_wp_false.Visible:=true;
+    Png_awp_true.Visible:=false;
+    Png_awp_false.Visible:=true;
 
     Png_idemia_false.Visible:=true;
     Png_idemia_true.Visible:=false;
@@ -1837,12 +1941,12 @@ begin
   end
 end;
 
-procedure TForm1.Png_wp_falseClick(Sender: TObject);
+procedure TForm1.Png_awp_falseClick(Sender: TObject);
 begin
-  if Png_wp_false.Visible = true then
+  if Png_awp_false.Visible = true then
   begin
-    Png_wp_true.Visible:=true;
-    Png_wp_false.Visible:=false;
+    Png_awp_true.Visible:=true;
+    Png_awp_false.Visible:=false;
 
     Png_morpho_false.Visible:=true;
     Png_morpho_true.Visible:=false;
@@ -1859,12 +1963,12 @@ begin
   end
 end;
 
-procedure TForm1.Png_wp_trueClick(Sender: TObject);
+procedure TForm1.Png_awp_trueClick(Sender: TObject);
 begin
-  if Png_wp_true.Visible = true then
+  if Png_awp_true.Visible = true then
   begin
-    Png_wp_true.Visible:=false;
-    Png_wp_false.Visible:=true;
+    Png_awp_true.Visible:=false;
+    Png_awp_false.Visible:=true;
   end
 end;
 
