@@ -2,14 +2,14 @@ object FBaixa_driver: TFBaixa_driver
   Left = 0
   Top = 0
   Width = 329
-  Height = 360
+  Height = 340
   Color = clWhite
   ParentBackground = False
   ParentColor = False
   TabOrder = 0
   object Image1: TImage
-    Left = 64
-    Top = 24
+    Left = 68
+    Top = 40
     Width = 187
     Height = 185
     Picture.Data = {
@@ -278,8 +278,8 @@ object FBaixa_driver: TFBaixa_driver
       82}
   end
   object Label1: TLabel
-    Left = 64
-    Top = 240
+    Left = 68
+    Top = 231
     Width = 186
     Height = 19
     Caption = 'Download em andamento.'
@@ -291,8 +291,8 @@ object FBaixa_driver: TFBaixa_driver
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 64
-    Top = 273
+    Left = 68
+    Top = 263
     Width = 184
     Height = 13
     Caption = 'Fique tranquilo! Quando for conclu'#237'do,'
@@ -304,8 +304,8 @@ object FBaixa_driver: TFBaixa_driver
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 64
-    Top = 292
+    Left = 68
+    Top = 282
     Width = 158
     Height = 13
     Caption = 'essa mensagem ir'#225' desaparecer.'
@@ -315,10 +315,5 @@ object FBaixa_driver: TFBaixa_driver
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
-  end
-  object ActivityIndicator1: TActivityIndicator
-    Left = 136
-    Top = 311
-    Animate = True
   end
 end

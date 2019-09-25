@@ -13,7 +13,6 @@ type
     Label1: TLabel;
     Label3: TLabel;
     Label2: TLabel;
-    ActivityIndicator1: TActivityIndicator;
   private
     { Private declarations }
   public

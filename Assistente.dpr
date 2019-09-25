@@ -13,7 +13,8 @@ uses
   cartao_mopho in 'cartao_mopho.pas' {FCartao_mopho: TFrame},
   cartao_idemia in 'cartao_idemia.pas' {fcartao_idemia: TFrame},
   cartao_gemalto in 'cartao_gemalto.pas' {Fcartao_gemalto: TFrame},
-  Baixa_driver in 'Baixa_driver.pas' {FBaixa_driver: TFrame};
+  Baixa_driver in 'Baixa_driver.pas' {FBaixa_driver: TFrame},
+  instalar_driver in 'instalar_driver.pas' {Frame1: TFrame};
 
 {$R *.res}
 
