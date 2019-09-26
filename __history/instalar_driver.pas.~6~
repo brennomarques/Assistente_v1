@@ -1,0 +1,219 @@
+unit instalar_driver;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons, PngSpeedButton;
+
+type
+  TFinstala_driver = class(TFrame)
+    Image1: TImage;
+    Label1: TLabel;
+    Label3: TLabel;
+    Label2: TLabel;
+    Image_ok: TImage;
+    Label_ok: TLabel;
+    procedure Label_okMouseLeave(Sender: TObject);
+    procedure Label_okMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Image_okMouseLeave(Sender: TObject);
+    procedure Image_okMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure eInstalaDrive();
+    procedure Image_okClick(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+var
+  Nome: string;//esprando nome do driver do from1 função baixar driver.
+
+implementation
+
+{$R *.dfm}
+
+procedure TFinstala_driver.eInstalaDrive();
+begin
+  if Nome = 'Emissor.jnlp' then
+  begin
+    Application.MessageBox('Vamos execultar o Assistente para Emissão do certificado para você, aguarde!','Assistente para Emissão do certificado', MB_OK or MB_ICONINFORMATION);
+    //WinExec('msiexec /i c:\soluti\safenet-pro72k-x64.msi /passive', SW_SHOW);
+    WinExec('cmd javaws /C  c:\soluti\Emissor.jnlp',SW_SHOW);
+  end
+  else
+  begin
+    ShowMessage('Nome drver: '+Nome);
+
+    if Nome = 'safenet-pro72k-x64.msi' then
+    begin
+      WinExec('msiexec /i c:\soluti\safenet-pro72k-x64.msi /passive', SW_SHOW);
+      // ,SW_shownormal)
+      // WinExec('cmd /c msiexec /i c:\soluti\safenet-pro72k-x64.msi /passive',SW_SHOW);//,SW_shownormal)
+    end
+    else
+    begin
+      if Nome = 'SafeNet-Aladin(x64).msi' then
+      begin
+        WinExec('msiexec /i c:\soluti\SafeNet-Aladin(x64).msi /passive', SW_SHOW);
+        // ,SW_shownormal);
+      end
+      else
+      begin
+        if Nome = 'Token_epass2003(x64).exe' then
+        begin
+          ShowMessage('intalando: ' + Nome);
+          // WinExec('cmd /C msiexec /i c:\soluti\SafeNet-Aladin(x64).msi /passive ',SW_SHOW);
+        end
+        else
+        begin
+          if Nome = 'SafeNet-5100(x64).msi' then
+          begin
+            WinExec('msiexec /i c:\soluti\SafeNet-5100(x64).msi /passive',
+              SW_SHOW);
+          end
+          else
+          begin
+            if Nome = 'SafeNet-5110(x64).msi' then
+            begin
+              WinExec('msiexec /i c:\soluti\SafeNet-5110(x64).msi /passive',
+                SW_SHOW); // ,SW_shownormal);
+            end
+            else
+            begin
+              if Nome = 'Cartão-AWP-OT(x64).msi' then
+              begin
+                WinExec('msiexec /i c:\soluti\Cartão-AWP-OT(x64).msi /passive',
+                  SW_SHOW); // ,SW_shownormal);
+              end
+              else
+              begin
+                if Nome = 'Cartão-Idemia-(x64).msi' then
+                begin
+                  WinExec('msiexec /i c:\soluti\Cartão-Idemia-(x64).msi /passive',
+                    SW_SHOW); // ,SW_shownormal);
+                end
+                else
+                begin
+                  if Nome = 'Cartão-Gemalto-(x64).msi' then
+                  begin
+                    WinExec('msiexec /i c:\soluti\Cartão-Gemalto-(x64).msi /passive',
+                      SW_SHOW);
+                  end
+                  else
+                  begin
+                    if Nome = 'Cartão_Morpho_(x64).msi' then
+                    begin
+                      ShowMessage('intalando: ' + Nome);
+                      // WinExec('cmd /C msiexec /i c:\soluti\Cartão_Morpho_(x64).msi',SW_SHOW);
+                    end
+                    else // apartir desse ponto para para maquina de 32 bit
+                    begin
+                      if Nome = 'SafeNet_pro72k(x32).msi' then
+                      begin
+                        WinExec('msiexec /i c:\soluti\SafeNet_pro72k(x32).msi /passive',
+                          SW_SHOW);
+                      end
+                      else
+                      begin
+                        if Nome = 'SafeNet_Aladin(x32).msi' then
+                        begin
+                          WinExec('msiexec /i c:\soluti\SafeNet_Aladin(x32).msi /passive',
+                            SW_SHOW);
+                        end
+                        else
+                        begin
+                          if Nome = 'Token_epass2003(x32).msi' then
+                          begin
+                            WinExec('msiexec /i c:\soluti\Token_epass2003(x32).msi /passive',
+                              SW_SHOW);
+                          end
+                          else
+                          begin
+                            if Nome = 'SafeNet_5100(x32).msi' then
+                            begin
+                              WinExec('msiexec /i c:\soluti\SafeNet_5100(x32).msi /passive',
+                                SW_SHOW);
+                            end
+                            else
+                            begin
+                              if Nome = 'SafeNet_5110(x32).msi' then
+                              begin
+                                WinExec('msiexec /i c:\soluti\SafeNet_5110(x32).msi /passive',
+                                  SW_SHOW);
+                              end
+                              else // AQUI SOMENTE CARTÃO PARA MAQUINA 32 BITS
+                              begin
+                                if Nome = 'Cartão_AWP_OT(x32).msi' then
+                                begin
+                                  WinExec('msiexec /i c:\soluti\Cartão_AWP_OT(x32).msi /passive',
+                                    SW_SHOW);
+                                end
+                                else
+                                begin
+                                  if Nome = 'Cartão_Idemia_(x32).msi' then
+                                  begin
+                                    WinExec('msiexec /i c:\soluti\Cartão_Idemia_(x32).msi /passive',
+                                      SW_SHOW);
+                                  end
+                                  else
+                                  begin
+                                    if Nome = 'Cartão-Gemalto-(x32).msi' then
+                                    begin
+                                      WinExec('msiexec /i c:\soluti\Cartão-Gemalto-(x32).msi /passive',
+                                        SW_SHOW);
+                                    end
+                                    else // AQUI ENTÃO E MORPHO
+                                    begin
+                                      WinExec('msiexec /i c:\soluti\Cartão-Morpho-(x32).msi /passive',
+                                        SW_SHOW);
+                                    end;
+                                  end;
+                                end;
+                              end;
+                            end;
+                          end;
+                        end;
+                      end;
+                    end;
+                  end;
+                end;
+              end;
+            end;
+          end;
+        end;
+      end;
+    end;
+  end;
+end;
+procedure TFinstala_driver.Image_okClick(Sender: TObject);
+begin
+  eInstalaDrive;//chama a função instalar o driver, usando a variavel Nome, onde contem o nome do driver.
+end;
+
+procedure TFinstala_driver.Image_okMouseLeave(Sender: TObject);
+begin
+  Label_ok.Font.Style := [];
+end;
+
+procedure TFinstala_driver.Image_okMouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  Label_ok.Font.Style := [fsUnderline];
+end;
+
+procedure TFinstala_driver.Label_okMouseLeave(Sender: TObject);
+begin
+  Label_ok.Font.Style := [];
+end;
+
+procedure TFinstala_driver.Label_okMouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  Label_ok.Font.Style := [fsUnderline];
+end;
+
+end.

@@ -318,7 +318,7 @@ object FBaixa_driver: TFBaixa_driver
   end
   object Label_baixando1: TLabel
     Left = 68
-    Top = 301
+    Top = 295
     Width = 61
     Height = 16
     Caption = 'Baixando...'
@@ -331,7 +331,7 @@ object FBaixa_driver: TFBaixa_driver
   end
   object Label_download1: TLabel
     Left = 68
-    Top = 320
+    Top = 312
     Width = 87
     Height = 16
     Caption = 'Download em...'
@@ -343,10 +343,11 @@ object FBaixa_driver: TFBaixa_driver
     ParentFont = False
   end
   object ProgressBar1: TProgressBar
-    Left = 80
-    Top = 16
+    Left = 88
+    Top = 17
     Width = 150
     Height = 17
     TabOrder = 0
+    Visible = False
   end
 end

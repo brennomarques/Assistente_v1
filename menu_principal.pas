@@ -10,7 +10,7 @@ uses
   cartao_wp, cartao_mopho, cartao_idemia, cartao_gemalto, token_safenet_aladin,
   token_safenet_5110, token_epass2003, ShellApi, System.IniFiles,
   IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP,
-  Baixa_driver;
+  Baixa_driver, IdAntiFreezeBase, IdAntiFreeze, instalar_driver;
 
 type
   TForm1 = class(TForm)
@@ -197,6 +197,8 @@ type
     Token_epass1: TToken_epass;
     FBaixa_driver1: TFBaixa_driver;
     IdHTTP_baixa: TIdHTTP;
+    IdAntiFreeze1: TIdAntiFreeze;
+    Finstala_driver1: TFinstala_driver;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -437,7 +439,11 @@ type
     function RetornaPorcentagem(ValorMaximo,ValorAtual: real): string;// retorna a porcentagem de download
     procedure eGetDriver(Link: string; Nome: string);
     procedure IdHTTP_baixaWork(ASender: TObject; AWorkMode: TWorkMode;
-      AWorkCount: Int64);//faz get no link para baixa e chama a função instalação do driver.
+      AWorkCount: Int64);
+    procedure IdHTTP_baixaWorkBegin(ASender: TObject; AWorkMode: TWorkMode;
+      AWorkCountMax: Int64);
+    procedure IdHTTP_baixaWorkEnd(ASender: TObject; AWorkMode: TWorkMode);
+    procedure Finstala_driver1Image_okClick(Sender: TObject);
 
 
   private
@@ -452,10 +458,15 @@ var
 
 implementation
 
+//uses Baixa_driver; //para manipular valor do frame
+
 {$R *.dfm}
 
-uses FBaixa_driver; //para manipular valor do frame
-
+procedure TForm1.Finstala_driver1Image_okClick(Sender: TObject);
+begin
+  Finstala_driver1.Visible:=false;//esconder frame instala driver.
+  Finstala_driver1.Image_okClick(Sender);
+end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
@@ -473,9 +484,24 @@ end;
 procedure TForm1.IdHTTP_baixaWork(ASender: TObject; AWorkMode: TWorkMode;
   AWorkCount: Int64);
 begin
-  {FBaixa_driver1.Label_baixando1.Caption := 'Baixando ... ' + RetornaKiloBytes(AWorkCount);
-  FBaixa_driver1.Label_download1 := 'Download em ...' + RetornaPorcentagem(FBaixa_driver1.ProgressBar1, AWorkCount); }
-  //FBaixa_driver.Label_baixando1.Caption:= 'gratodfdfd';
+  FBaixa_driver1.ProgressBar1.Position := AWorkCount;
+  FBaixa_driver1.Label_baixando1.Caption:='Baixando ... ' + RetornaKiloBytes(AWorkCount);
+  FBaixa_driver1.Label_download1.Caption:= 'Download em ...' + RetornaPorcentagem(FBaixa_driver1.ProgressBar1.Max, AWorkCount);
+
+end;
+
+procedure TForm1.IdHTTP_baixaWorkBegin(ASender: TObject; AWorkMode: TWorkMode;
+  AWorkCountMax: Int64);
+begin
+  FBaixa_driver1.ProgressBar1.Position := 0;
+  FBaixa_driver1.ProgressBar1.Max := AWorkCountMax;
+  //Label4.Caption := 'Download em andamente, aguarde!';
+end;
+
+procedure TForm1.IdHTTP_baixaWorkEnd(ASender: TObject; AWorkMode: TWorkMode);
+begin
+  FBaixa_driver1.ProgressBar1.Position := FBaixa_driver1.ProgressBar1.Max;
+  FBaixa_driver1.ProgressBar1.Position := 0;
 end;
 
 procedure TForm1.Image10Click(Sender: TObject);
@@ -718,25 +744,18 @@ begin
   if not DirectoryExists(caminhouser) then
   // se o local não exitir e cria a pasta
     ForceDirectories('caminhouser'); // criação da pasta
-  MyFile := TFileStream.Create(caminhouser + arquivo, fmCreate);
-  // local no hd e nome do arquivo com a extensão, onde vai salvar.
+  MyFile := TFileStream.Create(caminhouser + arquivo, fmCreate); // local no hd e nome do arquivo com a extensão, onde vai salvar.
+  FBaixa_driver1.Visible:=true;//mostrando o frame baixa driver na tela.
   try
-    // IdHTTP1.Get('https://www.soluti.com.br/download/1171/'+arquivo, MyFile); // fazendo o download do arquivo
-    if arquivo = 'Emissor.jnlp' then
-    begin
-      //IdHTTPEmissor.Get(caminho + arquivo, MyFile);
-    end
-    else
-    begin
-      IdHTTP_baixa.Get(caminho + arquivo, MyFile);
-    end;
+    IdHTTP_baixa.Get(caminho + arquivo, MyFile);
   finally
     MyFile.Free;
-    //eInstalaDrive(arquivo); // mando o nome do arquivo a ser execultado.
-    ShowMessage('Baixa Driver feito com exito! agora instalar ');
+    FBaixa_driver1.Visible:=false;//esconder o frame da tela.
+    Finstala_driver1.Visible:=true;//exibe o fram instala driver.
+    instalar_driver.Nome:=arquivo;//variavel Nome recebe o nome do driver que vai ser instalado (varivel é global encontrase no frame FInstala_driver)
   end;
 end;
-procedure TForm1.eBaixaDriver(nomeDrive: String); // atraves da variavel nomeDrive a função define qual driver e instalado na maquina
+procedure TForm1.eBaixaDriver(nomeDrive: String); // atraves da variavel nomeDrive a função define qual driver e instalado na maquina baseado na arquitetura.
 var
   link, nome: string;
 begin
@@ -745,10 +764,38 @@ begin
     if nomeDrive = 'awp' then
     begin
       link:='https://www.soluti.com.br/download/5153/';
-      nome:='Cartão_AWP_64bits.msi';
+      nome:='Cartão-AWP-OT(x64).msi';
       eGetDriver(link, nome);
-      ShowMessage('LInk, nome');
+    end
+    else
+    begin
+      if nomeDrive = 'morpho' then
+      begin
+        {link:='';
+        nome:='Cartão_Morpho_(x64).msi';
+        eGetDriver(link, nome);}
+        ShowMessage('Cartão Morpho sem driver.');
+      end
+      else
+      begin
+        if nomeDrive = 'idemia' then
+        begin
+          link:='https://www.soluti.com.br/download/5153/';
+          nome:='Cartão-Idemia-(x64).msi';
+          eGetDriver(link, nome);
+        end
+        else
+        begin
+          if nomeDrive = 'gemalto' then
+          begin
+            link:='https://www.soluti.com.br/download/7731/';
+            nome:='Cartão-Gemalto-(x64).msi';
+            eGetDriver(link, nome);
+          end;
+        end;
+      end;
     end;
+
   end
   else//aqui maquinas 32 bits
   begin

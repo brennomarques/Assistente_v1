@@ -9943,6 +9943,8 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
+    ExplicitLeft = 1
+    ExplicitTop = 119
     object Image27: TImage
       Left = 320
       Top = 34
@@ -10755,8 +10757,27 @@ object Form1: TForm1
       ParentBackground = False
       ParentColor = False
       TabOrder = 4
+      Visible = False
       ExplicitLeft = 523
       ExplicitTop = 48
+    end
+    inline Finstala_driver1: TFinstala_driver
+      Left = 603
+      Top = 44
+      Width = 329
+      Height = 340
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 5
+      Visible = False
+      ExplicitLeft = 603
+      ExplicitTop = 44
+      inherited Image_ok: TImage
+        Left = 74
+        OnClick = Finstala_driver1Image_okClick
+        ExplicitLeft = 74
+      end
     end
   end
   object Panel_sem_midia: TPanel
@@ -12896,6 +12917,8 @@ object Form1: TForm1
   end
   object IdHTTP_baixa: TIdHTTP
     OnWork = IdHTTP_baixaWork
+    OnWorkBegin = IdHTTP_baixaWorkBegin
+    OnWorkEnd = IdHTTP_baixaWorkEnd
     AllowCookies = True
     ProxyParams.BasicAuthentication = False
     ProxyParams.ProxyPort = 0
@@ -12910,6 +12933,10 @@ object Form1: TForm1
     Request.Ranges = <>
     HTTPOptions = [hoForceEncodeParams]
     Left = 312
+    Top = 24
+  end
+  object IdAntiFreeze1: TIdAntiFreeze
+    Left = 384
     Top = 24
   end
 end

@@ -161,7 +161,7 @@
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="instalar_driver.pas">
-            <Form>Frame1</Form>
+            <Form>Finstala_driver</Form>
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
