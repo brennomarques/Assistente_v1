@@ -317,11 +317,11 @@ object FBaixa_driver: TFBaixa_driver
     ParentFont = False
   end
   object Label_baixando1: TLabel
-    Left = 157
-    Top = 304
-    Width = 16
+    Left = 68
+    Top = 295
+    Width = 61
     Height = 16
-    Caption = '...'
+    Caption = 'Baixando...'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = 9667712
     Font.Height = -13
@@ -330,24 +330,11 @@ object FBaixa_driver: TFBaixa_driver
     ParentFont = False
   end
   object Label_download1: TLabel
-    Left = 129
-    Top = 304
-    Width = 20
-    Height = 16
-    Caption = '0% '
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = 9667712
-    Font.Height = -13
-    Font.Name = 'Branding Medium'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label_baixando: TLabel
     Left = 68
-    Top = 304
-    Width = 55
+    Top = 312
+    Width = 87
     Height = 16
-    Caption = 'Baixando:'
+    Caption = 'Download em...'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = 9667712
     Font.Height = -13

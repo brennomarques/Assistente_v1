@@ -16,7 +16,6 @@ type
     Label_baixando1: TLabel;
     Label_download1: TLabel;
     ProgressBar1: TProgressBar;
-    Label_baixando: TLabel;
   private
     { Private declarations }
   public

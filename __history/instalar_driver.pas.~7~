@@ -37,10 +37,7 @@ implementation
 {$R *.dfm}
 
 procedure TFinstala_driver.eInstalaDrive();
-var
-  usuarioname: string;
 begin
-  usuarioname:= GetEnvironmentVariable('userprofile');//LOCALIZO O CAMINHO ONDE A PASTA DO USUARIO LOCAL ESTA.
   if Nome = 'Emissor.jnlp' then
   begin
     Application.MessageBox('Vamos execultar o Assistente para Emissão do certificado para você, aguarde!','Assistente para Emissão do certificado', MB_OK or MB_ICONINFORMATION);
@@ -50,6 +47,7 @@ begin
   else
   begin
     ShowMessage('Nome drver: '+Nome);
+
     if Nome = 'safenet-pro72k-x64.msi' then
     begin
       WinExec('msiexec /i c:\soluti\safenet-pro72k-x64.msi /passive', SW_SHOW);
@@ -88,8 +86,9 @@ begin
             begin
               if Nome = 'Cartão-AWP-OT(x64).msi' then
               begin
-                ShowMessage('Estou aqu: '+Nome+'Nome do usuario: '+usuarioname);
-                //WinExec('msiexec /i c:\soluti\Cartão-AWP-OT(x64).msi /passive', SW_SHOW); // ,SW_shownormal);
+                 ShowMessage('Estou aqui : '+Nome);
+                WinExec('msiexec /i c:\soluti\Cartão-AWP-OT(x64).msi /passive',
+                  SW_SHOW); // ,SW_shownormal);
               end
               else
               begin
@@ -112,8 +111,8 @@ begin
                       ShowMessage('intalando: ' + Nome);
                       // WinExec('cmd /C msiexec /i c:\soluti\Cartão_Morpho_(x64).msi',SW_SHOW);
                     end
-                    else // APARTIR DESSE PONTO SÃO PARA MAQUINA DE ARQUITETURA 32BITS
-                    begin// AQUI SOMENTE
+                    else // apartir desse ponto para para maquina de 32 bit
+                    begin
                       if Nome = 'SafeNet_pro72k(x32).msi' then
                       begin
                         WinExec('msiexec /i c:\soluti\SafeNet_pro72k(x32).msi /passive',

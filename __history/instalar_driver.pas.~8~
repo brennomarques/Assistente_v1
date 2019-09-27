@@ -37,10 +37,7 @@ implementation
 {$R *.dfm}
 
 procedure TFinstala_driver.eInstalaDrive();
-var
-  usuarioname: string;
 begin
-  usuarioname:= GetEnvironmentVariable('userprofile');//LOCALIZO O CAMINHO ONDE A PASTA DO USUARIO LOCAL ESTA.
   if Nome = 'Emissor.jnlp' then
   begin
     Application.MessageBox('Vamos execultar o Assistente para Emissão do certificado para você, aguarde!','Assistente para Emissão do certificado', MB_OK or MB_ICONINFORMATION);
@@ -88,8 +85,9 @@ begin
             begin
               if Nome = 'Cartão-AWP-OT(x64).msi' then
               begin
-                ShowMessage('Estou aqu: '+Nome+'Nome do usuario: '+usuarioname);
-                //WinExec('msiexec /i c:\soluti\Cartão-AWP-OT(x64).msi /passive', SW_SHOW); // ,SW_shownormal);
+                 ShowMessage('Estou aqui : '+Nome);
+                WinExec('msiexec /i c:\soluti\Cartão-AWP-OT(x64).msi /passive',
+                  SW_SHOW); // ,SW_shownormal);
               end
               else
               begin

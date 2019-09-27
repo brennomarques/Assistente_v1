@@ -8,7 +8,9 @@ uses
   Vcl.StdCtrls, System.ImageList, Vcl.ImgList, PngBitBtn, Vcl.Buttons,
   PngSpeedButton, Documento_reservado, token_pro72k, token_safenet_5100,
   cartao_wp, cartao_mopho, cartao_idemia, cartao_gemalto, token_safenet_aladin,
-  token_safenet_5110, token_epass2003, ShellApi, System.IniFiles;
+  token_safenet_5110, token_epass2003, ShellApi, System.IniFiles,
+  IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP,
+  Baixa_driver, IdAntiFreezeBase, IdAntiFreeze, instalar_driver;
 
 type
   TForm1 = class(TForm)
@@ -157,15 +159,15 @@ type
     Label93: TLabel;
     Label94: TLabel;
     Label95: TLabel;
-    Image29: TImage;
+    Image_baixa_instalador: TImage;
     Png_morpho_false: TPngSpeedButton;
     Png_morpho_true: TPngSpeedButton;
-    Png_wp_false: TPngSpeedButton;
-    Png_wp_true: TPngSpeedButton;
+    Png_awp_false: TPngSpeedButton;
+    Png_awp_true: TPngSpeedButton;
     Png_idemia_false: TPngSpeedButton;
     Png_idemia_true: TPngSpeedButton;
-    Png_gmailto_false: TPngSpeedButton;
-    Png_gmailto_true: TPngSpeedButton;
+    Png_gemalto_false: TPngSpeedButton;
+    Png_gemalto_true: TPngSpeedButton;
     Label96: TLabel;
     Label98: TLabel;
     Label99: TLabel;
@@ -193,6 +195,10 @@ type
     Token_aladin1: TToken_aladin;
     token_safent_51101: Ttoken_safent_5110;
     Token_epass1: TToken_epass;
+    FBaixa_driver1: TFBaixa_driver;
+    IdHTTP_baixa: TIdHTTP;
+    IdAntiFreeze1: TIdAntiFreeze;
+    Finstala_driver1: TFinstala_driver;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -396,14 +402,14 @@ type
     procedure Label105MouseLeave(Sender: TObject);
     procedure Label105MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
-    procedure Png_wp_falseClick(Sender: TObject);
-    procedure Png_wp_trueClick(Sender: TObject);
+    procedure Png_awp_falseClick(Sender: TObject);
+    procedure Png_awp_trueClick(Sender: TObject);
     procedure Png_morpho_falseClick(Sender: TObject);
     procedure Png_morpho_trueClick(Sender: TObject);
     procedure Png_idemia_falseClick(Sender: TObject);
     procedure Png_idemia_trueClick(Sender: TObject);
-    procedure Png_gmailto_falseClick(Sender: TObject);
-    procedure Png_gmailto_trueClick(Sender: TObject);
+    procedure Png_gemalto_falseClick(Sender: TObject);
+    procedure Png_gemalto_trueClick(Sender: TObject);
     procedure Label71Click(Sender: TObject);
     procedure Image21Click(Sender: TObject);
     procedure Label109MouseLeave(Sender: TObject);
@@ -424,6 +430,27 @@ type
     procedure Image15Click(Sender: TObject);
     procedure Label54Click(Sender: TObject);
     procedure Label_config_dllClick(Sender: TObject);
+    procedure Image_baixa_instaladorClick(Sender: TObject);
+    procedure Image_baixa_instaladorMouseMove(Sender: TObject;
+      Shift: TShiftState; X, Y: Integer);
+    procedure Image_baixa_instaladorMouseLeave(Sender: TObject);
+    procedure eBaixaDriver(nomeDrive: String);//função responsavel em sabe quantos bit e a maquina, e baixar o driver
+    function RetornaKiloBytes(ValorAtual: real): string; //retorna bits
+    function RetornaPorcentagem(ValorMaximo,ValorAtual: real): string;// retorna a porcentagem de download
+    procedure eGetDriver(Link: string; Nome: string);
+    procedure IdHTTP_baixaWork(ASender: TObject; AWorkMode: TWorkMode;
+      AWorkCount: Int64);
+    procedure IdHTTP_baixaWorkBegin(ASender: TObject; AWorkMode: TWorkMode;
+      AWorkCountMax: Int64);
+    procedure IdHTTP_baixaWorkEnd(ASender: TObject; AWorkMode: TWorkMode);
+    procedure Finstala_driver1Image_okClick(Sender: TObject);
+    procedure eInstalaCartao();
+    procedure eInstalaToken();
+    procedure Label105Click(Sender: TObject);
+    procedure Image20Click(Sender: TObject);
+    procedure Image28Click(Sender: TObject);
+    procedure Label83Click(Sender: TObject);
+
 
   private
     { Private declarations }
@@ -433,11 +460,19 @@ type
 
 var
   Form1: TForm1;
-  nomeToken: String;//variavel global vai receber o nome da midia
+  nomeToken: String;//variavel global vai receber o nome da midia DO PANEL
 
 implementation
 
+//uses Baixa_driver; //para manipular valor do frame
+
 {$R *.dfm}
+
+procedure TForm1.Finstala_driver1Image_okClick(Sender: TObject);
+begin
+  Finstala_driver1.Visible:=false;//esconder frame instala driver.
+  Finstala_driver1.Image_okClick(Sender);
+end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
@@ -452,22 +487,27 @@ begin
   Panel_lista_cartao.Visible:=false;
   Panel_sem_midia.Visible:=false;
 end;
-procedure Arredondarcantos(componente: TWinControl; Y:String);
-var
-   BX: TRect;
-   mdo: HRGN;
+procedure TForm1.IdHTTP_baixaWork(ASender: TObject; AWorkMode: TWorkMode;
+  AWorkCount: Int64);
 begin
-  with componente do
-    begin
-    BX := ClientRect;
-    mdo := CreateRoundRectRgn(BX.Left, BX.Top, BX.Right,
-    BX.Bottom, StrToInt(Y), StrToInt(Y)) ;
-    Perform(EM_GETRECT, 0, lParam(@BX)) ;
-    InflateRect(BX, - 4, - 4) ;
-    Perform(EM_SETRECTNP, 0, lParam(@BX)) ;
-    SetWindowRgn(Handle, mdo, True) ;
-    Invalidate;
-    end;
+  FBaixa_driver1.ProgressBar1.Position := AWorkCount;
+  FBaixa_driver1.Label_baixando1.Caption:=RetornaKiloBytes(AWorkCount);
+  FBaixa_driver1.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver1.ProgressBar1.Max, AWorkCount);
+
+end;
+
+procedure TForm1.IdHTTP_baixaWorkBegin(ASender: TObject; AWorkMode: TWorkMode;
+  AWorkCountMax: Int64);
+begin
+  FBaixa_driver1.ProgressBar1.Position := 0;
+  FBaixa_driver1.ProgressBar1.Max := AWorkCountMax;
+  //Label4.Caption := 'Download em andamente, aguarde!';
+end;
+
+procedure TForm1.IdHTTP_baixaWorkEnd(ASender: TObject; AWorkMode: TWorkMode);
+begin
+  FBaixa_driver1.ProgressBar1.Position := FBaixa_driver1.ProgressBar1.Max;
+  FBaixa_driver1.ProgressBar1.Position := 0;
 end;
 
 procedure TForm1.Image10Click(Sender: TObject);
@@ -650,6 +690,353 @@ begin
     //ShowMessage('[ERROR:] Não foi possível acessar PKCS11');
   end;
 end;
+function IsWindows64: Boolean; // saber quantos bits e a maquina
+type
+  TIsWow64Process = function(AHandle: THandle; var AIsWow64: BOOL)
+    : BOOL; stdcall;
+var
+  vKernel32Handle: DWORD;
+  vIsWow64Process: TIsWow64Process;
+  vIsWow64: BOOL;
+begin
+
+  Result := False;
+
+  vKernel32Handle := LoadLibrary('kernel32.dll');
+  if (vKernel32Handle = 0) then
+    Exit;
+
+  try
+
+    @vIsWow64Process := GetProcAddress(vKernel32Handle, 'IsWow64Process');
+    if not Assigned(vIsWow64Process) then
+      Exit;
+
+    vIsWow64 := False;
+    if (vIsWow64Process(GetCurrentProcess, vIsWow64)) then
+      Result := vIsWow64;
+
+  finally
+    FreeLibrary(vKernel32Handle);
+  end;
+end;
+function TForm1.RetornaKiloBytes(ValorAtual: real): string;
+var
+  resultado: real;
+begin
+  resultado := ((ValorAtual / 1024) / 1024);
+  Result := FormatFloat('0.000 KBs', resultado);
+end;
+
+function TForm1.RetornaPorcentagem(ValorMaximo,
+  ValorAtual: real): string;
+var
+  resultado: real;
+begin
+  resultado := ((ValorAtual * 100) / ValorMaximo);
+  Result := FormatFloat('0%', resultado);
+end;
+procedure TForm1.eGetDriver(Link: string; Nome: string);// procedimento para realizar a baixa do drive.
+var
+  caminhouser, usuarioname, arquivo, caminho: string;
+  MyFile: TFileStream;
+begin
+  // definir o link
+  caminho := Link; // link para realizar a baixa
+  // arquivo:= edit1.text; // nome do arquivo para download
+  arquivo := Nome; // nome do arquivo com extenão
+  usuarioname:= GetEnvironmentVariable('userprofile');//LOCALIZO O CAMINHO ONDE A PASTA DO USUARIO LOCAL ESTA.
+  caminhouser:=usuarioname+'\SOLUTI_DRIVER\';
+  if not DirectoryExists(caminhouser) then
+  // se o local não exitir e cria a pasta
+    ForceDirectories('caminhouser'); // criação da pasta
+  MyFile := TFileStream.Create(caminhouser + arquivo, fmCreate); // local no hd e nome do arquivo com a extensão, onde vai salvar.
+  FBaixa_driver1.Visible:=true;//mostrando o frame baixa driver na tela.
+  try
+    IdHTTP_baixa.Get(caminho + arquivo, MyFile);
+  finally
+    MyFile.Free;
+    FBaixa_driver1.Visible:=false;//esconder o frame da tela.
+    Finstala_driver1.Visible:=true;//exibe o fram instala driver.
+    instalar_driver.Nome:=arquivo;//variavel Nome recebe o nome do driver que vai ser instalado (varivel é global encontrase no frame FInstala_driver)
+  end;
+end;
+procedure TForm1.eBaixaDriver(nomeDrive: String); // atraves da variavel nomeDrive a função define qual driver e instalado na maquina baseado na arquitetura.
+var
+  link, nome: string;
+begin
+  if IsWindows64 = true then // maquina 64 bits
+  begin
+    if nomeDrive = 'awp' then
+    begin
+      link:='https://www.soluti.com.br/download/5153/';
+      nome:='Cartão-AWP-OT(x64).msi';
+      eGetDriver(link, nome);
+    end
+    else
+    begin
+      if nomeDrive = 'morpho' then
+      begin
+        {link:='';
+        nome:='Cartão_Morpho_(x64).msi';
+        eGetDriver(link, nome);}
+        ShowMessage('Cartão Morpho sem driver.');
+      end
+      else
+      begin
+        if nomeDrive = 'idemia' then
+        begin
+          link:='https://www.soluti.com.br/download/5153/';
+          nome:='Cartão-Idemia-(x64).msi';
+          eGetDriver(link, nome);
+        end
+        else
+        begin
+          if nomeDrive = 'gemalto' then
+          begin
+            link:='https://www.soluti.com.br/download/7731/';
+            nome:='Cartão-Gemalto-(x64).msi';
+            eGetDriver(link, nome);
+          end
+          else// AQUI SÃO AS CONDIÇÕES PARA TOKENS
+          begin
+            if nomeDrive = 'tokenpro72k' then
+            begin
+              link:='https://www.soluti.com.br/download/7731/';
+              nome:='safenet-pro72k-x64.msi';
+              eGetDriver(link, nome);
+            end
+            else
+            begin
+              if nomeDrive = 'tokenaladin' then
+              begin
+                link:='https://www.soluti.com.br/download/7731/';
+                nome:='SafeNet-Aladin(x64).msi';
+                eGetDriver(link, nome);
+              end
+              else
+              begin
+                if nomeDrive = 'epass2003' then
+                begin
+                  ShowMessage('Sem driver epass2003 msi');
+                  {link:='';
+                  nome:='';
+                  eGetDriver(link, nome);}
+                end
+                else
+                begin
+                  if nomeDrive = 'tokensafenet5100' then
+                  begin
+                    link:='https://www.soluti.com.br/download/7731/';
+                    nome:='SafeNet-5100(x64).msi';
+                    eGetDriver(link, nome);
+                  end
+                  else
+                  begin
+                    if nomeDrive = 'tokensafenet5110' then
+                    begin
+                      link:='https://www.soluti.com.br/download/7731/';
+                      nome:='SafeNet-5110(x64).msi';
+                      eGetDriver(link, nome);
+                    end
+                    else
+                    begin
+                      Application.MessageBox('[ERRO]: Problema na chamada da função eGetDriver 64bits !','[ERRO]', MB_OK or MB_ICONINFORMATION)
+                    end;
+                  end;
+                end;
+              end;
+            end;
+          end;
+        end;
+      end;
+    end;
+  end
+  else//AQUI PARA MAQUINAS ARQUITETURA 32 BITS
+  begin
+    ShowMessage('Marquina 32');
+    if nomeDrive = 'awp' then
+    begin
+      link:='https://www.soluti.com.br/download/5158/';
+      nome:='Cartão_AWP_OT(x32).msi';
+      eGetDriver(link, nome);
+    end
+    else
+    begin
+      if nomeDrive = 'morpho' then
+      begin
+        {link:='';
+        nome:='Cartão_Morpho_(x64).msi';
+        eGetDriver(link, nome);}
+        ShowMessage('Cartão Morpho sem driver 32BITS.');
+      end
+      else
+      begin
+        if nomeDrive = 'idemia' then
+        begin
+          link:='https://www.soluti.com.br/download/5158/';
+          nome:='Cartão_Idemia_(x32).msi';
+          eGetDriver(link, nome);
+        end
+        else
+        begin
+          if nomeDrive = 'gemalto' then
+          begin
+            link:='https://www.soluti.com.br/download/7729/';
+            nome:='Cartão-Gemalto-(x32).msi';
+            eGetDriver(link, nome);
+          end
+          else// AQUI SÃO AS CONDIÇÕES PARA TOKENS
+          begin
+            if nomeDrive = 'tokenpro72k' then
+            begin
+              link:='https://www.soluti.com.br/download/7729/';
+              nome:='SafeNet_pro72k(x32).msi';
+              eGetDriver(link, nome);
+            end
+            else
+            begin
+              if nomeDrive = 'tokenaladin' then
+              begin
+                link:='https://www.soluti.com.br/download/7731/';
+                nome:='SafeNet-Aladin(x64).msi';
+                eGetDriver(link, nome);
+              end
+              else
+              begin
+                if nomeDrive = 'epass2003' then
+                begin
+                  ShowMessage('Sem driver epass2003 msi');
+                  {link:='';
+                  nome:='';
+                  eGetDriver(link, nome);}
+                end
+                else
+                begin
+                  if nomeDrive = 'tokensafenet5100' then
+                  begin
+                    link:='https://www.soluti.com.br/download/7731/';
+                    nome:='SafeNet-5100(x64).msi';
+                    eGetDriver(link, nome);
+                  end
+                  else
+                  begin
+                    if nomeDrive = 'tokensafenet5110' then
+                    begin
+                      link:='https://www.soluti.com.br/download/7731/';
+                      nome:='SafeNet-5110(x64).msi';
+                      eGetDriver(link, nome);
+                    end
+                    else
+                    begin
+                      Application.MessageBox('[ERRO]: Problema na chamada da função eGetDriver 64bits !','[ERRO]', MB_OK or MB_ICONINFORMATION)
+                    end;
+                  end;
+                end;
+              end;
+            end;
+          end;
+        end;
+      end;
+    end;
+  end;
+end;
+procedure Tform1.eInstalaCartao();
+begin
+  if Png_awp_true.Visible = true then
+  begin
+    eBaixaDriver('awp');//chamando a função e passando nome do driver a ser baixado.
+  end
+  else
+  begin
+    if Png_morpho_true.Visible = true then
+    begin
+      ShowMessage('Baixa mopho');
+      eBaixaDriver('morpho');//chamando a função e passando nome do driver a ser baixado.
+    end
+    else
+    begin
+      if Png_idemia_true.Visible = true then
+      begin
+        ShowMessage('Baixa idemia');
+        eBaixaDriver('idemia');//chamando a função e passando nome do driver a ser baixado.
+      end
+      else
+      begin
+        if Png_gemalto_true.Visible = true then
+        begin
+          ShowMessage('Baixa Gemalto');
+          eBaixaDriver('gemalto');//chamando a função e passando nome do driver a ser baixado.
+        end
+        else
+        begin
+          Application.MessageBox('Selecione o modelo do Cartão!','Seleção da Mídia', MB_OK or MB_ICONINFORMATION)
+        end;
+      end;
+    end;
+  end;
+end;
+procedure TForm1.eInstalaToken;
+begin
+  if Png_Token_pro_true.Visible = true then
+  begin
+    ShowMessage('Token pro 72k');
+    eBaixaDriver('tokenpro72k');//chamando a função e passando nome do driver a ser baixado
+  end
+  else
+  begin
+    if Png_token_aladin_true.Visible = true then
+    begin
+      ShowMessage('Token aladin');
+      eBaixaDriver('tokenaladin');//chamando a função e passando nome do driver a ser baixado
+    end
+    else
+    begin
+      if Png_token_epass2003_true.Visible = true then
+      begin
+        ShowMessage('Token epass');
+        eBaixaDriver('epass2003');//chamando a função e passando nome do driver a ser baixado
+      end
+      else
+      begin
+        if Png_token_safenet_5100_true.Visible = true then
+        begin
+          ShowMessage('Token safenet_5100');
+          eBaixaDriver('tokensafenet5100');//chamando a função e passando nome do driver a ser baixado
+        end
+        else
+        begin
+          if Png_token_safenet_5110_true.Visible = true then
+          begin
+            ShowMessage('Token safenet_5110');
+            eBaixaDriver('tokensafenet5110');//chamando a função e passando nome do driver a ser baixado
+          end
+          else
+          begin
+            Application.MessageBox('Selecione o modelo do Token!','Seleção do Token', MB_OK or MB_ICONINFORMATION)
+          end;
+        end;
+      end;
+    end;
+  end;
+
+end;
+procedure TForm1.Image_baixa_instaladorClick(Sender: TObject);
+begin
+  eInstalaCartao;
+end;
+
+procedure TForm1.Image_baixa_instaladorMouseLeave(Sender: TObject);
+begin
+  Label105.Font.Style := [];
+end;
+
+procedure TForm1.Image_baixa_instaladorMouseMove(Sender: TObject;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  Label105.Font.Style := [fsUnderline];
+end;
+
 procedure TForm1.Image_config_mozillaMouseLeave(Sender: TObject);
 begin
   Label_config_dll.Font.Style := [];
@@ -659,6 +1046,12 @@ procedure TForm1.Image_config_mozillaMouseMove(Sender: TObject; Shift: TShiftSta
   Y: Integer);
 begin
   Label_config_dll.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Image20Click(Sender: TObject);
+begin
+  Panel_lista_tokens.Visible:=true;
+  Panel_Instalador_token_cartao_1.Visible:=false;
 end;
 
 procedure TForm1.Image20MouseLeave(Sender: TObject);
@@ -741,6 +1134,11 @@ procedure TForm1.Image24MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label74.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Image28Click(Sender: TObject);
+begin
+  eInstalaToken;
 end;
 
 procedure TForm1.Image28MouseLeave(Sender: TObject);
@@ -918,6 +1316,11 @@ procedure TForm1.Label104MouseMove(Sender: TObject; Shift: TShiftState; X,
 begin
   Label104.Font.Style := [fsUnderline];
   Fcartao_gemalto1.Visible:=true;
+end;
+
+procedure TForm1.Label105Click(Sender: TObject);
+begin
+  eInstalaCartao;
 end;
 
 procedure TForm1.Label105MouseLeave(Sender: TObject);
@@ -1418,6 +1821,11 @@ begin
   //Arredondarcantos(Frame_token_pro72k, '50');//para arredonda as borda
 end;
 
+procedure TForm1.Label83Click(Sender: TObject);
+begin
+  eInstalaToken;
+end;
+
 procedure TForm1.Label83MouseLeave(Sender: TObject);
 begin
   Label83.Font.Style := [];
@@ -1561,15 +1969,15 @@ begin
  Label9.Font.Style := [fsUnderline];
 end;
 
-procedure TForm1.Png_gmailto_falseClick(Sender: TObject);
+procedure TForm1.Png_gemalto_falseClick(Sender: TObject);
 begin
-  if Png_gmailto_false.Visible = true then
+  if Png_gemalto_false.Visible = true then
   begin
-    Png_gmailto_false.Visible:=false;
-    Png_gmailto_true.Visible:=true;
+    Png_gemalto_false.Visible:=false;
+    Png_gemalto_true.Visible:=true;
 
-    Png_wp_true.Visible:=false;
-    Png_wp_false.Visible:=true;
+    Png_awp_true.Visible:=false;
+    Png_awp_false.Visible:=true;
 
     Png_morpho_false.Visible:=true;
     Png_morpho_true.Visible:=false;
@@ -1580,12 +1988,12 @@ begin
   end
 end;
 
-procedure TForm1.Png_gmailto_trueClick(Sender: TObject);
+procedure TForm1.Png_gemalto_trueClick(Sender: TObject);
 begin
-  if Png_gmailto_true.Visible = true then
+  if Png_gemalto_true.Visible = true then
   begin
-    Png_gmailto_false.Visible:=true;
-    Png_gmailto_true.Visible:=false;
+    Png_gemalto_false.Visible:=true;
+    Png_gemalto_true.Visible:=false;
   end
 end;
 
@@ -1596,14 +2004,14 @@ begin
     Png_idemia_false.Visible:=false;
     Png_idemia_true.Visible:=true;
 
-    Png_wp_true.Visible:=false;
-    Png_wp_false.Visible:=true;
+    Png_awp_true.Visible:=false;
+    Png_awp_false.Visible:=true;
 
     Png_morpho_false.Visible:=true;
     Png_morpho_true.Visible:=false;
 
-    Png_gmailto_false.Visible:=true;
-    Png_gmailto_true.Visible:=false;
+    Png_gemalto_false.Visible:=true;
+    Png_gemalto_true.Visible:=false;
 
   end
 end;
@@ -1624,14 +2032,14 @@ begin
     Png_morpho_false.Visible:=false;
     Png_morpho_true.Visible:=true;
 
-    Png_wp_true.Visible:=false;
-    Png_wp_false.Visible:=true;
+    Png_awp_true.Visible:=false;
+    Png_awp_false.Visible:=true;
 
     Png_idemia_false.Visible:=true;
     Png_idemia_true.Visible:=false;
 
-    Png_gmailto_false.Visible:=true;
-    Png_gmailto_true.Visible:=false;
+    Png_gemalto_false.Visible:=true;
+    Png_gemalto_true.Visible:=false;
   end
 end;
 
@@ -1789,12 +2197,12 @@ begin
   end
 end;
 
-procedure TForm1.Png_wp_falseClick(Sender: TObject);
+procedure TForm1.Png_awp_falseClick(Sender: TObject);
 begin
-  if Png_wp_false.Visible = true then
+  if Png_awp_false.Visible = true then
   begin
-    Png_wp_true.Visible:=true;
-    Png_wp_false.Visible:=false;
+    Png_awp_true.Visible:=true;
+    Png_awp_false.Visible:=false;
 
     Png_morpho_false.Visible:=true;
     Png_morpho_true.Visible:=false;
@@ -1802,8 +2210,8 @@ begin
     Png_idemia_false.Visible:=true;
     Png_idemia_true.Visible:=false;
 
-    Png_gmailto_false.Visible:=true;
-    Png_gmailto_true.Visible:=false;
+    Png_gemalto_false.Visible:=true;
+    Png_gemalto_true.Visible:=false;
 
 
 
@@ -1811,12 +2219,12 @@ begin
   end
 end;
 
-procedure TForm1.Png_wp_trueClick(Sender: TObject);
+procedure TForm1.Png_awp_trueClick(Sender: TObject);
 begin
-  if Png_wp_true.Visible = true then
+  if Png_awp_true.Visible = true then
   begin
-    Png_wp_true.Visible:=false;
-    Png_wp_false.Visible:=true;
+    Png_awp_true.Visible:=false;
+    Png_awp_false.Visible:=true;
   end
 end;
 
