@@ -317,9 +317,9 @@ object FBaixa_driver: TFBaixa_driver
     ParentFont = False
   end
   object Label_baixando1: TLabel
-    Left = 157
+    Left = 168
     Top = 304
-    Width = 16
+    Width = 17
     Height = 16
     Caption = '...'
     Font.Charset = DEFAULT_CHARSET

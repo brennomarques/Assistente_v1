@@ -199,6 +199,7 @@ type
     IdHTTP_baixa: TIdHTTP;
     IdAntiFreeze1: TIdAntiFreeze;
     Finstala_driver1: TFinstala_driver;
+    FBaixa_driver2: TFBaixa_driver;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -492,22 +493,32 @@ procedure TForm1.IdHTTP_baixaWork(ASender: TObject; AWorkMode: TWorkMode;
 begin
   FBaixa_driver1.ProgressBar1.Position := AWorkCount;
   FBaixa_driver1.Label_baixando1.Caption:=RetornaKiloBytes(AWorkCount);
-  FBaixa_driver1.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver1.ProgressBar1.Max, AWorkCount);
+  FBaixa_driver1.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver1.ProgressBar1.Max, AWorkCount);//cartão
+
+  FBaixa_driver2.ProgressBar1.Position := AWorkCount;
+  FBaixa_driver2.Label_baixando1.Caption:=RetornaKiloBytes(AWorkCount);
+  FBaixa_driver2.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver2.ProgressBar1.Max, AWorkCount);//token
 
 end;
 
 procedure TForm1.IdHTTP_baixaWorkBegin(ASender: TObject; AWorkMode: TWorkMode;
   AWorkCountMax: Int64);
 begin
-  FBaixa_driver1.ProgressBar1.Position := 0;
+  FBaixa_driver1.ProgressBar1.Position := 0; //cartão
   FBaixa_driver1.ProgressBar1.Max := AWorkCountMax;
   //Label4.Caption := 'Download em andamente, aguarde!';
+
+  FBaixa_driver2.ProgressBar1.Position := 0;//token
+  FBaixa_driver2.ProgressBar1.Max := AWorkCountMax;
 end;
 
 procedure TForm1.IdHTTP_baixaWorkEnd(ASender: TObject; AWorkMode: TWorkMode);
 begin
-  FBaixa_driver1.ProgressBar1.Position := FBaixa_driver1.ProgressBar1.Max;
+  FBaixa_driver1.ProgressBar1.Position := FBaixa_driver1.ProgressBar1.Max; //cartao
   FBaixa_driver1.ProgressBar1.Position := 0;
+
+  FBaixa_driver2.ProgressBar1.Position := FBaixa_driver2.ProgressBar1.Max;//token
+  FBaixa_driver2.ProgressBar1.Position := 0;
 end;
 
 procedure TForm1.Image10Click(Sender: TObject);
@@ -752,13 +763,22 @@ begin
     ForceDirectories('caminhouser'); // criação da pasta
   MyFile := TFileStream.Create(caminhouser + arquivo, fmCreate); // local no hd e nome do arquivo com a extensão, onde vai salvar.
   FBaixa_driver1.Visible:=true;//mostrando o frame baixa driver na tela.
+  FBaixa_driver2.Visible:=true;//mostrando o frame baixa driver na tela.
   try
     IdHTTP_baixa.Get(caminho + arquivo, MyFile);
   finally
     MyFile.Free;
-    FBaixa_driver1.Visible:=false;//esconder o frame da tela.
-    Finstala_driver1.Visible:=true;//exibe o fram instala driver.
-    instalar_driver.Nome:=arquivo;//variavel Nome recebe o nome do driver que vai ser instalado (varivel é global encontrase no frame FInstala_driver)
+    if arquivo = 'Emissor.jnlp' then
+    begin
+      ShowMessage('Emissor para emissão do certificado.');
+    end
+    else
+    begin
+      FBaixa_driver1.Visible:=false;//esconder o frame da tela cartão.
+      FBaixa_driver2.Visible:=false;//esconder o frame da tela token.
+      Finstala_driver1.Visible:=true;//exibe o fram instala driver.
+      instalar_driver.Nome:=arquivo;//variavel Nome recebe o nome do driver que vai ser instalado (varivel é global encontrase no frame FInstala_driver)
+    end;
   end;
 end;
 procedure TForm1.eBaixaDriver(nomeDrive: String); // atraves da variavel nomeDrive a função define qual driver e instalado na maquina baseado na arquitetura.
@@ -777,10 +797,9 @@ begin
     begin
       if nomeDrive = 'morpho' then
       begin
-        {link:='';
-        nome:='Cartão_Morpho_(x64).msi';
-        eGetDriver(link, nome);}
-        ShowMessage('Cartão Morpho sem driver.');
+        link:='https://www.soluti.com.br/download/516/';
+        nome:='Cartão_Morpho_(x64).exe';//Instalação ser realizada de forma manula, devido a extenção.
+        eGetDriver(link, nome);
       end
       else
       begin
@@ -818,10 +837,10 @@ begin
               begin
                 if nomeDrive = 'epass2003' then
                 begin
-                  ShowMessage('Sem driver epass2003 msi');
-                  {link:='';
-                  nome:='';
-                  eGetDriver(link, nome);}
+                  ShowMessage('nome do token epass2003');
+                  link:='https://www.soluti.com.br/download/1171/';//INSTALAÇÃO FEITA DE FORMA MANUAL
+                  nome:='Token_epass2003(x64).exe';
+                  eGetDriver(link, nome);
                 end
                 else
                 begin
@@ -865,10 +884,9 @@ begin
     begin
       if nomeDrive = 'morpho' then
       begin
-        {link:='';
-        nome:='Cartão_Morpho_(x64).msi';
-        eGetDriver(link, nome);}
-        ShowMessage('Cartão Morpho sem driver 32BITS.');
+        link:='https://www.soluti.com.br/download/514/';
+        nome:='Cartão-Morpho-(x32).exe';
+        eGetDriver(link, nome);
       end
       else
       begin
@@ -906,10 +924,9 @@ begin
               begin
                 if nomeDrive = 'epass2003' then
                 begin
-                  ShowMessage('Sem driver epass2003 msi 32bit');
-                  {link:='';
-                  nome:='';
-                  eGetDriver(link, nome);}
+                  link:='https://www.soluti.com.br/download/1171/';
+                  nome:='Token_epass2003(x32).exe';
+                  eGetDriver(link, nome);
                 end
                 else
                 begin

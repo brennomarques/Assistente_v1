@@ -7958,9 +7958,6 @@ object Form1: TForm1
     Color = 5264915
     ParentBackground = False
     TabOrder = 8
-    ExplicitLeft = 1
-    ExplicitWidth = 904
-    ExplicitHeight = 382
     object Label72: TLabel
       Left = 56
       Top = 29
@@ -9031,8 +9028,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
-    ExplicitWidth = 644
-    ExplicitHeight = 357
     object Image26: TImage
       Left = 323
       Top = 34
@@ -9940,12 +9935,29 @@ object Form1: TForm1
       ExplicitLeft = 755
       ExplicitTop = 304
     end
+    inline FBaixa_driver2: TFBaixa_driver
+      Left = 375
+      Top = 103
+      Width = 329
+      Height = 340
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 5
+      Visible = False
+      ExplicitLeft = 375
+      ExplicitTop = 103
+      inherited Label_baixando1: TLabel
+        Left = 167
+        ExplicitLeft = 167
+      end
+    end
   end
   object Panel_lista_cartao: TPanel
     Left = 1
     Top = 119
-    Width = 498
-    Height = 435
+    Width = 1040
+    Height = 564
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False

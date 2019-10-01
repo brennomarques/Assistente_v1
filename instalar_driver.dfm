@@ -249,7 +249,7 @@ object Finstala_driver: TFinstala_driver
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 67
+    Left = 68
     Top = 256
     Width = 164
     Height = 13
@@ -262,7 +262,7 @@ object Finstala_driver: TFinstala_driver
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 67
+    Left = 68
     Top = 275
     Width = 195
     Height = 13
@@ -275,8 +275,8 @@ object Finstala_driver: TFinstala_driver
     ParentFont = False
   end
   object Image_ok: TImage
-    Left = 67
-    Top = 306
+    Left = 68
+    Top = 300
     Width = 192
     Height = 31
     Picture.Data = {
@@ -312,7 +312,7 @@ object Finstala_driver: TFinstala_driver
   end
   object Label_ok: TLabel
     Left = 152
-    Top = 311
+    Top = 305
     Width = 21
     Height = 19
     Caption = 'OK'

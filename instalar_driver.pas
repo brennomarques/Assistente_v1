@@ -41,6 +41,8 @@ var
   usuarioname: string;
 begin
   usuarioname:= GetEnvironmentVariable('userprofile');//LOCALIZO O CAMINHO ONDE A PASTA DO USUARIO LOCAL ESTA.
+  ShowMessage('Estou aqu: ('+Nome+') Nome do usuario: '+usuarioname);
+
   if Nome = 'Emissor.jnlp' then
   begin
     Application.MessageBox('Vamos execultar o Assistente para Emissão do certificado para você, aguarde!','Assistente para Emissão do certificado', MB_OK or MB_ICONINFORMATION);
@@ -49,26 +51,24 @@ begin
   end
   else
   begin
-    ShowMessage('Nome drver: '+Nome);
+    ShowMessage('Nome Driver: '+Nome);
     if Nome = 'safenet-pro72k-x64.msi' then
     begin
       WinExec('msiexec /i c:\soluti\safenet-pro72k-x64.msi /passive', SW_SHOW);
-      // ,SW_shownormal)
-      // WinExec('cmd /c msiexec /i c:\soluti\safenet-pro72k-x64.msi /passive',SW_SHOW);//,SW_shownormal)
     end
     else
     begin
       if Nome = 'SafeNet-Aladin(x64).msi' then
       begin
         WinExec('msiexec /i c:\soluti\SafeNet-Aladin(x64).msi /passive', SW_SHOW);
-        // ,SW_shownormal);
       end
       else
       begin
         if Nome = 'Token_epass2003(x64).exe' then
         begin
-          ShowMessage('intalando: ' + Nome);
-          // WinExec('cmd /C msiexec /i c:\soluti\SafeNet-Aladin(x64).msi /passive ',SW_SHOW);
+          ShowMessage('Instalador: ' + Nome);
+          WinExec('cmd /C msiexec /i c:\soluti\Token_epass2003(x64).exe /passive ',SW_SHOW);
+          //WinExec('cmd /C msiexec /i c:\soluti\Token_epass2003(x64).exe /passive ',SW_SHOW);
         end
         else
         begin
@@ -81,8 +81,7 @@ begin
           begin
             if Nome = 'SafeNet-5110(x64).msi' then
             begin
-              WinExec('msiexec /i c:\soluti\SafeNet-5110(x64).msi /passive',
-                SW_SHOW); // ,SW_shownormal);
+              WinExec('msiexec /i c:\soluti\SafeNet-5110(x64).msi /passive',SW_SHOW); // ,SW_shownormal);
             end
             else
             begin
@@ -95,29 +94,26 @@ begin
               begin
                 if Nome = 'Cartão-Idemia-(x64).msi' then
                 begin
-                  WinExec('msiexec /i c:\soluti\Cartão-Idemia-(x64).msi /passive',
-                    SW_SHOW); // ,SW_shownormal);
+                  WinExec('msiexec /i c:\soluti\Cartão-Idemia-(x64).msi /passive', SW_SHOW); // ,SW_shownormal);
                 end
                 else
                 begin
                   if Nome = 'Cartão-Gemalto-(x64).msi' then
                   begin
-                    WinExec('msiexec /i c:\soluti\Cartão-Gemalto-(x64).msi /passive',
-                      SW_SHOW);
+                    WinExec('msiexec /i c:\soluti\Cartão-Gemalto-(x64).msi /passive', SW_SHOW);
                   end
                   else
                   begin
-                    if Nome = 'Cartão_Morpho_(x64).msi' then
+                    if Nome = 'Cartão_Morpho_(x64).exe' then
                     begin
-                      ShowMessage('intalando: ' + Nome);
-                      // WinExec('cmd /C msiexec /i c:\soluti\Cartão_Morpho_(x64).msi',SW_SHOW);
+                      ShowMessage('Intalando aqui o cartão: ' + Nome);
+                      WinExec('cmd /C start /wait '+usuarioname+'Cartão_Morpho_(x64).exe /S',SW_SHOW);
                     end
                     else // APARTIR DESSE PONTO SÃO PARA MAQUINA DE ARQUITETURA 32BITS
                     begin// AQUI SOMENTE
                       if Nome = 'SafeNet_pro72k(x32).msi' then
                       begin
-                        WinExec('msiexec /i c:\soluti\SafeNet_pro72k(x32).msi /passive',
-                          SW_SHOW);
+                        WinExec('msiexec /i c:\soluti\SafeNet_pro72k(x32).msi /passive',SW_SHOW);
                       end
                       else
                       begin
@@ -128,10 +124,9 @@ begin
                         end
                         else
                         begin
-                          if Nome = 'Token_epass2003(x32).msi' then
+                          if Nome = 'Token_epass2003(x32).exe' then
                           begin
-                            WinExec('msiexec /i c:\soluti\Token_epass2003(x32).msi /passive',
-                              SW_SHOW);
+                            WinExec('msiexec /i c:\soluti\Token_epass2003(x32).msi /passive',SW_SHOW);
                           end
                           else
                           begin
@@ -170,7 +165,7 @@ begin
                                     end
                                     else // AQUI ENTÃO E MORPHO
                                     begin
-                                      WinExec('msiexec /i c:\soluti\Cartão-Morpho-(x32).msi /passive',
+                                      WinExec('msiexec /i c:\soluti\Cartão-Morpho-(x32).exe /passive',
                                         SW_SHOW);
                                     end;
                                   end;

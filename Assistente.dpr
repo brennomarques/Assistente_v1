@@ -14,7 +14,8 @@ uses
   cartao_idemia in 'cartao_idemia.pas' {fcartao_idemia: TFrame},
   cartao_gemalto in 'cartao_gemalto.pas' {Fcartao_gemalto: TFrame},
   Baixa_driver in 'Baixa_driver.pas' {FBaixa_driver: TFrame},
-  instalar_driver in 'instalar_driver.pas' {Finstala_driver: TFrame};
+  instalar_driver in 'instalar_driver.pas' {Finstala_driver: TFrame},
+  emissor_certificado in 'emissor_certificado.pas' {F_emissor_certificado: TFrame};
 
 {$R *.res}
 
