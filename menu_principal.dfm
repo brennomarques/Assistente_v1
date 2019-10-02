@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
-  Caption = 'Assistente - BETA '
+  Caption = 'Assistente - ( BETA )'
   ClientHeight = 691
   ClientWidth = 1084
   Color = clBtnFace

@@ -873,7 +873,6 @@ begin
   end
   else//AQUI PARA MAQUINAS ARQUITETURA 32 BITS
   begin
-    ShowMessage('Marquina 32');
     if nomeDrive = 'awp' then
     begin
       link:='https://www.soluti.com.br/download/5158/';

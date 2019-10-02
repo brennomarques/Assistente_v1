@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons, PngSpeedButton, shellapi;
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons, PngSpeedButton;
 
 type
   TFinstala_driver = class(TFrame)
@@ -38,9 +38,11 @@ implementation
 
 procedure TFinstala_driver.eInstalaDrive();
 var
-  usuarioname, comando: string;
+  usuarioname: string;
 begin
   usuarioname:= GetEnvironmentVariable('userprofile');//LOCALIZO O CAMINHO ONDE A PASTA DO USUARIO LOCAL ESTA.
+  ShowMessage('Estou aqu: ('+Nome+') Nome do usuario: '+usuarioname);
+
   if Nome = 'Emissor.jnlp' then
   begin
     Application.MessageBox('Vamos execultar o Assistente para Emissão do certificado para você, aguarde!','Assistente para Emissão do certificado', MB_OK or MB_ICONINFORMATION);
@@ -85,11 +87,8 @@ begin
             begin
               if Nome = 'Cartão-AWP-OT(x64).msi' then
               begin
-                comando:= 'msiexec /i '+usuarioname+'\SOLUTI_DRIVER\Cartão-AWP-OT(x64).msi /passive';//concatenando o caminho do usuario com arquivo para ser execultado
-                ShowMessage('comando: '+comando);
-                //WinExec(pchar(comando)', SW_SHOW); // ,SW_shownormal);
-                //ShellExecute (0, nil, pchar(comando), nil, Nil, SW_SHOW);
-                WinExec('msiexec /i Cartão-AWP-OT(x64).msi /passive', SW_SHOW); // ,SW_shownormal);
+                ShowMessage('Estou aqu: '+Nome+'Nome do usuario: '+usuarioname);
+                //WinExec('msiexec /i c:\soluti\Cartão-AWP-OT(x64).msi /passive', SW_SHOW); // ,SW_shownormal);
               end
               else
               begin
@@ -107,8 +106,8 @@ begin
                   begin
                     if Nome = 'Cartão_Morpho_(x64).exe' then
                     begin
-                      comando:= usuarioname+'\SOLUTI_DRIVER\Cartão_Morpho_(x64).exe';//concatenando o caminho do usuario com arquivo para ser execultado
-                      ShellExecute (0, nil, pchar(comando), nil, Nil, SW_SHOW);
+                      ShowMessage('Intalando aqui o cartão: ' + Nome);
+                      WinExec('cmd /C start /wait '+usuarioname+'Cartão_Morpho_(x64).exe /S',SW_SHOW);
                     end
                     else // APARTIR DESSE PONTO SÃO PARA MAQUINA DE ARQUITETURA 32BITS
                     begin// AQUI SOMENTE
@@ -166,8 +165,8 @@ begin
                                     end
                                     else // AQUI ENTÃO E MORPHO
                                     begin
-                                      comando:= usuarioname+'\SOLUTI_DRIVER\Cartão-Morpho-(x32).exe';//concatenando o caminho do usuario com arquivo para ser execultado
-                                      ShellExecute (0, nil, pchar(comando), nil, Nil, SW_SHOW);
+                                      WinExec('msiexec /i c:\soluti\Cartão-Morpho-(x32).exe /passive',
+                                        SW_SHOW);
                                     end;
                                   end;
                                 end;

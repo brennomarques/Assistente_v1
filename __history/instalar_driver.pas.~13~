@@ -85,11 +85,7 @@ begin
             begin
               if Nome = 'Cartão-AWP-OT(x64).msi' then
               begin
-                comando:= 'msiexec /i '+usuarioname+'\SOLUTI_DRIVER\Cartão-AWP-OT(x64).msi /passive';//concatenando o caminho do usuario com arquivo para ser execultado
-                ShowMessage('comando: '+comando);
-                //WinExec(pchar(comando)', SW_SHOW); // ,SW_shownormal);
-                //ShellExecute (0, nil, pchar(comando), nil, Nil, SW_SHOW);
-                WinExec('msiexec /i Cartão-AWP-OT(x64).msi /passive', SW_SHOW); // ,SW_shownormal);
+                WinExec('msiexec /i c:\soluti\Cartão-AWP-OT(x64).msi /passive', SW_SHOW); // ,SW_shownormal);
               end
               else
               begin
