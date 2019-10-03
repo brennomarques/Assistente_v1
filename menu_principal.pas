@@ -10,7 +10,8 @@ uses
   cartao_wp, cartao_mopho, cartao_idemia, cartao_gemalto, token_safenet_aladin,
   token_safenet_5110, token_epass2003, ShellApi, System.IniFiles,
   IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP,
-  Baixa_driver, IdAntiFreezeBase, IdAntiFreeze, instalar_driver;
+  Baixa_driver, IdAntiFreezeBase, IdAntiFreeze, instalar_driver,
+  emissor_certificado;
 
 type
   TForm1 = class(TForm)
@@ -200,6 +201,9 @@ type
     IdAntiFreeze1: TIdAntiFreeze;
     Finstala_driver1: TFinstala_driver;
     FBaixa_driver2: TFBaixa_driver;
+    Finstala_driver2: TFinstala_driver;
+    FBaixa_driver3: TFBaixa_driver;
+    F_emissor_certificado1: TF_emissor_certificado;
     procedure Label5MouseLeave(Sender: TObject);
     procedure Label6MouseLeave(Sender: TObject);
     procedure Label7MouseLeave(Sender: TObject);
@@ -451,6 +455,13 @@ type
     procedure Image20Click(Sender: TObject);
     procedure Image28Click(Sender: TObject);
     procedure Label83Click(Sender: TObject);
+    procedure Finstala_driver2Image_okClick(Sender: TObject);
+    procedure Label33Click(Sender: TObject);
+    procedure Label35Click(Sender: TObject);
+    procedure Image11Click(Sender: TObject);
+    procedure F_emissor_certificado1Image_okClick(Sender: TObject);
+    procedure eChamaEmissor();
+    procedure Label36Click(Sender: TObject);
 
 
   private
@@ -475,6 +486,12 @@ begin
   Finstala_driver1.Image_okClick(Sender);
 end;
 
+procedure TForm1.Finstala_driver2Image_okClick(Sender: TObject);
+begin
+  Finstala_driver2.Visible:=false;//esconder tela
+  Finstala_driver2.Image_okClick(Sender);
+end;
+
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   Panel_Instalador_token_cartao_1.Visible:=false;
@@ -488,6 +505,12 @@ begin
   Panel_lista_cartao.Visible:=false;
   Panel_sem_midia.Visible:=false;
 end;
+procedure TForm1.F_emissor_certificado1Image_okClick(Sender: TObject);
+begin
+  F_emissor_certificado1.Visible:=false;
+  F_emissor_certificado1.Image_okClick(Sender);
+end;
+
 procedure TForm1.IdHTTP_baixaWork(ASender: TObject; AWorkMode: TWorkMode;
   AWorkCount: Int64);
 begin
@@ -498,6 +521,10 @@ begin
   FBaixa_driver2.ProgressBar1.Position := AWorkCount;
   FBaixa_driver2.Label_baixando1.Caption:=RetornaKiloBytes(AWorkCount);
   FBaixa_driver2.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver2.ProgressBar1.Max, AWorkCount);//token
+
+  FBaixa_driver3.ProgressBar1.Position := AWorkCount;
+  FBaixa_driver3.Label_baixando1.Caption:=RetornaKiloBytes(AWorkCount);
+  FBaixa_driver3.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver3.ProgressBar1.Max, AWorkCount);//emissor certificado
 
 end;
 
@@ -510,6 +537,9 @@ begin
 
   FBaixa_driver2.ProgressBar1.Position := 0;//token
   FBaixa_driver2.ProgressBar1.Max := AWorkCountMax;
+
+  FBaixa_driver3.ProgressBar1.Position := 0;//emissor
+  FBaixa_driver3.ProgressBar1.Max := AWorkCountMax;
 end;
 
 procedure TForm1.IdHTTP_baixaWorkEnd(ASender: TObject; AWorkMode: TWorkMode);
@@ -519,6 +549,10 @@ begin
 
   FBaixa_driver2.ProgressBar1.Position := FBaixa_driver2.ProgressBar1.Max;//token
   FBaixa_driver2.ProgressBar1.Position := 0;
+
+  FBaixa_driver3.ProgressBar1.Position := FBaixa_driver2.ProgressBar1.Max;//emissor de certificado
+  FBaixa_driver3.ProgressBar1.Position := 0;
+
 end;
 
 procedure TForm1.Image10Click(Sender: TObject);
@@ -538,6 +572,18 @@ procedure TForm1.Image10MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label21.Font.Style := [fsUnderline];
+end;
+procedure TForm1.eChamaEmissor();
+var
+  link, nome: string;
+begin
+  link:='https://www.soluti.com.br/download/516/';
+  nome:='Emissor.jnlp';//Instalação ser realizada de forma manula, devido a extenção.
+  eGetDriver(link, nome);
+end;
+procedure TForm1.Image11Click(Sender: TObject);
+begin
+  eChamaEmissor;
 end;
 
 procedure TForm1.Image11MouseLeave(Sender: TObject);
@@ -764,12 +810,16 @@ begin
   MyFile := TFileStream.Create(caminhouser + arquivo, fmCreate); // local no hd e nome do arquivo com a extensão, onde vai salvar.
   FBaixa_driver1.Visible:=true;//mostrando o frame baixa driver na tela.
   FBaixa_driver2.Visible:=true;//mostrando o frame baixa driver na tela.
+  FBaixa_driver3.Visible:=true;//mostrando o frame baixa emissor do certificado.
   try
     IdHTTP_baixa.Get(caminho + arquivo, MyFile);
   finally
     MyFile.Free;
     if arquivo = 'Emissor.jnlp' then
     begin
+      FBaixa_driver3.Visible:=false;//esconder o frame da tela emissor
+      F_emissor_certificado1.Visible:=true;//exiber tela para confirma e abrir o emissor.
+      emissor_certificado.Nome_emissor:=arquivo;//variavel Nome_emissor recebe o nome do emissor para ser execultado.
       ShowMessage('Emissor para emissão do certificado.');
     end
     else
@@ -777,6 +827,7 @@ begin
       FBaixa_driver1.Visible:=false;//esconder o frame da tela cartão.
       FBaixa_driver2.Visible:=false;//esconder o frame da tela token.
       Finstala_driver1.Visible:=true;//exibe o fram instala driver.
+      Finstala_driver2.Visible:=true;//exibe o fram instala driver.
       instalar_driver.Nome:=arquivo;//variavel Nome recebe o nome do driver que vai ser instalado (varivel é global encontrase no frame FInstala_driver)
     end;
   end;
@@ -837,7 +888,6 @@ begin
               begin
                 if nomeDrive = 'epass2003' then
                 begin
-                  ShowMessage('nome do token epass2003');
                   link:='https://www.soluti.com.br/download/1171/';//INSTALAÇÃO FEITA DE FORMA MANUAL
                   nome:='Token_epass2003(x64).exe';
                   eGetDriver(link, nome);
@@ -1516,6 +1566,12 @@ begin
   Frame_doc_reservado1.Visible:=true;
 end;
 
+procedure TForm1.Label33Click(Sender: TObject);
+begin
+  Panel_Downloads.Visible:=true;
+  Panel_emissor_certificado.Visible:=false;
+end;
+
 procedure TForm1.Label33MouseLeave(Sender: TObject);
 begin
   Label33.Font.Style := [];
@@ -1527,6 +1583,11 @@ begin
   Label33.Font.Style := [fsUnderline];
 end;
 
+procedure TForm1.Label35Click(Sender: TObject);
+begin
+  ShellExecute(Handle, 'open','https://arsoluti.acsoluti.com.br/public/manuais/MPO.100_V.2_-_Manual_de_Emissao_de_Certificado_Digital_Soluti.pdf', '', nil, 0);
+end;
+
 procedure TForm1.Label35MouseLeave(Sender: TObject);
 begin
   Label35.Font.Style := [];
@@ -1536,6 +1597,11 @@ procedure TForm1.Label35MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Label35.Font.Style := [fsUnderline];
+end;
+
+procedure TForm1.Label36Click(Sender: TObject);
+begin
+  eChamaEmissor;
 end;
 
 procedure TForm1.Label36MouseLeave(Sender: TObject);

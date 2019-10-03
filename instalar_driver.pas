@@ -49,59 +49,66 @@ begin
   end
   else
   begin
-    ShowMessage('Nome Driver: '+Nome);
     if Nome = 'safenet-pro72k-x64.msi' then
     begin
-      WinExec('msiexec /i c:\soluti\safenet-pro72k-x64.msi /passive', SW_SHOW);
+      //WinExec('msiexec /i c:\soluti\safenet-pro72k-x64.msi /passive', SW_SHOW);
+      comando:= usuarioname+'\SOLUTI_DRIVER\safenet-pro72k-x64.msi';//concatenando o caminho do usuario com arquivo para ser execultado
+      ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
     end
     else
     begin
       if Nome = 'SafeNet-Aladin(x64).msi' then
       begin
-        WinExec('msiexec /i c:\soluti\SafeNet-Aladin(x64).msi /passive', SW_SHOW);
+        //WinExec('msiexec /i c:\soluti\SafeNet-Aladin(x64).msi /passive', SW_SHOW);
+        comando:= usuarioname+'\SOLUTI_DRIVER\SafeNet-Aladin(x64).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+        ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
       end
       else
       begin
         if Nome = 'Token_epass2003(x64).exe' then
         begin
-          ShowMessage('Instalador: ' + Nome);
-          WinExec('cmd /C msiexec /i c:\soluti\Token_epass2003(x64).exe /passive ',SW_SHOW);
           //WinExec('cmd /C msiexec /i c:\soluti\Token_epass2003(x64).exe /passive ',SW_SHOW);
+          comando:= usuarioname+'\SOLUTI_DRIVER\Token_epass2003(x64).exe';//concatenando o caminho do usuario com arquivo para ser execultado
+          ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
         end
         else
         begin
           if Nome = 'SafeNet-5100(x64).msi' then
           begin
-            WinExec('msiexec /i c:\soluti\SafeNet-5100(x64).msi /passive',
-              SW_SHOW);
+            //WinExec('msiexec /i c:\soluti\SafeNet-5100(x64).msi /passive', SW_SHOW);
+            comando:= usuarioname+'\SOLUTI_DRIVER\SafeNet-5100(x64).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+            ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
           end
           else
           begin
             if Nome = 'SafeNet-5110(x64).msi' then
             begin
-              WinExec('msiexec /i c:\soluti\SafeNet-5110(x64).msi /passive',SW_SHOW); // ,SW_shownormal);
+              //WinExec('msiexec /i c:\soluti\SafeNet-5110(x64).msi /passive',SW_SHOW); // ,SW_shownormal);
+              comando:= usuarioname+'\SOLUTI_DRIVER\SafeNet-5110(x64).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+              ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
             end
             else
             begin
               if Nome = 'Cartão-AWP-OT(x64).msi' then
               begin
-                comando:= 'msiexec /i '+usuarioname+'\SOLUTI_DRIVER\Cartão-AWP-OT(x64).msi /passive';//concatenando o caminho do usuario com arquivo para ser execultado
-                ShowMessage('comando: '+comando);
-                //WinExec(pchar(comando)', SW_SHOW); // ,SW_shownormal);
-                //ShellExecute (0, nil, pchar(comando), nil, Nil, SW_SHOW);
-                WinExec('msiexec /i Cartão-AWP-OT(x64).msi /passive', SW_SHOW); // ,SW_shownormal);
+                comando:= usuarioname+'\SOLUTI_DRIVER\Cartão-AWP-OT(x64).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+                ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
               end
               else
               begin
                 if Nome = 'Cartão-Idemia-(x64).msi' then
                 begin
-                  WinExec('msiexec /i c:\soluti\Cartão-Idemia-(x64).msi /passive', SW_SHOW); // ,SW_shownormal);
+                  //WinExec('msiexec /i c:\soluti\Cartão-Idemia-(x64).msi /passive', SW_SHOW); // ,SW_shownormal);
+                  comando:= usuarioname+'\SOLUTI_DRIVER\Cartão-Idemia-(x64).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+                  ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
                 end
                 else
                 begin
                   if Nome = 'Cartão-Gemalto-(x64).msi' then
                   begin
-                    WinExec('msiexec /i c:\soluti\Cartão-Gemalto-(x64).msi /passive', SW_SHOW);
+                    //WinExec('msiexec /i c:\soluti\Cartão-Gemalto-(x64).msi /passive', SW_SHOW);
+                    comando:= usuarioname+'\SOLUTI_DRIVER\Cartão-Gemalto-(x64).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+                    ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
                   end
                   else
                   begin
@@ -114,60 +121,77 @@ begin
                     begin// AQUI SOMENTE
                       if Nome = 'SafeNet_pro72k(x32).msi' then
                       begin
-                        WinExec('msiexec /i c:\soluti\SafeNet_pro72k(x32).msi /passive',SW_SHOW);
+                        //WinExec('msiexec /i c:\soluti\SafeNet_pro72k(x32).msi /passive',SW_SHOW);
+                        comando:= usuarioname+'\SOLUTI_DRIVER\SafeNet_pro72k(x32).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+                        ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
                       end
                       else
                       begin
                         if Nome = 'SafeNet_Aladin(x32).msi' then
                         begin
-                          WinExec('msiexec /i c:\soluti\SafeNet_Aladin(x32).msi /passive',
-                            SW_SHOW);
+                          //WinExec('msiexec /i c:\soluti\SafeNet_Aladin(x32).msi /passive', SW_SHOW);
+                          comando:= usuarioname+'\SOLUTI_DRIVER\SafeNet_Aladin(x32).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+                          ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
                         end
                         else
                         begin
                           if Nome = 'Token_epass2003(x32).exe' then
                           begin
-                            WinExec('msiexec /i c:\soluti\Token_epass2003(x32).msi /passive',SW_SHOW);
+                            //WinExec('msiexec /i c:\soluti\Token_epass2003(x32).msi /passive',SW_SHOW);
+                            comando:= usuarioname+'\SOLUTI_DRIVER\Token_epass2003(x32).exe';//concatenando o caminho do usuario com arquivo para ser execultado
+                            ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
                           end
                           else
                           begin
                             if Nome = 'SafeNet_5100(x32).msi' then
                             begin
-                              WinExec('msiexec /i c:\soluti\SafeNet_5100(x32).msi /passive',
-                                SW_SHOW);
+                              WinExec('msiexec /i c:\soluti\SafeNet_5100(x32).msi /passive', SW_SHOW);
+                              comando:= usuarioname+'\SOLUTI_DRIVER\SafeNet_5100(x32).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+                              ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
                             end
                             else
                             begin
                               if Nome = 'SafeNet_5110(x32).msi' then
                               begin
-                                WinExec('msiexec /i c:\soluti\SafeNet_5110(x32).msi /passive',
-                                  SW_SHOW);
+                                //WinExec('msiexec /i c:\soluti\SafeNet_5110(x32).msi /passive', SW_SHOW);
+                                comando:= usuarioname+'\SOLUTI_DRIVER\SafeNet_5110(x32).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+                                ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
                               end
                               else // AQUI SOMENTE CARTÃO PARA MAQUINA 32 BITS
                               begin
                                 if Nome = 'Cartão_AWP_OT(x32).msi' then
                                 begin
-                                  WinExec('msiexec /i c:\soluti\Cartão_AWP_OT(x32).msi /passive',
-                                    SW_SHOW);
+                                  //WinExec('msiexec /i c:\soluti\Cartão_AWP_OT(x32).msi /passive', SW_SHOW);
+                                  comando:= usuarioname+'\SOLUTI_DRIVER\Cartão_AWP_OT(x32).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+                                  ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
                                 end
                                 else
                                 begin
                                   if Nome = 'Cartão_Idemia_(x32).msi' then
                                   begin
-                                    WinExec('msiexec /i c:\soluti\Cartão_Idemia_(x32).msi /passive',
-                                      SW_SHOW);
+                                    //WinExec('msiexec /i c:\soluti\Cartão_Idemia_(x32).msi /passive', SW_SHOW);
+                                    comando:= usuarioname+'\SOLUTI_DRIVER\Cartão_Idemia_(x32).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+                                    ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
                                   end
                                   else
                                   begin
                                     if Nome = 'Cartão-Gemalto-(x32).msi' then
                                     begin
-                                      WinExec('msiexec /i c:\soluti\Cartão-Gemalto-(x32).msi /passive',
-                                        SW_SHOW);
+                                      //WinExec('msiexec /i c:\soluti\Cartão-Gemalto-(x32).msi /passive', SW_SHOW);
+                                      comando:= usuarioname+'\SOLUTI_DRIVER\Cartão_Idemia_(x32).msi';//concatenando o caminho do usuario com arquivo para ser execultado
+                                      ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
                                     end
                                     else // AQUI ENTÃO E MORPHO
                                     begin
-                                      comando:= usuarioname+'\SOLUTI_DRIVER\Cartão-Morpho-(x32).exe';//concatenando o caminho do usuario com arquivo para ser execultado
-                                      ShellExecute (0, nil, pchar(comando), nil, Nil, SW_SHOW);
+                                      if Nome = 'Cartão-Morpho-(x32).exe' then
+                                      begin
+                                        comando:= usuarioname+'\SOLUTI_DRIVER\Cartão-Morpho-(x32).exe';//concatenando o caminho do usuario com arquivo para ser execultado
+                                        ShellExecute (0, nil, pchar(comando), nil, Nil, SW_SHOW);
+                                      end
+                                      else
+                                      begin
+                                        Application.MessageBox('Não foi encontrado o driver para Instalação!','ERRO[INSTALL]', MB_OK or MB_ICONINFORMATION);
+                                      end;
                                     end;
                                   end;
                                 end;

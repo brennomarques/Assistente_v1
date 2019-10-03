@@ -2867,6 +2867,8 @@ object Form1: TForm1
     Color = 14264576
     ParentBackground = False
     TabOrder = 3
+    ExplicitLeft = 1
+    ExplicitTop = 106
     object Label18: TLabel
       Left = 56
       Top = 48
@@ -3626,6 +3628,10 @@ object Form1: TForm1
     Color = 5264916
     ParentBackground = False
     TabOrder = 4
+    ExplicitLeft = 1
+    ExplicitTop = 105
+    ExplicitWidth = 1060
+    ExplicitHeight = 554
     object Label23: TLabel
       Left = 55
       Top = 49
@@ -3770,6 +3776,7 @@ object Form1: TForm1
       Font.Name = 'Branding Bold'
       Font.Style = []
       ParentFont = False
+      OnClick = Label33Click
       OnMouseMove = Label33MouseMove
       OnMouseLeave = Label33MouseLeave
     end
@@ -3798,14 +3805,15 @@ object Form1: TForm1
       Font.Name = 'Branding Bold'
       Font.Style = []
       ParentFont = False
+      OnClick = Label35Click
       OnMouseMove = Label35MouseMove
       OnMouseLeave = Label35MouseLeave
     end
     object Image11: TImage
       Left = 56
-      Top = 298
+      Top = 297
       Width = 257
-      Height = 37
+      Height = 31
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000000FA0000
         001D0803000000B47381350000000467414D410000B18F0BFC6105000000E750
@@ -3832,6 +3840,7 @@ object Form1: TForm1
         5432313A31343A31332B30323A30302E2715AB0000002574455874646174653A
         6D6F6469667900323031392D30392D30325432313A31343A31332B30323A3030
         5F7AAD170000000049454E44AE426082}
+      OnClick = Image11Click
       OnMouseLeave = Image11MouseLeave
       OnMouseMove = Image11MouseMove
     end
@@ -3847,6 +3856,7 @@ object Form1: TForm1
       Font.Name = 'Branding Medium'
       Font.Style = []
       ParentFont = False
+      OnClick = Label36Click
       OnMouseMove = Label36MouseMove
       OnMouseLeave = Label36MouseLeave
     end
@@ -4880,6 +4890,35 @@ object Form1: TForm1
       ExplicitWidth = 597
       ExplicitHeight = 469
     end
+    inline FBaixa_driver3: TFBaixa_driver
+      Left = 416
+      Top = 88
+      Width = 329
+      Height = 340
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 1
+      Visible = False
+      ExplicitLeft = 416
+      ExplicitTop = 88
+    end
+    inline F_emissor_certificado1: TF_emissor_certificado
+      Left = 416
+      Top = 88
+      Width = 329
+      Height = 340
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 2
+      Visible = False
+      ExplicitLeft = 416
+      ExplicitTop = 88
+      inherited Image_ok: TImage
+        OnClick = F_emissor_certificado1Image_okClick
+      end
+    end
   end
   object Panel_suporte: TPanel
     Left = 0
@@ -4891,6 +4930,10 @@ object Form1: TForm1
     Color = 9667712
     ParentBackground = False
     TabOrder = 5
+    ExplicitLeft = 1
+    ExplicitTop = 119
+    ExplicitWidth = 736
+    ExplicitHeight = 540
     object Label37: TLabel
       Left = 56
       Top = 40
@@ -6089,6 +6132,10 @@ object Form1: TForm1
     ParentBackground = False
     TabOrder = 6
     Visible = False
+    ExplicitLeft = 21
+    ExplicitTop = 122
+    ExplicitWidth = 518
+    ExplicitHeight = 436
     object Label55: TLabel
       Left = 56
       Top = 40
@@ -7189,11 +7236,10 @@ object Form1: TForm1
     end
   end
   object Panel_Instalador_token_cartao_1: TPanel
-    Left = 0
-    Top = 113
-    Width = 1084
-    Height = 578
-    Align = alClient
+    Left = 168
+    Top = 229
+    Width = 518
+    Height = 406
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
@@ -7958,6 +8004,10 @@ object Form1: TForm1
     Color = 5264915
     ParentBackground = False
     TabOrder = 8
+    ExplicitLeft = 8
+    ExplicitTop = 119
+    ExplicitWidth = 518
+    ExplicitHeight = 363
     object Label72: TLabel
       Left = 56
       Top = 29
@@ -9028,6 +9078,10 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
+    ExplicitLeft = 1
+    ExplicitTop = 119
+    ExplicitWidth = 404
+    ExplicitHeight = 373
     object Image26: TImage
       Left = 323
       Top = 34
@@ -9865,8 +9919,8 @@ object Form1: TForm1
         88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
     end
     inline Frame_token_pro72k1: TFrame_token_pro72k
-      Left = 758
-      Top = 304
+      Left = 707
+      Top = 147
       Width = 302
       Height = 248
       Color = clWhite
@@ -9880,12 +9934,12 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 0
       Visible = False
-      ExplicitLeft = 758
-      ExplicitTop = 304
+      ExplicitLeft = 707
+      ExplicitTop = 147
     end
     inline Frame_safenet_51001: TFrame_safenet_5100
-      Left = 758
-      Top = 304
+      Left = 707
+      Top = 147
       Width = 302
       Height = 248
       Color = clWhite
@@ -9893,12 +9947,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 1
       Visible = False
-      ExplicitLeft = 758
-      ExplicitTop = 304
+      ExplicitLeft = 707
+      ExplicitTop = 147
     end
     inline Token_aladin1: TToken_aladin
-      Left = 759
-      Top = 304
+      Left = 150
+      Top = 147
       Width = 302
       Height = 248
       Color = clWhite
@@ -9906,12 +9960,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 2
       Visible = False
-      ExplicitLeft = 759
-      ExplicitTop = 304
+      ExplicitLeft = 150
+      ExplicitTop = 147
     end
     inline token_safent_51101: Ttoken_safent_5110
-      Left = 758
-      Top = 304
+      Left = 147
+      Top = 147
       Width = 302
       Height = 248
       Color = clWhite
@@ -9919,12 +9973,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 3
       Visible = False
-      ExplicitLeft = 758
-      ExplicitTop = 304
+      ExplicitLeft = 147
+      ExplicitTop = 147
     end
     inline Token_epass1: TToken_epass
-      Left = 755
-      Top = 304
+      Left = 417
+      Top = 147
       Width = 302
       Height = 248
       Color = clWhite
@@ -9932,12 +9986,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 4
       Visible = False
-      ExplicitLeft = 755
-      ExplicitTop = 304
+      ExplicitLeft = 417
+      ExplicitTop = 147
     end
     inline FBaixa_driver2: TFBaixa_driver
-      Left = 375
-      Top = 103
+      Left = 395
+      Top = 116
       Width = 329
       Height = 340
       Color = clWhite
@@ -9945,23 +9999,44 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 5
       Visible = False
-      ExplicitLeft = 375
-      ExplicitTop = 103
+      ExplicitLeft = 395
+      ExplicitTop = 116
       inherited Label_baixando1: TLabel
         Left = 167
         ExplicitLeft = 167
       end
     end
+    inline Finstala_driver2: TFinstala_driver
+      Left = 400
+      Top = 116
+      Width = 329
+      Height = 340
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 6
+      Visible = False
+      ExplicitLeft = 400
+      ExplicitTop = 116
+      inherited Image_ok: TImage
+        OnClick = Finstala_driver2Image_okClick
+      end
+    end
   end
   object Panel_lista_cartao: TPanel
-    Left = 1
-    Top = 119
-    Width = 1040
-    Height = 564
+    Left = 0
+    Top = 113
+    Width = 1084
+    Height = 578
+    Align = alClient
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
+    ExplicitLeft = 1
+    ExplicitTop = 110
+    ExplicitWidth = 1063
+    ExplicitHeight = 553
     object Image27: TImage
       Left = 320
       Top = 34
@@ -10715,8 +10790,8 @@ object Form1: TForm1
       OnMouseLeave = Label105MouseLeave
     end
     inline fcartao_wp1: Tfcartao_wp
-      Left = 765
-      Top = 321
+      Left = 607
+      Top = 188
       Width = 302
       Height = 248
       Color = clWhite
@@ -10724,12 +10799,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 0
       Visible = False
-      ExplicitLeft = 765
-      ExplicitTop = 321
+      ExplicitLeft = 607
+      ExplicitTop = 188
     end
     inline FCartao_mopho1: TFCartao_mopho
-      Left = 765
-      Top = 320
+      Left = 607
+      Top = 188
       Width = 302
       Height = 248
       Color = clWhite
@@ -10737,12 +10812,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 1
       Visible = False
-      ExplicitLeft = 765
-      ExplicitTop = 320
+      ExplicitLeft = 607
+      ExplicitTop = 188
     end
     inline fcartao_idemia1: Tfcartao_idemia
-      Left = 759
-      Top = 320
+      Left = 248
+      Top = 185
       Width = 302
       Height = 248
       Color = clWhite
@@ -10750,12 +10825,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 2
       Visible = False
-      ExplicitLeft = 759
-      ExplicitTop = 320
+      ExplicitLeft = 248
+      ExplicitTop = 185
     end
     inline Fcartao_gemalto1: TFcartao_gemalto
-      Left = 765
-      Top = 320
+      Left = 248
+      Top = 185
       Width = 302
       Height = 248
       Color = clWhite
@@ -10763,12 +10838,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 3
       Visible = False
-      ExplicitLeft = 765
-      ExplicitTop = 320
+      ExplicitLeft = 248
+      ExplicitTop = 185
     end
     inline FBaixa_driver1: TFBaixa_driver
-      Left = 523
-      Top = 48
+      Left = 415
+      Top = 122
       Width = 329
       Height = 340
       Color = clWhite
@@ -10776,12 +10851,12 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 4
       Visible = False
-      ExplicitLeft = 523
-      ExplicitTop = 48
+      ExplicitLeft = 415
+      ExplicitTop = 122
     end
     inline Finstala_driver1: TFinstala_driver
-      Left = 603
-      Top = 48
+      Left = 415
+      Top = 122
       Width = 329
       Height = 340
       Color = clWhite
@@ -10789,8 +10864,8 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 5
       Visible = False
-      ExplicitLeft = 603
-      ExplicitTop = 48
+      ExplicitLeft = 415
+      ExplicitTop = 122
       inherited Image_ok: TImage
         Left = 74
         OnClick = Finstala_driver1Image_okClick
@@ -10801,12 +10876,17 @@ object Form1: TForm1
   object Panel_sem_midia: TPanel
     Left = 0
     Top = 113
-    Width = 298
-    Height = 172
+    Width = 1084
+    Height = 578
+    Align = alClient
     BevelOuter = bvNone
     Color = 6714127
     ParentBackground = False
     TabOrder = 11
+    ExplicitLeft = 8
+    ExplicitTop = 119
+    ExplicitWidth = 171
+    ExplicitHeight = 166
     object Label97: TLabel
       Left = 56
       Top = 40

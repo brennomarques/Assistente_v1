@@ -293,6 +293,7 @@ object F_emissor_certificado: TF_emissor_certificado
       332B30323A3030F999CA6A0000002574455874646174653A6D6F646966790032
       3031392D30392D32365431353A34383A31332B30323A303088C472D600000000
       49454E44AE426082}
+    OnClick = Image_okClick
     OnMouseLeave = Image_okMouseLeave
     OnMouseMove = Image_okMouseMove
   end
