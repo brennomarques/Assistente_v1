@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Assistente - ( BETA )'
-  ClientHeight = 691
+  ClientHeight = 694
   ClientWidth = 1084
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -22,7 +22,7 @@ object Form1: TForm1
     Left = 0
     Top = 113
     Width = 1084
-    Height = 578
+    Height = 581
     Align = alClient
     BevelOuter = bvNone
     Color = 6730063
@@ -32,7 +32,7 @@ object Form1: TForm1
       Left = 0
       Top = 0
       Width = 1084
-      Height = 578
+      Height = 581
       Align = alClient
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000004640000
@@ -1710,7 +1710,7 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
     end
-    object Image3: TImage
+    object Image_token_cartao: TImage
       Left = 56
       Top = 280
       Width = 249
@@ -1743,9 +1743,9 @@ object Form1: TForm1
         95EDE8BE29C57FFAFA934EF40B5CA99746660DEED44DA652AB26F3DD55D5BE6F
         0C089AC9A0EBDB4715EB2FA8DED57CFE46A6A3E7DD7897FC005255EDEA4A4633
         6C0000000049454E44AE426082}
-      OnClick = Image3Click
-      OnMouseLeave = Image3MouseLeave
-      OnMouseMove = Image3MouseMove
+      OnClick = Image_token_cartaoClick
+      OnMouseLeave = Image_token_cartaoMouseLeave
+      OnMouseMove = Image_token_cartaoMouseMove
     end
     object Image4: TImage
       Left = 348
@@ -1800,7 +1800,7 @@ object Form1: TForm1
       OnMouseMove = Label10MouseMove
       OnMouseLeave = Label10MouseLeave
     end
-    object Label11: TLabel
+    object Label_token_cartao: TLabel
       Left = 121
       Top = 292
       Width = 100
@@ -1812,9 +1812,9 @@ object Form1: TForm1
       Font.Name = 'Branding Medium'
       Font.Style = []
       ParentFont = False
-      OnClick = Label11Click
-      OnMouseMove = Label11MouseMove
-      OnMouseLeave = Label11MouseLeave
+      OnClick = Label_token_cartaoClick
+      OnMouseMove = Label_token_cartaoMouseMove
+      OnMouseLeave = Label_token_cartaoMouseLeave
     end
   end
   object Panel_Inicial_Superior: TPanel
@@ -1835,7 +1835,7 @@ object Form1: TForm1
     TabOrder = 1
     object Image2: TImage
       Left = 56
-      Top = 16
+      Top = 24
       Width = 177
       Height = 49
       Picture.Data = {
@@ -2039,7 +2039,7 @@ object Form1: TForm1
     Left = 0
     Top = 113
     Width = 1084
-    Height = 578
+    Height = 581
     Align = alClient
     BevelOuter = bvNone
     Color = 14264576
@@ -2088,7 +2088,7 @@ object Form1: TForm1
     end
     object Image9: TImage
       Left = 541
-      Top = 191
+      Top = 187
       Width = 487
       Height = 338
       Picture.Data = {
@@ -2861,14 +2861,12 @@ object Form1: TForm1
     Left = 0
     Top = 113
     Width = 1084
-    Height = 578
+    Height = 581
     Align = alClient
     BevelOuter = bvNone
     Color = 14264576
     ParentBackground = False
     TabOrder = 3
-    ExplicitLeft = 1
-    ExplicitTop = 106
     object Label18: TLabel
       Left = 56
       Top = 48
@@ -3622,16 +3620,12 @@ object Form1: TForm1
     Left = 0
     Top = 113
     Width = 1084
-    Height = 578
+    Height = 581
     Align = alClient
     BevelOuter = bvNone
     Color = 5264916
     ParentBackground = False
     TabOrder = 4
-    ExplicitLeft = 1
-    ExplicitTop = 105
-    ExplicitWidth = 1060
-    ExplicitHeight = 554
     object Label23: TLabel
       Left = 55
       Top = 49
@@ -4924,16 +4918,12 @@ object Form1: TForm1
     Left = 0
     Top = 113
     Width = 1084
-    Height = 578
+    Height = 581
     Align = alClient
     BevelOuter = bvNone
     Color = 9667712
     ParentBackground = False
     TabOrder = 5
-    ExplicitLeft = 1
-    ExplicitTop = 119
-    ExplicitWidth = 736
-    ExplicitHeight = 540
     object Label37: TLabel
       Left = 56
       Top = 40
@@ -6125,17 +6115,13 @@ object Form1: TForm1
     Left = 0
     Top = 113
     Width = 1084
-    Height = 578
+    Height = 581
     Align = alClient
     BevelOuter = bvNone
     Color = 8988182
     ParentBackground = False
     TabOrder = 6
     Visible = False
-    ExplicitLeft = 21
-    ExplicitTop = 122
-    ExplicitWidth = 518
-    ExplicitHeight = 436
     object Label55: TLabel
       Left = 56
       Top = 40
@@ -7236,10 +7222,11 @@ object Form1: TForm1
     end
   end
   object Panel_Instalador_token_cartao_1: TPanel
-    Left = 168
-    Top = 229
-    Width = 518
-    Height = 406
+    Left = 0
+    Top = 113
+    Width = 1084
+    Height = 581
+    Align = alClient
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
@@ -7998,16 +7985,12 @@ object Form1: TForm1
     Left = 0
     Top = 113
     Width = 1084
-    Height = 578
+    Height = 581
     Align = alClient
     BevelOuter = bvNone
     Color = 5264915
     ParentBackground = False
     TabOrder = 8
-    ExplicitLeft = 8
-    ExplicitTop = 119
-    ExplicitWidth = 518
-    ExplicitHeight = 363
     object Label72: TLabel
       Left = 56
       Top = 29
@@ -8089,6 +8072,7 @@ object Form1: TForm1
         61746500323031392D30392D30335431383A31343A31392B30323A3030DFCBF4
         470000002574455874646174653A6D6F6469667900323031392D30392D303354
         31383A31343A31392B30323A3030AE964CFB0000000049454E44AE426082}
+      OnClick = Image22Click
       OnMouseLeave = Image22MouseLeave
       OnMouseMove = Image22MouseMove
     end
@@ -8188,8 +8172,8 @@ object Form1: TForm1
       OnMouseLeave = Label74MouseLeave
     end
     object Image25: TImage
-      Left = 575
-      Top = 95
+      Left = 581
+      Top = 61
       Width = 447
       Height = 438
       Picture.Data = {
@@ -9048,6 +9032,7 @@ object Form1: TForm1
       Font.Name = 'Branding Medium'
       Font.Style = []
       ParentFont = False
+      OnClick = Label75Click
       OnMouseMove = Label75MouseMove
       OnMouseLeave = Label75MouseLeave
     end
@@ -9072,16 +9057,12 @@ object Form1: TForm1
     Left = 0
     Top = 113
     Width = 1084
-    Height = 578
+    Height = 581
     Align = alClient
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
-    ExplicitLeft = 1
-    ExplicitTop = 119
-    ExplicitWidth = 404
-    ExplicitHeight = 373
     object Image26: TImage
       Left = 323
       Top = 34
@@ -9919,7 +9900,7 @@ object Form1: TForm1
         88951EFA506DC94F8291FB3AD199E1830000000049454E44AE426082}
     end
     inline Frame_token_pro72k1: TFrame_token_pro72k
-      Left = 707
+      Left = 419
       Top = 147
       Width = 302
       Height = 248
@@ -9934,12 +9915,12 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 0
       Visible = False
-      ExplicitLeft = 707
+      ExplicitLeft = 419
       ExplicitTop = 147
     end
     inline Frame_safenet_51001: TFrame_safenet_5100
-      Left = 707
-      Top = 147
+      Left = 419
+      Top = 154
       Width = 302
       Height = 248
       Color = clWhite
@@ -9947,8 +9928,8 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 1
       Visible = False
-      ExplicitLeft = 707
-      ExplicitTop = 147
+      ExplicitLeft = 419
+      ExplicitTop = 154
     end
     inline Token_aladin1: TToken_aladin
       Left = 150
@@ -9977,7 +9958,7 @@ object Form1: TForm1
       ExplicitTop = 147
     end
     inline Token_epass1: TToken_epass
-      Left = 417
+      Left = 421
       Top = 147
       Width = 302
       Height = 248
@@ -9986,11 +9967,17 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 4
       Visible = False
-      ExplicitLeft = 417
+      ExplicitLeft = 421
       ExplicitTop = 147
+      inherited Label1: TLabel
+        Left = 96
+        Top = 196
+        ExplicitLeft = 96
+        ExplicitTop = 196
+      end
     end
     inline FBaixa_driver2: TFBaixa_driver
-      Left = 395
+      Left = 418
       Top = 116
       Width = 329
       Height = 340
@@ -9999,7 +9986,7 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 5
       Visible = False
-      ExplicitLeft = 395
+      ExplicitLeft = 418
       ExplicitTop = 116
       inherited Label_baixando1: TLabel
         Left = 167
@@ -10007,7 +9994,7 @@ object Form1: TForm1
       end
     end
     inline Finstala_driver2: TFinstala_driver
-      Left = 400
+      Left = 414
       Top = 116
       Width = 329
       Height = 340
@@ -10016,7 +10003,7 @@ object Form1: TForm1
       ParentColor = False
       TabOrder = 6
       Visible = False
-      ExplicitLeft = 400
+      ExplicitLeft = 414
       ExplicitTop = 116
       inherited Image_ok: TImage
         OnClick = Finstala_driver2Image_okClick
@@ -10027,16 +10014,12 @@ object Form1: TForm1
     Left = 0
     Top = 113
     Width = 1084
-    Height = 578
+    Height = 581
     Align = alClient
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
-    ExplicitLeft = 1
-    ExplicitTop = 110
-    ExplicitWidth = 1063
-    ExplicitHeight = 553
     object Image27: TImage
       Left = 320
       Top = 34
@@ -10877,16 +10860,14 @@ object Form1: TForm1
     Left = 0
     Top = 113
     Width = 1084
-    Height = 578
+    Height = 581
     Align = alClient
     BevelOuter = bvNone
     Color = 6714127
     ParentBackground = False
     TabOrder = 11
-    ExplicitLeft = 8
-    ExplicitTop = 119
-    ExplicitWidth = 171
-    ExplicitHeight = 166
+    ExplicitWidth = 276
+    ExplicitHeight = 131
     object Label97: TLabel
       Left = 56
       Top = 40
@@ -10943,7 +10924,7 @@ object Form1: TForm1
     end
     object Image30: TImage
       Left = 650
-      Top = 97
+      Top = 82
       Width = 372
       Height = 392
       Picture.Data = {

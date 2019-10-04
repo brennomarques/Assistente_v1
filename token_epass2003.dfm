@@ -8,7 +8,7 @@ object Token_epass: TToken_epass
   ParentColor = False
   TabOrder = 0
   object Label1: TLabel
-    Left = 64
+    Left = 80
     Top = 190
     Width = 120
     Height = 19

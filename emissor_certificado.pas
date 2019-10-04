@@ -45,6 +45,7 @@ begin
   begin
     comando:= usuarioname+'\SOLUTI_DRIVER\Emissor.jnlp';//concatenando o caminho do usuario com arquivo para ser execultado
     ShellExecute (0, nil, PChar(comando), nil, Nil, SW_SHOW);
+    //WinExec('cmd javaws /C  C:\Users\brenno.lima\SOLUTI_DRIVER\Emissor.jnlp',SW_SHOW);
   end
   else
   begin
