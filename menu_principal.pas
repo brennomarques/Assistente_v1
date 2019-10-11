@@ -464,6 +464,7 @@ type
     procedure Label36Click(Sender: TObject);
     procedure Image22Click(Sender: TObject);
     procedure Label75Click(Sender: TObject);
+    procedure eSalvaDLL();//SALVA DLL NO LOCAL DO .EXE
 
 
   private
@@ -485,15 +486,37 @@ implementation
 procedure TForm1.Finstala_driver1Image_okClick(Sender: TObject);
 begin
   Finstala_driver1.Visible:=false;//esconder frame instala driver.
+  Finstala_driver2.Visible:=false;//esconder frame instala driver.
   Finstala_driver1.Image_okClick(Sender);
+
 end;
 
 procedure TForm1.Finstala_driver2Image_okClick(Sender: TObject);
 begin
   Finstala_driver2.Visible:=false;//esconder tela
+  Finstala_driver1.Visible:=false;//esconder tela
   Finstala_driver2.Image_okClick(Sender);
 end;
+procedure TForm1.eSalvaDLL();//SALVA DLL NO LOCAL DO .EXE
+var
+  fs: TFileStream;
+  rs: TResourceStream;
+  s : string;
+begin
+  //EXTRAIR libeay32.dll PARA LOCAL NO .EXE
+  rs := TResourceStream.Create(hInstance, 'Resource_1', RT_RCDATA);
+  s  := ExtractFilePath(Application.ExeName)+'libeay32.dll';
+  fs := TFileStream.Create(s,fmCreate);
+  rs.SaveToStream(fs);
+  fs.Free;
+  //EXTRAIR ssleay32.dll PARA LOCAL NO .EXE
+  rs := TResourceStream.Create(hInstance, 'Resource_2', RT_RCDATA);
+  s  := ExtractFilePath(Application.ExeName)+'ssleay32.dll';
+  fs := TFileStream.Create(s,fmCreate);
+  rs.SaveToStream(fs);
+  fs.Free;
 
+end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   Panel_Instalador_token_cartao_1.Visible:=false;
@@ -506,6 +529,7 @@ begin
   Panel_lista_tokens.Visible:=false;
   Panel_lista_cartao.Visible:=false;
   Panel_sem_midia.Visible:=false;
+  eSalvaDLL; //salvar dll  no local onde esta o .exe
 end;
 procedure TForm1.F_emissor_certificado1Image_okClick(Sender: TObject);
 begin
@@ -518,15 +542,15 @@ procedure TForm1.IdHTTP_baixaWork(ASender: TObject; AWorkMode: TWorkMode;
 begin
   FBaixa_driver1.ProgressBar1.Position := AWorkCount;
   FBaixa_driver1.Label_baixando1.Caption:=RetornaKiloBytes(AWorkCount);
-  FBaixa_driver1.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver1.ProgressBar1.Max, AWorkCount);//cartão
+  FBaixa_driver1.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver1.ProgressBar1.Max, AWorkCount)+',';//cartão
 
   FBaixa_driver2.ProgressBar1.Position := AWorkCount;
   FBaixa_driver2.Label_baixando1.Caption:=RetornaKiloBytes(AWorkCount);
-  FBaixa_driver2.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver2.ProgressBar1.Max, AWorkCount);//token
+  FBaixa_driver2.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver2.ProgressBar1.Max, AWorkCount)+',';//token
 
   FBaixa_driver3.ProgressBar1.Position := AWorkCount;
   FBaixa_driver3.Label_baixando1.Caption:=RetornaKiloBytes(AWorkCount);
-  FBaixa_driver3.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver3.ProgressBar1.Max, AWorkCount);//emissor certificado
+  FBaixa_driver3.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver3.ProgressBar1.Max, AWorkCount)+',';//emissor certificado
 
 end;
 
@@ -2215,8 +2239,6 @@ begin
     Png_token_safenet_5110_true.Visible:=false;
     Png_token_epass2003_false.Visible:=true;
     Png_token_epass2003_true.Visible:=false;
-
-
   end
 
 end;

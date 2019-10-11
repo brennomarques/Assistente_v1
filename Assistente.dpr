@@ -1,5 +1,11 @@
 program Assistente;
 
+
+
+
+
+{$R *.dres}
+
 uses
   Vcl.Forms,
   menu_principal in 'menu_principal.pas' {Form1},

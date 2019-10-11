@@ -2,9 +2,10 @@ object Form1: TForm1
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Assistente - ( BETA )'
-  ClientHeight = 694
-  ClientWidth = 1084
+  ClientHeight = 704
+  ClientWidth = 1094
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,18 +22,20 @@ object Form1: TForm1
   object Panel_Inicial_Inferior: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 581
+    Width = 1094
+    Height = 591
     Align = alClient
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1084
+    ExplicitHeight = 581
     object Image1: TImage
       Left = 0
       Top = 0
-      Width = 1084
-      Height = 581
+      Width = 1094
+      Height = 591
       Align = alClient
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000004640000
@@ -1820,7 +1823,7 @@ object Form1: TForm1
   object Panel_Inicial_Superior: TPanel
     Left = 0
     Top = 0
-    Width = 1084
+    Width = 1094
     Height = 113
     Align = alTop
     BevelOuter = bvNone
@@ -1833,6 +1836,7 @@ object Form1: TForm1
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 1084
     object Image2: TImage
       Left = 56
       Top = 24
@@ -2038,13 +2042,15 @@ object Form1: TForm1
   object Panel_Instalador_token_cartao: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 581
+    Width = 1094
+    Height = 591
     Align = alClient
     BevelOuter = bvNone
     Color = 14264576
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 1084
+    ExplicitHeight = 581
     object Label13: TLabel
       Left = 56
       Top = 48
@@ -2860,13 +2866,15 @@ object Form1: TForm1
   object Panel_Certificado_A1_A3: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 581
+    Width = 1094
+    Height = 591
     Align = alClient
     BevelOuter = bvNone
     Color = 14264576
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 1084
+    ExplicitHeight = 581
     object Label18: TLabel
       Left = 56
       Top = 48
@@ -3619,13 +3627,15 @@ object Form1: TForm1
   object Panel_emissor_certificado: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 581
+    Width = 1094
+    Height = 591
     Align = alClient
     BevelOuter = bvNone
     Color = 5264916
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 1084
+    ExplicitHeight = 581
     object Label23: TLabel
       Left = 55
       Top = 49
@@ -4888,7 +4898,7 @@ object Form1: TForm1
       Left = 416
       Top = 88
       Width = 329
-      Height = 340
+      Height = 378
       Color = clWhite
       ParentBackground = False
       ParentColor = False
@@ -4917,13 +4927,15 @@ object Form1: TForm1
   object Panel_suporte: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 581
+    Width = 1094
+    Height = 591
     Align = alClient
     BevelOuter = bvNone
     Color = 9667712
     ParentBackground = False
     TabOrder = 5
+    ExplicitWidth = 1084
+    ExplicitHeight = 581
     object Label37: TLabel
       Left = 56
       Top = 40
@@ -6114,14 +6126,16 @@ object Form1: TForm1
   object Panel_Downloads: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 581
+    Width = 1094
+    Height = 591
     Align = alClient
     BevelOuter = bvNone
     Color = 8988182
     ParentBackground = False
     TabOrder = 6
     Visible = False
+    ExplicitWidth = 1084
+    ExplicitHeight = 581
     object Label55: TLabel
       Left = 56
       Top = 40
@@ -7224,13 +7238,15 @@ object Form1: TForm1
   object Panel_Instalador_token_cartao_1: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 581
+    Width = 1094
+    Height = 591
     Align = alClient
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
     TabOrder = 7
+    ExplicitWidth = 1084
+    ExplicitHeight = 581
     object Label68: TLabel
       Left = 56
       Top = 23
@@ -7984,13 +8000,15 @@ object Form1: TForm1
   object Panel_pergunta_midia: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 581
+    Width = 1094
+    Height = 591
     Align = alClient
     BevelOuter = bvNone
     Color = 5264915
     ParentBackground = False
     TabOrder = 8
+    ExplicitWidth = 1084
+    ExplicitHeight = 581
     object Label72: TLabel
       Left = 56
       Top = 29
@@ -9056,13 +9074,15 @@ object Form1: TForm1
   object Panel_lista_tokens: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 581
+    Width = 1094
+    Height = 591
     Align = alClient
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
+    ExplicitWidth = 1084
+    ExplicitHeight = 581
     object Image26: TImage
       Left = 323
       Top = 34
@@ -9980,7 +10000,7 @@ object Form1: TForm1
       Left = 418
       Top = 116
       Width = 329
-      Height = 340
+      Height = 378
       Color = clWhite
       ParentBackground = False
       ParentColor = False
@@ -10013,13 +10033,15 @@ object Form1: TForm1
   object Panel_lista_cartao: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 581
+    Width = 1094
+    Height = 591
     Align = alClient
     BevelOuter = bvNone
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
+    ExplicitWidth = 1084
+    ExplicitHeight = 581
     object Image27: TImage
       Left = 320
       Top = 34
@@ -10828,7 +10850,7 @@ object Form1: TForm1
       Left = 415
       Top = 122
       Width = 329
-      Height = 340
+      Height = 378
       Color = clWhite
       ParentBackground = False
       ParentColor = False
@@ -10859,15 +10881,15 @@ object Form1: TForm1
   object Panel_sem_midia: TPanel
     Left = 0
     Top = 113
-    Width = 1084
-    Height = 581
+    Width = 1094
+    Height = 591
     Align = alClient
     BevelOuter = bvNone
     Color = 6714127
     ParentBackground = False
     TabOrder = 11
-    ExplicitWidth = 276
-    ExplicitHeight = 131
+    ExplicitWidth = 1064
+    ExplicitHeight = 552
     object Label97: TLabel
       Left = 56
       Top = 40

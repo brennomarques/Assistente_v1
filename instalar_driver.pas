@@ -41,7 +41,7 @@ var
   usuarioname, comando: string;
 begin
   usuarioname:= GetEnvironmentVariable('userprofile');//LOCALIZO O CAMINHO ONDE A PASTA DO USUARIO LOCAL ESTA.
-  if Nome = 'Emissor.jnlp' then
+  if Nome = 'Emissor.jnlp' then //NÃO USADA!
   begin
     Application.MessageBox('Vamos execultar o Assistente para Emissão do certificado para você, aguarde!','Assistente para Emissão do certificado', MB_OK or MB_ICONINFORMATION);
     //WinExec('msiexec /i c:\soluti\safenet-pro72k-x64.msi /passive', SW_SHOW);
@@ -214,6 +214,7 @@ end;
 procedure TFinstala_driver.Image_okClick(Sender: TObject);
 begin
   eInstalaDrive;//chama a função instalar o driver, usando a variavel Nome, onde contem o nome do driver.
+
 end;
 
 procedure TFinstala_driver.Image_okMouseLeave(Sender: TObject);
