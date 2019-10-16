@@ -17,13 +17,13 @@ type
     Label_download1: TLabel;
     ProgressBar1: TProgressBar;
     Label_baixando: TLabel;
-    Image2: TImage;
-    Label_cancelar: TLabel;
-    procedure Label_cancelarMouseLeave(Sender: TObject);
-    procedure Label_cancelarMouseMove(Sender: TObject; Shift: TShiftState; X,
+    Image_cancelar_baixa: TImage;
+    Label_cancelar_baixa: TLabel;
+    procedure Label_cancelar_baixaMouseLeave(Sender: TObject);
+    procedure Label_cancelar_baixaMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
-    procedure Image2MouseLeave(Sender: TObject);
-    procedure Image2MouseMove(Sender: TObject; Shift: TShiftState; X,
+    procedure Image_cancelar_baixaMouseLeave(Sender: TObject);
+    procedure Image_cancelar_baixaMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
   private
     { Private declarations }
@@ -36,26 +36,26 @@ implementation
 
 {$R *.dfm}
 
-procedure TFBaixa_driver.Image2MouseLeave(Sender: TObject);
+procedure TFBaixa_driver.Image_cancelar_baixaMouseLeave(Sender: TObject);
 begin
-  Label_cancelar.Font.Style := [];
+  Label_cancelar_baixa.Font.Style := [];
 end;
 
-procedure TFBaixa_driver.Image2MouseMove(Sender: TObject; Shift: TShiftState; X,
+procedure TFBaixa_driver.Image_cancelar_baixaMouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
-  Label_cancelar.Font.Style := [fsUnderline];
+  Label_cancelar_baixa.Font.Style := [fsUnderline];
 end;
 
-procedure TFBaixa_driver.Label_cancelarMouseLeave(Sender: TObject);
+procedure TFBaixa_driver.Label_cancelar_baixaMouseLeave(Sender: TObject);
 begin
-   Label_cancelar.Font.Style := [];
+   Label_cancelar_baixa.Font.Style := [];
 end;
 
-procedure TFBaixa_driver.Label_cancelarMouseMove(Sender: TObject; Shift: TShiftState;
+procedure TFBaixa_driver.Label_cancelar_baixaMouseMove(Sender: TObject; Shift: TShiftState;
   X, Y: Integer);
 begin
-  Label_cancelar.Font.Style := [fsUnderline];
+  Label_cancelar_baixa.Font.Style := [fsUnderline];
 end;
 
 end.

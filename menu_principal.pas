@@ -464,7 +464,13 @@ type
     procedure Label36Click(Sender: TObject);
     procedure Image22Click(Sender: TObject);
     procedure Label75Click(Sender: TObject);
-    procedure eSalvaDLL();//SALVA DLL NO LOCAL DO .EXE
+    procedure eSalvaDLL();
+    procedure FBaixa_driver1Image2Click(Sender: TObject);
+    procedure FBaixa_driver1Label_cancelar_baixaClick(Sender: TObject);
+    procedure FBaixa_driver2Image_cancelar_baixaClick(Sender: TObject);
+    procedure FBaixa_driver2Label_cancelar_baixaClick(Sender: TObject);
+    procedure FBaixa_driver3Image_cancelar_baixaClick(Sender: TObject);
+    procedure FBaixa_driver3Label_cancelar_baixaClick(Sender: TObject);//SALVA DLL NO LOCAL DO .EXE
 
 
   private
@@ -475,13 +481,69 @@ type
 
 var
   Form1: TForm1;
-  nomeToken: String;//variavel global vai receber o nome da midia DO PANEL
+  nomeToken: String;//variavel global vai receber o nome da midia DO PANEL , nomeToken
+  cancel: boolean;//VARIAL VAI DEFINIR A EXIBIÇÃO DOS FRAME APOS O CANCELAMENTO OU NÃO DA BAIXA DRIVER
 
 implementation
 
 //uses Baixa_driver; //para manipular valor do frame
 
+
 {$R *.dfm}
+
+procedure TForm1.FBaixa_driver1Image2Click(Sender: TObject);
+begin
+  IdHTTP_baixa.Disconnect;
+  FBaixa_driver3.Visible:=false;//esconder frame instala
+  FBaixa_driver1.Visible:=false;//esconder frame instala
+  FBaixa_driver2.Visible:=false;//esconder frame instala
+  cancel:=TRUE;
+end;
+
+procedure TForm1.FBaixa_driver1Label_cancelar_baixaClick(Sender: TObject);
+begin
+  IdHTTP_baixa.Disconnect;
+  FBaixa_driver3.Visible:=false;//esconder frame instala
+  FBaixa_driver1.Visible:=false;//esconder frame instala
+  FBaixa_driver2.Visible:=false;//esconder frame instala
+  cancel:=TRUE;
+end;
+
+procedure TForm1.FBaixa_driver2Image_cancelar_baixaClick(Sender: TObject);
+begin
+  IdHTTP_baixa.Disconnect;
+  FBaixa_driver3.Visible:=false;//esconder frame instala
+  FBaixa_driver1.Visible:=false;//esconder frame instala
+  FBaixa_driver2.Visible:=false;//esconder frame instala
+  cancel:=TRUE;
+end;
+
+procedure TForm1.FBaixa_driver2Label_cancelar_baixaClick(Sender: TObject);
+begin
+  IdHTTP_baixa.Disconnect;
+  FBaixa_driver3.Visible:=false;//esconder frame instala
+  FBaixa_driver1.Visible:=false;//esconder frame instala
+  FBaixa_driver2.Visible:=false;//esconder frame instala
+  cancel:=TRUE;
+end;
+
+procedure TForm1.FBaixa_driver3Image_cancelar_baixaClick(Sender: TObject);
+begin
+  IdHTTP_baixa.Disconnect;
+  FBaixa_driver3.Visible:=false;//esconder frame instala
+  FBaixa_driver1.Visible:=false;//esconder frame instala
+  FBaixa_driver2.Visible:=false;//esconder frame instala
+  cancel:=TRUE;
+end;
+
+procedure TForm1.FBaixa_driver3Label_cancelar_baixaClick(Sender: TObject);
+begin
+  IdHTTP_baixa.Disconnect;
+  FBaixa_driver3.Visible:=false;//esconder frame instala
+  FBaixa_driver1.Visible:=false;//esconder frame instala
+  FBaixa_driver2.Visible:=false;//esconder frame instala
+  cancel:=TRUE;
+end;
 
 procedure TForm1.Finstala_driver1Image_okClick(Sender: TObject);
 begin
@@ -835,6 +897,7 @@ begin
     ForceDirectories(caminhouser); // criação da pasta
   //CreateDir('C:\Users\brenno.lima\SOLUTI_DRIVER\');
   MyFile := TFileStream.Create(caminhouser + arquivo, fmCreate); // local no hd e nome do arquivo com a extensão, onde vai salvar.
+
   FBaixa_driver1.Visible:=true;//mostrando o frame baixa driver na tela.
   FBaixa_driver2.Visible:=true;//mostrando o frame baixa driver na tela.
   FBaixa_driver3.Visible:=true;//mostrando o frame baixa emissor do certificado.
@@ -844,20 +907,26 @@ begin
     MyFile.Free;
     if arquivo = 'Emissor.jnlp' then
     begin
-      FBaixa_driver1.Visible:=false;//esconder o frame da tela cartão.
-      FBaixa_driver2.Visible:=false;//esconder o frame da tela token.
-      FBaixa_driver3.Visible:=false;//esconder o frame da tela emissor
-      F_emissor_certificado1.Visible:=true;//exiber tela para confirma e abrir o emissor.
-      emissor_certificado.Nome_emissor:=arquivo;//variavel Nome_emissor recebe o nome do emissor para ser execultado.
+      if not cancel then//ESSA CONDIGÇÃO DEFINI SE EXIBIO O FRAME QUANDO FOR CANCELADO O PROCESSO DE BAIXA
+      begin
+        FBaixa_driver1.Visible:=false;//esconder o frame da tela cartão.
+        FBaixa_driver2.Visible:=false;//esconder o frame da tela token.
+        FBaixa_driver3.Visible:=false;//esconder o frame da tela emissor
+        F_emissor_certificado1.Visible:=true;//exiber tela para confirma e abrir o emissor.
+        emissor_certificado.Nome_emissor:=arquivo;//variavel Nome_emissor recebe o nome do emissor para ser execultado.
+      end;
     end
     else
     begin
-      FBaixa_driver1.Visible:=false;//esconder o frame da tela cartão.
-      FBaixa_driver2.Visible:=false;//esconder o frame da tela token.
-      FBaixa_driver3.Visible:=false;//esconder o frame da tela emissor
-      Finstala_driver1.Visible:=true;//exibe o fram instala driver.
-      Finstala_driver2.Visible:=true;//exibe o fram instala driver.
-      instalar_driver.Nome:=arquivo;//variavel Nome recebe o nome do driver que vai ser instalado (varivel é global encontrase no frame FInstala_driver)
+      if not cancel then
+      begin
+        FBaixa_driver1.Visible:=false;//esconder o frame da tela cartão.
+        FBaixa_driver2.Visible:=false;//esconder o frame da tela token.
+        FBaixa_driver3.Visible:=false;//esconder o frame da tela emissor
+        Finstala_driver1.Visible:=true;//exibe o fram instala driver.
+        Finstala_driver2.Visible:=true;//exibe o fram instala driver.
+        instalar_driver.Nome:=arquivo;//variavel Nome recebe o nome do driver que vai ser instalado (varivel é global encontrase no frame FInstala_driver)
+      end;
     end;
   end;
 end;

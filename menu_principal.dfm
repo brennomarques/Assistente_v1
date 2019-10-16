@@ -29,8 +29,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1084
-    ExplicitHeight = 581
     object Image1: TImage
       Left = 0
       Top = 0
@@ -1836,7 +1834,6 @@ object Form1: TForm1
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 1084
     object Image2: TImage
       Left = 56
       Top = 24
@@ -2049,8 +2046,6 @@ object Form1: TForm1
     Color = 14264576
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 1084
-    ExplicitHeight = 581
     object Label13: TLabel
       Left = 56
       Top = 48
@@ -2873,8 +2868,6 @@ object Form1: TForm1
     Color = 14264576
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 1084
-    ExplicitHeight = 581
     object Label18: TLabel
       Left = 56
       Top = 48
@@ -3634,8 +3627,6 @@ object Form1: TForm1
     Color = 5264916
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 1084
-    ExplicitHeight = 581
     object Label23: TLabel
       Left = 55
       Top = 49
@@ -4906,12 +4897,18 @@ object Form1: TForm1
       Visible = False
       ExplicitLeft = 416
       ExplicitTop = 88
+      inherited Image_cancelar_baixa: TImage
+        OnClick = FBaixa_driver3Image_cancelar_baixaClick
+      end
+      inherited Label_cancelar_baixa: TLabel
+        OnClick = FBaixa_driver3Label_cancelar_baixaClick
+      end
     end
     inline F_emissor_certificado1: TF_emissor_certificado
       Left = 416
       Top = 88
       Width = 329
-      Height = 340
+      Height = 378
       Color = clWhite
       ParentBackground = False
       ParentColor = False
@@ -4934,8 +4931,8 @@ object Form1: TForm1
     Color = 9667712
     ParentBackground = False
     TabOrder = 5
-    ExplicitWidth = 1084
-    ExplicitHeight = 581
+    ExplicitWidth = 1086
+    ExplicitHeight = 568
     object Label37: TLabel
       Left = 56
       Top = 40
@@ -6134,8 +6131,8 @@ object Form1: TForm1
     ParentBackground = False
     TabOrder = 6
     Visible = False
-    ExplicitWidth = 1084
-    ExplicitHeight = 581
+    ExplicitWidth = 1081
+    ExplicitHeight = 576
     object Label55: TLabel
       Left = 56
       Top = 40
@@ -7245,8 +7242,8 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 7
-    ExplicitWidth = 1084
-    ExplicitHeight = 581
+    ExplicitWidth = 1041
+    ExplicitHeight = 504
     object Label68: TLabel
       Left = 56
       Top = 23
@@ -8007,8 +8004,8 @@ object Form1: TForm1
     Color = 5264915
     ParentBackground = False
     TabOrder = 8
-    ExplicitWidth = 1084
-    ExplicitHeight = 581
+    ExplicitWidth = 1057
+    ExplicitHeight = 568
     object Label72: TLabel
       Left = 56
       Top = 29
@@ -9081,8 +9078,8 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
-    ExplicitWidth = 1084
-    ExplicitHeight = 581
+    ExplicitWidth = 1064
+    ExplicitHeight = 560
     object Image26: TImage
       Left = 323
       Top = 34
@@ -10012,19 +10009,26 @@ object Form1: TForm1
         Left = 167
         ExplicitLeft = 167
       end
+      inherited Image_cancelar_baixa: TImage
+        OnClick = FBaixa_driver2Image_cancelar_baixaClick
+      end
+      inherited Label_cancelar_baixa: TLabel
+        OnClick = FBaixa_driver2Label_cancelar_baixaClick
+      end
     end
     inline Finstala_driver2: TFinstala_driver
-      Left = 414
+      Left = 418
       Top = 116
       Width = 329
-      Height = 340
+      Height = 376
       Color = clWhite
       ParentBackground = False
       ParentColor = False
       TabOrder = 6
       Visible = False
-      ExplicitLeft = 414
+      ExplicitLeft = 418
       ExplicitTop = 116
+      ExplicitHeight = 376
       inherited Image_ok: TImage
         OnClick = Finstala_driver2Image_okClick
       end
@@ -10040,8 +10044,8 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
-    ExplicitWidth = 1084
-    ExplicitHeight = 581
+    ExplicitLeft = 1
+    ExplicitTop = 104
     object Image27: TImage
       Left = 320
       Top = 34
@@ -10858,12 +10862,18 @@ object Form1: TForm1
       Visible = False
       ExplicitLeft = 415
       ExplicitTop = 122
+      inherited Image_cancelar_baixa: TImage
+        OnClick = FBaixa_driver1Image2Click
+      end
+      inherited Label_cancelar_baixa: TLabel
+        OnClick = FBaixa_driver1Label_cancelar_baixaClick
+      end
     end
     inline Finstala_driver1: TFinstala_driver
       Left = 415
       Top = 122
       Width = 329
-      Height = 340
+      Height = 383
       Color = clWhite
       ParentBackground = False
       ParentColor = False
@@ -10871,6 +10881,7 @@ object Form1: TForm1
       Visible = False
       ExplicitLeft = 415
       ExplicitTop = 122
+      ExplicitHeight = 383
       inherited Image_ok: TImage
         Left = 74
         OnClick = Finstala_driver1Image_okClick
@@ -10881,15 +10892,12 @@ object Form1: TForm1
   object Panel_sem_midia: TPanel
     Left = 0
     Top = 113
-    Width = 1094
-    Height = 591
-    Align = alClient
+    Width = 231
+    Height = 296
     BevelOuter = bvNone
     Color = 6714127
     ParentBackground = False
     TabOrder = 11
-    ExplicitWidth = 1064
-    ExplicitHeight = 552
     object Label97: TLabel
       Left = 56
       Top = 40

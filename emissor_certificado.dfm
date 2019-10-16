@@ -2,7 +2,7 @@ object F_emissor_certificado: TF_emissor_certificado
   Left = 0
   Top = 0
   Width = 329
-  Height = 340
+  Height = 378
   Color = clWhite
   ParentBackground = False
   ParentColor = False
@@ -250,7 +250,7 @@ object F_emissor_certificado: TF_emissor_certificado
   end
   object Label1: TLabel
     Left = 68
-    Top = 256
+    Top = 264
     Width = 181
     Height = 13
     Caption = 'Clique no bot'#227'o OK para execu'#231#227'o do'
@@ -263,7 +263,7 @@ object F_emissor_certificado: TF_emissor_certificado
   end
   object Image_ok: TImage
     Left = 68
-    Top = 300
+    Top = 319
     Width = 192
     Height = 31
     Picture.Data = {
@@ -299,7 +299,7 @@ object F_emissor_certificado: TF_emissor_certificado
   end
   object Label3: TLabel
     Left = 68
-    Top = 275
+    Top = 283
     Width = 183
     Height = 13
     Caption = 'assistente para emiss'#227'o do certificado'
@@ -311,8 +311,8 @@ object F_emissor_certificado: TF_emissor_certificado
     ParentFont = False
   end
   object Label_ok_emissor: TLabel
-    Left = 152
-    Top = 305
+    Left = 144
+    Top = 324
     Width = 21
     Height = 19
     Caption = 'OK'

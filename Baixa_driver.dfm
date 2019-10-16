@@ -355,7 +355,7 @@ object FBaixa_driver: TFBaixa_driver
     Font.Style = []
     ParentFont = False
   end
-  object Image2: TImage
+  object Image_cancelar_baixa: TImage
     Left = 68
     Top = 328
     Width = 190
@@ -399,10 +399,10 @@ object FBaixa_driver: TFBaixa_driver
       31302D31315432323A34363A34312B30323A30302C7AC37D0000002574455874
       646174653A6D6F6469667900323031392D31302D31315432323A34363A34312B
       30323A30305D277BC10000000049454E44AE426082}
-    OnMouseLeave = Image2MouseLeave
-    OnMouseMove = Image2MouseMove
+    OnMouseLeave = Image_cancelar_baixaMouseLeave
+    OnMouseMove = Image_cancelar_baixaMouseMove
   end
-  object Label_cancelar: TLabel
+  object Label_cancelar_baixa: TLabel
     Left = 129
     Top = 336
     Width = 61
@@ -414,8 +414,8 @@ object FBaixa_driver: TFBaixa_driver
     Font.Name = 'Branding Medium'
     Font.Style = []
     ParentFont = False
-    OnMouseMove = Label_cancelarMouseMove
-    OnMouseLeave = Label_cancelarMouseLeave
+    OnMouseMove = Label_cancelar_baixaMouseMove
+    OnMouseLeave = Label_cancelar_baixaMouseLeave
   end
   object ProgressBar1: TProgressBar
     Left = 79

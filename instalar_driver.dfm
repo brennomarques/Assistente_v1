@@ -2,7 +2,7 @@ object Finstala_driver: TFinstala_driver
   Left = 0
   Top = 0
   Width = 329
-  Height = 340
+  Height = 378
   Color = clWhite
   ParentBackground = False
   ParentColor = False
@@ -250,7 +250,7 @@ object Finstala_driver: TFinstala_driver
   end
   object Label3: TLabel
     Left = 68
-    Top = 256
+    Top = 264
     Width = 164
     Height = 13
     Caption = 'Clique no bot'#227'o OK para realizar a'
@@ -263,7 +263,7 @@ object Finstala_driver: TFinstala_driver
   end
   object Label2: TLabel
     Left = 68
-    Top = 275
+    Top = 283
     Width = 195
     Height = 13
     Caption = 'instala'#231#227'o do driver em seu computador.'
@@ -276,7 +276,7 @@ object Finstala_driver: TFinstala_driver
   end
   object Image_ok: TImage
     Left = 68
-    Top = 300
+    Top = 324
     Width = 192
     Height = 31
     Picture.Data = {
@@ -312,7 +312,7 @@ object Finstala_driver: TFinstala_driver
   end
   object Label_ok: TLabel
     Left = 152
-    Top = 305
+    Top = 329
     Width = 21
     Height = 19
     Caption = 'OK'
