@@ -2868,8 +2868,6 @@ object Form1: TForm1
     Color = 14264576
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 1079
-    ExplicitHeight = 583
     object Label18: TLabel
       Left = 56
       Top = 48
@@ -3629,9 +3627,6 @@ object Form1: TForm1
     Color = 5264916
     ParentBackground = False
     TabOrder = 4
-    ExplicitLeft = 1
-    ExplicitWidth = 1072
-    ExplicitHeight = 583
     object Label23: TLabel
       Left = 55
       Top = 49
@@ -4936,9 +4931,6 @@ object Form1: TForm1
     Color = 9667712
     ParentBackground = False
     TabOrder = 5
-    ExplicitLeft = 4
-    ExplicitWidth = 1060
-    ExplicitHeight = 576
     object Label37: TLabel
       Left = 56
       Top = 40
@@ -6137,9 +6129,6 @@ object Form1: TForm1
     ParentBackground = False
     TabOrder = 6
     Visible = False
-    ExplicitLeft = 1
-    ExplicitWidth = 1064
-    ExplicitHeight = 560
     object Label55: TLabel
       Left = 56
       Top = 40
@@ -7249,9 +7238,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 7
-    ExplicitLeft = 1
-    ExplicitWidth = 1085
-    ExplicitHeight = 583
     object Label68: TLabel
       Left = 55
       Top = 48
@@ -7268,9 +7254,9 @@ object Form1: TForm1
     object Label69: TLabel
       Left = 56
       Top = 107
-      Width = 529
+      Width = 509
       Height = 32
-      Caption = 'Escolha o tipo de m'#237'dia que deseja instalado:'
+      Caption = 'Escolha o tipo de m'#237'dia que deseja instalar:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
       Font.Height = -27
@@ -8012,8 +7998,6 @@ object Form1: TForm1
     Color = 5264915
     ParentBackground = False
     TabOrder = 8
-    ExplicitWidth = 858
-    ExplicitHeight = 365
     object Label72: TLabel
       Left = 56
       Top = 29
@@ -9086,9 +9070,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
-    ExplicitLeft = -5
-    ExplicitWidth = 1078
-    ExplicitHeight = 568
     object Image26: TImage
       Left = 323
       Top = 34
@@ -10053,8 +10034,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
-    ExplicitWidth = 977
-    ExplicitHeight = 471
     object Image27: TImage
       Left = 320
       Top = 34
@@ -10908,8 +10887,6 @@ object Form1: TForm1
     Color = 6714127
     ParentBackground = False
     TabOrder = 11
-    ExplicitWidth = 1021
-    ExplicitHeight = 525
     object Label97: TLabel
       Left = 56
       Top = 40
