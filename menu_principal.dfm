@@ -2868,15 +2868,17 @@ object Form1: TForm1
     Color = 14264576
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 1079
+    ExplicitHeight = 583
     object Label18: TLabel
       Left = 56
       Top = 48
-      Width = 276
-      Height = 32
+      Width = 338
+      Height = 40
       Caption = 'Prepare-se para emitir!'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -27
+      Font.Height = -33
       Font.Name = 'Branding Bold'
       Font.Style = []
       ParentFont = False
@@ -2977,7 +2979,7 @@ object Form1: TForm1
     end
     object Label20: TLabel
       Left = 147
-      Top = 208
+      Top = 210
       Width = 15
       Height = 19
       Caption = 'A1'
@@ -2993,7 +2995,7 @@ object Form1: TForm1
     end
     object Label22: TLabel
       Left = 376
-      Top = 208
+      Top = 210
       Width = 18
       Height = 19
       Caption = 'A3'
@@ -3627,6 +3629,9 @@ object Form1: TForm1
     Color = 5264916
     ParentBackground = False
     TabOrder = 4
+    ExplicitLeft = 1
+    ExplicitWidth = 1072
+    ExplicitHeight = 583
     object Label23: TLabel
       Left = 55
       Top = 49
@@ -4931,8 +4936,9 @@ object Form1: TForm1
     Color = 9667712
     ParentBackground = False
     TabOrder = 5
-    ExplicitWidth = 1086
-    ExplicitHeight = 568
+    ExplicitLeft = 4
+    ExplicitWidth = 1060
+    ExplicitHeight = 576
     object Label37: TLabel
       Left = 56
       Top = 40
@@ -6131,8 +6137,9 @@ object Form1: TForm1
     ParentBackground = False
     TabOrder = 6
     Visible = False
-    ExplicitWidth = 1081
-    ExplicitHeight = 576
+    ExplicitLeft = 1
+    ExplicitWidth = 1064
+    ExplicitHeight = 560
     object Label55: TLabel
       Left = 56
       Top = 40
@@ -7242,11 +7249,12 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 7
-    ExplicitWidth = 1041
-    ExplicitHeight = 504
+    ExplicitLeft = 1
+    ExplicitWidth = 1085
+    ExplicitHeight = 583
     object Label68: TLabel
-      Left = 56
-      Top = 23
+      Left = 55
+      Top = 48
       Width = 375
       Height = 40
       Caption = 'Prepare-se para come'#231'ar!'
@@ -7259,22 +7267,22 @@ object Form1: TForm1
     end
     object Label69: TLabel
       Left = 56
-      Top = 95
-      Width = 418
-      Height = 25
+      Top = 107
+      Width = 529
+      Height = 32
       Caption = 'Escolha o tipo de m'#237'dia que deseja instalado:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -21
+      Font.Height = -27
       Font.Name = 'Branding Medium'
       Font.Style = []
       ParentFont = False
     end
     object Image19: TImage
-      Left = 557
-      Top = 161
-      Width = 465
-      Height = 339
+      Left = 540
+      Top = 191
+      Width = 487
+      Height = 338
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000001CE0000
         01500806000000368A9E830000000473424954080808087C08648800004B2149
@@ -7882,8 +7890,8 @@ object Form1: TForm1
         6EBF584B529FC23C0000000049454E44AE426082}
     end
     object Image20: TImage
-      Left = 56
-      Top = 169
+      Left = 55
+      Top = 202
       Width = 200
       Height = 39
       Picture.Data = {
@@ -7922,9 +7930,9 @@ object Form1: TForm1
       OnMouseMove = Image20MouseMove
     end
     object Image21: TImage
-      Left = 274
-      Top = 169
-      Width = 200
+      Left = 285
+      Top = 202
+      Width = 201
       Height = 39
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D49484452000000C80000
@@ -7962,8 +7970,8 @@ object Form1: TForm1
       OnMouseMove = Image21MouseMove
     end
     object Label70: TLabel
-      Left = 134
-      Top = 177
+      Left = 129
+      Top = 210
       Width = 42
       Height = 19
       Caption = 'Token'
@@ -7978,8 +7986,8 @@ object Form1: TForm1
       OnMouseLeave = Label70MouseLeave
     end
     object Label71: TLabel
-      Left = 337
-      Top = 177
+      Left = 349
+      Top = 210
       Width = 76
       Height = 19
       Caption = 'SmartCard'
@@ -8004,8 +8012,8 @@ object Form1: TForm1
     Color = 5264915
     ParentBackground = False
     TabOrder = 8
-    ExplicitWidth = 1057
-    ExplicitHeight = 568
+    ExplicitWidth = 858
+    ExplicitHeight = 365
     object Label72: TLabel
       Left = 56
       Top = 29
@@ -9078,8 +9086,9 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
-    ExplicitWidth = 1064
-    ExplicitHeight = 560
+    ExplicitLeft = -5
+    ExplicitWidth = 1078
+    ExplicitHeight = 568
     object Image26: TImage
       Left = 323
       Top = 34
@@ -10044,8 +10053,8 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
-    ExplicitLeft = 1
-    ExplicitTop = 104
+    ExplicitWidth = 977
+    ExplicitHeight = 471
     object Image27: TImage
       Left = 320
       Top = 34
@@ -10892,12 +10901,15 @@ object Form1: TForm1
   object Panel_sem_midia: TPanel
     Left = 0
     Top = 113
-    Width = 231
-    Height = 296
+    Width = 1094
+    Height = 591
+    Align = alClient
     BevelOuter = bvNone
     Color = 6714127
     ParentBackground = False
     TabOrder = 11
+    ExplicitWidth = 1021
+    ExplicitHeight = 525
     object Label97: TLabel
       Left = 56
       Top = 40
