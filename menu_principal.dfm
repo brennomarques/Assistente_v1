@@ -9070,6 +9070,8 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
+    ExplicitLeft = 16
+    ExplicitTop = 163
     object Image26: TImage
       Left = 323
       Top = 34
@@ -9385,7 +9387,7 @@ object Form1: TForm1
       OnMouseLeave = Label82MouseLeave
     end
     object Image28: TImage
-      Left = 395
+      Left = 398
       Top = 486
       Width = 246
       Height = 47
@@ -10034,6 +10036,8 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
+    ExplicitWidth = 1064
+    ExplicitHeight = 568
     object Image27: TImage
       Left = 320
       Top = 34
@@ -10887,6 +10891,8 @@ object Form1: TForm1
     Color = 6714127
     ParentBackground = False
     TabOrder = 11
+    ExplicitWidth = 1086
+    ExplicitHeight = 444
     object Label97: TLabel
       Left = 56
       Top = 40

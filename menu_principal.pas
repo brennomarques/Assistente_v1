@@ -671,6 +671,7 @@ begin
 end;
 procedure TForm1.Image11Click(Sender: TObject);
 begin
+  cancel:=FALSE;
   eChamaEmissor;
 end;
 
@@ -1179,6 +1180,7 @@ begin
 end;
 procedure TForm1.Image_baixa_instaladorClick(Sender: TObject);
 begin
+  cancel:=FALSE;
   eInstalaCartao;
 end;
 
@@ -1300,6 +1302,7 @@ end;
 
 procedure TForm1.Image28Click(Sender: TObject);
 begin
+  cancel:=FALSE;
   eInstalaToken;
 end;
 
@@ -1482,6 +1485,7 @@ end;
 
 procedure TForm1.Label105Click(Sender: TObject);
 begin
+  cancel:=FALSE;
   eInstalaCartao;
 end;
 
@@ -1697,6 +1701,7 @@ end;
 
 procedure TForm1.Label36Click(Sender: TObject);
 begin
+  cancel:=FALSE;
   eChamaEmissor;
 end;
 
@@ -2007,6 +2012,7 @@ end;
 
 procedure TForm1.Label83Click(Sender: TObject);
 begin
+  cancel:=FALSE;
   eInstalaToken;
 end;
 

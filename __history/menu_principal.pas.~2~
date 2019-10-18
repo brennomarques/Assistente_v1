@@ -28,10 +28,10 @@ type
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
-    Image3: TImage;
+    Image_token_cartao: TImage;
     Image4: TImage;
     Label10: TLabel;
-    Label11: TLabel;
+    Label_token_cartao: TLabel;
     Label12: TLabel;
     Panel_Instalador_token_cartao: TPanel;
     Label13: TLabel;
@@ -219,8 +219,8 @@ type
       Y: Integer);
     procedure Label9MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
-    procedure Label11MouseLeave(Sender: TObject);
-    procedure Label11MouseMove(Sender: TObject; Shift: TShiftState; X,
+    procedure Label_token_cartaoMouseLeave(Sender: TObject);
+    procedure Label_token_cartaoMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
     procedure Label10MouseLeave(Sender: TObject);
     procedure Label10MouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -237,8 +237,8 @@ type
     procedure Image6MouseLeave(Sender: TObject);
     procedure Image6MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
-    procedure Image3MouseLeave(Sender: TObject);
-    procedure Image3MouseMove(Sender: TObject; Shift: TShiftState; X,
+    procedure Image_token_cartaoMouseLeave(Sender: TObject);
+    procedure Image_token_cartaoMouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
     procedure Image4MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
@@ -246,8 +246,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure Label6Click(Sender: TObject);
     procedure Label5Click(Sender: TObject);
-    procedure Image3Click(Sender: TObject);
-    procedure Label11Click(Sender: TObject);
+    procedure Image_token_cartaoClick(Sender: TObject);
+    procedure Label_token_cartaoClick(Sender: TObject);
 
     procedure Image10MouseLeave(Sender: TObject);
     procedure Image10MouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -462,6 +462,15 @@ type
     procedure F_emissor_certificado1Image_okClick(Sender: TObject);
     procedure eChamaEmissor();
     procedure Label36Click(Sender: TObject);
+    procedure Image22Click(Sender: TObject);
+    procedure Label75Click(Sender: TObject);
+    procedure eSalvaDLL();
+    procedure FBaixa_driver1Image2Click(Sender: TObject);
+    procedure FBaixa_driver1Label_cancelar_baixaClick(Sender: TObject);
+    procedure FBaixa_driver2Image_cancelar_baixaClick(Sender: TObject);
+    procedure FBaixa_driver2Label_cancelar_baixaClick(Sender: TObject);
+    procedure FBaixa_driver3Image_cancelar_baixaClick(Sender: TObject);
+    procedure FBaixa_driver3Label_cancelar_baixaClick(Sender: TObject);//SALVA DLL NO LOCAL DO .EXE
 
 
   private
@@ -472,26 +481,104 @@ type
 
 var
   Form1: TForm1;
-  nomeToken: String;//variavel global vai receber o nome da midia DO PANEL
+  nomeToken: String;//variavel global vai receber o nome da midia DO PANEL , nomeToken
+  cancel: boolean;//VARIAL VAI DEFINIR A EXIBIÇÃO DOS FRAME APOS O CANCELAMENTO OU NÃO DA BAIXA DRIVER
 
 implementation
 
 //uses Baixa_driver; //para manipular valor do frame
 
+
 {$R *.dfm}
+
+procedure TForm1.FBaixa_driver1Image2Click(Sender: TObject);
+begin
+  IdHTTP_baixa.Disconnect;
+  FBaixa_driver3.Visible:=false;//esconder frame instala
+  FBaixa_driver1.Visible:=false;//esconder frame instala
+  FBaixa_driver2.Visible:=false;//esconder frame instala
+  cancel:=TRUE;
+end;
+
+procedure TForm1.FBaixa_driver1Label_cancelar_baixaClick(Sender: TObject);
+begin
+  IdHTTP_baixa.Disconnect;
+  FBaixa_driver3.Visible:=false;//esconder frame instala
+  FBaixa_driver1.Visible:=false;//esconder frame instala
+  FBaixa_driver2.Visible:=false;//esconder frame instala
+  cancel:=TRUE;
+end;
+
+procedure TForm1.FBaixa_driver2Image_cancelar_baixaClick(Sender: TObject);
+begin
+  IdHTTP_baixa.Disconnect;
+  FBaixa_driver3.Visible:=false;//esconder frame instala
+  FBaixa_driver1.Visible:=false;//esconder frame instala
+  FBaixa_driver2.Visible:=false;//esconder frame instala
+  cancel:=TRUE;
+end;
+
+procedure TForm1.FBaixa_driver2Label_cancelar_baixaClick(Sender: TObject);
+begin
+  IdHTTP_baixa.Disconnect;
+  FBaixa_driver3.Visible:=false;//esconder frame instala
+  FBaixa_driver1.Visible:=false;//esconder frame instala
+  FBaixa_driver2.Visible:=false;//esconder frame instala
+  cancel:=TRUE;
+end;
+
+procedure TForm1.FBaixa_driver3Image_cancelar_baixaClick(Sender: TObject);
+begin
+  IdHTTP_baixa.Disconnect;
+  FBaixa_driver3.Visible:=false;//esconder frame instala
+  FBaixa_driver1.Visible:=false;//esconder frame instala
+  FBaixa_driver2.Visible:=false;//esconder frame instala
+  cancel:=TRUE;
+end;
+
+procedure TForm1.FBaixa_driver3Label_cancelar_baixaClick(Sender: TObject);
+begin
+  IdHTTP_baixa.Disconnect;
+  FBaixa_driver3.Visible:=false;//esconder frame instala
+  FBaixa_driver1.Visible:=false;//esconder frame instala
+  FBaixa_driver2.Visible:=false;//esconder frame instala
+  cancel:=TRUE;
+end;
 
 procedure TForm1.Finstala_driver1Image_okClick(Sender: TObject);
 begin
   Finstala_driver1.Visible:=false;//esconder frame instala driver.
+  Finstala_driver2.Visible:=false;//esconder frame instala driver.
   Finstala_driver1.Image_okClick(Sender);
+
 end;
 
 procedure TForm1.Finstala_driver2Image_okClick(Sender: TObject);
 begin
   Finstala_driver2.Visible:=false;//esconder tela
+  Finstala_driver1.Visible:=false;//esconder tela
   Finstala_driver2.Image_okClick(Sender);
 end;
+procedure TForm1.eSalvaDLL();//SALVA DLL NO LOCAL DO .EXE
+var
+  fs: TFileStream;
+  rs: TResourceStream;
+  s : string;
+begin
+  //EXTRAIR libeay32.dll PARA LOCAL NO .EXE
+  rs := TResourceStream.Create(hInstance, 'Resource_1', RT_RCDATA);
+  s  := ExtractFilePath(Application.ExeName)+'libeay32.dll';
+  fs := TFileStream.Create(s,fmCreate);
+  rs.SaveToStream(fs);
+  fs.Free;
+  //EXTRAIR ssleay32.dll PARA LOCAL NO .EXE
+  rs := TResourceStream.Create(hInstance, 'Resource_2', RT_RCDATA);
+  s  := ExtractFilePath(Application.ExeName)+'ssleay32.dll';
+  fs := TFileStream.Create(s,fmCreate);
+  rs.SaveToStream(fs);
+  fs.Free;
 
+end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   Panel_Instalador_token_cartao_1.Visible:=false;
@@ -504,6 +591,7 @@ begin
   Panel_lista_tokens.Visible:=false;
   Panel_lista_cartao.Visible:=false;
   Panel_sem_midia.Visible:=false;
+  eSalvaDLL; //salvar dll  no local onde esta o .exe
 end;
 procedure TForm1.F_emissor_certificado1Image_okClick(Sender: TObject);
 begin
@@ -516,15 +604,15 @@ procedure TForm1.IdHTTP_baixaWork(ASender: TObject; AWorkMode: TWorkMode;
 begin
   FBaixa_driver1.ProgressBar1.Position := AWorkCount;
   FBaixa_driver1.Label_baixando1.Caption:=RetornaKiloBytes(AWorkCount);
-  FBaixa_driver1.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver1.ProgressBar1.Max, AWorkCount);//cartão
+  FBaixa_driver1.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver1.ProgressBar1.Max, AWorkCount)+',';//cartão
 
   FBaixa_driver2.ProgressBar1.Position := AWorkCount;
   FBaixa_driver2.Label_baixando1.Caption:=RetornaKiloBytes(AWorkCount);
-  FBaixa_driver2.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver2.ProgressBar1.Max, AWorkCount);//token
+  FBaixa_driver2.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver2.ProgressBar1.Max, AWorkCount)+',';//token
 
   FBaixa_driver3.ProgressBar1.Position := AWorkCount;
   FBaixa_driver3.Label_baixando1.Caption:=RetornaKiloBytes(AWorkCount);
-  FBaixa_driver3.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver3.ProgressBar1.Max, AWorkCount);//emissor certificado
+  FBaixa_driver3.Label_download1.Caption:=RetornaPorcentagem(FBaixa_driver3.ProgressBar1.Max, AWorkCount)+',';//emissor certificado
 
 end;
 
@@ -577,7 +665,7 @@ procedure TForm1.eChamaEmissor();
 var
   link, nome: string;
 begin
-  link:='https://www.soluti.com.br/download/516/';
+  link:='https://www.soluti.com.br/download/1146/';
   nome:='Emissor.jnlp';//Instalação ser realizada de forma manula, devido a extenção.
   eGetDriver(link, nome);
 end;
@@ -806,8 +894,10 @@ begin
   caminhouser:=usuarioname+'\SOLUTI_DRIVER\';
   if not DirectoryExists(caminhouser) then
   // se o local não exitir e cria a pasta
-    ForceDirectories('caminhouser'); // criação da pasta
+    ForceDirectories(caminhouser); // criação da pasta
+  //CreateDir('C:\Users\brenno.lima\SOLUTI_DRIVER\');
   MyFile := TFileStream.Create(caminhouser + arquivo, fmCreate); // local no hd e nome do arquivo com a extensão, onde vai salvar.
+
   FBaixa_driver1.Visible:=true;//mostrando o frame baixa driver na tela.
   FBaixa_driver2.Visible:=true;//mostrando o frame baixa driver na tela.
   FBaixa_driver3.Visible:=true;//mostrando o frame baixa emissor do certificado.
@@ -817,18 +907,26 @@ begin
     MyFile.Free;
     if arquivo = 'Emissor.jnlp' then
     begin
-      FBaixa_driver3.Visible:=false;//esconder o frame da tela emissor
-      F_emissor_certificado1.Visible:=true;//exiber tela para confirma e abrir o emissor.
-      emissor_certificado.Nome_emissor:=arquivo;//variavel Nome_emissor recebe o nome do emissor para ser execultado.
-      ShowMessage('Emissor para emissão do certificado.');
+      if not cancel then//ESSA CONDIGÇÃO DEFINI SE EXIBIO O FRAME QUANDO FOR CANCELADO O PROCESSO DE BAIXA
+      begin
+        FBaixa_driver1.Visible:=false;//esconder o frame da tela cartão.
+        FBaixa_driver2.Visible:=false;//esconder o frame da tela token.
+        FBaixa_driver3.Visible:=false;//esconder o frame da tela emissor
+        F_emissor_certificado1.Visible:=true;//exiber tela para confirma e abrir o emissor.
+        emissor_certificado.Nome_emissor:=arquivo;//variavel Nome_emissor recebe o nome do emissor para ser execultado.
+      end;
     end
     else
     begin
-      FBaixa_driver1.Visible:=false;//esconder o frame da tela cartão.
-      FBaixa_driver2.Visible:=false;//esconder o frame da tela token.
-      Finstala_driver1.Visible:=true;//exibe o fram instala driver.
-      Finstala_driver2.Visible:=true;//exibe o fram instala driver.
-      instalar_driver.Nome:=arquivo;//variavel Nome recebe o nome do driver que vai ser instalado (varivel é global encontrase no frame FInstala_driver)
+      if not cancel then
+      begin
+        FBaixa_driver1.Visible:=false;//esconder o frame da tela cartão.
+        FBaixa_driver2.Visible:=false;//esconder o frame da tela token.
+        FBaixa_driver3.Visible:=false;//esconder o frame da tela emissor
+        Finstala_driver1.Visible:=true;//exibe o fram instala driver.
+        Finstala_driver2.Visible:=true;//exibe o fram instala driver.
+        instalar_driver.Nome:=arquivo;//variavel Nome recebe o nome do driver que vai ser instalado (varivel é global encontrase no frame FInstala_driver)
+      end;
     end;
   end;
 end;
@@ -1017,21 +1115,18 @@ begin
   begin
     if Png_morpho_true.Visible = true then
     begin
-      ShowMessage('Baixa mopho');
-      eBaixaDriver('morpho');//chamando a função e passando nome do driver a ser baixado.
+     eBaixaDriver('morpho');//chamando a função e passando nome do driver a ser baixado.
     end
     else
     begin
       if Png_idemia_true.Visible = true then
       begin
-        ShowMessage('Baixa idemia');
         eBaixaDriver('idemia');//chamando a função e passando nome do driver a ser baixado.
       end
       else
       begin
         if Png_gemalto_true.Visible = true then
         begin
-          ShowMessage('Baixa Gemalto');
           eBaixaDriver('gemalto');//chamando a função e passando nome do driver a ser baixado.
         end
         else
@@ -1046,35 +1141,30 @@ procedure TForm1.eInstalaToken;
 begin
   if Png_Token_pro_true.Visible = true then
   begin
-    ShowMessage('Token pro 72k');
     eBaixaDriver('tokenpro72k');//chamando a função e passando nome do driver a ser baixado
   end
   else
   begin
     if Png_token_aladin_true.Visible = true then
     begin
-      ShowMessage('Token aladin');
       eBaixaDriver('tokenaladin');//chamando a função e passando nome do driver a ser baixado
     end
     else
     begin
       if Png_token_epass2003_true.Visible = true then
       begin
-        ShowMessage('Token epass');
         eBaixaDriver('epass2003');//chamando a função e passando nome do driver a ser baixado
       end
       else
       begin
         if Png_token_safenet_5100_true.Visible = true then
         begin
-          ShowMessage('Token safenet_5100');
           eBaixaDriver('tokensafenet5100');//chamando a função e passando nome do driver a ser baixado
         end
         else
         begin
           if Png_token_safenet_5110_true.Visible = true then
           begin
-            ShowMessage('Token safenet_5110');
             eBaixaDriver('tokensafenet5110');//chamando a função e passando nome do driver a ser baixado
           end
           else
@@ -1089,6 +1179,7 @@ begin
 end;
 procedure TForm1.Image_baixa_instaladorClick(Sender: TObject);
 begin
+  cancel:=FALSE;
   eInstalaCartao;
 end;
 
@@ -1148,6 +1239,12 @@ begin
   Label71.Font.Style := [fsUnderline];
 end;
 
+procedure TForm1.Image22Click(Sender: TObject);
+begin
+  Panel_emissor_certificado.Visible:=true;
+  Panel_pergunta_midia.Visible:=false;
+end;
+
 procedure TForm1.Image22MouseLeave(Sender: TObject);
 begin
   Label75.Font.Style := [];
@@ -1204,6 +1301,7 @@ end;
 
 procedure TForm1.Image28Click(Sender: TObject);
 begin
+  cancel:=FALSE;
   eInstalaToken;
 end;
 
@@ -1235,21 +1333,21 @@ begin
   Label109.Font.Style := [fsUnderline];
 end;
 
-procedure TForm1.Image3Click(Sender: TObject);
+procedure TForm1.Image_token_cartaoClick(Sender: TObject);
 begin
-   Panel_Instalador_token_cartao_1.Visible:=false;
-    Panel_Inicial_Inferior.Visible:=true;
+  Panel_Instalador_token_cartao_1.Visible:=true;
+  Panel_Inicial_Inferior.Visible:=false;
 end;
 
-procedure TForm1.Image3MouseLeave(Sender: TObject);
+procedure TForm1.Image_token_cartaoMouseLeave(Sender: TObject);
 begin
-  Label11.Font.Style := [];
+  Label_token_cartao.Font.Style := [];
 end;
 
-procedure TForm1.Image3MouseMove(Sender: TObject; Shift: TShiftState; X,
+procedure TForm1.Image_token_cartaoMouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
-  Label11.Font.Style := [fsUnderline];
+  Label_token_cartao.Font.Style := [fsUnderline];
 end;
 
 procedure TForm1.Image4Click(Sender: TObject);
@@ -1386,6 +1484,7 @@ end;
 
 procedure TForm1.Label105Click(Sender: TObject);
 begin
+  cancel:=FALSE;
   eInstalaCartao;
 end;
 
@@ -1435,21 +1534,21 @@ begin
   Label10.Font.Style := [fsUnderline];
 end;
 
-procedure TForm1.Label11Click(Sender: TObject);
+procedure TForm1.Label_token_cartaoClick(Sender: TObject);
 begin
   Panel_Instalador_token_cartao_1.Visible:=true;
   Panel_Inicial_Inferior.Visible:=false;
 end;
 
-procedure TForm1.Label11MouseLeave(Sender: TObject);
+procedure TForm1.Label_token_cartaoMouseLeave(Sender: TObject);
 begin
- Label11.Font.Style := [];
+ Label_token_cartao.Font.Style := [];
 end;
 
-procedure TForm1.Label11MouseMove(Sender: TObject; Shift: TShiftState; X,
+procedure TForm1.Label_token_cartaoMouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
-  Label11.Font.Style := [fsUnderline];
+  Label_token_cartao.Font.Style := [fsUnderline];
 end;
 
 procedure TForm1.Label15MouseLeave(Sender: TObject);
@@ -1601,6 +1700,7 @@ end;
 
 procedure TForm1.Label36Click(Sender: TObject);
 begin
+  cancel:=FALSE;
   eChamaEmissor;
 end;
 
@@ -1697,9 +1797,9 @@ begin
           nomearq:= eBuscaNome(varString);//FUNÇÃO QUE LOCALIZA SEÇÃO [INSTALL...]
           if nomearq ='False' then//AQUI DEFINI QUAL SEÇÃO SERA USADA, SE NÃO TIVER [INSTALL...] VEI SER [PROFILE]
           begin// AQUI NÃO ENCOTROU A SEÇÃO [INSTALL] ENTÃO SERA EXECULTADO A SEÇÃO [PROFILE]
-            ShowMessage(' [ERROR] :');
+            //ShowMessage(' [ERROR] :');
             aux:=eEncontarSecao(ArqIni);//FUNÇÃO BUSCA SEÇÃO [PROFILE] QUE ESTA SENDO USADA.
-            ShowMessage('Achou PROFILE: '+aux);
+            //ShowMessage('Achou PROFILE: '+aux);
             eConfiguraDLL(usuarioname+caminho+aux);//FUNÇÃO PARA CONFIGURAR DLL
           end
           else
@@ -1811,6 +1911,12 @@ begin
   Label74.Font.Style := [fsUnderline];
 end;
 
+procedure TForm1.Label75Click(Sender: TObject);
+begin
+  Panel_emissor_certificado.Visible:=true;
+  Panel_pergunta_midia.Visible:=false;
+end;
+
 procedure TForm1.Label75MouseLeave(Sender: TObject);
 begin
   Label75.Font.Style := [];
@@ -1905,6 +2011,7 @@ end;
 
 procedure TForm1.Label83Click(Sender: TObject);
 begin
+  cancel:=FALSE;
   eInstalaToken;
 end;
 
@@ -2206,8 +2313,6 @@ begin
     Png_token_safenet_5110_true.Visible:=false;
     Png_token_epass2003_false.Visible:=true;
     Png_token_epass2003_true.Visible:=false;
-
-
   end
 
 end;
