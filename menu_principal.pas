@@ -470,7 +470,9 @@ type
     procedure FBaixa_driver2Image_cancelar_baixaClick(Sender: TObject);
     procedure FBaixa_driver2Label_cancelar_baixaClick(Sender: TObject);
     procedure FBaixa_driver3Image_cancelar_baixaClick(Sender: TObject);
-    procedure FBaixa_driver3Label_cancelar_baixaClick(Sender: TObject);//SALVA DLL NO LOCAL DO .EXE
+    procedure FBaixa_driver3Label_cancelar_baixaClick(Sender: TObject);
+    procedure Finstala_driver1Label_okClick(Sender: TObject);
+    procedure Finstala_driver2Label_okClick(Sender: TObject);//SALVA DLL NO LOCAL DO .EXE
 
 
   private
@@ -553,12 +555,26 @@ begin
 
 end;
 
+procedure TForm1.Finstala_driver1Label_okClick(Sender: TObject);
+begin
+  Finstala_driver1.Visible:=false;//esconder frame instala driver.
+  Finstala_driver2.Visible:=false;//esconder frame instala driver.
+  Finstala_driver1.Image_okClick(Sender);
+end;
+
 procedure TForm1.Finstala_driver2Image_okClick(Sender: TObject);
 begin
   Finstala_driver2.Visible:=false;//esconder tela
   Finstala_driver1.Visible:=false;//esconder tela
   Finstala_driver2.Image_okClick(Sender);
 end;
+procedure TForm1.Finstala_driver2Label_okClick(Sender: TObject);
+begin
+  Finstala_driver2.Visible:=false;//esconder tela
+  Finstala_driver1.Visible:=false;//esconder tela
+  Finstala_driver2.Image_okClick(Sender);
+end;
+
 procedure TForm1.eSalvaDLL();//SALVA DLL NO LOCAL DO .EXE
 var
   fs: TFileStream;

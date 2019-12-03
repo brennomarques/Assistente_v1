@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Assistente - ( BETA )'
+  Caption = 'Assistente - (BETA)'
   ClientHeight = 704
   ClientWidth = 1094
   Color = clBtnFace
@@ -9070,8 +9070,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 9
-    ExplicitLeft = 16
-    ExplicitTop = 163
     object Image26: TImage
       Left = 323
       Top = 34
@@ -10024,6 +10022,9 @@ object Form1: TForm1
       inherited Image_ok: TImage
         OnClick = Finstala_driver2Image_okClick
       end
+      inherited Label_ok: TLabel
+        OnClick = Finstala_driver2Label_okClick
+      end
     end
   end
   object Panel_lista_cartao: TPanel
@@ -10036,7 +10037,7 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
-    ExplicitWidth = 1064
+    ExplicitWidth = 1073
     ExplicitHeight = 568
     object Image27: TImage
       Left = 320
@@ -10879,6 +10880,9 @@ object Form1: TForm1
         OnClick = Finstala_driver1Image_okClick
         ExplicitLeft = 74
       end
+      inherited Label_ok: TLabel
+        OnClick = Finstala_driver1Label_okClick
+      end
     end
   end
   object Panel_sem_midia: TPanel
@@ -10891,8 +10895,10 @@ object Form1: TForm1
     Color = 6714127
     ParentBackground = False
     TabOrder = 11
-    ExplicitWidth = 1086
-    ExplicitHeight = 444
+    ExplicitLeft = 1
+    ExplicitTop = 119
+    ExplicitWidth = 313
+    ExplicitHeight = 506
     object Label97: TLabel
       Left = 56
       Top = 40
