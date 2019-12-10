@@ -1690,7 +1690,7 @@ object Form1: TForm1
       Top = 116
       Width = 381
       Height = 32
-      Caption = 'Driver '#233' Emiss'#227'o de Certificado.'
+      Caption = 'Driver e Emiss'#227'o de Certificado.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
       Font.Height = -27
@@ -10037,8 +10037,6 @@ object Form1: TForm1
     Color = 6730063
     ParentBackground = False
     TabOrder = 10
-    ExplicitWidth = 1073
-    ExplicitHeight = 568
     object Image27: TImage
       Left = 320
       Top = 34
@@ -10895,10 +10893,6 @@ object Form1: TForm1
     Color = 6714127
     ParentBackground = False
     TabOrder = 11
-    ExplicitLeft = 1
-    ExplicitTop = 119
-    ExplicitWidth = 313
-    ExplicitHeight = 506
     object Label97: TLabel
       Left = 56
       Top = 40
