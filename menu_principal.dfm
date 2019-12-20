@@ -1701,9 +1701,9 @@ object Form1: TForm1
     object Label4: TLabel
       Left = 56
       Top = 200
-      Width = 237
+      Width = 259
       Height = 24
-      Caption = 'Escolha o que seja realizar:'
+      Caption = 'Escolha o que deseja realizar:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
       Font.Height = -20
